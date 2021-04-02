@@ -1,0 +1,38 @@
+html * {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  min-height: 100vh;
+  overflow-X: hidden;
+}
+
+:root {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: hsl(232deg, 11%, 26%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+h6 {
+  font-family: 'Poppins';
+  font-weight: bold;
+}
+
+img,
+figure {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
+}
