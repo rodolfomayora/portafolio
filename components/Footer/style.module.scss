@@ -38,6 +38,9 @@
   }
 
   @include medium {
+    padding-top: 60px;
+    padding-bottom: 50px;
+
     // Container
     & > :first-child {
       flex-direction: row;
