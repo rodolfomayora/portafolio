@@ -1,16 +1,7 @@
-import Head from 'next/head'
+import Home from './Home';
 
-export default function Home() {
+export default function Index() {
   return (
-    <>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={''}>
-        <h1>PORTAFOLIO</h1>
-      </main>
-    </>
+    <Home />
   )
 }
