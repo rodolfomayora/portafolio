@@ -1,8 +1,11 @@
 import React, { FC } from 'react';
+import Container from '../Container';
 
 const Header: FC = () => (
   <header>
-    HEADER
+    <Container>
+      HEADER
+    </Container>
   </header>
 )
 

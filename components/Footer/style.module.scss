@@ -1,0 +1,53 @@
+@import '../../styles/config';
+
+.Footer {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-color: $dark;
+  color: $white;
+
+  // Container
+  & > :first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // items
+    & > :first-child ~ * { margin-top: 40px };
+  }
+
+  .myName {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 16px;
+  }
+
+  .navigationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navigationLink:first-child ~ * { margin-top: 14px; }
+
+  .socialLink {
+    width: 22px;
+    fill: $white;
+
+    &:first-of-type ~ * { margin-left: 18px}
+  }
+
+  @include medium {
+    // Container
+    & > :first-child {
+      flex-direction: row;
+      align-items: flex-start;
+
+      // items
+      & > * { flex-grow: 1; }
+      & > :first-child ~ * { margin-top: 0 };
+    }
+
+    .navigationContainer { align-items: flex-start; }
+  }
+}
