@@ -2,10 +2,9 @@ import React, { FC } from 'react';
 import { Layout, Container } from '../../components';
 import style from './style.module.scss';
 
+import { Nextjs } from '../../public/images';
+
 const Home: FC = () => {
-
-
-
 
 
   return (
@@ -22,27 +21,87 @@ const Home: FC = () => {
         <section className={style.sectionTechSkills}>
           <Container>
             <h2 className={style.subTitle}>¿Qué utilizo?</h2>
-            <div className={style.tecnology}>
-              {/* <img src={} alt="Tecnology"/> */}
+            <div className={style.tecnologies}>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/react.svg" alt="Tecnology"/>
+                </div>
+                <span>ReactJS</span>
+              </div>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/typescript.svg" alt="Tecnology"/>
+                </div>
+                <span>TypeScript</span>
+              </div>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/javascript.svg" alt="Tecnology"/>
+                </div>
+                <span>Javascript</span>
+              </div>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/sass.svg" alt="Tecnology"/>
+                </div>
+                <span>Sass</span>
+              </div>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/git.svg" alt="Tecnology"/>
+                </div>
+                <span>Git</span>
+              </div>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/yarn.svg" alt="Tecnology"/>
+                </div>
+                <span>Yarn</span>
+              </div>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/nextjs.svg" alt="Tecnology"/>
+                  {/* <Nextjs /> */}
+                </div>
+                <span>NextJS</span>
+              </div>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/html5.svg" alt="Tecnology"/>
+                </div>
+                <span>HTML5</span>
+              </div>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/css3.svg" alt="Tecnology"/>
+                </div>
+                <span>CSS3</span>
+              </div>
+
+              <div className={style.tecnology}>
+                <div className={style.brandLogo}>
+                  <img src="/images/svg/redux.svg" alt="Tecnology"/>
+                </div>
+                <span>Redux</span>
+              </div>
+
+
             </div>
-            <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>Sass</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>ReactJS</li>
-              <li>NextJS</li>
-              <li>Redux</li>
-              <li>Git</li>
-              <li>Yarn</li>
-            </ul>
           </Container>
         </section>
   
         <section className={style.sectionProjects}>
           <Container>
-            <h2 className={style.subTitle}>Proyectos Personales</h2>
+            <h2 className={style.subTitle}>Portafolio</h2>
   
             <article className={style.projectSummary}>
               <div className={style.mockupWrapper}>
@@ -58,15 +117,11 @@ const Home: FC = () => {
               <div className={style.infoWrapper}>
                 <h3 className={style.projectTitle}>Blogr Landing Page</h3>
                 <div className={style.info}>
-                  <p>Stack:</p>
-                  <ul>
-                    <li>NextJS</li>
-                    <li>TypeScript</li>
-                    <li>SCSS (Sass)</li>
-                    <li>CSS Modules</li>
-                    <li>Flexbox</li>
-                    <li>RWD (Mobile First)</li>
-                  </ul>
+                  <p>Enfoque de desarrollo: Mobile First</p>
+
+                  <p>Stack: NextJS, TypeScript, Sass (SCSS), SCSS Modules, Flexbox, <abbr title="Responsive Web Design">RWD</abbr></p>
+                  <p>Tipo de sitio web: Estático</p>
+                  <p>Tipo de renderizado: Static Generation (SSG) sin datos</p>
                 </div>
                 <div className={style.buttonsWrapper}>
                   <a className={style.button}
@@ -92,17 +147,10 @@ const Home: FC = () => {
               <div className={style.infoWrapper}>
                 <h3 className={style.projectTitle}>Easybank Landing Page</h3>
                 <div className={style.info}>
-                  <p>Stack:</p>
-                  <ul>
-                    <li>ReactJS</li>
-                    <li>HTML</li>
-                    <li>TypeScript</li>
-                    <li>SCSS (Sass)</li>
-                    <li>CSS Modules</li>
-                    <li>CSS Grid</li>
-                    <li>Flexbox</li>
-                    <li>RWD (Mobile First)</li>
-                  </ul>
+                  <p>Enfoque de desarrollo: Mobile First</p>
+                  <p>Stack: ReactJS, TypeScript, Sass (SCSS), SCSS Modules, CSS Grid, Flexbox, <abbr title="Responsive Web Design">RWD</abbr></p>
+                  <p>Tipo de sitio web: Single Page Aplication (SPA)</p>
+                  <p>Tipo de renderizado: Client Side Rendering (CSR)</p>
                 </div>
                 <div className={style.buttonsWrapper}>
                   <a className={style.button}
@@ -148,14 +196,9 @@ const Home: FC = () => {
               <div className={style.infoWrapper}>
                 <h3 className={style.projectTitle}>Insure Landing Page</h3>
                 <div className={style.info}>
-                  <p>Stack:</p>
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>SCSS (Sass)</li>
-                    <li>Javascript</li>
-                    <li>Flexbox</li>
-                  </ul>
+                  <p>Enfoque de desarrollo: Mobile First</p>
+                  <p>Stack: HTML, Sass (SCSS), JavaScript, Flexbox</p>
+                  <p>Tipo de sitio web: Estático</p>
                 </div>
                 <div className={style.buttonsWrapper}>
                   <a className={style.button}
