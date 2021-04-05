@@ -7,9 +7,10 @@
     // font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
+    color: hsl(167, 92%, 15%);
 
     @include medium {
-      font-size: 36px;
+      font-size: 40px;
       text-align: left;
     }
   }
@@ -111,7 +112,7 @@
       // border-top: solid 45vh hsl(174, 100%, 50%);
     }
 
-    .sectionContainer {
+    .sectionWrapper {
       position: relative;
       z-index: 0;
       width: 60%;
@@ -169,7 +170,7 @@
       fill: hsl(167deg, 92%, 20%);
       cursor: pointer;
 
-      &:hover { fill: hsl(136deg, 94%, 40%); }
+      &:hover { fill: hsl(167deg, 92%, 30%); }
 
       &:first-child ~ * { margin-left: 30px; }
     }
@@ -208,9 +209,12 @@
   
   // SECCION TECH SKILLS
   .sectionTechSkills {
-    padding-top: 80px;
-    padding-bottom: 80px;
     background-color: hsl(0, 0%, 100%);
+
+    .sectionWrapper {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
 
     .tecnologies {
       display: grid;
@@ -221,14 +225,16 @@
     }
     
     .tecnology {
+      position: relative;
       display: flex;
       align-items: center;
       flex-direction: column;
       border-radius: 4px;
       padding: 12px 12px;
       background-color: hsl(0, 0%, 95%);
-      box-shadow: 0 2px 4px $shadow;
       overflow: hidden;
+      border-left: solid 6px hsl(167, 92%, 20%);
+      box-shadow: 0 2px 4px $shadow;
     }
 
     .brandLogo {
@@ -262,10 +268,10 @@
 
 
   // SECCION DE PROYECTOS
-  .sectionProjects {
+  .portfolioSection {
     padding-top: 80px;
     padding-bottom: 80px;
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 95%);
 
     .projectTitle {
       font-size: 32px;
@@ -315,10 +321,14 @@
       margin-bottom: 20px;
       line-height: 24px;
     }
+
+    .label {
+      font-weight: 700;
+    }
   
     .buttonsWrapper {
       display: flex;
-      & > * { flex-grow: 1; }
+      & > * { flex-basis: 50%; }
       & > :first-child { margin-right: 20px; }
     }
   
@@ -327,11 +337,17 @@
       padding: 10px 20px;
       font-size: 16px;
       font-weight: 700;
-      color: $main-gray;
+      color: $white;
       text-align: center;
-      border: solid 2px $main-gray;
+      // border: solid 2px $main-gray;
+      background-color: hsl(167, 92%, 20%);
       border-radius: 4px;
       box-shadow: 0 2px 4px rgb(53 59 58 / 40%);
+      transition: background-color 0.3s ease;
+      
+      &:hover {
+        background-color: hsl(167deg, 92%, 30%);
+      }
     }
   }
 

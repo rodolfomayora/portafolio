@@ -12,6 +12,7 @@ const Home: FC = () => {
     <Layout pageTitle="Inicio">
       <main className={style.Home}>
 
+        {/* Main Section */}
         <section className={style.mainSection}>
           <div className={style.layerContainer}>
             <div className={style.layer}>
@@ -24,7 +25,7 @@ const Home: FC = () => {
           </div>
 
           <Container>
-            <div className={style.sectionContainer}>
+            <div className={style.sectionWrapper}>
               <div className={style.frostedLayer}></div>
 
               <div className={style.infoWrapper}>
@@ -46,87 +47,90 @@ const Home: FC = () => {
           </Container>
         </section>
   
+        {/* Tech Skills Section */}
         <section className={style.sectionTechSkills}>
           <Container>
-            <h2 className={style.sectionTitle}>¿Qué utilizo?</h2>
-            <div className={style.tecnologies}>
+            <div className={style.sectionWrapper}>
+              <h2 className={style.sectionTitle}>¿Qué utilizo?</h2>
+              <div className={style.tecnologies}>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/react.svg" alt="Tecnology"/>
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/react.svg" alt="Tecnology"/>
+                  </div>
+                  <span className={style.label}>ReactJS</span>
                 </div>
-                <span className={style.label}>ReactJS</span>
-              </div>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/typescript.svg" alt="Tecnology"/>
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/typescript.svg" alt="Tecnology"/>
+                  </div>
+                  <span className={style.label}>TypeScript</span>
                 </div>
-                <span className={style.label}>TypeScript</span>
-              </div>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/javascript.svg" alt="Tecnology"/>
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/javascript.svg" alt="Tecnology"/>
+                  </div>
+                  <span className={style.label}>Javascript</span>
                 </div>
-                <span className={style.label}>Javascript</span>
-              </div>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/sass.svg" alt="Tecnology"/>
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/sass.svg" alt="Tecnology"/>
+                  </div>
+                  <span className={style.label}>Sass</span>
                 </div>
-                <span className={style.label}>Sass</span>
-              </div>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/git.svg" alt="Tecnology"/>
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/git.svg" alt="Tecnology"/>
+                  </div>
+                  <span className={style.label}>Git</span>
                 </div>
-                <span className={style.label}>Git</span>
-              </div>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/yarn.svg" alt="Tecnology"/>
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/yarn.svg" alt="Tecnology"/>
+                  </div>
+                  <span className={style.label}>Yarn</span>
                 </div>
-                <span className={style.label}>Yarn</span>
-              </div>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/nextjs.svg" alt="Tecnology"/>
-                  {/* <Nextjs /> */}
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/nextjs.svg" alt="Tecnology"/>
+                    {/* <Nextjs /> */}
+                  </div>
+                  <span className={style.label}>NextJS</span>
                 </div>
-                <span className={style.label}>NextJS</span>
-              </div>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/html5.svg" alt="Tecnology"/>
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/html5.svg" alt="Tecnology"/>
+                  </div>
+                  <span className={style.label}>HTML5</span>
                 </div>
-                <span className={style.label}>HTML5</span>
-              </div>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/css3.svg" alt="Tecnology"/>
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/css3.svg" alt="Tecnology"/>
+                  </div>
+                  <span className={style.label}>CSS3</span>
                 </div>
-                <span className={style.label}>CSS3</span>
-              </div>
 
-              <div className={style.tecnology}>
-                <div className={style.brandLogo}>
-                  <img src="/images/svg/redux.svg" alt="Tecnology"/>
+                <div className={style.tecnology}>
+                  <div className={style.brandLogo}>
+                    <img src="/images/svg/redux.svg" alt="Tecnology"/>
+                  </div>
+                  <span className={style.label}>Redux</span>
                 </div>
-                <span className={style.label}>Redux</span>
               </div>
-
             </div>
           </Container>
         </section>
   
-        <section className={style.sectionProjects}>
+        {/* Portfolio Section */}
+        <section className={style.portfolioSection}>
           <Container>
             <h2 className={style.sectionTitle}>Portafolio</h2>
   
@@ -144,11 +148,22 @@ const Home: FC = () => {
               <div className={style.infoWrapper}>
                 <h3 className={style.projectTitle}>Blogr Landing Page</h3>
                 <div className={style.info}>
-                  <p>Enfoque de desarrollo: Mobile First</p>
-
-                  <p>Stack: NextJS, TypeScript, Sass (SCSS), SCSS Modules, Flexbox, <abbr title="Responsive Web Design">RWD</abbr></p>
-                  <p>Tipo de sitio web: Estático</p>
-                  <p>Tipo de renderizado: Static Generation (SSG) sin datos</p>
+                  <p>
+                    <span className={style.label}>Enfoque de desarrollo: </span>
+                    Mobile First
+                  </p>
+                  <p>
+                    <span className={style.label}>Stack: </span>
+                    NextJS, TypeScript, Sass (SCSS), SCSS Modules, Flexbox, Responsive Web Design
+                  </p>
+                  <p>
+                    <span className={style.label}>Tipo de sitio web:</span>
+                    Estático
+                  </p>
+                  <p>
+                    <span className={style.label}>Tipo de renderizado: </span>
+                    Static Generation (SSG) sin datos
+                  </p>
                 </div>
                 <div className={style.buttonsWrapper}>
                   <a className={style.button}
@@ -174,10 +189,21 @@ const Home: FC = () => {
               <div className={style.infoWrapper}>
                 <h3 className={style.projectTitle}>Easybank Landing Page</h3>
                 <div className={style.info}>
-                  <p>Enfoque de desarrollo: Mobile First</p>
-                  <p>Stack: ReactJS, TypeScript, Sass (SCSS), SCSS Modules, CSS Grid, Flexbox, <abbr title="Responsive Web Design">RWD</abbr></p>
-                  <p>Tipo de sitio web: Single Page Aplication (SPA)</p>
-                  <p>Tipo de renderizado: Client Side Rendering (CSR)</p>
+                  <p>
+                    <span className={style.label}>Enfoque de desarrollo: </span> Mobile First
+                  </p>
+                  <p>
+                    <span className={style.label}>Stack: </span>
+                    ReactJS, TypeScript, Sass (SCSS), SCSS Modules, CSS Grid, Flexbox, Responsive Web Design
+                  </p>
+                  <p>
+                    <span className={style.label}>Tipo de sitio web: </span>
+                    Single Page Aplication (SPA)
+                  </p>
+                  <p>
+                    <span className={style.label}>Tipo de renderizado: </span>
+                    Client Side Rendering (CSR)
+                  </p>
                 </div>
                 <div className={style.buttonsWrapper}>
                   <a className={style.button}
@@ -223,9 +249,18 @@ const Home: FC = () => {
               <div className={style.infoWrapper}>
                 <h3 className={style.projectTitle}>Insure Landing Page</h3>
                 <div className={style.info}>
-                  <p>Enfoque de desarrollo: Mobile First</p>
-                  <p>Stack: HTML, Sass (SCSS), JavaScript, Flexbox</p>
-                  <p>Tipo de sitio web: Estático</p>
+                  <p>
+                    <span className={style.label}>Enfoque de desarrollo: </span>
+                    Mobile First
+                  </p>
+                  <p>
+                    <span className={style.label}>Stack: </span>
+                    HTML, Sass (SCSS), JavaScript, Flexbox, Responsive Web Design
+                  </p>
+                  <p>
+                    <span className={style.label}>Tipo de sitio web: </span> 
+                    Estático
+                  </p>
                 </div>
                 <div className={style.buttonsWrapper}>
                   <a className={style.button}
