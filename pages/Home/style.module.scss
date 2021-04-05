@@ -3,10 +3,15 @@
 .Home {
   // GENERAL
   .sectionTitle {
-    font-size: 36px;
+    font-size: 32px;
     // font-weight: 400;
-    // text-align: center;
+    text-align: center;
     margin-bottom: 40px;
+
+    @include medium {
+      font-size: 36px;
+      text-align: left;
+    }
   }
 
   // MAIN SECTION
@@ -17,6 +22,11 @@
     min-height: 100vh;
     overflow: hidden;
     background-color: $transparent;
+
+    // Container Component
+    & > [class*="Container"] {
+      width: 100%;
+    }
 
     .layerContainer {
       position: absolute;
@@ -148,7 +158,6 @@
       line-height: 4vw;
       letter-spacing: 0;
       font-weight: 800;
-      letter-spacing: -1.7px;
       color: $main-dark-gray;
       margin-bottom: 50px;
     }
@@ -189,6 +198,7 @@
         margin-bottom: 70px;
         font-size: 40px;
         line-height: 32px;
+        letter-spacing: -1.7px;
       }
 
       .socialLinks { text-align: left; }
@@ -196,51 +206,57 @@
   }
 
   
-  // SECCION DE skills 
+  // SECCION TECH SKILLS
   .sectionTechSkills {
     padding-top: 80px;
     padding-bottom: 80px;
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 100%);
 
     .tecnologies {
-      // display: flex;
-      // flex-wrap: wrap;
       display: grid;
-      grid-template-rows: repeat(3, auto);
-      grid-template-columns: repeat(4, 1fr);
+      // grid-template-rows: repeat(5, auto);
+      grid-auto-rows: auto;
+      grid-template-columns: repeat(2, 1fr);
       grid-gap: 24px;
     }
     
     .tecnology {
-      // margin-left: 10px;
-      // margin-right: 10px;
-      min-width: 170px;
       display: flex;
-      // align-items: flex-end;
       align-items: center;
-      // height: 170px;
+      flex-direction: column;
       border-radius: 4px;
-      overflow: hidden;
-      background-color: hsl(0, 0%, 100%);
-
-
       padding: 12px 12px;
-
+      background-color: hsl(0, 0%, 95%);
       box-shadow: 0 2px 4px $shadow;
+      overflow: hidden;
+    }
 
-      & > .brandLogo {
-        display: flex;
-        align-items: center;
-        
-        & > * { height: 40px; }
-      }
+    .brandLogo {
+      display: flex;
+      align-items: center;
+      
+      & > * { height: 40px; }
+    }
 
-      & > span {
-        flex-grow: 1;
-        text-align: center;
-        font-weight: 700;
-      }
+    .label {
+      flex-grow: 1;
+      text-align: center;
+      font-weight: 700;
+      margin-top: 12px;
+    }
 
+    @include small {
+      .tecnology { flex-direction: row; }
+      
+      .label { margin-top: 0; }
+    }
+
+    @include medium {
+      .tecnologies { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @include large {
+      .tecnologies { grid-template-columns: repeat(5, 1fr); }
     }
   }
 
@@ -249,6 +265,7 @@
   .sectionProjects {
     padding-top: 80px;
     padding-bottom: 80px;
+    background-color: hsl(0, 0%, 98%);
 
     .projectTitle {
       font-size: 32px;

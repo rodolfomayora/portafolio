@@ -55,42 +55,42 @@ const Home: FC = () => {
                 <div className={style.brandLogo}>
                   <img src="/images/svg/react.svg" alt="Tecnology"/>
                 </div>
-                <span>ReactJS</span>
+                <span className={style.label}>ReactJS</span>
               </div>
 
               <div className={style.tecnology}>
                 <div className={style.brandLogo}>
                   <img src="/images/svg/typescript.svg" alt="Tecnology"/>
                 </div>
-                <span>TypeScript</span>
+                <span className={style.label}>TypeScript</span>
               </div>
 
               <div className={style.tecnology}>
                 <div className={style.brandLogo}>
                   <img src="/images/svg/javascript.svg" alt="Tecnology"/>
                 </div>
-                <span>Javascript</span>
+                <span className={style.label}>Javascript</span>
               </div>
 
               <div className={style.tecnology}>
                 <div className={style.brandLogo}>
                   <img src="/images/svg/sass.svg" alt="Tecnology"/>
                 </div>
-                <span>Sass</span>
+                <span className={style.label}>Sass</span>
               </div>
 
               <div className={style.tecnology}>
                 <div className={style.brandLogo}>
                   <img src="/images/svg/git.svg" alt="Tecnology"/>
                 </div>
-                <span>Git</span>
+                <span className={style.label}>Git</span>
               </div>
 
               <div className={style.tecnology}>
                 <div className={style.brandLogo}>
                   <img src="/images/svg/yarn.svg" alt="Tecnology"/>
                 </div>
-                <span>Yarn</span>
+                <span className={style.label}>Yarn</span>
               </div>
 
               <div className={style.tecnology}>
@@ -98,28 +98,28 @@ const Home: FC = () => {
                   <img src="/images/svg/nextjs.svg" alt="Tecnology"/>
                   {/* <Nextjs /> */}
                 </div>
-                <span>NextJS</span>
+                <span className={style.label}>NextJS</span>
               </div>
 
               <div className={style.tecnology}>
                 <div className={style.brandLogo}>
                   <img src="/images/svg/html5.svg" alt="Tecnology"/>
                 </div>
-                <span>HTML5</span>
+                <span className={style.label}>HTML5</span>
               </div>
 
               <div className={style.tecnology}>
                 <div className={style.brandLogo}>
                   <img src="/images/svg/css3.svg" alt="Tecnology"/>
                 </div>
-                <span>CSS3</span>
+                <span className={style.label}>CSS3</span>
               </div>
 
               <div className={style.tecnology}>
                 <div className={style.brandLogo}>
                   <img src="/images/svg/redux.svg" alt="Tecnology"/>
                 </div>
-                <span>Redux</span>
+                <span className={style.label}>Redux</span>
               </div>
 
             </div>
