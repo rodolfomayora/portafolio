@@ -27,7 +27,7 @@ const Home: FC = () => {
             <div className={style.sectionContainer}>
               <div className={style.frostedLayer}></div>
 
-              <div>
+              <div className={style.infoWrapper}>
                 <h1 className={style.mainTitle}>
                   RODOLFO<br />
                   MAYORA<br />
@@ -36,10 +36,10 @@ const Home: FC = () => {
                 <div className={style.techRol}>
                   FRONTEND DEVELOPER
                 </div>
-                <div>
-                  <Github className={style.socialLink} />
-                  <Linkedin className={style.socialLink} />
-                  <Telegram className={style.socialLink} />
+                <div className={style.socialLinks}>
+                  <Github className={style.link} />
+                  <Linkedin className={style.link} />
+                  <Telegram className={style.link} />
                 </div>
               </div>
             </div>
