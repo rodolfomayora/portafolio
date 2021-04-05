@@ -1,7 +1,12 @@
 // Primary
-$white: hsl(0, 50%, 100%);
 $light: hsl(190deg, 14%, 83%);
 $dark : hsl(232deg, 11%, 26%);
-$green: hsl(166, 54%, 15%);
 
+$green: hsl(166, 54%, 15%);
+$main-dark : hsl(166deg, 6%, 22%); // titles
+$main-dark-gray : hsl(166deg, 6%, 36%);
+$main-gray: hsl(166, 6%, 48%); // body text
+$shadow: hsla(166deg, 6%, 22%, 0.4); // shadows
+
+$white: hsl(0, 50%, 100%);
 $transparent: hsla(0, 0%, 0%, 0);

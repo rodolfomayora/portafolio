@@ -7,7 +7,7 @@ import Footer from '../Footer';
 const Layout: FC<LayoutProps> = ({ children, pageTitle }) => (
   <>
     <Head>
-      <title>{pageTitle}{' '}| Rodolfo Mayora Pereda</title>
+      <title>{pageTitle}{' '}| Rodolfo Mayora Pereda | FrontEnd Developer</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
     {/* <Header /> */}

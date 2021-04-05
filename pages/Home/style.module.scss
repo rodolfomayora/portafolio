@@ -1,31 +1,171 @@
 @import '../../styles/config';
 
 .Home {
-  min-height: 600px; // temporal
-
-  // MAIN SECTION
-  .mainSection {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding-bottom: 40px;
-    min-height: 100vh;
-  }
-
-  .mainTitle {
-    font-size: 72px;
-    line-height: 60px;
-    font-weight: 900;
-  }
-
-  .subTitle {
+  // GENERAL
+  .sectionTitle {
     font-size: 36px;
     // font-weight: 400;
     // text-align: center;
     margin-bottom: 40px;
   }
 
+  // MAIN SECTION
+  .mainSection {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: $transparent;
 
+    .layerContainer {
+      position: absolute;
+      z-index: -1;
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      display: flex;
+    }
+
+    .layer {
+      flex-grow: 1;
+      position: relative;
+      z-index: 0;
+      transform: skewX(27deg);
+      filter: blur(120px);
+    }
+
+    .shape {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      /* border-radius: 50%; */
+      // filter: blur(60px);
+    }
+
+    .shape:nth-of-type(1) {
+      top: 30%;
+      left: 25%;
+      transform: translate(-60%, -60%);
+      background-color: $white; // light
+      // background-color: hsl(166, 54%, 15%);
+      /* background: transparent; */
+      border-radius: 100%;
+    }
+
+    .shape:nth-of-type(2) {
+      top: 30%;
+      left: 75%;
+      transform: translate(-40%, -60%);
+      background: hsl(152, 100%, 50%); // light
+      // background-color: hsl(163, 63%, 43%);
+      border-radius: 100%;
+    }
+    
+    .shape:nth-of-type(3) {
+      top: 80%;
+      left: 75%;
+      transform: translate(-40%, -39%);
+      background-color: hsl(168, 95%, 43%); // light
+      // background-color: hsl(191, 100%, 35%);
+      border-radius: 100%;
+    }
+    
+    .shape:nth-of-type(4) {
+      top: 80%;
+      left: 25%;
+      transform: translate(-60%, -39%);
+      background-color: hsl(136, 94%, 66%); // light
+      // background-color: hsl(149, 81%, 25%);
+      border-radius: 100%;
+    }
+
+    .shape:nth-of-type(5) {
+      left: 40%;
+      top: 49%;
+      transform:
+        translate(-40%, -40%)
+        rotateZ(-8deg);
+      height: 0;
+      width: 0;
+      border-top: solid 45vh hsl(174, 100%, 70%);  //light
+      border-left: solid 45vw hsla(0, 0%, 100%, 0);
+      border-right: solid 86vw hsla(0, 0%, 100%, 0);
+      
+      // border-top: solid 80px hsl(166, 54%, 15%);
+      // border-top: solid 80px  hsl(234deg, 53%, 64%);
+      // border-left: solid 150px hsla(0, 0%, 100%, 0);
+      // border-right: solid 250px hsla(0, 0%, 100%, 0);
+      
+      // border-top: solid 45vh hsl(234deg, 53%, 15%);
+      // border-top: solid 45vh hsl(200deg, 38%, 77%);
+      // border-top: solid 45vh hsl(174, 100%, 50%);
+    }
+
+    .sectionContainer {
+      position: relative;
+      z-index: 0;
+      width: 60%;
+      min-width: fit-content;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: 50px;
+    }
+
+    .frostedLayer {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 200%;
+
+      background-color: hsla(0, 0%, 100%, 0.6);
+    }
+
+    .mainTitle {
+      margin-bottom: 10px;
+      font-size: 90px;
+      line-height: 80px;
+      font-weight: 900;
+
+      background-color: $dark;
+      background: linear-gradient(
+        90deg,
+        hsl(167deg, 92%, 20%),
+        hsl(136deg, 94%, 40%)
+      );
+      background-clip: text;
+      -webkit-text-fill-color: $transparent;
+    }
+
+    .techRol {
+      margin-bottom: 70px;
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 32px;
+      letter-spacing: -1.7px;
+      color: $main-dark-gray;
+    }
+
+    .socialLink {
+      height: 26px;
+      fill: hsl(167deg, 92%, 20%);
+      cursor: pointer;
+
+      &:hover { fill: hsl(136deg, 94%, 40%); }
+
+      &:first-child ~ * { margin-left: 30px; }
+    }
+  }
+
+  
+
+  
 
 
   
@@ -33,7 +173,7 @@
   .sectionTechSkills {
     padding-top: 80px;
     padding-bottom: 80px;
-    background-color: hsl(0, 0%, 95%);
+    background-color: hsl(0, 0%, 98%);
 
     .tecnologies {
       // display: flex;
@@ -41,7 +181,7 @@
       display: grid;
       grid-template-rows: repeat(3, auto);
       grid-template-columns: repeat(4, 1fr);
-      grid-gap: 20px;
+      grid-gap: 24px;
     }
     
     .tecnology {
@@ -59,9 +199,11 @@
 
       padding: 12px 12px;
 
-      box-shadow: 0 2px 5px hsla(0, 0%, 21%, 0.315);
+      box-shadow: 0 2px 4px $shadow;
 
       & > .brandLogo {
+        display: flex;
+        align-items: center;
         
         & > * { height: 40px; }
       }
@@ -141,10 +283,11 @@
       padding: 10px 20px;
       font-size: 16px;
       font-weight: 700;
-      color: $dark;
+      color: $main-gray;
       text-align: center;
-      border: solid 2px $dark;
+      border: solid 2px $main-gray;
       border-radius: 4px;
+      box-shadow: 0 2px 4px rgb(53 59 58 / 40%);
     }
   }
 

@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Layout, Container } from '../../components';
 import style from './style.module.scss';
+import { Github, Linkedin, Telegram} from '../../public/images';
 
 import { Nextjs } from '../../public/images';
 
@@ -10,17 +11,44 @@ const Home: FC = () => {
   return (
     <Layout pageTitle="Inicio">
       <main className={style.Home}>
-  
+
         <section className={style.mainSection}>
+          <div className={style.layerContainer}>
+            <div className={style.layer}>
+              <div className={style.shape}></div>
+              <div className={style.shape}></div>
+              <div className={style.shape}></div>
+              <div className={style.shape}></div>
+              <div className={style.shape}></div>
+            </div>
+          </div>
+
           <Container>
-            <h1 className={style.mainTitle}>RODOLFO<br /> MAYORA<br /> PEREDA</h1>
-            <h2>FRONTEND DEVELOPER</h2>
+            <div className={style.sectionContainer}>
+              <div className={style.frostedLayer}></div>
+
+              <div>
+                <h1 className={style.mainTitle}>
+                  RODOLFO<br />
+                  MAYORA<br />
+                  PEREDA
+                </h1>
+                <div className={style.techRol}>
+                  FRONTEND DEVELOPER
+                </div>
+                <div>
+                  <Github className={style.socialLink} />
+                  <Linkedin className={style.socialLink} />
+                  <Telegram className={style.socialLink} />
+                </div>
+              </div>
+            </div>
           </Container>
         </section>
   
         <section className={style.sectionTechSkills}>
           <Container>
-            <h2 className={style.subTitle}>¿Qué utilizo?</h2>
+            <h2 className={style.sectionTitle}>¿Qué utilizo?</h2>
             <div className={style.tecnologies}>
 
               <div className={style.tecnology}>
@@ -94,14 +122,13 @@ const Home: FC = () => {
                 <span>Redux</span>
               </div>
 
-
             </div>
           </Container>
         </section>
   
         <section className={style.sectionProjects}>
           <Container>
-            <h2 className={style.subTitle}>Portafolio</h2>
+            <h2 className={style.sectionTitle}>Portafolio</h2>
   
             <article className={style.projectSummary}>
               <div className={style.mockupWrapper}>

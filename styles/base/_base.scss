@@ -12,7 +12,8 @@ body {
 :root {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: hsl(232deg, 11%, 26%);
+  // color: hsl(232deg, 11%, 26%);
+  color: $main-gray;
 }
 
 h1,
@@ -24,6 +25,7 @@ h5,
 h6 {
   font-family: 'Poppins';
   font-weight: bold;
+  color: $main-dark;
 }
 
 img,
