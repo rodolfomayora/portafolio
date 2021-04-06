@@ -6,8 +6,7 @@
   background-color: $dark;
   color: $white;
 
-  // Container
-  & > :first-child {
+  .footerWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,11 +23,10 @@
 
   .navigationContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center
   }
 
-  .navigationLink:first-child ~ * { margin-top: 14px; }
+  .navigationLink:first-child ~ * { margin-left: 20px; }
 
   .socialLink {
     width: 22px;
@@ -41,16 +39,15 @@
     padding-top: 60px;
     padding-bottom: 50px;
 
-    // Container
-    & > :first-child {
+    .footerWrapper {
       flex-direction: row;
-      align-items: flex-start;
 
       // items
       & > * { flex-grow: 1; }
+      
       & > :first-child ~ * { margin-top: 0 };
     }
 
-    .navigationContainer { align-items: flex-start; }
+    .socialWrapper { text-align: right;}
   }
 }

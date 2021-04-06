@@ -28,89 +28,6 @@
       width: 100%;
     }
 
-    .layerContainer {
-      position: absolute;
-      z-index: -1;
-      top: -10px;
-      left: -10px;
-      right: -10px;
-      bottom: -10px;
-      display: flex;
-    }
-
-    .layer {
-      flex-grow: 1;
-      position: relative;
-      z-index: 0;
-      transform: skewX(27deg);
-      filter: blur(120px);
-    }
-
-    .shape {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-
-    .shape:nth-of-type(1) {
-      top: 30%;
-      left: 25%;
-      transform: translate(-60%, -60%);
-      background-color: $white; // light
-      // background-color: hsl(166, 54%, 15%);
-      /* background: transparent; */
-      border-radius: 100%;
-    }
-
-    .shape:nth-of-type(2) {
-      top: 30%;
-      left: 75%;
-      transform: translate(-40%, -60%);
-      background: hsl(152, 100%, 50%); // light
-      // background-color: hsl(163, 63%, 43%);
-      border-radius: 100%;
-    }
-    
-    .shape:nth-of-type(3) {
-      top: 80%;
-      left: 75%;
-      transform: translate(-40%, -39%);
-      background-color: hsl(168, 95%, 43%); // light
-      // background-color: hsl(191, 100%, 35%);
-      border-radius: 100%;
-    }
-    
-    .shape:nth-of-type(4) {
-      top: 80%;
-      left: 25%;
-      transform: translate(-60%, -39%);
-      background-color: hsl(136, 94%, 66%); // light
-      // background-color: hsl(149, 81%, 25%);
-      border-radius: 100%;
-    }
-
-    .shape:nth-of-type(5) {
-      left: 40%;
-      top: 49%;
-      transform:
-        translate(-40%, -40%)
-        rotateZ(-8deg);
-      height: 0;
-      width: 0;
-      border-top: solid 45vh hsl(174, 100%, 70%);  //light
-      border-left: solid 45vw hsla(0, 0%, 100%, 0);
-      border-right: solid 86vw hsla(0, 0%, 100%, 0);
-      
-      // border-top: solid 80px hsl(166, 54%, 15%);
-      // border-top: solid 80px  hsl(234deg, 53%, 64%);
-      // border-left: solid 150px hsla(0, 0%, 100%, 0);
-      // border-right: solid 250px hsla(0, 0%, 100%, 0);
-      
-      // border-top: solid 45vh hsl(234deg, 53%, 15%);
-      // border-top: solid 45vh hsl(200deg, 38%, 77%);
-      // border-top: solid 45vh hsl(174, 100%, 50%);
-    }
-
     .sectionWrapper {
       position: relative;
       z-index: 0;
@@ -223,39 +140,6 @@
       grid-gap: 24px;
     }
     
-    .tecnology {
-      position: relative;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      border-radius: 4px;
-      padding: 12px 12px;
-      background-color: hsl(0, 0%, 95%);
-      overflow: hidden;
-      border-left: solid 6px hsl(167, 92%, 20%);
-      box-shadow: 0 2px 4px $shadow;
-    }
-
-    .brandLogo {
-      display: flex;
-      align-items: center;
-      
-      & > * { height: 40px; }
-    }
-
-    .label {
-      flex-grow: 1;
-      text-align: center;
-      font-weight: 700;
-      margin-top: 12px;
-    }
-
-    @include small {
-      .tecnology { flex-direction: row; }
-      
-      .label { margin-top: 0; }
-    }
-
     @include medium {
       .tecnologies { grid-template-columns: repeat(3, 1fr); }
     }
@@ -268,7 +152,6 @@
 
   // SECCION DE PROYECTOS
   .portfolioSection {
-    
     background-color: hsl(0, 0%, 95%);
 
     .sectionWraper {
@@ -276,121 +159,7 @@
       padding-bottom: 80px;
     }
 
-    .projectSummary {
-      &:first-of-type ~ .projectSummary {
-        margin-top: 80px;
-      }
-    }
-  
-    .mockupWrapperDesktop {
-      width: 0;
-      height: 0;
-      visibility: hidden;
-    }
-  
-    .mockupWrapperMobile { overflow: hidden; }
-
-    .mockupLayer {
-      position: relative;
-      padding-top: 50%;
-    }
-  
-    .mockup {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-    }
-  
-    .infoWrapper > :first-child ~ * {
-      margin-top: 25px;
-    }
-
-    .projectTitle {
-      font-size: 32px;
-      font-weight: 400;
-      text-align: center;
-    }
-  
-    .info {
-      margin-bottom: 20px;
-      line-height: 24px;
-    }
-
-    .label { font-weight: 700; }
-  
-    .buttonsWrapper > :first-child { margin-bottom: 25px; }
-  
-    .button {
-      display: block;
-      padding: 16px 20px;
-      font-size: 16px;
-      font-weight: 700;
-      color: $white;
-      text-align: center;
-      background-color: hsl(167, 92%, 20%);
-      border-radius: 4px;
-      box-shadow: 0 2px 4px rgb(53 59 58 / 40%);
-      transition: background-color 0.3s ease;
-      
-      &:hover {
-        background-color: hsl(167deg, 92%, 30%);
-      }
-
-      &.more { margin-top: 100px; }
-    }
-
-    @include small {
-      .buttonsWrapper {
-        display: flex;
-
-        & > * { flex-basis: 50%; }
-
-        & > :first-child {
-          margin-right: 20px;
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    @include medium {
-      .projectSummary {
-        display: flex;
-        align-items: center;
-
-        & > :first-child { margin-right: 20px; }
-      }
-
-      .infoWrapper { flex-basis: 50%; }
-
-      .projectTitle { text-align: left; }
-
-      .mockupWrapperMobile {
-        width: 0;
-        height: 0;
-        visibility: hidden;
-        position: absolute;
-        z-index: -99;
-      }
-  
-      .mockupWrapperDesktop {
-        width: auto;
-        height: auto;
-        visibility: visible;
-        flex-basis: 50%;
-        
-      }
-
-      .mockupLayer {
-        position: relative;
-        padding-top: 60%;
-      }
-    }
+    .more { margin-top: 100px; }
   }
 
   // SECCION DE INTERESES
