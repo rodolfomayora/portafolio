@@ -132,158 +132,200 @@ const Home: FC = () => {
         {/* Portfolio Section */}
         <section className={style.portfolioSection}>
           <Container>
-            <h2 className={style.sectionTitle}>Portafolio</h2>
-  
-            <article className={style.projectSummary}>
-              <div className={style.mockupWrapper}>
-                <div className={style.mockupLayer}>
-                  <picture>
-                    <img className={style.mockup}
-                      src="/images/static/blogr-mockup.png"
-                      alt="Blogr Landing Page Mockup"
-                    />
-                </picture>
+            <div className={style.sectionWraper}>
+              <h2 className={style.sectionTitle}>Portafolio</h2>
+    
+              <article className={style.projectSummary}>
+
+                <div className={style.mockupWrapperDesktop}>
+                  <div className={style.mockupLayer}>
+                    <picture>
+                      <img className={style.mockup}
+                        src="/images/static/blogr-mockup.png"
+                        alt="Blogr Landing Page Mockup"
+                      />
+                    </picture>
+                  </div>
                 </div>
+
+                <div className={style.infoWrapper}>
+                  <h3 className={style.projectTitle}>Blogr Landing Page</h3>
+
+                  <div className={style.mockupWrapperMobile}>
+                    <div className={style.mockupLayer}>
+                      <picture>
+                        <img className={style.mockup}
+                          src="/images/static/blogr-mockup.png"
+                          alt="Blogr Landing Page Mockup"
+                        />
+                      </picture>
+                    </div>
+                  </div>
+                  <div className={style.info}>
+                    <p>
+                      <span className={style.label}>Enfoque de desarrollo: </span>
+                      Mobile First
+                    </p>
+                    <p>
+                      <span className={style.label}>Stack: </span>
+                      NextJS, TypeScript, Sass (SCSS), SCSS Modules, Flexbox, Responsive Web Design
+                    </p>
+                    <p>
+                      <span className={style.label}>Tipo de sitio web:</span>
+                      Estático
+                    </p>
+                    <p>
+                      <span className={style.label}>Tipo de renderizado: </span>
+                      Static Generation (SSG) sin datos
+                    </p>
+                  </div>
+                  <div className={style.buttonsWrapper}>
+                    <a className={style.button}
+                      href="https://blogr-landing-page-orcin.vercel.app"
+                      target="_blank"
+                      rel="external noopener noreferrer"
+                    >
+                      Ver Online
+                    </a>
+    
+                    <a className={style.button}
+                      href="https://github.com/rodolfomayora/blogr-landing-page.git"
+                      target="_blank"
+                      rel="external noopener noreferrer"
+                    >
+                      Repositorio
+                    </a>
+                  </div>
+                </div>
+              </article>
+    
+              <article className={style.projectSummary}>
+                <div className={style.infoWrapper}>
+                  <h3 className={style.projectTitle}>Easybank Landing Page</h3>
+
+                  <div className={style.mockupWrapperMobile}>
+                    <div className={style.mockupLayer}>
+                      <picture>
+                        <img className={style.mockup}
+                          src="/images/static/easybank-mockup.png"
+                          alt="Easybank Landing Page Mockup"
+                        />
+                    </picture>
+                    </div>
+                  </div>
+
+                  <div className={style.info}>
+                    <p>
+                      <span className={style.label}>Enfoque de desarrollo: </span> Mobile First
+                    </p>
+                    <p>
+                      <span className={style.label}>Stack: </span>
+                      ReactJS, TypeScript, Sass (SCSS), SCSS Modules, CSS Grid, Flexbox, Responsive Web Design
+                    </p>
+                    <p>
+                      <span className={style.label}>Tipo de sitio web: </span>
+                      Single Page Aplication (SPA)
+                    </p>
+                    <p>
+                      <span className={style.label}>Tipo de renderizado: </span>
+                      Client Side Rendering (CSR)
+                    </p>
+                  </div>
+                  <div className={style.buttonsWrapper}>
+                    <a className={style.button}
+                      href="https://rodolfomayora.github.io/easybank-landing-page"
+                      target="_blank"
+                      rel="external noopener noreferrer"
+                    >
+                      Ver Online
+                    </a>
+    
+                    <a className={style.button}
+                      href="https://github.com/rodolfomayora/easybank-landing-page.git"
+                      target="_blank"
+                      rel="external noopener noreferrer"
+                    >
+                      Repositorio
+                    </a>
+                  </div>
+                </div>
+
+                <div className={style.mockupWrapperDesktop}>
+                  <div className={style.mockupLayer}>
+                    <picture>
+                      <img className={style.mockup}
+                        src="/images/static/easybank-mockup.png"
+                        alt="Easybank Landing Page Mockup"
+                      />
+                  </picture>
+                  </div>
+                </div>
+              </article>
+    
+              <article className={style.projectSummary}>
+                <div className={style.mockupWrapperDesktop}>
+                  <div className={style.mockupLayer}>
+                    <picture>
+                      <img className={style.mockup}
+                        src="/images/static/insure-mockup.png"
+                        alt="Insure Landing Page Mockup"
+                      />
+                  </picture>
+                  </div>
+                </div>
+
+                <div className={style.infoWrapper}>
+                  <h3 className={style.projectTitle}>Insure Landing Page</h3>
+
+                  <div className={style.mockupWrapperMobile}>
+                    <div className={style.mockupLayer}>
+                      <picture>
+                        <img className={style.mockup}
+                          src="/images/static/insure-mockup.png"
+                          alt="Insure Landing Page Mockup"
+                        />
+                    </picture>
+                    </div>
+                  </div>
+
+                  <div className={style.info}>
+                    <p>
+                      <span className={style.label}>Enfoque de desarrollo: </span>
+                      Mobile First
+                    </p>
+                    <p>
+                      <span className={style.label}>Stack: </span>
+                      HTML, Sass (SCSS), JavaScript, Flexbox, Responsive Web Design
+                    </p>
+                    <p>
+                      <span className={style.label}>Tipo de sitio web: </span> 
+                      Estático
+                    </p>
+                  </div>
+                  <div className={style.buttonsWrapper}>
+                    <a className={style.button}
+                      href="https://rodolfomayora.github.io/insure-landing-page"
+                      target="_blank"
+                      rel="external noopener noreferrer"
+                    >
+                      Ver Online
+                    </a>
+    
+                    <a className={style.button}
+                      href="https://github.com/rodolfomayora/insure-landing-page.git"
+                      target="_blank"
+                      rel="external noopener noreferrer"
+                    >
+                      Repositorio
+                    </a>
+                  </div>
+                </div>
+              </article>
+    
+              <div className={style.button + ' ' + style.more}>
+                Ver más proyectos
               </div>
-              <div className={style.infoWrapper}>
-                <h3 className={style.projectTitle}>Blogr Landing Page</h3>
-                <div className={style.info}>
-                  <p>
-                    <span className={style.label}>Enfoque de desarrollo: </span>
-                    Mobile First
-                  </p>
-                  <p>
-                    <span className={style.label}>Stack: </span>
-                    NextJS, TypeScript, Sass (SCSS), SCSS Modules, Flexbox, Responsive Web Design
-                  </p>
-                  <p>
-                    <span className={style.label}>Tipo de sitio web:</span>
-                    Estático
-                  </p>
-                  <p>
-                    <span className={style.label}>Tipo de renderizado: </span>
-                    Static Generation (SSG) sin datos
-                  </p>
-                </div>
-                <div className={style.buttonsWrapper}>
-                  <a className={style.button}
-                    href="https://blogr-landing-page-orcin.vercel.app"
-                    target="_blank"
-                    rel="external noopener noreferrer"
-                  >
-                    Ver Online
-                  </a>
-  
-                  <a className={style.button}
-                    href="https://github.com/rodolfomayora/blogr-landing-page.git"
-                    target="_blank"
-                    rel="external noopener noreferrer"
-                  >
-                    Repositorio
-                  </a>
-                </div>
-              </div>
-            </article>
-  
-            <article className={style.projectSummary}>
-              <div className={style.infoWrapper}>
-                <h3 className={style.projectTitle}>Easybank Landing Page</h3>
-                <div className={style.info}>
-                  <p>
-                    <span className={style.label}>Enfoque de desarrollo: </span> Mobile First
-                  </p>
-                  <p>
-                    <span className={style.label}>Stack: </span>
-                    ReactJS, TypeScript, Sass (SCSS), SCSS Modules, CSS Grid, Flexbox, Responsive Web Design
-                  </p>
-                  <p>
-                    <span className={style.label}>Tipo de sitio web: </span>
-                    Single Page Aplication (SPA)
-                  </p>
-                  <p>
-                    <span className={style.label}>Tipo de renderizado: </span>
-                    Client Side Rendering (CSR)
-                  </p>
-                </div>
-                <div className={style.buttonsWrapper}>
-                  <a className={style.button}
-                    href="https://rodolfomayora.github.io/easybank-landing-page"
-                    target="_blank"
-                    rel="external noopener noreferrer"
-                  >
-                    Ver Online
-                  </a>
-  
-                  <a className={style.button}
-                    href="https://github.com/rodolfomayora/easybank-landing-page.git"
-                    target="_blank"
-                    rel="external noopener noreferrer"
-                  >
-                    Repositorio
-                  </a>
-                </div>
-              </div>
-              <div className={style.mockupWrapper}>
-                <div className={style.mockupLayer}>
-                  <picture>
-                    <img className={style.mockup}
-                      src="/images/static/easybank-mockup.png"
-                      alt="Easybank Landing Page Mockup"
-                    />
-                </picture>
-                </div>
-              </div>
-            </article>
-  
-            <article className={style.projectSummary}>
-              <div className={style.mockupWrapper}>
-                <div className={style.mockupLayer}>
-                  <picture>
-                    <img className={style.mockup}
-                      src="/images/static/insure-mockup.png"
-                      alt="Insure Landing Page Mockup"
-                    />
-                </picture>
-                </div>
-              </div>
-              <div className={style.infoWrapper}>
-                <h3 className={style.projectTitle}>Insure Landing Page</h3>
-                <div className={style.info}>
-                  <p>
-                    <span className={style.label}>Enfoque de desarrollo: </span>
-                    Mobile First
-                  </p>
-                  <p>
-                    <span className={style.label}>Stack: </span>
-                    HTML, Sass (SCSS), JavaScript, Flexbox, Responsive Web Design
-                  </p>
-                  <p>
-                    <span className={style.label}>Tipo de sitio web: </span> 
-                    Estático
-                  </p>
-                </div>
-                <div className={style.buttonsWrapper}>
-                  <a className={style.button}
-                    href="https://rodolfomayora.github.io/insure-landing-page"
-                    target="_blank"
-                    rel="external noopener noreferrer"
-                  >
-                    Ver Online
-                  </a>
-  
-                  <a className={style.button}
-                    href="https://github.com/rodolfomayora/insure-landing-page.git"
-                    target="_blank"
-                    rel="external noopener noreferrer"
-                  >
-                    Repositorio
-                  </a>
-                </div>
-              </div>
-            </article>
-  
-            <div className={style.button}>Ver más proyectos</div>
-  
+            </div>
           </Container>
         </section>
   

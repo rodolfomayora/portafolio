@@ -3,14 +3,13 @@
 .Home {
   // GENERAL
   .sectionTitle {
-    font-size: 32px;
+    font-size: 36px;
     // font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
     color: hsl(167, 92%, 15%);
 
     @include medium {
-      font-size: 40px;
       text-align: left;
     }
   }
@@ -269,34 +268,31 @@
 
   // SECCION DE PROYECTOS
   .portfolioSection {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    
     background-color: hsl(0, 0%, 95%);
 
-    .projectTitle {
-      font-size: 32px;
-      font-weight: 400;
-      margin-bottom: 20px;
+    .sectionWraper {
+      padding-top: 80px;
+      padding-bottom: 80px;
     }
-  
+
     .projectSummary {
-      display: flex;
-      align-items: center;
-  
-      & > :first-child { margin-right: 20px; }
-  
-      &:first-of-type ~ * { margin-top: 60px; }
+      &:first-of-type ~ .projectSummary {
+        margin-top: 80px;
+      }
     }
   
-    .mockupWrapper {
-      flex-basis: 50%;
+    .mockupWrapperDesktop {
+      width: 0;
+      height: 0;
+      visibility: hidden;
     }
   
+    .mockupWrapperMobile { overflow: hidden; }
+
     .mockupLayer {
       position: relative;
-      padding-top: 60%;
-      overflow: hidden;
-      border-radius: 4px;
+      padding-top: 50%;
     }
   
     .mockup {
@@ -311,10 +307,14 @@
       object-position: center;
     }
   
-    .infoWrapper {
-      flex-basis: 50%;
+    .infoWrapper > :first-child ~ * {
+      margin-top: 25px;
+    }
 
-      & > :first-child ~ * { margin-top: 20px; }
+    .projectTitle {
+      font-size: 32px;
+      font-weight: 400;
+      text-align: center;
     }
   
     .info {
@@ -322,24 +322,17 @@
       line-height: 24px;
     }
 
-    .label {
-      font-weight: 700;
-    }
+    .label { font-weight: 700; }
   
-    .buttonsWrapper {
-      display: flex;
-      & > * { flex-basis: 50%; }
-      & > :first-child { margin-right: 20px; }
-    }
+    .buttonsWrapper > :first-child { margin-bottom: 25px; }
   
     .button {
-      display: inline-block;
-      padding: 10px 20px;
+      display: block;
+      padding: 16px 20px;
       font-size: 16px;
       font-weight: 700;
       color: $white;
       text-align: center;
-      // border: solid 2px $main-gray;
       background-color: hsl(167, 92%, 20%);
       border-radius: 4px;
       box-shadow: 0 2px 4px rgb(53 59 58 / 40%);
@@ -348,10 +341,57 @@
       &:hover {
         background-color: hsl(167deg, 92%, 30%);
       }
+
+      &.more { margin-top: 100px; }
+    }
+
+    @include small {
+      .buttonsWrapper {
+        display: flex;
+
+        & > * { flex-basis: 50%; }
+
+        & > :first-child {
+          margin-right: 20px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    @include medium {
+      .projectSummary {
+        display: flex;
+        align-items: center;
+
+        & > :first-child { margin-right: 20px; }
+      }
+
+      .infoWrapper { flex-basis: 50%; }
+
+      .projectTitle { text-align: left; }
+
+      .mockupWrapperMobile {
+        width: 0;
+        height: 0;
+        visibility: hidden;
+        position: absolute;
+        z-index: -99;
+      }
+  
+      .mockupWrapperDesktop {
+        width: auto;
+        height: auto;
+        visibility: visible;
+        flex-basis: 50%;
+        
+      }
+
+      .mockupLayer {
+        position: relative;
+        padding-top: 60%;
+      }
     }
   }
-
-  
 
   // SECCION DE INTERESES
 
