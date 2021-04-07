@@ -29,6 +29,10 @@ const Footer: FC = () => (
           <Telegram className={style.socialLink} />
         </div>
       </div>
+
+      <div className={style.footerBottom}>
+        <small>&copy; 2021 - Rodolfo Mayora Pereda</small>
+      </div>
     </Container>
   </footer>
 )

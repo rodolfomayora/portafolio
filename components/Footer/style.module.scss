@@ -57,6 +57,13 @@
     }
   }
 
+  .footerBottom {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: solid 1px $light-aurora-4;
+  }
+
   @include medium {
     padding-top: 60px;
     padding-bottom: 50px;
