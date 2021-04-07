@@ -33,11 +33,31 @@
   }
 
   .navigationBar {
-    
     // Links
     & > * {
       position: relative;
-      color: $main-dark-gray
+      color: $gray;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: 10;
+        height: 5px;
+        bottom: -12px;
+        left: 0;
+        width: 0;
+        background: linear-gradient(
+          90deg,
+          $light-gradient-1,
+          $light-gradient-2
+        );
+
+        transition: width 0.2s linear;
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
     }
       
     & > * + * { margin-left: 20px; }
@@ -56,8 +76,8 @@
 
         background: linear-gradient(
           90deg,
-          hsl(167deg, 92%, 20%),
-          hsl(136deg, 94%, 40%)
+          $light-gradient-1,
+          $light-gradient-2
         );
       }
     }
@@ -67,7 +87,7 @@
     display: block;
     width: 40px;
     height: 40px;
-    background: rgb(53, 53, 53);
+    background: $green;
     border-radius: 50%;
 
     margin-left: auto;

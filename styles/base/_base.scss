@@ -13,8 +13,7 @@ body {
 :root {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 16px;
-  // color: hsl(232deg, 11%, 26%);
-  color: $main-gray;
+  color: $gray;
 }
 
 h1,
@@ -26,7 +25,7 @@ h5,
 h6 {
   font-family: 'Poppins';
   font-weight: bold;
-  color: hsl(167, 92%, 15%);
+  color: $dark-gray;
 }
 
 img,
@@ -37,7 +36,8 @@ figure {
 
 a {
   text-decoration: none;
-  -webkit-tap-highlight-color: hsla(0, 0%, 0%, 0);
+  -webkit-tap-highlight-color: $transparent;
+  cursor: pointer;
 }
 
 abbr[title] { text-decoration: none; }

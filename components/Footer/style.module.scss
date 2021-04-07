@@ -19,20 +19,42 @@
     font-size: 18px;
     font-weight: 900;
     line-height: 16px;
+    color: $white;
+    transition: color 0.3s linear;
+
+    &:hover {
+      // color: hsl(141, 92%, 65%);
+      color: $light-aurora-4;
+    }
   }
 
   .navigationContainer {
     display: flex;
-    justify-content: center
-  }
+    justify-content: center;
 
-  .navigationLink:first-child ~ * { margin-left: 20px; }
+    // Links
+    & > * {
+      color: $white;
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: $light-aurora-4;
+      }
+    }
+
+    & > * + * { margin-left: 20px; }
+  }
 
   .socialLink {
     width: 22px;
     fill: $white;
+    transition: fill 0.3s ease;
 
     &:first-of-type ~ * { margin-left: 18px}
+
+    &:hover {
+      fill: $light-aurora-4;
+    }
   }
 
   @include medium {

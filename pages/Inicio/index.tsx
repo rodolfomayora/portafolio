@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import {
-  Header,
   Layout,
   Container,
   AuroraBackground,
@@ -8,6 +7,7 @@ import {
   MainButtonWrapper,
   ProyectSummary
 } from '../../components';
+import Link from 'next/link';
 import style from './style.module.scss';
 import { Github, Linkedin, Telegram} from '../../public/images';
 import projects from '../../Utils/projects';
@@ -28,7 +28,7 @@ const Home: FC = () => {
 
   return (
     <Layout pageTitle="Inicio">
-      <main className={style.Home}>
+      <main className={style.Inicio}>
 
         {/* Main Section */}
         <section className={style.mainSection}>
@@ -56,8 +56,6 @@ const Home: FC = () => {
             </div>
           </Container>
         </section>
-
-        {/* <Header /> */}
 
         {/* Tech Skills Section */}
         <section className={style.sectionTechSkills}>
@@ -99,7 +97,9 @@ const Home: FC = () => {
 
               <div className={style.more}>
                 <MainButtonWrapper>
-                  <a>Ver más proyectos</a>
+                  <Link href="/Portafolio">
+                    <a>Ver más proyectos</a>
+                  </Link>
                 </MainButtonWrapper>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import Link from 'next/link';
 import style from './style.module.scss';
 import Container from '../Container';
 import NavigationLinks from '../NavigationLinks';
@@ -8,16 +9,17 @@ const Footer: FC = () => (
   <footer className={style.Footer}>
     <Container>
       <div className={style.footerWrapper}>
-        <div className={style.myName}>
-          RODOLFO<br />
-          MAYORA<br />
-          PEREDA
+        <div className={style.myNameWrapper}>
+          <Link href="/">
+            <a className={style.myName}>
+              RODOLFO<br />
+              MAYORA<br />
+              PEREDA
+            </a>
+          </Link>
         </div>
 
         <div className={style.navigationContainer}>
-          {/* <span className={style.navigationLink}>Inicio</span>
-          <span className={style.navigationLink}>Portafolio</span>
-          <span className={style.navigationLink}>Perfil</span> */}
           <NavigationLinks />
         </div>
 

@@ -1,12 +1,26 @@
 // Primary
-$light: hsl(190deg, 14%, 83%);
-$dark : hsl(232deg, 11%, 26%);
+$green    : hsl(167, 92%, 20%);    // main color | buttons
+$green2   : hsl(167deg, 92%, 30%); // buttons hover
+$white    : hsl(0, 0%, 100%);      // main color
+$white2   : hsl(0, 0%, 95%);
+$dark     : hsl(167, 10%, 14%);    // main color
+$dark-gray: hsl(167deg, 10%, 30%); // titles
+$gray     : hsl(166, 6%, 44%);     // body text
 
-$green: hsl(166, 54%, 15%);
-$main-dark : hsl(166deg, 6%, 22%); // titles
-$main-dark-gray : hsl(166deg, 6%, 36%);
-$main-gray: hsl(166, 6%, 48%); // body text
+// frsoted effect layer over auroras or gradients
+$light-frosted-layer: hsla(0, 0%, 100%, 0.6);
+
+// $white2: 
 $shadow: hsla(166deg, 6%, 22%, 0.4); // shadows
-
-$white: hsl(0, 50%, 100%);
 $transparent: hsla(0, 0%, 0%, 0);
+
+// Aurora Gradient for layers
+$light-aurora-1: hsl(0, 50%, 100%);
+$light-aurora-2: hsl(152, 100%, 50%);
+$light-aurora-3: hsl(168, 95%, 43%); // hover width green
+$light-aurora-4: hsl(136, 94%, 66%); // hover width white
+$light-aurora-5: hsl(174, 100%, 70%);
+
+// Linear Gradient for text and layers
+$light-gradient-1: hsl(167deg, 92%, 20%);
+$light-gradient-2: hsl(136deg, 94%, 40%);

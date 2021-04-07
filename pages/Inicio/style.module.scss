@@ -1,13 +1,13 @@
 @import '../../styles/config';
 
-.Home {
+.Inicio {
   // GENERAL
   .sectionTitle {
     font-size: 36px;
     // font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
-    color: hsl(167, 92%, 15%);
+    color: $dark-gray;
 
     @include medium {
       text-align: left;
@@ -24,9 +24,7 @@
     background-color: $transparent;
 
     // Container Component
-    & > [class*="Container"] {
-      width: 100%;
-    }
+    & > [class*="Container"] { width: 100%; }
 
     .sectionWrapper {
       position: relative;
@@ -48,7 +46,7 @@
       right: 0;
       bottom: 0;
       width: 200%;
-      background-color: hsla(0, 0%, 100%, 0.6);
+      background-color: $light-frosted-layer;
     }
 
     .infoWrapper { width: 100%; }
@@ -63,19 +61,19 @@
       background-color: $dark;
       background: linear-gradient(
         90deg,
-        hsl(167deg, 92%, 20%),
-        hsl(136deg, 94%, 40%)
+        $light-gradient-1,
+        $light-gradient-2
       );
       background-clip: text;
       -webkit-text-fill-color: $transparent;
     }
 
     .techRol {
-      font-size: 5vw;
+      font-size: 5.5vw;
       line-height: 4vw;
       letter-spacing: 0;
-      font-weight: 800;
-      color: $main-dark-gray;
+      font-weight: 400;
+      color: $dark-gray;
       margin-bottom: 50px;
     }
 
@@ -83,10 +81,11 @@
 
     .link {
       height: 26px;
-      fill: hsl(167deg, 92%, 20%);
+      fill: $green;
       cursor: pointer;
+      transition: fill 0.3s ease;
 
-      &:hover { fill: hsl(167deg, 92%, 30%); }
+      &:hover { fill: $light-aurora-3; }
 
       &:first-child ~ * { margin-left: 30px; }
     }
@@ -98,12 +97,14 @@
       }
 
       .techRol {
-        font-size: 28px;
+        font-size: 30px;
         line-height: 24px;
       }
     }
 
     @include medium {
+      .sectionWrapper { padding-right: 50px; }
+
       .sectionContainer { padding-right: 50px; }
 
       .mainTitle {
@@ -113,7 +114,7 @@
 
       .techRol {
         margin-bottom: 70px;
-        font-size: 40px;
+        font-size: 42px;
         line-height: 32px;
         letter-spacing: -1.7px;
       }
@@ -125,7 +126,7 @@
   
   // SECCION TECH SKILLS
   .sectionTechSkills {
-    background-color: hsl(0, 0%, 100%);
+    background-color: $white;
 
     .sectionWrapper {
       padding-top: 80px;
@@ -145,6 +146,11 @@
     }
 
     @include large {
+      .sectionWrapper {
+        padding-top: 120px;
+        padding-bottom: 120px;
+      }
+  
       .tecnologies { grid-template-columns: repeat(5, 1fr); }
     }
   }
@@ -152,7 +158,7 @@
 
   // SECCION DE PROYECTOS
   .portfolioSection {
-    background-color: hsl(0, 0%, 95%);
+    background-color: $white2;
 
     .sectionWraper {
       padding-top: 80px;
@@ -160,6 +166,13 @@
     }
 
     .more { margin-top: 100px; }
+
+    @include large {
+      .sectionWrapper {
+        padding-top: 120px;
+        padding-bottom: 120px;
+      }
+    }
   }
 
   // SECCION DE INTERESES

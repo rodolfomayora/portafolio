@@ -27,7 +27,7 @@
     top: 30%;
     left: 25%;
     transform: translate(-60%, -60%);
-    background-color: $white; // light
+    background-color: $light-aurora-1; // light
     // background-color: hsl(166, 54%, 15%);
     /* background: transparent; */
     border-radius: 100%;
@@ -37,7 +37,7 @@
     top: 30%;
     left: 75%;
     transform: translate(-40%, -60%);
-    background: hsl(152, 100%, 50%); // light
+    background: $light-aurora-2; // light
     // background-color: hsl(163, 63%, 43%);
     border-radius: 100%;
   }
@@ -46,7 +46,7 @@
     top: 80%;
     left: 75%;
     transform: translate(-40%, -39%);
-    background-color: hsl(168, 95%, 43%); // light
+    background-color: $light-aurora-3; // light
     // background-color: hsl(191, 100%, 35%);
     border-radius: 100%;
   }
@@ -55,7 +55,7 @@
     top: 80%;
     left: 25%;
     transform: translate(-60%, -39%);
-    background-color: hsl(136, 94%, 66%); // light
+    background-color: $light-aurora-4; // light
     // background-color: hsl(149, 81%, 25%);
     border-radius: 100%;
   }
@@ -68,9 +68,9 @@
       rotateZ(-8deg);
     height: 0;
     width: 0;
-    border-top: solid 45vh hsl(174, 100%, 70%);  //light
-    border-left: solid 45vw hsla(0, 0%, 100%, 0);
-    border-right: solid 86vw hsla(0, 0%, 100%, 0);
+    border-top: solid 45vh $light-aurora-5; //light
+    border-left: solid 45vw $transparent;
+    border-right: solid 86vw $transparent;
     
     // border-top: solid 80px hsl(166, 54%, 15%);
     // border-top: solid 80px  hsl(234deg, 53%, 64%);

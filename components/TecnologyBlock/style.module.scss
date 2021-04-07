@@ -7,9 +7,9 @@
   flex-direction: column;
   border-radius: 4px;
   padding: 12px 12px;
-  background-color: hsl(0, 0%, 95%);
+  background-color: $white2;
   overflow: hidden;
-  border-left: solid 6px hsl(167, 92%, 20%);
+  border-left: solid 6px $green;
   box-shadow: 0 2px 4px $shadow;
 
   .brandLogo {

@@ -5,7 +5,7 @@
   height: 50px;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgb(53 59 58 / 40%);
-  background-color: hsl(167, 92%, 20%);
+  background-color: $green;
   transition: background-color 0.3s ease;
   cursor: pointer;
 
@@ -23,5 +23,5 @@
     text-align: center;
   }
 
-  &:hover { background-color: hsl(167deg, 92%, 30%); }
+  &:hover { background-color: $green2; }
 }
