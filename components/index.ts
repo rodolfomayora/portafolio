@@ -6,3 +6,4 @@ export { default as AuroraBackground } from './AuroraBackground';
 export { default as TecnologyBlock } from './TecnologyBlock';
 export { default as MainButtonWrapper } from './MainButtonWrapper';
 export { default as ProyectSummary } from './ProyectSummary';
+export { default as NavigationLinks } from './NavigationLinks';

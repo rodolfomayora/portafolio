@@ -1,7 +1,7 @@
-import Home from './Home';
+import Inicio from './Inicio';
 
 export default function Index() {
   return (
-    <Home />
+    <Inicio />
   )
 }

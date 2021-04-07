@@ -10,7 +10,7 @@ const Layout: FC<LayoutProps> = ({ children, pageTitle }) => (
       <title>{pageTitle}{' '}| Rodolfo Mayora Pereda | FrontEnd Developer</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
-    {/* <Header /> */}
+    <Header currentPage={pageTitle} />
     {children}
     <Footer />
   </>

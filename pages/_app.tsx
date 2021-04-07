@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app';
 import '../styles/styles.global.scss';
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <Component {...pageProps} />
   );

@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import {
+  Header,
   Layout,
   Container,
   AuroraBackground,
@@ -9,7 +10,6 @@ import {
 } from '../../components';
 import style from './style.module.scss';
 import { Github, Linkedin, Telegram} from '../../public/images';
-
 import projects from '../../Utils/projects';
 import tecnologies from '../../Utils/tecnologies';
 
@@ -56,7 +56,9 @@ const Home: FC = () => {
             </div>
           </Container>
         </section>
-  
+
+        {/* <Header /> */}
+
         {/* Tech Skills Section */}
         <section className={style.sectionTechSkills}>
           <Container>
