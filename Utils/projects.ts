@@ -1,9 +1,11 @@
-import ProyectSummaryType from '../types/ProyectSummaryType';
+import ProjectSummaryType from '../types/ProjectSummaryType';
 
-const projectsData: Array<ProyectSummaryType> = [
+const projectImagePath: string = '/images/static/';
+
+const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Blogr Landing Page',
-    mockupPath: '/images/static/blogr-mockup.png',
+    mockupPath: projectImagePath + 'blogr-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'NextJS, TypeScript, Sass (SCSS), SCSS Modules, Flexbox, Responsive Web Design',
     webType: 'Estático',
@@ -13,7 +15,7 @@ const projectsData: Array<ProyectSummaryType> = [
   },
   {
     title: 'Easybank Landing Page',
-    mockupPath: '/images/static/easybank-mockup.png',
+    mockupPath: projectImagePath + 'easybank-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'ReactJS, TypeScript, Sass (SCSS), SCSS Modules, CSS Grid, Flexbox, Responsive Web Design',
     webType: 'Single Page Aplication (SPA)',
@@ -23,23 +25,41 @@ const projectsData: Array<ProyectSummaryType> = [
   },
   {
     title: 'Insure Landing Page',
-    mockupPath: '/images/static/insure-mockup.png',
+    mockupPath: projectImagePath + 'insure-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'HTML, Sass (SCSS), JavaScript, Flexbox, Responsive Web Design',
     webType: 'Estático',
     sourceCodeURL: 'https://github.com/rodolfomayora/insure-landing-page.git',
     deployURL: 'https://rodolfomayora.github.io/insure-landing-page'
   },
+  {
+    title: 'Testimonials Grid Section',
+    mockupPath: projectImagePath + 'testimonial-mockup.png',
+    focusDevelopment: 'Mobile First',
+    stack: 'ReactJS, TypeScript, CSS Modules, CSS Grid, Responsive Web Design',
+    webType: 'Estático',
+    sourceCodeURL: 'https://github.com/rodolfomayora/testimonials-grid-section.git',
+    deployURL: 'https://rodolfomayora.github.io/testimonials-grid-section'
+  },
+  {
+    title: 'Article Preview Component',
+    mockupPath: projectImagePath + 'article-preview-mockup.png',
+    focusDevelopment: 'Mobile First',
+    stack: 'HTML5, CSS3, JavaScript, Responsive Web Design',
+    webType: 'Estático',
+    sourceCodeURL: 'https://github.com/rodolfomayora/article-preview-component.git',
+    deployURL: 'https://rodolfomayora.github.io/article-preview-component'
+  },
   // {
   //   title: '',
-  //   mockupPath: '',
+  //   mockupPath: projectImagePath +  '',
   //   focusDevelopment: '',
   //   stack: '',
   //   webType: '',
   //   renderType: '',
   //   sourceCodeURL: '',
   //   deployURL: ''
-  // }
+  // },
 ];
 
 export default projectsData;

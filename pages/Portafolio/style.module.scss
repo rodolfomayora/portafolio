@@ -1,5 +1,41 @@
 @import '../../styles/config';
 
-.Portfolio {
-  
+.Portafolio {
+  min-height: calc(100vh - 263px);
+
+  .layer {
+    position: relative;
+    z-index: 0;
+    background: $transparent;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    padding-top: 100px;
+  }
+
+  .contentWrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+  }
+
+  @include medium {
+
+    .layer { height: 400px; }
+
+    .contentWrapper {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+
+    .mainTitle { font-size: 42px; }
+
+  }
+
 }

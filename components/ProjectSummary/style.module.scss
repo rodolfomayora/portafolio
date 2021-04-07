@@ -1,8 +1,8 @@
 @import '../../styles/config';
 
-.ProyectSummary {
+.ProjectSummary {
 
-  &:first-of-type ~ .ProyectSummary { margin-top: 80px; }
+  &:first-of-type ~ .ProjectSummary { margin-top: 80px; }
 
   .mockupWrapperDesktop {
     width: 0;

@@ -1,9 +1,9 @@
 import React, { FC } from 'react';
-import ProyectSummaryProps from './type';
+import ProjectSummaryProps from './type';
 import style from './style.module.scss';
 import MainButtonWrapper from '../MainButtonWrapper'
 
-const ProyectSummary: FC<ProyectSummaryProps> = ({
+const ProjectSummary: FC<ProjectSummaryProps> = ({
   title,
   mockupPath,
   focusDevelopment,
@@ -13,7 +13,7 @@ const ProyectSummary: FC<ProyectSummaryProps> = ({
   sourceCodeURL,
   deployURL
 }) => (
-  <article className={style.ProyectSummary}>
+  <article className={style.ProjectSummary}>
     <div className={style.mockupWrapperDesktop}>
       <div className={style.mockupLayer}>
         <picture>
@@ -52,7 +52,7 @@ const ProyectSummary: FC<ProyectSummaryProps> = ({
         
         {!!webType && (
           <p>
-            <span className={style.label}>Tipo de sitio web:</span>
+            <span className={style.label}>Tipo de sitio web: </span>
             {webType}
           </p>
         )}
@@ -89,4 +89,4 @@ const ProyectSummary: FC<ProyectSummaryProps> = ({
   </article>
 );
 
-export default ProyectSummary;
+export default ProjectSummary;

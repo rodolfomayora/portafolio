@@ -5,13 +5,13 @@ import {
   AuroraBackground,
   TecnologyBlock,
   MainButtonWrapper,
-  ProyectSummary
+  ProjectSummary
 } from '../../components';
 import Link from 'next/link';
 import style from './style.module.scss';
 import { Github, Linkedin, Telegram} from '../../public/images';
-import projects from '../../Utils/projects';
-import tecnologies from '../../Utils/tecnologies';
+import projects from '../../utils/projects';
+import tecnologies from '../../utils/tecnologies';
 
 const Home: FC = () => {
 
@@ -24,7 +24,9 @@ const Home: FC = () => {
 
   const myTechSkills: Array<any> = tecnologies.map(addId);
 
-  const portfolio: Array<any> = projects.map(addId);
+  const portfolio: Array<any> = projects
+    .slice(0,3)
+    .map(addId);
 
   return (
     <Layout pageTitle="Inicio">
@@ -82,7 +84,7 @@ const Home: FC = () => {
               <h2 className={style.sectionTitle}>Portafolio</h2>
 
               {!!portfolio && portfolio.map((item: any) => (
-                <ProyectSummary
+                <ProjectSummary
                   key={item.customId}
                   title={item.title}
                   mockupPath={item.mockupPath}

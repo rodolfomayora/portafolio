@@ -1,4 +1,4 @@
-type ProyectSummaryType = {
+type ProjectSummaryType = {
   title: string,
   mockupPath: string,
   focusDevelopment: string,
@@ -9,4 +9,4 @@ type ProyectSummaryType = {
   deployURL: string
 }
 
-export default ProyectSummaryType;
+export default ProjectSummaryType;
