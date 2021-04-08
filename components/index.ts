@@ -7,3 +7,4 @@ export { default as TecnologyBlock } from './TecnologyBlock';
 export { default as MainButtonWrapper } from './MainButtonWrapper';
 export { default as ProjectSummary } from './ProjectSummary';
 export { default as NavigationLinks } from './NavigationLinks';
+export { default as SocialLinks } from './SocialLinks';

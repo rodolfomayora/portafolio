@@ -1,10 +1,9 @@
 @import '../../styles/config';
 
-.Inicio {
+.Home {
   // GENERAL
   .sectionTitle {
     font-size: 36px;
-    // font-weight: 400;
     text-align: center;
     margin-bottom: 40px;
     color: $dark-gray;
@@ -77,17 +76,18 @@
       margin-bottom: 50px;
     }
 
-    .socialLinks { text-align: center; }
-
-    .link {
-      height: 26px;
-      fill: $green;
-      cursor: pointer;
-      transition: fill 0.3s ease;
-
-      &:hover { fill: $light-aurora-3; }
-
-      &:first-child ~ * { margin-left: 30px; }
+    .socialLinks {
+      text-align: center;
+    
+      // links
+      svg {
+        height: 26px;
+        fill: $green;
+        cursor: pointer;
+        transition: fill 0.3s ease;
+  
+        &:hover { fill: $light-aurora-3; }
+      }
     }
 
     @include small {
@@ -129,7 +129,7 @@
     background-color: $white;
 
     .sectionWrapper {
-      padding-top: 80px;
+      padding-top: 70px;
       padding-bottom: 80px;
     }
 
@@ -147,7 +147,7 @@
 
     @include large {
       .sectionWrapper {
-        padding-top: 120px;
+        padding-top: 100px;
         padding-bottom: 120px;
       }
   
@@ -160,8 +160,8 @@
   .portfolioSection {
     background-color: $white2;
 
-    .sectionWraper {
-      padding-top: 80px;
+    .sectionWrapper {
+      padding-top: 70px;
       padding-bottom: 80px;
     }
 
@@ -169,7 +169,7 @@
 
     @include large {
       .sectionWrapper {
-        padding-top: 120px;
+        padding-top: 100px;
         padding-bottom: 120px;
       }
     }

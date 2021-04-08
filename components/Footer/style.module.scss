@@ -45,12 +45,10 @@
     & > * + * { margin-left: 20px; }
   }
 
-  .socialLink {
+  .socialWrapper svg {
     width: 22px;
     fill: $white;
     transition: fill 0.3s ease;
-
-    &:first-of-type ~ * { margin-left: 18px}
 
     &:hover {
       fill: $light-aurora-4;
@@ -72,7 +70,10 @@
       flex-direction: row;
 
       // items
-      & > * { flex-grow: 1; }
+      & > * {
+        flex-basis: 30%;
+        flex-grow: 1;
+      }
       
       & > :first-child ~ * { margin-top: 0 };
     }

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import style from './style.module.scss';
 import Container from '../Container';
 import NavigationLinks from '../NavigationLinks';
-import { Github, Linkedin, Telegram } from '../../public/images/';
+import SocialLinks from '../SocialLinks';
 
 const Footer: FC = () => (
   <footer className={style.Footer}>
@@ -24,9 +24,7 @@ const Footer: FC = () => (
         </div>
 
         <div className={style.socialWrapper}>
-          <Github className={style.socialLink} />
-          <Linkedin className={style.socialLink} />
-          <Telegram className={style.socialLink} />
+          <SocialLinks />
         </div>
       </div>
 

@@ -1,0 +1,8 @@
+@import '../../styles/config';
+
+.linkWrapper:first-of-type ~ * { margin-left: 30px; }
+
+.link {
+  width: 20px;
+  fill: #111111;
+}

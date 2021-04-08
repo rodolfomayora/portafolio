@@ -5,11 +5,11 @@ import {
   AuroraBackground,
   TecnologyBlock,
   MainButtonWrapper,
-  ProjectSummary
+  ProjectSummary,
+  SocialLinks
 } from '../../components';
 import Link from 'next/link';
 import style from './style.module.scss';
-import { Github, Linkedin, Telegram} from '../../public/images';
 import projects from '../../utils/projects';
 import tecnologies from '../../utils/tecnologies';
 
@@ -30,7 +30,7 @@ const Home: FC = () => {
 
   return (
     <Layout pageTitle="Inicio">
-      <main className={style.Inicio}>
+      <main className={style.Home}>
 
         {/* Main Section */}
         <section className={style.mainSection}>
@@ -50,9 +50,7 @@ const Home: FC = () => {
                   FRONTEND DEVELOPER
                 </div>
                 <div className={style.socialLinks}>
-                  <Github className={style.link} />
-                  <Linkedin className={style.link} />
-                  <Telegram className={style.link} />
+                  <SocialLinks />
                 </div>
               </div>
             </div>
@@ -80,7 +78,7 @@ const Home: FC = () => {
         {/* Portfolio Section */}
         <section className={style.portfolioSection}>
           <Container>
-            <div className={style.sectionWraper}>
+            <div className={style.sectionWrapper}>
               <h2 className={style.sectionTitle}>Portafolio</h2>
 
               {!!portfolio && portfolio.map((item: any) => (

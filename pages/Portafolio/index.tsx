@@ -18,7 +18,7 @@ const Portafolio: FC = () => {
 
   return (
     <Layout pageTitle="Portafolio">
-      <main className={style.Portafolio}>
+      <main className={style.Portfolio}>
         <section className={style.layer}>
           <AuroraBackground />
           <h1 className={style.mainTitle}>Portafolio</h1>
@@ -27,6 +27,7 @@ const Portafolio: FC = () => {
           <div className={style.contentWrapper}>
             {!!portfolio && portfolio.map((item) => (
               <ProjectSummary
+                key={item.customId}
                 title={item.title}
                 mockupPath={item.mockupPath}
                 focusDevelopment={item.focusDevelopment}
