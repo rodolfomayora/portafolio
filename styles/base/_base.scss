@@ -8,6 +8,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-X: hidden;
+  background-color: $white2;
 }
 
 :root {
@@ -41,3 +42,5 @@ a {
 }
 
 abbr[title] { text-decoration: none; }
+
+strong { font-weight: bold; }

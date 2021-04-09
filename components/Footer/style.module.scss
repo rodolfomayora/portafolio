@@ -15,6 +15,8 @@
     & > :first-child ~ * { margin-top: 40px };
   }
 
+  .myNameWrapper { text-align: center; }
+
   .myName {
     font-size: 18px;
     font-weight: 900;
@@ -77,6 +79,8 @@
       
       & > :first-child ~ * { margin-top: 0 };
     }
+
+    .myNameWrapper { text-align: left; }
 
     .socialWrapper { text-align: right;}
   }

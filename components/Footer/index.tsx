@@ -5,34 +5,42 @@ import Container from '../Container';
 import NavigationLinks from '../NavigationLinks';
 import SocialLinks from '../SocialLinks';
 
-const Footer: FC = () => (
-  <footer className={style.Footer}>
-    <Container>
-      <div className={style.footerWrapper}>
-        <div className={style.myNameWrapper}>
-          <Link href="/">
-            <a className={style.myName}>
-              RODOLFO<br />
-              MAYORA<br />
-              PEREDA
-            </a>
-          </Link>
-        </div>
+const Footer: FC = () => {
 
-        <div className={style.navigationContainer}>
-          <NavigationLinks />
-        </div>
+  const date: Date = new Date;
+  const currentYear: string = date.getFullYear().toString();
 
-        <div className={style.socialWrapper}>
-          <SocialLinks />
+  return (
+    <footer className={style.Footer}>
+      <Container>
+        <div className={style.footerWrapper}>
+          <div className={style.myNameWrapper}>
+            <Link href="/">
+              <a className={style.myName}>
+                RODOLFO<br />
+                MAYORA<br />
+                PEREDA
+              </a>
+            </Link>
+          </div>
+  
+          <div className={style.navigationContainer}>
+            <NavigationLinks />
+          </div>
+  
+          <div className={style.socialWrapper}>
+            <SocialLinks />
+          </div>
         </div>
-      </div>
-
-      <div className={style.footerBottom}>
-        <small>&copy; 2021 - Rodolfo Mayora Pereda</small>
-      </div>
-    </Container>
-  </footer>
-)
+  
+        <div className={style.footerBottom}>
+          <small>
+            &copy; <time dateTime={currentYear}>{currentYear}</time> - Rodolfo Mayora Pereda
+          </small>
+        </div>
+      </Container>
+    </footer>
+  );
+}
 
 export default Footer;
