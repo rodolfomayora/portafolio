@@ -13,7 +13,8 @@
     }
   }
 
-  // MAIN SECTION
+  /* MAIN SECTION
+   ===============================*/
   .mainSection {
     position: relative;
     z-index: 0;
@@ -124,7 +125,8 @@
   }
 
   
-  // SECCION TECH SKILLS
+  /* TECH SKILLS SECTION
+   ===============================*/
   .sectionTechSkills {
     background-color: $white;
 
@@ -156,25 +158,50 @@
   }
 
 
-  // SECCION DE PROYECTOS
+  /* PORTFOLIO SECTION
+   ===============================*/
   .portfolioSection {
     background-color: $white2;
 
     .sectionWrapper {
       padding-top: 70px;
-      padding-bottom: 80px;
+      padding-bottom: 50px;
     }
 
-    .more { margin-top: 100px; }
+    .more { margin-top: 80px; }
 
     @include large {
       .sectionWrapper {
         padding-top: 100px;
+        padding-bottom: 70px;
+      }
+    }
+  }
+
+  /* CONTACT SECTION
+  ===============================*/
+  .contactSection {
+    .sectionWrapper {
+      padding-top: 30px;
+      padding-bottom: 80px;
+    }
+  
+    .contactFormWrapper {
+      width: 100%;
+    }
+
+    @include medium {
+      .contactFormWrapper { width: 50%; }
+    }
+
+    @include large {
+      .sectionWrapper {
+        padding-top: 60px;
         padding-bottom: 120px;
       }
     }
   }
 
-  // SECCION DE INTERESES
+  
 
 }

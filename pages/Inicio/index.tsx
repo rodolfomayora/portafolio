@@ -6,7 +6,8 @@ import {
   TecnologyBlock,
   MainButtonWrapper,
   ProjectSummary,
-  SocialLinks
+  SocialLinks,
+  ContactForm
 } from '../../components';
 import Link from 'next/link';
 import style from './style.module.scss';
@@ -105,12 +106,19 @@ const Home: FC = () => {
             </div>
           </Container>
         </section>
-  
-        {/* <section>
+                
+        {/* Contact Section */}
+        <section className={style.contactSection}>
           <Container>
-            <h2 className={style.title}>Intereses / ¿que tecnologias me gustaria aprender?</h2>
+            <div className={style.sectionWrapper}>
+              <h2 className={style.sectionTitle}>Contacto</h2>
+
+              <div className={style.contactFormWrapper}> 
+                <ContactForm />
+              </div>
+            </div>
           </Container>
-        </section> */}
+        </section>
       </main>
     </Layout>
   )
