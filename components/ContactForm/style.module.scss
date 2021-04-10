@@ -39,6 +39,7 @@
     min-width: 100%;
     max-width: 100%;
     min-height: 40px;
+    margin-bottom: -4px;
 
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -57,19 +58,34 @@
     }
   }
 
+  .errorInput { border: solid 1px red; }
+
+  .error {
+    font-size: 13px;
+    color: hsl(0, 100%, 50%);
+  }
+
   .fullNameInput { text-transform: capitalize; }
 
-  .messageInput { height: 120px; }
+  .messageInput {
+    height: 120px;
+    margin-bottom: -10px;
+  }
 
   .submitButton {
     font-weight: 700;
-    cursor: pointer;
     background-color: $green;
     color: $white;
     transition: background-color 0.3s ease;
 
-    &:hover {
+    &:enabled:hover {
       background-color: $green2;
+      cursor: pointer;
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: default;
     }
   }
 }
