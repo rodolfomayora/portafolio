@@ -3,13 +3,27 @@ import {
   Layout,
   Container,
   AuroraBackground,
-  MainButtonWrapper
+  MainButtonWrapper,
+
+
+  ContactForm
+
+
 } from '../../components';
 import style from './style.module.scss';
 
 const Perfil: FC = () => (
   <Layout pageTitle="Perfil">
     <main className={style.Profile}>
+
+
+
+
+      {/* test */}
+      <ContactForm />
+
+
+
       <section className={style.layer}>
         <AuroraBackground />
         <h1 className={style.mainTitle}>Perfil</h1>

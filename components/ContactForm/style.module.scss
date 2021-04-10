@@ -1,0 +1,75 @@
+@import '../../styles/config';
+
+.temporalLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: rgba(19, 19, 19, 0.678);
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 40px;
+  background-color: $white;
+  border-radius: 4px;
+
+  & > :first-child ~ * { margin-top: 16px; }
+
+  // & > * {
+  //   font-size: 16px;
+  //   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  //   font-size: 14px;
+  //   color: $dark-gray;
+  //   line-height: 20px;
+  // }
+
+  .fullNameInput,
+  .emailIntput,
+  .messageInput,
+  .submitButton {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 40px;
+
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: $dark-gray;
+    line-height: 20px;
+
+    padding: 10px 20px;
+    outline: none;
+    background-color: $white-gray;
+    border-width: 0;
+    border-radius: 4px;
+
+    &::placeholder {
+      color: $gray;
+      opacity: 1;
+    }
+  }
+
+  .fullNameInput { text-transform: capitalize; }
+
+  .messageInput { height: 120px; }
+
+  .submitButton {
+    font-weight: 700;
+    cursor: pointer;
+    background-color: $green;
+    color: $white;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $green2;
+    }
+  }
+}
