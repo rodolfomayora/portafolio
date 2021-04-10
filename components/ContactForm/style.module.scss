@@ -57,9 +57,12 @@
   }
 
   .submitButton {
+    position: relative;
+    margin-top: 40px;
     font-weight: 700;
-    background-color: $green;
     color: $white;
+    line-height: 30px;
+    background-color: $green;
     transition: background-color 0.3s ease;
 
     &:enabled:hover {
@@ -70,6 +73,58 @@
     &:disabled {
       opacity: 0.6;
       cursor: default;
+      background-color: $dark-gray;
     }
+  }
+
+  .loaderWrapper {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    line-height: 0;
+  }
+
+  
+  .successResponse,
+  .errorResponse {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    width: 0;
+    will-change: width;
+    animation: notification 4s ease 0s 1;
+
+    .notification { flex-shrink: 0; }
+  }
+
+  .successResponse { background-color: $greenSuccess; }
+
+  .errorResponse { background-color: $red; }
+}
+
+@keyframes notification {
+  0% {
+    width: 0;
+  }
+
+  20% {
+    width: 100%;
+  }
+
+  80% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
   }
 }

@@ -1,10 +1,64 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 import { Formik, FormikProps, FormikValues } from 'formik';
 import * as Yup from 'yup';
 import style from './style.module.scss';
-import { Container } from '../../components';
+import { SubmitLoader } from '../../components';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import capitelizeAllWords from '../../utils/capitelizeAllWords';
+import { RequestBody } from './type';
 
 const ContactForm: FC = () => {
+
+  const [loader, setLoader] = useState<boolean>(false);
+  const [requestError, setRequestErrorr] = useState<boolean>(false);
+  const [requestSuccess, setRequestSuccess] = useState<boolean>(false);
+
+  const successNotification = ({ resetForm }: any): void => {
+    window.setTimeout(() => {
+      setRequestSuccess(false);
+      
+      resetForm({
+        fullName: '',
+        email   : '',
+        message : '',
+      })
+    }, 4000);
+  }
+
+  const errorNotification = (): void => {
+    window.setTimeout(() => {
+      setRequestErrorr(false);
+    }, 4000);
+  }
+
+  const sendEmail = async (values: RequestBody, actions: any) => {
+    try {
+      setLoader(true);
+      const { fullName, ...rest } = values;
+      const requestBody: RequestBody = {
+        fullName: capitelizeAllWords(fullName),
+        ...rest
+      }
+
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        requestBody,
+        process.env.NEXT_PUBLIC_USER_ID
+      );
+
+      setLoader(false);
+      setRequestSuccess(true);
+      successNotification(actions);
+
+    }  catch (error) {
+      setLoader(false);
+      setRequestErrorr(true);
+      errorNotification();
+    }
+  }
+
+
 
   const schema: any = Yup.object().shape({
     fullName: Yup.string()
@@ -14,19 +68,7 @@ const ContactForm: FC = () => {
       .required('Campo requerido'),
     message: Yup.string()
       .required('Campo requerido')
-  })
-
-  const capitalizeWord = (str: string): string => {
-    return str[0].toUpperCase() + str.slice(1);
-  }
-
-  const capitelizeAllWords = (str: string): string => {
-    return str.trim()
-    .split(' ')
-    .filter((word: string) => word !== '')
-    .map((word: string) => capitalizeWord(word))
-    .join(' ');
-  }
+  });
 
   return (
     <>
@@ -39,14 +81,7 @@ const ContactForm: FC = () => {
 
       validationSchema={schema}
 
-      onSubmit={(values: any) => {
-        const { fullName, ...rest } = values;
-        const requestBody: object = {
-          fullName: capitelizeAllWords(fullName),
-          ...rest
-        }
-        console.log(requestBody);
-      }}
+      onSubmit={sendEmail}
 
       initialErrors={{ fullName: 'required', email: 'required' }}
     >
@@ -55,7 +90,6 @@ const ContactForm: FC = () => {
       errors,
       touched,
       isValid,
-      isSubmitting,
       handleBlur,
       handleChange,
       handleSubmit,
@@ -75,6 +109,7 @@ const ContactForm: FC = () => {
             onBlur={handleBlur}
             onChange={handleChange}
             required
+            disabled={loader}
           />
           {
             touched.fullName &&
@@ -95,6 +130,7 @@ const ContactForm: FC = () => {
             onBlur={handleBlur}
             onChange={handleChange}
             required
+            disabled={loader}
           />
           {
             touched.email &&
@@ -114,7 +150,8 @@ const ContactForm: FC = () => {
             onBlur={handleBlur}
             onChange={handleChange}
             required
-            maxLength={1000}
+            maxLength={2000}
+            disabled={loader}
           />
           {
             touched.message &&
@@ -125,8 +162,30 @@ const ContactForm: FC = () => {
 
         <button className={style.submitButton}
           type="submit"
-          disabled={!isValid}
+          disabled={!isValid || loader}
         >
+          {loader && (
+            <div className={style.loaderWrapper}>
+              <SubmitLoader />
+            </div>
+          )}
+
+          {requestError && (
+            <div className={style.errorResponse}>
+              <span className={style.notification}>
+                Intentelo de nuevo
+              </span>
+            </div>
+          )}
+
+          {requestSuccess && (
+            <div className={style.successResponse}>
+              <span className={style.notification}>
+                Mensaje enviado
+              </span>
+            </div>
+          )}
+
           Enviar mensaje
         </button>
       </form>

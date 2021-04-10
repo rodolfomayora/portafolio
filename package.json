@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "emailjs-com": "^2.6.4",
     "formik": "^2.2.6",
     "next": "10.1.2",
     "react": "17.0.2",

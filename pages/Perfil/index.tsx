@@ -75,6 +75,17 @@ const Perfil: FC = () => (
               <li>GraphQL mediante el uso de Apollo CLient o Relay Framework</li>
               <li>PWA</li>
             </ul>
+
+            <p>
+              Puedes ver mas en mi perfil de {' '}
+              <a className={style.linkWrapper}
+                href="https://www.linkedin.com/in/rodolfo-mayora-pereda"
+                target="_blank"
+                rel="external noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </p>
           </section>
 
           <section className={style.contactSection}>
