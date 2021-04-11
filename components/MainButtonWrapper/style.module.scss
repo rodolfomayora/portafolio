@@ -1,0 +1,27 @@
+@import '../../styles/config';
+
+.MainButtonWrapper {
+  display: flex;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0 2px 4px $shadow;
+  background-color: $green;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+
+  & > :first-child {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 15px;
+    min-width: 145px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+  }
+
+  &:hover { background-color: $green2; }
+}

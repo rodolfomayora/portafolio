@@ -16,6 +16,12 @@
   }
 }
 
+@mixin small {
+  @media screen and (min-width: $small) {
+    @content;
+  }
+}
+
 // extra breackpoint helper
 @mixin responsiveMinWidth($breakpoint) {
   @media screen and (min-width: $breakpoint) {

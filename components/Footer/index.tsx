@@ -1,30 +1,46 @@
 import React, { FC } from 'react';
+import Link from 'next/link';
 import style from './style.module.scss';
 import Container from '../Container';
-import { Github, Linkedin, Telegram } from '../../public/images/';
+import NavigationLinks from '../NavigationLinks';
+import SocialLinks from '../SocialLinks';
 
-const Footer: FC = () => (
-  <footer className={style.Footer}>
-    <Container>
-      <div className={style.myName}>
-        RODOLFO<br />
-        MAYORA<br />
-        PEREDA
-      </div>
+const Footer: FC = () => {
 
-      <div className={style.navigationContainer}>
-        <span className={style.navigationLink}>Inicio</span>
-        <span className={style.navigationLink}>Proyectos</span>
-        <span className={style.navigationLink}>Perfil</span>
-      </div>
+  const date: Date = new Date;
+  const currentYear: string = date.getFullYear().toString();
 
-      <div className={style.socialWrapper}>
-        <Github className={style.socialLink} />
-        <Linkedin className={style.socialLink} />
-        <Telegram className={style.socialLink} />
-      </div>
-    </Container>
-  </footer>
-)
+  return (
+    <footer className={style.Footer}>
+      <Container>
+        <div className={style.footerWrapper}>
+          <div className={style.myNameWrapper}>
+            <Link href="/">
+              <a className={style.myName}>
+                RODOLFO<br />
+                MAYORA<br />
+                PEREDA
+              </a>
+            </Link>
+          </div>
+  
+          <div className={style.navigationContainer}>
+            <NavigationLinks />
+          </div>
+  
+          <div className={style.socialWrapper}>
+            <SocialLinks />
+          </div>
+        </div>
+  
+        <div className={style.footerBottom}>
+          <small>
+            &copy; <time dateTime={currentYear}>{currentYear}</time> - Rodolfo Mayora Pereda
+          </small>
+        </div>
+      </Container>
+    </footer>
+  );
+}
 
 export default Footer;
