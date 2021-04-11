@@ -3,6 +3,8 @@
 .Profile {
   min-height: calc(100vh - 263px);
   line-height: 24px;
+
+  & p:first-of-type ~ p { margin-top: 20px; }
   
   .layer {
     position: relative;
@@ -63,13 +65,21 @@
     object-position: center;
   }
 
+  .title {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
   .list { padding-left: 20px; }
 
-  .buttonWrapper {
-    display: flex;
-    margin-top: 60px;
-
-    & > * { flex-grow: 1; }
+  .contactSection {
+    padding-top: 80px;
+  
+    .contactFormWrapper {
+      width: 100%;
+    }
   }
 
   @include medium {
@@ -83,6 +93,8 @@
 
     .mainTitle { font-size: 42px; }
 
-    .buttonWrapper > * { flex-grow: 0; }
+    .title { text-align: left; }
+
+    .contactSection .contactFormWrapper { width: 50%; }
   }
 }

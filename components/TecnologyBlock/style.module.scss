@@ -28,6 +28,7 @@
 
   @include small {
     flex-direction: row;
+    border-radius: 32px;
     
     .label { margin-top: 0; }
   }

@@ -8,3 +8,5 @@ export { default as MainButtonWrapper } from './MainButtonWrapper';
 export { default as ProjectSummary } from './ProjectSummary';
 export { default as NavigationLinks } from './NavigationLinks';
 export { default as SocialLinks } from './SocialLinks';
+export { default as ContactForm } from './ContactForm';
+export { default as SubmitLoader } from './SubmitLoader';

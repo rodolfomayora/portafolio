@@ -3,11 +3,12 @@ $green    : hsl(167, 92%, 20%);    // main color | buttons
 $white    : hsl(0, 0%, 100%);      // main color
 $dark     : hsl(167, 10%, 14%);    // main color
 $dark-gray: hsl(167deg, 10%, 30%); // titles
-$gray     : hsl(166, 6%, 44%);     // body text
+$gray     : hsl(166, 6%, 38%);     // body text
 
 // neutral
 $green2     : hsl(167deg, 92%, 30%); // buttons hover
 $white2     : hsl(0, 0%, 96%);
+$white-gray : hsl(0, 0%, 94%);
 $shadow     : hsla(166deg, 6%, 22%, 0.4); // shadows
 $transparent: hsla(0, 0%, 0%, 0);
 
@@ -24,3 +25,7 @@ $light-aurora-5: hsl(174, 100%, 70%);
 // Linear Gradient for text and layers
 $light-gradient-1: hsl(167deg, 92%, 20%);
 $light-gradient-2: hsl(136deg, 94%, 40%);
+
+// Indicators
+$red: hsl(0, 70%, 50%);
+$greenSuccess: rgb(0, 219, 0);
