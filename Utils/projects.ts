@@ -1,11 +1,9 @@
 import ProjectSummaryType from '../types/ProjectSummaryType';
 
-const projectImagePath: string = '/images/static/';
-
 const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Blogr Landing Page',
-    mockupPath: projectImagePath + 'blogr-mockup.png',
+    mockupPath: 'blogr-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'NextJS, TypeScript, Sass (SCSS), SCSS Modules, Flexbox, Responsive Web Design',
     webType: 'Estático',
@@ -15,7 +13,7 @@ const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Easybank Landing Page',
-    mockupPath: projectImagePath + 'easybank-mockup.png',
+    mockupPath: 'easybank-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'ReactJS, TypeScript, Sass (SCSS), SCSS Modules, CSS Grid, Flexbox, Responsive Web Design',
     webType: 'Single Page Aplication (SPA)',
@@ -25,7 +23,7 @@ const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Insure Landing Page',
-    mockupPath: projectImagePath + 'insure-mockup.png',
+    mockupPath: 'insure-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'HTML, Sass (SCSS), JavaScript, Flexbox, Responsive Web Design',
     webType: 'Estático',
@@ -34,7 +32,7 @@ const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Testimonials Grid Section',
-    mockupPath: projectImagePath + 'testimonial-mockup.png',
+    mockupPath: 'testimonial-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'ReactJS, TypeScript, CSS Modules, CSS Grid, Responsive Web Design',
     webType: 'Estático',
@@ -43,7 +41,7 @@ const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Article Preview Component',
-    mockupPath: projectImagePath + 'article-preview-mockup.png',
+    mockupPath: 'article-preview-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'HTML5, CSS3, JavaScript, Responsive Web Design',
     webType: 'Estático',
@@ -52,7 +50,7 @@ const projectsData: Array<ProjectSummaryType> = [
   },
   // {
   //   title: '',
-  //   mockupPath: projectImagePath +  '',
+  //   mockupPath:  '',
   //   focusDevelopment: '',
   //   stack: '',
   //   webType: '',

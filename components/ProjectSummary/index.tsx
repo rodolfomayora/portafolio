@@ -12,81 +12,94 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
   renderType,
   sourceCodeURL,
   deployURL
-}) => (
-  <article className={style.ProjectSummary}>
-    <div className={style.mockupWrapperDesktop}>
-      <div className={style.mockupLayer}>
-        <picture>
-          <img className={style.mockup}
-            src={mockupPath}
-            alt={`${title} Mockup`}
-          />
-        </picture>
-      </div>
-    </div>
+}) => {
 
-    <div className={style.infoWrapper}>
-      <h3 className={style.projectTitle}>
-        {title}
-      </h3>
+  const projectMockupPath: string = '/images/static/';
 
-      <div className={style.mockupWrapperMobile}>
+  return (
+    <article className={style.ProjectSummary}>
+      <div className={style.mockupWrapperDesktop}>
         <div className={style.mockupLayer}>
           <picture>
+            <source
+              media="(min-width: 768px)"
+              srcSet={`${projectMockupPath}medium_${mockupPath}`}
+            />
             <img className={style.mockup}
-              src={mockupPath}
+              src={`${projectMockupPath}${mockupPath}`}
               alt={`${title} Mockup`}
             />
           </picture>
         </div>
       </div>
-      <div className={style.info}>
-        <p>
-          <span className={style.label}>Enfoque de desarrollo: </span>
-          {focusDevelopment}
-        </p>
-        <p>
-          <span className={style.label}>Stack: </span>
-          {stack}
-        </p>
-        
-        {!!webType && (
+  
+      <div className={style.infoWrapper}>
+        <h3 className={style.projectTitle}>
+          {title}
+        </h3>
+  
+        <div className={style.mockupWrapperMobile}>
+          <div className={style.mockupLayer}>
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcSet={`${projectMockupPath}medium_${mockupPath}`}
+              />
+              <img className={style.mockup}
+                src={`${projectMockupPath}${mockupPath}`}
+                alt={`${title} Mockup`}
+              />
+            </picture>
+          </div>
+        </div>
+        <div className={style.info}>
           <p>
-            <span className={style.label}>Tipo de sitio web: </span>
-            {webType}
+            <span className={style.label}>Enfoque de desarrollo: </span>
+            {focusDevelopment}
           </p>
-        )}
-        
-        {!!renderType && (
           <p>
-            <span className={style.label}>Tipo de renderizado: </span>
-            {renderType}
+            <span className={style.label}>Stack: </span>
+            {stack}
           </p>
-        )}
+          
+          {!!webType && (
+            <p>
+              <span className={style.label}>Tipo de sitio web: </span>
+              {webType}
+            </p>
+          )}
+          
+          {!!renderType && (
+            <p>
+              <span className={style.label}>Tipo de renderizado: </span>
+              {renderType}
+            </p>
+          )}
+        </div>
+  
+        <div className={style.buttonsWrapper}>
+          <MainButtonWrapper>
+            <a
+              href={deployURL}
+              target="_blank"
+              rel="external noopener noreferrer"
+            >
+              Ver Online
+            </a>
+          </MainButtonWrapper>
+          <MainButtonWrapper>
+            <a
+              href={sourceCodeURL}
+              target="_blank"
+              rel="external noopener noreferrer"
+            >
+              Código Fuente
+            </a>
+          </MainButtonWrapper>
+        </div>
       </div>
-
-      <div className={style.buttonsWrapper}>
-        <MainButtonWrapper>
-          <a
-            href={deployURL}
-            target="_blank"
-            rel="external noopener noreferrer"
-          >
-            Ver Online
-          </a>
-        </MainButtonWrapper>
-        <MainButtonWrapper>
-          <a
-            href={sourceCodeURL}
-            target="_blank"
-            rel="external noopener noreferrer"
-          >
-            Código Fuente
-          </a>
-        </MainButtonWrapper>
-      </div>
-    </div>
-  </article>
-);
+    </article>
+  );
+}
 
 export default ProjectSummary;
