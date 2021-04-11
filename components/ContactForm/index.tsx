@@ -3,11 +3,22 @@ import { Formik, FormikProps, FormikValues } from 'formik';
 import * as Yup from 'yup';
 import style from './style.module.scss';
 import { SubmitLoader } from '../../components';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import capitelizeAllWords from '../../utils/capitelizeAllWords';
+import emailjs from 'emailjs-com';
 import { RequestBody } from './type';
 
 const ContactForm: FC = () => {
+
+  const capitalizeWord = (str: string): string => {
+    return str[0].toUpperCase() + str.slice(1);
+  }
+
+  const capitelizeAllWords = (str: string): string => {
+    return str.trim()
+    .split(' ')
+    .filter((word: string) => word !== '')
+    .map((word: string) => capitalizeWord(word))
+    .join(' ');
+  }
 
   const [loader, setLoader] = useState<boolean>(false);
   const [requestError, setRequestErrorr] = useState<boolean>(false);
