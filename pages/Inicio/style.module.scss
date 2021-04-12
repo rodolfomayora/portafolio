@@ -19,7 +19,7 @@
     position: relative;
     z-index: 0;
     display: flex;
-    min-height: 100vh;
+    min-height: 100vmax;
     overflow: hidden;
     background-color: $transparent;
 
@@ -104,6 +104,8 @@
     }
 
     @include medium {
+      min-height: 100vh;
+
       .sectionWrapper { padding-right: 50px; }
 
       .sectionContainer { padding-right: 50px; }
