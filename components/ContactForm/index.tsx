@@ -5,6 +5,7 @@ import style from './style.module.scss';
 import { SubmitLoader } from '../../components';
 import emailjs from 'emailjs-com';
 import { RequestBody } from './type';
+import capitelizeAllWords from '../../utils/capitelizeAllWords';
 
 const ContactForm: FC = () => {
 
