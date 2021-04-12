@@ -29,7 +29,7 @@ const Perfil: FC = () => (
           </div>
 
           <section>
-            <h2 className={style.title}>👋 Hola, soy Rodolfo Mayora Pereda</h2>
+            <h2 className={style.title}>Hola, soy Rodolfo Mayora Pereda</h2>
 
             <p><strong>Soy desarollador Frontend con enfoque en ReactJS.</strong></p>
             
