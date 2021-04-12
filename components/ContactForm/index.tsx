@@ -5,20 +5,9 @@ import style from './style.module.scss';
 import { SubmitLoader } from '../../components';
 import emailjs from 'emailjs-com';
 import { RequestBody } from './type';
+import capitelizeAllWords from '../../utils/capitelizeAllWords';
 
 const ContactForm: FC = () => {
-
-  const capitalizeWord = (str: string): string => {
-    return str[0].toUpperCase() + str.slice(1);
-  }
-
-  const capitelizeAllWords = (str: string): string => {
-    return str.trim()
-    .split(' ')
-    .filter((word: string) => word !== '')
-    .map((word: string) => capitalizeWord(word))
-    .join(' ');
-  }
 
   const [loader, setLoader] = useState<boolean>(false);
   const [requestError, setRequestErrorr] = useState<boolean>(false);
