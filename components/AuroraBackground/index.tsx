@@ -11,11 +11,11 @@ import style from './style.module.scss';
 const AuroraBakcground: FC = () => (
   <div className={style.AuroraBackground}>
     <div className={style.layer}>
-      <div className={style.shape}></div>
-      <div className={style.shape}></div>
-      <div className={style.shape}></div>
-      <div className={style.shape}></div>
-      <div className={style.shape}></div>
+      <div className={style.shape1}></div>
+      <div className={style.shape2}></div>
+      <div className={style.shape3}></div>
+      <div className={style.shape4}></div>
+      <div className={style.shape5}></div>
     </div>
   </div>
 );
