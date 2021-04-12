@@ -17,6 +17,7 @@
    ===============================*/
   .mainSection {
     position: relative;
+    z-index: 0;
     display: flex;
     min-height: 100vh;
     overflow: hidden;
