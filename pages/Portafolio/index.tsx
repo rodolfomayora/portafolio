@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { Layout, Container } from '../../components';
 import style from './style.module.scss';
-
 import { ProjectSummary, AuroraBackground } from '../../components';
 import projects from '../../utils/projects';
 
