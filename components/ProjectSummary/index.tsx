@@ -28,6 +28,8 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
             <img className={style.mockup}
               src={`${projectMockupPath}${mockupPath}`}
               alt={`${title} Mockup`}
+              width="270"
+              height="140"
             />
           </picture>
         </div>
@@ -48,6 +50,8 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
               <img className={style.mockup}
                 src={`${projectMockupPath}${mockupPath}`}
                 alt={`${title} Mockup`}
+                width="270"
+                height="140"
               />
             </picture>
           </div>

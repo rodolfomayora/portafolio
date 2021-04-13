@@ -23,6 +23,8 @@ const Perfil: FC = () => (
                 <img className={style.myPicture}
                   src="/images/static/rodolfo.png"
                   alt="Rodolfo Mayora Pereda"
+                  width="130"
+                  height="130"
                 />
               </div>
             </div>
@@ -53,7 +55,7 @@ const Perfil: FC = () => (
 
               <li>Gestionar el estado global de las aplicaciones web (Data Store) mediante el uso del patron REDUX o API Context de ReactJS</li>
 
-              <li>Mejorar el rendiemiento de las aplicaciones mediante tácnicas de renderizado tales como: <abbr title="Client Side Rendering">CSR</abbr> (<abbr title="Single Page Aplication">SPA</abbr>) mediante ReactJS y <abbr title="Static Generation">SSG</abbr>  mediante NextJS</li>
+              <li>Mejorar el rendiemiento de las aplicaciones mediante técnicas de renderizado tales como: <abbr title="Client Side Rendering">CSR</abbr> (<abbr title="Single Page Aplication">SPA</abbr>) mediante ReactJS y <abbr title="Static Generation">SSG</abbr>  mediante NextJS</li>
             </ul>
 
             <p>Actualmente me encuentro en el desarrollo de proyectos web con ReactJS y NextJS.</p>
@@ -71,6 +73,7 @@ const Perfil: FC = () => (
             <p>También estoy interesado en aprender tecnologías web tales como:</p>
           
             <ul className={style.list}>
+              <li>Jest (Unit Testing)</li>
               <li>SSR (Server Side Rendering)</li>
               <li>GraphQL mediante el uso de Apollo CLient o Relay Framework</li>
               <li>PWA</li>
