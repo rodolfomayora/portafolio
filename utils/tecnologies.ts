@@ -4,6 +4,10 @@ const tecnologies: Array<any> = [
     image: '/images/svg/react.svg'
   },
   {
+    name: 'NextJS',
+    image: '/images/svg/nextjs.svg'
+  },
+  {
     name: 'TypesScript',
     image: '/images/svg/typescript.svg'
   },
@@ -16,16 +20,12 @@ const tecnologies: Array<any> = [
     image: '/images/svg/sass.svg'
   },
   {
-    name: 'Git',
-    image: '/images/svg/git.svg'
+    name: 'Redux',
+    image: '/images/svg/redux.svg'
   },
   {
-    name: 'Yarn',
-    image: '/images/svg/yarn.svg'
-  },
-  {
-    name: 'NextJS',
-    image: '/images/svg/nextjs.svg'
+    name: 'Redux Saga',
+    image: '/images/svg/redux-saga.svg'
   },
   {
     name: 'HTML5',
@@ -36,13 +36,14 @@ const tecnologies: Array<any> = [
     image: '/images/svg/css3.svg'
   },
   {
-    name: 'Redux',
-    image: '/images/svg/redux.svg'
+    name: 'Git',
+    image: '/images/svg/git.svg'
   },
+ 
   // {
   //   name: '',
   //   image: ''
-  // }
+  // },
 ];
 
 export default tecnologies;

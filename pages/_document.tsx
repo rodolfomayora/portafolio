@@ -8,7 +8,7 @@ class MyDocument extends Document {
           <meta charSet="UTF-8" />
           <meta name="keywords" content="rodolfo, mayora, pereda, FontEnd, Developer, Desarrollador, web, ReactJS, React" />
           <meta name="theme-color" content="hsla(0deg, 0%, 0%, 0)" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon2.ico" />
         </Head>
         <body>
           <Main />

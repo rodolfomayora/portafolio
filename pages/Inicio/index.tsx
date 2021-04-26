@@ -93,6 +93,7 @@ const Home: FC = () => {
                   deployURL={item.deployURL}
                   renderType={item?.renderType}
                   webType={item.webType}
+                  apiIntegration={{ ...item.apiIntegration }}
                 />
               ))}              
 
@@ -120,6 +121,21 @@ const Home: FC = () => {
           </Container>
         </section>
       </main>
+
+      {/* load image only for inprove UX in other pages through cache */}
+      <img style={{
+          width: 0,
+          height: 0,
+          visibility: 'hidden',
+          opacity: 0,
+          position: 'absolute',
+          zIndex: -5
+        }}
+        src="/images/static/rodolfo-mayora-pereda.jpg"
+        alt="Rodolfo Mayora Pereda"
+        width="0"
+        height="0"
+      />
     </Layout>
   )
 }

@@ -2,10 +2,24 @@ import ProjectSummaryType from '../types/ProjectSummaryType';
 
 const projectsData: Array<ProjectSummaryType> = [
   {
+    title: 'Rest Countries App',
+    mockupPath:  'rest-countries-app.png',
+    focusDevelopment: 'Mobile First',
+    stack: 'ReactJS, TypeScript, Redux, Redux-Saga, Sass (SCSS), CSS Modules, Flexbox, Responsive Web Design',
+    webType: 'Single Page Aplication (SPA)',
+    renderType: 'CSR, List Virtualization (Windowing)',
+    sourceCodeURL: 'https://github.com/rodolfomayora/rest-countries.git',
+    deployURL: 'https://rest-countries-app-swart.vercel.app',
+    apiIntegration: {
+      name: 'REST Countries',
+      url: 'https://restcountries.eu'
+    }
+  },
+  {
     title: 'Blogr Landing Page',
     mockupPath: 'blogr-mockup.png',
     focusDevelopment: 'Mobile First',
-    stack: 'NextJS, TypeScript, Sass (SCSS), SCSS Modules, Flexbox, Responsive Web Design',
+    stack: 'NextJS, TypeScript, Sass (SCSS), CSS Modules, Flexbox, Responsive Web Design',
     webType: 'Estático',
     renderType: 'Static Generation (SSG) sin datos',
     sourceCodeURL: 'https://github.com/rodolfomayora/blogr-landing-page.git',
@@ -15,7 +29,7 @@ const projectsData: Array<ProjectSummaryType> = [
     title: 'Easybank Landing Page',
     mockupPath: 'easybank-mockup.png',
     focusDevelopment: 'Mobile First',
-    stack: 'ReactJS, TypeScript, Sass (SCSS), SCSS Modules, CSS Grid, Flexbox, Responsive Web Design',
+    stack: 'ReactJS, TypeScript, Sass (SCSS), CSS Modules, CSS Grid, Flexbox, Responsive Web Design',
     webType: 'Single Page Aplication (SPA)',
     renderType: 'Client Side Rendering (CSR)',
     sourceCodeURL: 'https://github.com/rodolfomayora/easybank-landing-page.git',
@@ -48,10 +62,12 @@ const projectsData: Array<ProjectSummaryType> = [
     sourceCodeURL: 'https://github.com/rodolfomayora/article-preview-component.git',
     deployURL: 'https://rodolfomayora.github.io/article-preview-component'
   },
+  
   // {
   //   title: '',
   //   mockupPath:  '',
   //   focusDevelopment: '',
+  //   apiIntegration: '',
   //   stack: '',
   //   webType: '',
   //   renderType: '',
