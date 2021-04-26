@@ -16,7 +16,10 @@
     display: flex;
     align-items: center;
     
-    & > * { height: 40px; }
+    & > * {
+      max-height: 40px;
+      height: auto;
+    }
   }
 
   .label {
@@ -28,7 +31,6 @@
 
   @include small {
     flex-direction: row;
-    border-radius: 32px;
     
     .label { margin-top: 0; }
   }

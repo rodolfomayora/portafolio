@@ -1,3 +1,8 @@
+type ApiIntegration = {
+  name: string,
+  url: string
+}
+
 type ProjectSummaryType = {
   title: string,
   mockupPath: string,
@@ -6,7 +11,8 @@ type ProjectSummaryType = {
   webType: string,
   renderType?: string
   sourceCodeURL: string,
-  deployURL: string
+  deployURL: string,
+  apiIntegration?: ApiIntegration,
 }
 
 export default ProjectSummaryType;

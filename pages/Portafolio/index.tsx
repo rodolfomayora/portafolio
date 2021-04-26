@@ -35,6 +35,7 @@ const Portafolio: FC = () => {
                 webType={item.webType}
                 sourceCodeURL={item.sourceCodeURL}
                 deployURL={item.deployURL}
+                apiIntegration={{ ...item.apiIntegration }}
               />
             ))}
           </div>

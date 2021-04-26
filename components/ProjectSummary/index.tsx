@@ -11,7 +11,8 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
   webType,
   renderType,
   sourceCodeURL,
-  deployURL
+  deployURL,
+  apiIntegration
 }) => {
 
   const projectMockupPath: string = '/images/static/';
@@ -77,6 +78,19 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
             <p>
               <span className={style.label}>Tipo de renderizado: </span>
               {renderType}
+            </p>
+          )}
+
+          {!!apiIntegration && (
+            <p>
+              <span className={style.label}>API Integrada: </span>
+              <a
+                href={apiIntegration.url}
+                target="_blank" 
+                rel="external noopener noreferrer"
+              >
+                {apiIntegration.name}
+              </a>
             </p>
           )}
         </div>
