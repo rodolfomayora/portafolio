@@ -19,7 +19,7 @@
     position: relative;
     z-index: 0;
     display: flex;
-    min-height: 100vmax;
+    // min-height: 100vmax; this value did set directly on the component
     overflow: hidden;
     background-color: $transparent;
 
