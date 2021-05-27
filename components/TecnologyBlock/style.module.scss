@@ -12,13 +12,14 @@
   border-left: solid 6px $green;
   box-shadow: 0 2px 4px $shadow;
 
-  .brandLogo {
+  .brandLogoWrapper {
     display: flex;
     align-items: center;
     
-    & > * {
+    & > .logo {
       max-height: 40px;
       height: auto;
+      width: auto;
     }
   }
 
