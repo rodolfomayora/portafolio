@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import ProjectSummaryProps from './type';
 import style from './style.module.scss';
 import MainButtonWrapper from '../MainButtonWrapper'
@@ -81,7 +81,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
             </p>
           )}
 
-          {!!apiIntegration && (
+          {!!Object.keys(apiIntegration).length && (
             <p>
               <span className={style.label}>API Integrada: </span>
               <a

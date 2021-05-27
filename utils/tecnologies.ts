@@ -12,7 +12,7 @@ const tecnologies: Array<any> = [
     image: '/images/svg/typescript.svg'
   },
   {
-    name: 'Javascript',
+    name: 'JavaScript',
     image: '/images/svg/javascript.svg'
   },
   {

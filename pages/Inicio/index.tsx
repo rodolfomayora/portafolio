@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import {
   Layout,
   Container,
@@ -16,25 +16,32 @@ import tecnologies from '../../utils/tecnologies';
 
 const Home: FC = () => {
 
-  const addId = (item: any, index: number) => {
-    return {
-      ...item,
-      customId: (index + 1).toString()
-    }
-  }
+  const [fullHeight, setFullHeight] = useState<string>('100vmax');
+  useEffect(() => {
+    // real 100vh on mobile
+    const windowInnerHeight: string = `${window.innerHeight}px`;
+    setFullHeight(windowInnerHeight);
+  },
+  [])
+
+  const addId = (item: any, index: number) => ({
+    ...item,
+    customId: (index + 1).toString()
+  })
 
   const myTechSkills: Array<any> = tecnologies.map(addId);
 
-  const portfolio: Array<any> = projects
-    .slice(0,3)
-    .map(addId);
+  const portfolio: Array<any> = projects.slice(0,3).map(addId);
 
   return (
     <Layout pageTitle="Inicio">
       <main className={style.Home}>
 
         {/* Main Section */}
-        <section className={style.mainSection}>
+        <section
+          className={style.mainSection}
+          style={{ minHeight: fullHeight }}
+        >
           <AuroraBackground />
 
           <Container>
