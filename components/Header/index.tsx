@@ -4,28 +4,29 @@ import Container from '../Container';
 import NavigationLinks from '../NavigationLinks';
 import style from './style.module.scss';
 
-
 const Header: FC<HeaderProps> = ({ currentPage }) => {
   
   const [headerStyle, setHeaderStyle] = useState<string>(style.Header);
   useEffect(() => {
     const initHeaderStyle: string = style.Header;
-    const scrollHeaderStyle: string = style.Header + ' ' + style.scroll;
+    const scrollHeaderStyle: string = `${style.Header} ${style.scroll}`;
     let isScrolling: boolean = false;
     let isInTop: boolean = true;
+
+    if (window.pageYOffset > 0) setHeaderStyle(scrollHeaderStyle);
 
     const intervalWatcher: number = window.setInterval(():void => {
       if (isScrolling) {
         isScrolling = false;
         
-        let scrollOffset: number = window.pageYOffset;
+        let scrollYOffset: number = window.pageYOffset;
 
-        if (scrollOffset === 0) {
+        if (scrollYOffset === 0) {
           isInTop = true;
           setHeaderStyle(initHeaderStyle);
         }
 
-        if (scrollOffset > 0 && isInTop) {
+        if (scrollYOffset > 0 && isInTop) {
           isInTop = false;
           setHeaderStyle(scrollHeaderStyle)
         }
