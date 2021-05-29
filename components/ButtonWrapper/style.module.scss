@@ -1,11 +1,10 @@
 @import '../../styles/config';
 
-.MainButtonWrapper {
+.ButtonWrapper {
   display: flex;
   height: 50px;
   border-radius: 4px;
   box-shadow: 0 2px 4px $shadow;
-  background-color: $green;
   transition: background-color 0.3s ease;
   cursor: pointer;
 
@@ -23,5 +22,18 @@
     text-align: center;
   }
 
-  &:hover { background-color: $green2; }
+  &.primary {
+    background-color: $green;
+
+    &:hover { background-color: $green2; }
+  }
+
+  &.secondary {
+    background-color: $white2;
+    border: solid 2px $green;
+    
+    & > * { color: $green; }
+
+    &:hover { background-color: $white; }
+  }
 }

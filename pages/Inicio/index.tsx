@@ -4,7 +4,7 @@ import {
   Container,
   AuroraBackground,
   TecnologyBlock,
-  MainButtonWrapper,
+  ButtonWrapper,
   ProjectSummary,
   SocialLinks,
   ContactForm
@@ -105,11 +105,11 @@ const Home: FC = () => {
               ))}              
 
               <div className={style.more}>
-                <MainButtonWrapper>
+                <ButtonWrapper buttonType="primary">
                   <Link href="/Portafolio">
                     <a>Ver más proyectos</a>
                   </Link>
-                </MainButtonWrapper>
+                </ButtonWrapper>
               </div>
             </div>
           </Container>
