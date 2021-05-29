@@ -34,6 +34,10 @@
     
     & > * { color: $green; }
 
-    &:hover { background-color: $white; }
+    &:hover {
+      background-color: $green;
+
+      & > * { color: $white; }
+    }
   }
 }
