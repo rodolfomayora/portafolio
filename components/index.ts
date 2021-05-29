@@ -4,7 +4,7 @@ export { default as Layout } from './Layout';
 export { default as Container } from './Container';
 export { default as AuroraBackground } from './AuroraBackground';
 export { default as TecnologyBlock } from './TecnologyBlock';
-export { default as MainButtonWrapper } from './MainButtonWrapper';
+export { default as ButtonWrapper } from './ButtonWrapper';
 export { default as ProjectSummary } from './ProjectSummary';
 export { default as NavigationLinks } from './NavigationLinks';
 export { default as SocialLinks } from './SocialLinks';

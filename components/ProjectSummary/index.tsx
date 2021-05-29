@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from 'react';
 import ProjectSummaryProps from './type';
 import style from './style.module.scss';
-import MainButtonWrapper from '../MainButtonWrapper'
+import ButtonWrapper from '../ButtonWrapper';
 
 const ProjectSummary: FC<ProjectSummaryProps> = ({
   title,
@@ -96,7 +96,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
         </div>
   
         <div className={style.buttonsWrapper}>
-          <MainButtonWrapper>
+          <ButtonWrapper buttonType="primary">
             <a
               href={deployURL}
               target="_blank"
@@ -104,8 +104,8 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
             >
               Ver Online
             </a>
-          </MainButtonWrapper>
-          <MainButtonWrapper>
+          </ButtonWrapper>
+          <ButtonWrapper buttonType="secondary">
             <a
               href={sourceCodeURL}
               target="_blank"
@@ -113,7 +113,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
             >
               Código Fuente
             </a>
-          </MainButtonWrapper>
+          </ButtonWrapper>
         </div>
       </div>
     </article>
