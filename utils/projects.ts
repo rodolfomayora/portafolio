@@ -20,7 +20,7 @@ const projectsData: Array<ProjectSummaryType> = [
     mockupPath: 'blogr-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'NextJS, TypeScript, SCSS, SCSS-Modules, Flexbox, Responsive Web Design',
-    webType: 'Langin Page',
+    webType: 'Landing Page',
     renderType: 'Static Generation (SSG)',
     sourceCodeURL: 'https://github.com/rodolfomayora/blogr-landing-page.git',
     deployURL: 'https://blogr-landing-page-orcin.vercel.app'
@@ -30,7 +30,7 @@ const projectsData: Array<ProjectSummaryType> = [
     mockupPath: 'easybank-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'ReactJS, TypeScript, SCSS, SCSS-Modules, CSS Grid, Flexbox, Responsive Web Design',
-    webType: 'Langin Page',
+    webType: 'Landing Page',
     renderType: 'Client Side Rendering (CSR)',
     sourceCodeURL: 'https://github.com/rodolfomayora/easybank-landing-page.git',
     deployURL: 'https://rodolfomayora.github.io/easybank-landing-page'
@@ -40,7 +40,7 @@ const projectsData: Array<ProjectSummaryType> = [
     mockupPath: 'insure-mockup.png',
     focusDevelopment: 'Mobile First',
     stack: 'HTML, SCSS, JavaScript, Flexbox, Responsive Web Design',
-    webType: 'Langin Page',
+    webType: 'Landing Page',
     sourceCodeURL: 'https://github.com/rodolfomayora/insure-landing-page.git',
     deployURL: 'https://rodolfomayora.github.io/insure-landing-page'
   },
