@@ -1,8 +1,13 @@
 import React, { FC } from 'react';
-import { Layout, Container } from '../../components';
+
+import {
+  AuroraBackground,
+  Container,
+  Layout,
+  ProjectSummary,
+} from '../../components';
+import projects from '../../data/projects';
 import style from './style.module.scss';
-import { ProjectSummary, AuroraBackground } from '../../components';
-import projects from '../../utils/projects';
 
 const Portafolio: FC = () => {
 

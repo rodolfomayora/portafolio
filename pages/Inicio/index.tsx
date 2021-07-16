@@ -1,4 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
+import Link from 'next/link';
+
 import {
   Layout,
   Container,
@@ -9,10 +11,9 @@ import {
   SocialLinks,
   ContactForm
 } from '../../components';
-import Link from 'next/link';
+import projects from '../../data/projects';
+import tecnologies from '../../data/tecnologies';
 import style from './style.module.scss';
-import projects from '../../utils/projects';
-import tecnologies from '../../utils/tecnologies';
 
 const Home: FC = () => {
 
