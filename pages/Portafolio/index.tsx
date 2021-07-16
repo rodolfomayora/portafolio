@@ -6,8 +6,8 @@ import {
   Layout,
   ProjectSummary,
 } from '../../components';
-import projects from '../../data/projects';
 import style from './style.module.scss';
+import projects from '../../data/projects';
 
 const Portafolio: FC = () => {
 
