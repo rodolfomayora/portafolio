@@ -1,11 +1,13 @@
 import React, { FC, useState } from 'react';
+
 import { Formik, FormikProps, FormikValues } from 'formik';
 import * as Yup from 'yup';
-import style from './style.module.scss';
-import { SubmitLoader } from '../../components';
 import emailjs from 'emailjs-com';
-import { RequestBody } from './type';
+
+import { Loader } from '../../components';
 import capitelizeAllWords from '../../utils/capitelizeAllWords';
+import { RequestBody } from './type';
+import style from './style.module.scss';
 
 const ContactForm: FC = () => {
 
@@ -13,13 +15,13 @@ const ContactForm: FC = () => {
     return str[0].toUpperCase() + str.slice(1);
   }
 
-  const capitelizeAllWords = (str: string): string => {
-    return str.trim()
-    .split(' ')
-    .filter((word: string) => word !== '')
-    .map((word: string) => capitalizeWord(word))
-    .join(' ');
-  }
+  // const capitelizeAllWords = (str: string): string => {
+  //   return str.trim()
+  //   .split(' ')
+  //   .filter((word: string) => word !== '')
+  //   .map((word: string) => capitalizeWord(word))
+  //   .join(' ');
+  // }
 
   const [loader, setLoader] = useState<boolean>(false);
   const [requestError, setRequestErrorr] = useState<boolean>(false);
@@ -106,9 +108,9 @@ const ContactForm: FC = () => {
       handleChange,
       handleSubmit,
     }: FormikProps<FormikValues>) => (
-      <form className={style.ContactForm}
-        onSubmit={handleSubmit}
-      >
+      <form
+        className={style.ContactForm}
+        onSubmit={handleSubmit}>
         <label>
           Nombre y apellido <br />
           <input name="fullName"
@@ -174,11 +176,10 @@ const ContactForm: FC = () => {
 
         <button className={style.submitButton}
           type="submit"
-          disabled={!isValid || loader}
-        >
+          disabled={!isValid || loader}>
           {loader && (
             <div className={style.loaderWrapper}>
-              <SubmitLoader />
+              <Loader small />
             </div>
           )}
 

@@ -1,7 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import style from './style.module.scss';
 
-const SplahScreen: FC = () => {
+const SplashScreen: FC = () => {
   const visible: string = style.SplahScreen;
   const hidden: string = style.SplahScreen + ' ' + style.loaded;
   const [splashStyle, setSpalshStyle] = useState<string>(visible);
@@ -23,11 +23,11 @@ const SplahScreen: FC = () => {
 
   return isLoading ? (
     <div className={splashStyle}>
-      <div className={style.layer}></div>
+      <div className={style.layer} />
     </div>
   ) : (
     <></>
   )
 }
 
-export default SplahScreen;
+export default SplashScreen;

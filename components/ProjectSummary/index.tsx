@@ -1,107 +1,97 @@
-import React, { FC, useEffect } from 'react';
-import ProjectSummaryProps from './type';
-import style from './style.module.scss';
+import React, { FC } from 'react';
+
 import ButtonWrapper from '../ButtonWrapper';
+import MockupViewer from '../MockupViewer';
+import ProjectSummaryProps from './types';
+import {
+  ButtonsWrapper,
+  Info,
+  InfoWrapper,
+  Label,
+  MockupWrapperDesktop,
+  MockupWrapperMobile,
+  ProjectTitle,
+  ProjectSummaryStyled
+} from './styles';
 
-const ProjectSummary: FC<ProjectSummaryProps> = ({
-  title,
-  mockupPath,
-  focusDevelopment,
-  stack,
-  webType,
-  renderType,
-  sourceCodeURL,
-  deployURL,
-  apiIntegration
-}) => {
+const ProjectSummary: FC<ProjectSummaryProps> = props => {
 
-  const projectMockupPath: string = '/images/static/';
+  const {
+    title,
+    mockupPath,
+    focusDevelopment,
+    stack,
+    webType,
+    renderType,
+    sourceCodeURL,
+    deployURL,
+    apiIntegration
+  } = props;
+
+  const hasWebType: boolean = !!webType;
+  const hasRenderType: boolean = !!renderType;
+  const hasApiIntegration: boolean = !!Object.keys(apiIntegration).length;
 
   return (
-    <article className={style.ProjectSummary}>
-      <div className={style.mockupWrapperDesktop}>
-        <div className={style.mockupLayer}>
-          <picture>
-            <source
-              media="(min-width: 768px)"
-              srcSet={`${projectMockupPath}medium_${mockupPath}`}
-            />
-            <img className={style.mockup}
-              src={`${projectMockupPath}${mockupPath}`}
-              alt={`${title} Mockup`}
-              width="270"
-              height="140"
-            />
-          </picture>
-        </div>
-      </div>
+    <ProjectSummaryStyled>
+      <MockupWrapperDesktop>
+        <MockupViewer 
+          mockupFileName={mockupPath}
+          title={title} />
+      </MockupWrapperDesktop>
   
-      <div className={style.infoWrapper}>
-        <h3 className={style.projectTitle}>
-          {title}
-        </h3>
+      <InfoWrapper>
+        <ProjectTitle>{title}</ProjectTitle>
   
-        <div className={style.mockupWrapperMobile}>
-          <div className={style.mockupLayer}>
-            <picture>
-              <source
-                media="(min-width: 768px)"
-                srcSet={`${projectMockupPath}medium_${mockupPath}`}
-              />
-              <img className={style.mockup}
-                src={`${projectMockupPath}${mockupPath}`}
-                alt={`${title} Mockup`}
-                width="270"
-                height="140"
-              />
-            </picture>
-          </div>
-        </div>
-        <div className={style.info}>
+        <MockupWrapperMobile>
+          <MockupViewer 
+            mockupFileName={mockupPath}
+            title={title} />
+        </MockupWrapperMobile>
+        <Info>
           <p>
-            <span className={style.label}>Enfoque de desarrollo: </span>
+            <Label>Enfoque de desarrollo: </Label>
             {focusDevelopment}
           </p>
           <p>
-            <span className={style.label}>Stack: </span>
+            <Label>Stack: </Label>
             {stack}
           </p>
           
-          {!!webType && (
+          {hasWebType && (
             <p>
-              <span className={style.label}>Tipo de sitio web: </span>
+              <Label>Tipo de sitio web: </Label>
               {webType}
             </p>
           )}
           
-          {!!renderType && (
+          {hasRenderType && (
             <p>
-              <span className={style.label}>Tipo de renderizado: </span>
+              <Label>Tipo de renderizado: </Label>
               {renderType}
             </p>
           )}
 
-          {!!Object.keys(apiIntegration).length && (
+          {hasApiIntegration && (
             <p>
-              <span className={style.label}>API Integrada: </span>
+              <Label>API Integrada: </Label>
               <a
                 href={apiIntegration.url}
                 target="_blank" 
-                rel="external noopener noreferrer"
-              >
+                rel="external noopener noreferrer">
                 {apiIntegration.name}
               </a>
             </p>
           )}
-        </div>
+        </Info>
   
-        <div className={style.buttonsWrapper}>
+        <ButtonsWrapper>
+  
           <ButtonWrapper buttonType="primary">
             <a
               href={deployURL}
               target="_blank"
-              rel="external noopener noreferrer"
-            >
+              rel="external noopener noreferrer">
               Ver Online
             </a>
           </ButtonWrapper>
@@ -109,14 +99,14 @@ const ProjectSummary: FC<ProjectSummaryProps> = ({
             <a
               href={sourceCodeURL}
               target="_blank"
-              rel="external noopener noreferrer"
-            >
+              rel="external noopener noreferrer">
               Código Fuente
             </a>
           </ButtonWrapper>
-        </div>
-      </div>
-    </article>
+
+        </ButtonsWrapper>
+      </InfoWrapper>
+    </ProjectSummaryStyled>
   );
 }
 

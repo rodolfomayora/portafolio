@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import { colors, mixins } from '../../styles/config';
 
 export const TecnologyBlockStyled = styled.div`
   position: relative;
@@ -7,14 +9,14 @@ export const TecnologyBlockStyled = styled.div`
   flex-direction: column;
   border-radius: 4px;
   padding: 12px 12px;
-  background-color: hsl(0, 0%, 96%); //$white2
+  background-color: ${colors.white2};
   overflow: hidden;
-  border-left: solid 6px hsl(167deg, 92%, 30%); //$green
-  box-shadow: 0 2px 4px hsla(166deg, 6%, 22%, 0.4); //$shadow;
+  border-left: solid 6px ${colors.green};
+  box-shadow: 0 2px 4px ${colors.shadow};
 
-  @media screen and (min-width: 576px) { //small
+  ${mixins.small(css`
     flex-direction: row;
-  }
+  `)}
 `;
 
 export const LogoWrapper = styled.div`
@@ -34,7 +36,7 @@ export const Label = styled.span`
   font-weight: 700;
   margin-top: 12px;
 
-  @media screen and (min-width: 576px) { //small
+  ${mixins.small(css`
     margin-top: 0;
-  }
+  `)}
 `;

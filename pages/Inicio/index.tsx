@@ -1,4 +1,9 @@
 import React, { FC, useState, useEffect } from 'react';
+
+import Link from 'next/link';
+
+import projects from '../../utils/projects';
+import tecnologies from '../../utils/tecnologies';
 import {
   Layout,
   Container,
@@ -7,12 +12,9 @@ import {
   ButtonWrapper,
   ProjectSummary,
   SocialLinks,
-  ContactForm
+  ContactForm,
 } from '../../components';
-import Link from 'next/link';
 import style from './style.module.scss';
-import projects from '../../utils/projects';
-import tecnologies from '../../utils/tecnologies';
 
 const Home: FC = () => {
 
@@ -40,8 +42,7 @@ const Home: FC = () => {
         {/* Main Section */}
         <section
           className={style.mainSection}
-          style={{ minHeight: fullHeight }}
-        >
+          style={{ minHeight: fullHeight }}>
           <AuroraBackground />
 
           <Container>
