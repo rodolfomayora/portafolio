@@ -5,14 +5,14 @@ import Link from 'next/link';
 import projects from '../../utils/projects';
 import tecnologies from '../../utils/tecnologies';
 import {
-  Layout,
-  Container,
   AuroraBackground,
-  TecnologyBlock,
   ButtonWrapper,
+  ContactForm,
+  Container,
+  Layout,
   ProjectSummary,
   SocialLinks,
-  ContactForm,
+  TecnologyBlock,
 } from '../../components';
 import style from './style.module.scss';
 

@@ -9,6 +9,7 @@ export default {
 
   // Neutral
   green2     : 'hsl(167deg, 92%, 30%)', // buttons hover
+  green3     : 'hsl(174, 100%, 70%)',
   white2     : 'hsl(0, 0%, 96%)',
   whiteGray  : 'hsl(0, 0%, 94%)',
   shadow     : 'hsla(166deg, 6%, 22%, 0.4)',

@@ -2,8 +2,12 @@ import React, { FC } from 'react';
 
 import Link from 'next/link';
 
-const NavigationLinks: FC = () => (
-  <>
+type NavigationProps = {
+  className?: string,
+}
+
+const Navigation: FC<NavigationProps> = ({ className }) => (
+  <nav className={className}>
     <Link href="/">
       <a>Inicio</a>
     </Link>
@@ -13,7 +17,7 @@ const NavigationLinks: FC = () => (
     <Link href="/Perfil">
       <a>Perfil</a>
     </Link>
-  </>
+  </nav>
 );
 
-export default NavigationLinks;
+export default Navigation;

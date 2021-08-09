@@ -1,4 +1,5 @@
 export { default as AuroraBackground } from './AuroraBackground';
+export { default as Button } from './Button';
 export { default as ButtonWrapper } from './ButtonWrapper';
 export { default as ContactForm } from './ContactForm';
 export { default as Container } from './Container';
@@ -8,7 +9,7 @@ export { default as Header } from './Header';
 export { default as Layout } from './Layout';
 export { default as Loader } from './Loader';
 export { default as MockupViewer } from './MockupViewer';
-export { default as NavigationLinks } from './NavigationLinks';
+export { default as Navigation } from './Navigation';
 export { default as ProjectSummary } from './ProjectSummary';
 export { default as SocialLinks } from './SocialLinks';
 export { default as SplashScreen } from './SplashScreen';

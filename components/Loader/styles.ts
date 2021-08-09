@@ -1,7 +1,12 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 import { colors } from '../../styles/config';
 import { LoaderProps } from './types';
+
+const rotation = keyframes`
+    0% { transform: rotateZ(0); }
+    100% { transform: rotateZ(360deg); }
+`;
 
 export const LoaderStyled = styled.div<LoaderProps>`
   width: 40px;
@@ -10,7 +15,7 @@ export const LoaderStyled = styled.div<LoaderProps>`
   border-left-color: ${colors.white};
   border-radius: 50%;
   will-change: transform;
-  animation: rotate 1s linear 0s infinite;
+  animation: ${rotation} 1s linear 0s infinite;
 
   ${({ small }) => small && css`
     width: 20px;
@@ -22,9 +27,4 @@ export const LoaderStyled = styled.div<LoaderProps>`
     border-color: ${colors.lightGray};
     border-left-color: ${colors.dark};
   `}
-
-  @keyframes rotate {
-    0% { transform: rotateZ(0); }
-    100% { transform: rotateZ(360deg); }
-  }
 `;

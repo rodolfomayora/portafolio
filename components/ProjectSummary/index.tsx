@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 
-import ButtonWrapper from '../ButtonWrapper';
+import Button from '../Button';
+import ExternalLink from '../ExternalLink';
 import MockupViewer from '../MockupViewer';
 import ProjectSummaryProps from './types';
 import {
@@ -17,15 +18,15 @@ import {
 const ProjectSummary: FC<ProjectSummaryProps> = props => {
 
   const {
-    title,
-    mockupPath,
+    apiIntegration,
+    deployURL,
     focusDevelopment,
-    stack,
-    webType,
+    mockupPath,
     renderType,
     sourceCodeURL,
-    deployURL,
-    apiIntegration
+    stack,
+    title,
+    webType,
   } = props;
 
   const hasWebType: boolean = !!webType;
@@ -75,35 +76,16 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
           {hasApiIntegration && (
             <p>
               <Label>API Integrada: </Label>
-              <a
-                href={apiIntegration.url}
-                target="_blank" 
-                rel="external noopener noreferrer">
+              <ExternalLink href={apiIntegration.url}>
                 {apiIntegration.name}
-              </a>
+              </ExternalLink>
             </p>
           )}
         </Info>
   
         <ButtonsWrapper>
-  
-          <ButtonWrapper buttonType="primary">
-            <a
-              href={deployURL}
-              target="_blank"
-              rel="external noopener noreferrer">
-              Ver Online
-            </a>
-          </ButtonWrapper>
-          <ButtonWrapper buttonType="secondary">
-            <a
-              href={sourceCodeURL}
-              target="_blank"
-              rel="external noopener noreferrer">
-              Código Fuente
-            </a>
-          </ButtonWrapper>
-
+          <Button href={deployURL}>Ver Online</Button>
+          <Button outline href={sourceCodeURL}>Código Fuente</Button>
         </ButtonsWrapper>
       </InfoWrapper>
     </ProjectSummaryStyled>
