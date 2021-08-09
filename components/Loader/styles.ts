@@ -4,8 +4,12 @@ import { colors } from '../../styles/config';
 import { LoaderProps } from './types';
 
 const rotation = keyframes`
-    0% { transform: rotateZ(0); }
-    100% { transform: rotateZ(360deg); }
+    0% {
+      transform: rotateZ(0);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
 `;
 
 export const LoaderStyled = styled.div<LoaderProps>`

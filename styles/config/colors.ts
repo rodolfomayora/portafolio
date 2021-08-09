@@ -23,8 +23,8 @@ export default {
   lightAurora1: 'hsl(0, 50%, 100%)',
   lightAurora2: 'hsl(152, 100%, 50%)',
   lightAurora3: 'hsl(168, 95%, 43%)',  // hover width green
-  $lightAurora4: 'hsl(136, 94%, 66%)', // hover width white
-  $lightAurora5: 'hsl(174, 100%, 70%)',
+  lightAurora4: 'hsl(136, 94%, 66%)', // hover width white
+  lightAurora5: 'hsl(174, 100%, 70%)',
 
   // Linear Gradient for text and layers
   lightGradient1: 'hsl(167deg, 92%, 20%)',

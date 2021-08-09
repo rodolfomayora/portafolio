@@ -1,6 +1,8 @@
-@import '../../styles/config';
+import styled from "styled-components";
 
-.AuroraBackground {
+import { colors } from '../../styles/config';
+
+export const AuroraBrackgroundStyled = styled.div`
   position: absolute;
   z-index: -1;
   top: 0;
@@ -8,58 +10,58 @@
   right: 0;
   bottom: 0;
   display: flex;
+`;
 
-  .layer {
-    flex-grow: 1;
-    position: relative;
-    z-index: 0;
-    filter: blur(120px);
-  }
+export const Layer = styled.div`
+  flex-grow: 1;
+  position: relative;
+  z-index: 0;
+  filter: blur(120px);
+`;
 
-  .shape {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
+export const Shape = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
 
-  .shape:nth-of-type(1) {
+  &:nth-of-type(1) {
     top: 30%;
     left: 25%;
     transform: translate(-60%, -60%);
-    background-color: $light-aurora-1; // light
+    background-color: ${colors.lightAurora1};
     // background-color: hsl(166, 54%, 15%);
     /* background: transparent; */
     border-radius: 100%;
   }
 
-  .shape:nth-of-type(2) {
+  &:nth-of-type(2) {
     top: 30%;
     left: 75%;
     transform: translate(-40%, -60%);
-    background: $light-aurora-2; // light
+    background: ${colors.lightAurora2};
     // background-color: hsl(163, 63%, 43%);
     border-radius: 100%;
   }
   
-  .shape:nth-of-type(3) {
+  &:nth-of-type(3) {
     top: 80%;
     left: 75%;
     transform: translate(-40%, -39%);
-    background-color: $light-aurora-3; // light
+    background: ${colors.lightAurora3};
     // background-color: hsl(191, 100%, 35%);
     border-radius: 100%;
   }
   
-  .shape:nth-of-type(4) {
+  &:nth-of-type(4) {
     top: 80%;
     left: 25%;
     transform: translate(-60%, -39%);
-    background-color: $light-aurora-4; // light
+    background: ${colors.lightAurora4};
     // background-color: hsl(149, 81%, 25%);
     border-radius: 100%;
   }
 
-  .shape:nth-of-type(5) {
+  &:nth-of-type(5) {
     left: 40%;
     top: 49%;
     transform:
@@ -67,9 +69,9 @@
       rotateZ(-8deg);
     height: 0;
     width: 0;
-    border-top: solid 45vh $light-aurora-5; //light
-    border-left: solid 45vw $transparent;
-    border-right: solid 86vw $transparent;
+    background: ${colors.lightAurora5};
+    border-left: solid 45vw ${colors.transparent};
+    border-right: solid 86vw ${colors.transparent};
     
     // border-top: solid 80px hsl(166, 54%, 15%);
     // border-top: solid 80px  hsl(234deg, 53%, 64%);
@@ -80,4 +82,4 @@
     // border-top: solid 45vh hsl(200deg, 38%, 77%);
     // border-top: solid 45vh hsl(174, 100%, 50%);
   }
-}
+`;

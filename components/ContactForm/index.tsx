@@ -7,7 +7,17 @@ import emailjs from 'emailjs-com';
 import capitelizeAllWords from '../../utils/capitelizeAllWords';
 import { Loader } from '../../components';
 import { RequestBody } from './type';
-import style from './style.module.scss';
+
+import {
+  ContactFormStyled,
+  ErrorLabel,
+  FailureResponse,
+  Input,
+  LoaderWrapper,
+  TextArea,
+  SubmitButton,
+  SuccessResponse,
+} from './styles';
 
 const ContactForm: FC = () => {
 
@@ -71,7 +81,6 @@ const ContactForm: FC = () => {
   });
 
   return (
-    <>
     <Formik
       initialValues={{
         fullName: '',
@@ -94,103 +103,94 @@ const ContactForm: FC = () => {
       handleChange,
       handleSubmit,
     }: FormikProps<FormikValues>) => (
-      <form
-        className={style.ContactForm}
-        onSubmit={handleSubmit}>
+      <ContactFormStyled onSubmit={handleSubmit}>
         <label>
           Nombre y apellido <br />
-          <input name="fullName"
-            className={touched.fullName && errors.fullName
-              ? `${style.fullNameInput} ${style.errorInput}` 
-              : style.fullNameInput
-            }
+          <Input
+            name="fullName"
             type="text"
             value={values.fullName}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            required
+            error={!!touched.fullName && !!errors.fullName}
             disabled={loader}
-          />
+            required
+            onBlur={handleBlur}
+            onChange={handleChange}/>
           {
             touched.fullName &&
             errors.fullName &&
-            <span className={style.error}>{errors.fullName}</span>
+            <ErrorLabel>{errors.fullName}</ErrorLabel>
           }
         </label>
         
         <label>
           Correo <br />
-          <input name="email"
-            className={touched.email && errors.email
-              ? `${style.emailIntput} ${style.errorInput}`
-              : style.emailIntput
-            }
+          <Input
+            name="email"
             type="email"
             value={values.email}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            required
+            error={!!touched.email && !!errors.email}
             disabled={loader}
-          />
+            required
+            onBlur={handleBlur}
+            onChange={handleChange}/>
           {
             touched.email &&
             errors.email &&
-            <span className={style.error}>{errors.email}</span>
+            <ErrorLabel>{errors.email}</ErrorLabel>
           }
         </label>
 
         <label>
           Mensaje <br />
-          <textarea name="message"
-            className={touched.message && errors.message
-              ? `${style.messageInput} ${style.errorInput}`
-              : style.messageInput
-            }
+          <TextArea
+            name="message"
+            as="textarea"
             value={values.message}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            required
             maxLength={2000}
+            error={!!touched.message && !!errors.message}
             disabled={loader}
-          />
+            required
+            onBlur={handleBlur}
+            onChange={handleChange}/>
           {
             touched.message &&
             errors.message &&
-            <span className={style.error}>{errors.message}</span>
+            <ErrorLabel>{errors.message}</ErrorLabel>
           }
         </label>
 
-        <button className={style.submitButton}
+
+        <SubmitButton
           type="submit"
           disabled={!isValid || loader}>
           {loader && (
-            <div className={style.loaderWrapper}>
+            <LoaderWrapper>
               <Loader small />
-            </div>
+            </LoaderWrapper>
           )}
 
           {requestError && (
-            <div className={style.errorResponse}>
-              <span className={style.notification}>
+            <FailureResponse>
+              <span className="notification">
                 Intentelo de nuevo
               </span>
-            </div>
+            </FailureResponse>
           )}
 
           {requestSuccess && (
-            <div className={style.successResponse}>
-              <span className={style.notification}>
+            <SuccessResponse>
+              <span className="notification">
                 Mensaje enviado
               </span>
-            </div>
+            </SuccessResponse>
           )}
 
           Enviar mensaje
-        </button>
-      </form>
+        </SubmitButton>
+
+      </ContactFormStyled>
     )}
     </Formik>
-    </>
   );
 }
 

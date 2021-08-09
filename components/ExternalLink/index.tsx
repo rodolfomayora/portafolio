@@ -5,9 +5,10 @@ type ExternalLinkProps = {
   href: string
 }
 
-const ExternalLink: FC<ExternalLinkProps> = ({ children, ...props }) => (
+const ExternalLink: FC<ExternalLinkProps> = ({ children, className, href }) => (
   <a
-    {...props}
+    className={className}
+    href={href}
     rel="
       external
       noopener

@@ -84,8 +84,17 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
         </Info>
   
         <ButtonsWrapper>
-          <Button href={deployURL}>Ver Online</Button>
-          <Button outline href={sourceCodeURL}>Código Fuente</Button>
+          <Button
+            fullWidth
+            href={deployURL}>
+            Ver Online
+          </Button>
+          <Button
+            fullWidth
+            outline
+            href={sourceCodeURL}>
+            Código Fuente
+          </Button>
         </ButtonsWrapper>
       </InfoWrapper>
     </ProjectSummaryStyled>
