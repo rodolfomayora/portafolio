@@ -1,15 +1,15 @@
 import React, { FC } from 'react';
 
-import TecnologyBlockProps from './types';
+import TechnologyBlockProps from './types';
 import {
   Label,
   Logo,
   LogoWrapper,
-  TecnologyBlockStyled
+  TechnologyBlockStyled
 } from './styles';
 
-const TecnologyBlock: FC<TecnologyBlockProps> = ({ name, pathIcon }) => (
-  <TecnologyBlockStyled>
+const TecnologyBlock: FC<TechnologyBlockProps> = ({ name, pathIcon }) => (
+  <TechnologyBlockStyled>
     <LogoWrapper>
       <Logo
         src={pathIcon}
@@ -18,7 +18,7 @@ const TecnologyBlock: FC<TecnologyBlockProps> = ({ name, pathIcon }) => (
         height="40" />
     </LogoWrapper>
     <Label>{name}</Label>
-  </TecnologyBlockStyled>
+  </TechnologyBlockStyled>
 );
 
 export default TecnologyBlock;

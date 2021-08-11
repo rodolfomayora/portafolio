@@ -12,4 +12,4 @@ export { default as Navigation } from './Navigation';
 export { default as ProjectSummary } from './ProjectSummary';
 export { default as SocialLinks } from './SocialLinks';
 export { default as SplashScreen } from './SplashScreen';
-export { default as TecnologyBlock } from './TecnologyBlock';
+export { default as TechnologyBlock } from './TechnologyBlock';

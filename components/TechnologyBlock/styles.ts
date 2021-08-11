@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 import { colors, mixins } from '../../styles/config';
 
-export const TecnologyBlockStyled = styled.div`
+export const TechnologyBlockStyled = styled.div`
   position: relative;
   display: flex;
   align-items: center;

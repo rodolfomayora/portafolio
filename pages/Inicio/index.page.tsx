@@ -10,24 +10,37 @@ import {
   Layout,
   ProjectSummary,
   SocialLinks,
-  TecnologyBlock,
+  TechnologyBlock,
 } from '../../components';
-
-import style from './style.module.scss';
-
 import {
+  ButtonWrapper,
   ContactFormWrapper,
+  FrostedLayer,
+  InfoWrapper,
+  MainTittle,
+  MainSection,
+  MainSectionContent,
   PageSection,
+  PageSection2,
+  SocialLinksWrapper,
   Subtitle,
-  TecnologyGrid,
+  TechnologyGrid,
+  TechRole,
 } from './styles';
 
 const Home: FC = () => {
-  const [fullHeight, setFullHeight] = useState<string>('100vmax');
+  const [viewportHeight, setViewportHeight] = useState<number>(0);
   useEffect(() => {
-    // real 100vh on mobile
-    const windowInnerHeight: string = `${window.innerHeight}px`;
-    setFullHeight(windowInnerHeight);
+    const updateViewportHeight = () => {
+      const windowInnerHeight: number = window.innerHeight;
+      setViewportHeight(windowInnerHeight);
+    }
+
+    window.addEventListener('resize', updateViewportHeight);
+    
+    () => {
+      window.removeEventListener('resize', updateViewportHeight);
+    }
   },
   [])
 
@@ -42,96 +55,85 @@ const Home: FC = () => {
 
   return (
     <Layout pageTitle="Inicio">
-      <main className={style.Home}>
-
-        {/* Main Section */}
-        <section
-          className={style.mainSection}
-          style={{ minHeight: fullHeight }}>
+      <main>
+        <MainSection mainSectionHeight={viewportHeight}>
           <AuroraBackground />
-
           <Container>
-            <div className={style.sectionWrapper}>
-              <div className={style.frostedLayer}></div>
+            <MainSectionContent>
+              <FrostedLayer />
 
-              <div className={style.infoWrapper}>
-                <h1 className={style.mainTitle}>
+              <InfoWrapper>
+                <MainTittle>
                   RODOLFO<br />
                   MAYORA<br />
                   PEREDA
-                </h1>
-                <div className={style.techRol}>
-                  FRONTEND DEVELOPER
-                </div>
-                <div className={style.socialLinks}>
+                </MainTittle>
+                
+                <TechRole>FRONTEND DEVELOPER</TechRole>
+
+                <SocialLinksWrapper>
                   <SocialLinks />
-                </div>
-              </div>
-            </div>
+                </SocialLinksWrapper>
+              </InfoWrapper>
+            </MainSectionContent>
           </Container>
-        </section>
+        </MainSection>
 
         {/* Tech Skills Section */}
-        <section className={style.sectionTechSkills}>
-          <Container>
-            <div className={style.sectionWrapper}>
+          <PageSection>
+            <Container>
               <Subtitle>¿Qué utilizo?</Subtitle>
-              <TecnologyGrid>
+              <TechnologyGrid>
                 {myTechSkills?.map(technology => (
-                  <TecnologyBlock
+                  <TechnologyBlock
                     key={technology.customId}
                     name={technology.name}
                     pathIcon={technology.image}/>
                 ))}
-              </TecnologyGrid>
-            </div>
-          </Container>
-        </section>
+              </TechnologyGrid>
+            </Container>
+          </PageSection>
   
         {/* Portfolio Section */}
-        <section className={style.portfolioSection}>
+        <PageSection2>
           <Container>
-            <PageSection>
-              <Subtitle>Portafolio</Subtitle>
+            <Subtitle>Portafolio</Subtitle>
 
-              {portfolio?.map(project => (
-                <ProjectSummary
-                  key={project.customId}
-                  apiIntegration={{ ...project.apiIntegration }}
-                  deployURL={project.deployURL}
-                  focusDevelopment={project.focusDevelopment}
-                  mockupPath={project.mockupPath}
-                  title={project.title}
-                  renderType={project?.renderType}
-                  sourceCodeURL={project.sourceCodeURL}
-                  stack={project.stack}
-                  webType={project.webType}/>
-              ))}              
+            {portfolio?.map(project => (
+              <ProjectSummary
+                key={project.customId}
+                apiIntegration={{ ...project.apiIntegration }}
+                deployURL={project.deployURL}
+                focusDevelopment={project.focusDevelopment}
+                mockupPath={project.mockupPath}
+                title={project.title}
+                renderType={project?.renderType}
+                sourceCodeURL={project.sourceCodeURL}
+                stack={project.stack}
+                webType={project.webType}/>
+            ))}              
 
-
-              <div className={style.more}>
-                <Button
-                  as="innerLink"
-                  href="/Portafolio"
-                  fullWidth>
-                  Ver más proyectos
-                </Button>
-              </div>
-
-            </PageSection>
+            <ButtonWrapper>
+              <Button
+                as="innerLink"
+                href="/Portafolio"
+                fullWidth>
+                Ver más proyectos
+              </Button>
+            </ButtonWrapper>
           </Container>
-        </section>
+        </PageSection2>
                 
         {/* Contact Section */}
-        <Container>
-          <PageSection>
+        <PageSection2>
+          <Container>
             <Subtitle>Contacto</Subtitle>
 
             <ContactFormWrapper> 
               <ContactForm />
             </ContactFormWrapper>
-          </PageSection>
-        </Container>
+          </Container>
+        </PageSection2>
       </main>
     </Layout>
   );
