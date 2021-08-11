@@ -1,6 +1,5 @@
 export { default as AuroraBackground } from './AuroraBackground';
 export { default as Button } from './Button';
-export { default as ButtonWrapper } from './ButtonWrapper';
 export { default as ContactForm } from './ContactForm';
 export { default as Container } from './Container';
 export { default as ExternalLink } from './ExternalLink';

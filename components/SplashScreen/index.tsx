@@ -1,15 +1,14 @@
-import React, { FC, useState, useEffect } from 'react';
-import style from './style.module.scss';
+import React, { FC, useEffect, useState } from 'react';
+
+import { Circle, SplashScreenStyled} from './styles';
 
 const SplashScreen: FC = () => {
-  const visible: string = style.SplahScreen;
-  const hidden: string = style.SplahScreen + ' ' + style.loaded;
-  const [splashStyle, setSpalshStyle] = useState<string>(visible);
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [hasSiteLoaded, setHasSiteLoaded] = useState<boolean>(false)
   useEffect(() => {
     const init = (): void => {
       window.setTimeout(() => {
-        setSpalshStyle(hidden);
+        setHasSiteLoaded(true);
       }, 2000);
 
       window.setTimeout(() => {
@@ -18,16 +17,20 @@ const SplashScreen: FC = () => {
     }
 
     window.addEventListener('load', init);
+
+    () => {
+      window.removeEventListener('load', init);
+    }
   },
   [])
 
-  return isLoading ? (
-    <div className={splashStyle}>
-      <div className={style.layer} />
-    </div>
-  ) : (
-    <></>
-  )
+  if (isLoading) return (
+    <SplashScreenStyled hasSiteLoaded={hasSiteLoaded}>
+      <Circle hasSiteLoaded={hasSiteLoaded}/>
+    </SplashScreenStyled>
+  );
+  
+  return <></>;
 }
 
 export default SplashScreen;

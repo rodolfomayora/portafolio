@@ -1,12 +1,10 @@
-import React, { FC, useState, useEffect } from 'react';
-
-import Link from 'next/link';
+import React, { FC, useEffect, useState } from 'react';
 
 import projects from '../../utils/projects';
 import tecnologies from '../../utils/tecnologies';
 import {
   AuroraBackground,
-  ButtonWrapper,
+  Button,
   ContactForm,
   Container,
   Layout,
@@ -14,10 +12,17 @@ import {
   SocialLinks,
   TecnologyBlock,
 } from '../../components';
+
 import style from './style.module.scss';
 
-const Home: FC = () => {
+import {
+  ContactFormWrapper,
+  PageSection,
+  Subtitle,
+  TecnologyGrid,
+} from './styles';
 
+const Home: FC = () => {
   const [fullHeight, setFullHeight] = useState<string>('100vmax');
   useEffect(() => {
     // real 100vh on mobile
@@ -70,16 +75,15 @@ const Home: FC = () => {
         <section className={style.sectionTechSkills}>
           <Container>
             <div className={style.sectionWrapper}>
-              <h2 className={style.sectionTitle}>¿Qué utilizo?</h2>
-              <div className={style.tecnologies}>
-              {!!myTechSkills && myTechSkills.map((item: any) => (
-                <TecnologyBlock
-                  key={item.customId}
-                  name={item.name}
-                  pathIcon={item.image}
-                />
-              ))}
-              </div>
+              <Subtitle>¿Qué utilizo?</Subtitle>
+              <TecnologyGrid>
+                {myTechSkills?.map(technology => (
+                  <TecnologyBlock
+                    key={technology.customId}
+                    name={technology.name}
+                    pathIcon={technology.image}/>
+                ))}
+              </TecnologyGrid>
             </div>
           </Container>
         </section>
@@ -87,65 +91,50 @@ const Home: FC = () => {
         {/* Portfolio Section */}
         <section className={style.portfolioSection}>
           <Container>
-            <div className={style.sectionWrapper}>
-              <h2 className={style.sectionTitle}>Portafolio</h2>
+            <PageSection>
+              <Subtitle>Portafolio</Subtitle>
 
-              {!!portfolio && portfolio.map((item: any) => (
+              {portfolio?.map(project => (
                 <ProjectSummary
-                  key={item.customId}
-                  title={item.title}
-                  mockupPath={item.mockupPath}
-                  focusDevelopment={item.focusDevelopment}
-                  stack={item.stack}
-                  sourceCodeURL={item.sourceCodeURL}
-                  deployURL={item.deployURL}
-                  renderType={item?.renderType}
-                  webType={item.webType}
-                  apiIntegration={{ ...item.apiIntegration }}
-                />
+                  key={project.customId}
+                  apiIntegration={{ ...project.apiIntegration }}
+                  deployURL={project.deployURL}
+                  focusDevelopment={project.focusDevelopment}
+                  mockupPath={project.mockupPath}
+                  title={project.title}
+                  renderType={project?.renderType}
+                  sourceCodeURL={project.sourceCodeURL}
+                  stack={project.stack}
+                  webType={project.webType}/>
               ))}              
 
+
               <div className={style.more}>
-                <ButtonWrapper buttonType="primary">
-                  <Link href="/Portafolio">
-                    <a>Ver más proyectos</a>
-                  </Link>
-                </ButtonWrapper>
+                <Button
+                  as="innerLink"
+                  href="/Portafolio"
+                  fullWidth>
+                  Ver más proyectos
+                </Button>
               </div>
-            </div>
+
+            </PageSection>
           </Container>
         </section>
                 
         {/* Contact Section */}
-        <section className={style.contactSection}>
-          <Container>
-            <div className={style.sectionWrapper}>
-              <h2 className={style.sectionTitle}>Contacto</h2>
+        <Container>
+          <PageSection>
+            <Subtitle>Contacto</Subtitle>
 
-              <div className={style.contactFormWrapper}> 
-                <ContactForm />
-              </div>
-            </div>
-          </Container>
-        </section>
+            <ContactFormWrapper> 
+              <ContactForm />
+            </ContactFormWrapper>
+          </PageSection>
+        </Container>
       </main>
-
-      {/* load image only for inprove UX in other pages through cache */}
-      <img style={{
-          width: 0,
-          height: 0,
-          visibility: 'hidden',
-          opacity: 0,
-          position: 'absolute',
-          zIndex: -5
-        }}
-        src="/images/static/rodolfo-mayora-pereda.jpg"
-        alt="Rodolfo Mayora Pereda"
-        width="0"
-        height="0"
-      />
     </Layout>
-  )
+  );
 }
 
 export default Home;

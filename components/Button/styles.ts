@@ -2,14 +2,19 @@ import styled, { css } from "styled-components";
 
 import { colors } from '../../styles/config';
 import { ButtonStyledProps } from './types';
-import ExternalLink from '../ExternalLink';
+import { default as ELink} from '../ExternalLink';
 
-export const ButtonStyled = styled(ExternalLink)<ButtonStyledProps>`
+const buttonHeight: number = 42;
+const borderWidth: number = 2;
+const outlineButtonHeight: number = buttonHeight - (borderWidth * 2);
+
+const ButtonStyles = css<ButtonStyledProps>`
   display: inline-block;
   padding: 0 16px;
-  line-height: 38px;
-  border: solid 2px ${colors.green};
+  line-height: ${buttonHeight}px;
+  border: none;
   border-radius: 4px;
+  overflow: hidden;
   
   font-size: 16px;
   font-weight: 700;
@@ -19,19 +24,21 @@ export const ButtonStyled = styled(ExternalLink)<ButtonStyledProps>`
   
   background-color: ${colors.green};
   box-shadow: 0 2px 4px ${colors.shadow};
-  transition: all 0.3s ease;
   cursor: pointer;
+  transition: all 0.3s ease;
 
-  &:hover {
-    border-color: ${colors.transparent};
-    background-color: ${colors.green2};
-  }
+  &:hover { background-color: ${colors.green2}; }
 
   ${({ fullWidth }) => fullWidth && css`
     width: 100%;
   `}
 
   ${({ outline }) => outline && css`
+    line-height: ${outlineButtonHeight}px;
+    border:
+      solid
+      ${borderWidth}px
+      ${colors.green};
     color: ${colors.green};
     background-color: ${colors.transparent};
 
@@ -40,4 +47,16 @@ export const ButtonStyled = styled(ExternalLink)<ButtonStyledProps>`
       background-color: ${colors.green};
     }
   `}
+`;
+
+export const ButtonStyled = styled.button`
+  ${ButtonStyles}
+`;
+
+export const LinkButtonStyled = styled.a`
+  ${ButtonStyles}
+`;
+
+export const ExternalLinkStyled = styled(ELink)`
+  ${ButtonStyles}
 `;

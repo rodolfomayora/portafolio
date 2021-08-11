@@ -1,6 +1,7 @@
 html * {
   box-sizing: border-box;
   margin: 0;
+  -webkit-tap-highlight-color: $transparent;
 }
 
 html,
@@ -37,7 +38,6 @@ figure {
 
 a {
   text-decoration: none;
-  -webkit-tap-highlight-color: $transparent;
   cursor: pointer;
 }
 

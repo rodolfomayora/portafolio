@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
 
 import { colors } from '../../styles/config';
+import Button from '../Button';
 
 export const ContactFormStyled = styled.form`
   display: flex;
@@ -12,45 +13,30 @@ export const ContactFormStyled = styled.form`
   & > :first-child ~ * { margin-top: 16px; }
 `;
 
-const formElementStyles = css`
+type InputProps = {
+  error?: boolean,
+}
+export const Input = styled.input<InputProps>`
   min-width: 100%;
   max-width: 100%;
   min-height: 40px;
+  padding: 10px 20px;
+  margin-top: 5px;
+  border: 1px solid ${colors.lightGray};
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
 
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans';
   font-size: 16px;
   color: ${colors.darkGray};
-
-  border-radius: 4px;
-  box-shadow: none;
-`;
-
-const inputElementStyles = css`
-  ${formElementStyles}
-
-  padding: 10px 20px;
-  outline: none;
-  border: 1px solid ${colors.lightGray};
+  
   background-color: ${colors.white};
-  /* box-shadow: 0 0 2px $gray; */
-
-  margin-top: 5px;
-
-  &::-internal-autofill-selected {
-
-  }
 
   &::placeholder {
     color: ${colors.gray};
     opacity: 1;
   }
-`;
-
-type InputProps = {
-  error?: boolean,
-}
-export const Input = styled.input<InputProps>`
-  ${inputElementStyles}
 
   ${({ error }) => error && css`
     border-color: ${colors.red};
@@ -67,20 +53,10 @@ export const ErrorLabel = styled.div`
   margin-top: 3px;
 `;
 
-export const SubmitButton = styled.button`
-  ${formElementStyles}
-
+export const SubmitButton = styled(Button)`
   position: relative;
   margin-top: 40px;
-  padding: 0;
-  border: none;
   font-weight: 700;
-  color: ${colors.white};
-  line-height: 42px;
-  background-color: ${colors.green};
-  cursor: pointer;
-  box-shadow: 0 2px 4px ${colors.shadow};
-  transition: background-color 0.3s ease;
 
   &:enabled:hover {
     background-color: ${colors.green2};
@@ -103,18 +79,10 @@ export const LoaderWrapper = styled.div`
 `;
 
 const notification = keyframes`
-  0% {
-    width: 0;
-  }
-  20% {
-    width: 100%;
-  }
-  80% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
+  0% { width: 0; }
+  20% { width: 100%; }
+  80% { width: 100%; }
+  100% { width: 0; }
 `;
 
 const responseMessage = css`

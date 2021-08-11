@@ -1,8 +1,13 @@
 export type ButtonStyledProps = {
-  outline?: boolean,
   fullWidth?: boolean,
+  outline?: boolean,
 }
 
 export type ButtonProps =  ButtonStyledProps & { 
-  href: string,
+  as?: 'innerLink' | 'externalLink',
+  className?: string,
+  disabled?: boolean,
+  href?: string,
+  type?: "button" | "submit" | "reset",
+  onClick?: () => void,
 }

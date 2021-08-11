@@ -7,7 +7,6 @@ import emailjs from 'emailjs-com';
 import capitelizeAllWords from '../../utils/capitelizeAllWords';
 import { Loader } from '../../components';
 import { RequestBody } from './type';
-
 import {
   ContactFormStyled,
   ErrorLabel,

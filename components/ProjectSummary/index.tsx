@@ -85,11 +85,14 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
   
         <ButtonsWrapper>
           <Button
+            as="externalLink"
             fullWidth
             href={deployURL}>
             Ver Online
           </Button>
+
           <Button
+            as="externalLink"
             fullWidth
             outline
             href={sourceCodeURL}>

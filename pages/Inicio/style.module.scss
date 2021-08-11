@@ -137,25 +137,11 @@
       padding-bottom: 80px;
     }
 
-    .tecnologies {
-      display: grid;
-      // grid-template-rows: repeat(5, auto);
-      grid-auto-rows: auto;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 24px;
-    }
-    
-    @include medium {
-      .tecnologies { grid-template-columns: repeat(3, 1fr); }
-    }
-
     @include large {
       .sectionWrapper {
         padding-top: 100px;
         padding-bottom: 120px;
       }
-  
-      .tecnologies { grid-template-columns: repeat(5, 1fr); }
     }
   }
 
@@ -188,14 +174,6 @@
       padding-bottom: 80px;
     }
   
-    .contactFormWrapper {
-      width: 100%;
-    }
-
-    @include medium {
-      .contactFormWrapper { width: 50%; }
-    }
-
     @include large {
       .sectionWrapper {
         padding-top: 60px;
@@ -203,7 +181,4 @@
       }
     }
   }
-
-  
-
 }
