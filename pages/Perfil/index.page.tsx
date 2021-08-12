@@ -1,5 +1,6 @@
 import React, { FC, ReactNode } from 'react';
 
+import { socialLinks as links} from '../../data';
 import {
   AuroraBackground,
   ContactForm,
@@ -104,7 +105,7 @@ const Perfil: FC = () => {
             <p>
               Puedes ver mas en mi perfil de {' '}
               <ExternalLink
-                href="https://www.linkedin.com/in/rodolfo-mayora-pereda">
+                href={links.linkedInProfile}>
                 LinkedIn
               </ExternalLink>
             </p>
