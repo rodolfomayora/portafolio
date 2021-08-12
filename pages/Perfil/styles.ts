@@ -44,9 +44,9 @@ export const PageSection = styled.section`
 
   & + & { padding-top: 0; }
 
-  ${mixins.large(css`
-    padding-top: 100px;
-    padding-bottom: 100px;
+  ${mixins.medium(css`
+    padding-top: 80px;
+    padding-bottom: 80px;
   `)}
 `;
 

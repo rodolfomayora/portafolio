@@ -3,11 +3,13 @@ import styled, { css } from "styled-components";
 import { mixins } from '../../styles/config';
 
 export const ProjectSummaryStyled = styled.article`
-  &:first-of-type ~ & { margin-top: 80px; }
+  &:first-of-type ~ & { margin-top: 60px; }
 
   ${mixins.medium(css`
     display: flex;
     align-items: center;
+
+    &:first-of-type ~ & { margin-top: 80px; }
     
     &:nth-of-type(2n - 1) > :first-child { margin-right: 20px; }
 

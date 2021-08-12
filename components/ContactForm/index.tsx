@@ -4,7 +4,7 @@ import { Formik, FormikProps, FormikValues } from 'formik';
 import * as Yup from 'yup';
 import emailjs from 'emailjs-com';
 
-import capitelizeAllWords from '../../utils/capitelizeAllWords';
+import { capitelizeAllWords } from '../../utils';
 import { Loader } from '../../components';
 import { RequestBody } from './type';
 import {

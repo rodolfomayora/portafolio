@@ -10,7 +10,7 @@ const outlineButtonHeight: number = buttonHeight - (borderWidth * 2);
 
 const ButtonStyles = css<ButtonStyledProps>`
   display: inline-block;
-  padding: 0 16px;
+  padding: 0 10px;
   line-height: ${buttonHeight}px;
   border: none;
   border-radius: 4px;

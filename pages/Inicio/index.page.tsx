@@ -1,8 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
 
-import projects from '../../utils/projects';
-import tecnologies from '../../utils/tecnologies';
-import addCustomId from '../../utils/addCustomId';
+import { projects, technologies } from '../../data';
+import { addCustomId } from '../../utils';
 import {
   AuroraBackground,
   Button,
@@ -45,7 +44,7 @@ const Home: FC = () => {
   },
   [])
 
-  const myTechSkills: Array<any> = tecnologies.map(addCustomId);
+  const myTechSkills: Array<any> = technologies.map(addCustomId);
 
   const portfolio: Array<any> = projects.slice(0,3).map(addCustomId);
 

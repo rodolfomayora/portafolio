@@ -36,8 +36,8 @@ export const PageSection = styled.section`
   padding: 60px 0;
   background-color: ${colors.white2};
 
-  ${mixins.large(css`
-    padding-top: 100px;
-    padding-bottom: 100px;
+  ${mixins.medium(css`
+    padding-top: 80px;
+    padding-bottom: 80px;
   `)}
 `;

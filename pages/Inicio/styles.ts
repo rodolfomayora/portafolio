@@ -8,9 +8,9 @@ export const PageSection = styled.section`
   padding: 60px 0;
   background-color: ${colors.white};
 
-  ${mixins.large(css`
-    padding-top: 100px;
-    padding-bottom: 100px;
+  ${mixins.medium(css`
+    padding-top: 80px;
+    padding-bottom: 80px;
   `)}
 `;
 
@@ -175,7 +175,11 @@ export const TechnologyGrid = styled.div`
 /* PORTFOLIO SECTION
 ===============================*/
 export const ButtonWrapper = styled.div`
-  margin-top: 80px;
+  margin-top: 60px;
+
+  ${mixins.medium(css`
+    margin-top: 80px;
+  `)}
 `;
 
 

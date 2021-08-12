@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
-import projects from '../../utils/projects';
-import addCustomId from '../../utils/addCustomId'
+import { projects } from '../../data';
+import { addCustomId } from '../../utils';
 import {
   AuroraBackground,
   Container,
