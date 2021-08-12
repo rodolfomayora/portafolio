@@ -1,36 +1,44 @@
-import React, { FC, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 
-import { Circle, SplashScreenStyled} from './styles';
+/**
+ * CSS Modules it is implemented instead of Styled-Componentes because 
+ * it works as a spected way when the client recieve de main page
+ */
+import styles from './styles.module.scss';
 
 const SplashScreen: FC = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [hasSiteLoaded, setHasSiteLoaded] = useState<boolean>(false)
+  const visibleStyle: string = styles.SplahScreen;
+  const hiddenStyle: string = `${styles.SplahScreen} ${styles.loaded}`;
+
+  const [splashStyle, setSpalshStyle] = useState<string>(visibleStyle);
+  const [didLoad, setDidLoad] = useState<boolean>(false);
   useEffect(() => {
     const init = (): void => {
-      window.setTimeout(() => {
-        setHasSiteLoaded(true);
-      }, 2000);
+      const delayHidde: number = 2000;
+      const delayRemove: number = 4000;
 
       window.setTimeout(() => {
-        setIsLoading(false)
-      }, 4000);
+        setSpalshStyle(hiddenStyle);
+      }, delayHidde);
+
+      window.setTimeout(() => {
+        setDidLoad(true)
+      }, delayRemove);
     }
 
     window.addEventListener('load', init);
 
-    () => {
-      window.removeEventListener('load', init);
-    }
+    return () => window.removeEventListener('load', init);
   },
   [])
 
-  if (isLoading) return (
-    <SplashScreenStyled hasSiteLoaded={hasSiteLoaded}>
-      <Circle hasSiteLoaded={hasSiteLoaded}/>
-    </SplashScreenStyled>
+  if (didLoad) return <></>;
+
+  return (
+    <div className={splashStyle}>
+      <div className={styles.layer} />
+    </div>
   );
-  
-  return <></>;
 }
 
 export default SplashScreen;

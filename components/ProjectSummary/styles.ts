@@ -14,7 +14,7 @@ export const ProjectSummaryStyled = styled.article`
     &:nth-of-type(2n) {
       flex-direction: row-reverse;
 
-      & > :first-child { margin-left: 20px; }
+      & > :first-child { margin-left: 25px; }
     }
   `)}
 `;
@@ -46,8 +46,14 @@ export const MockupWrapperMobile = styled.div`
 
 export const InfoWrapper = styled.div`
   & > :first-child ~ * {
-    margin-top: 14px;
+    margin-top: 25px;
   }
+
+  ${mixins.small(css`
+    & > :first-child ~ * {
+      margin-top: 20px;
+    }
+  `)}
 
   ${mixins.medium(css`
     flex-basis: 50%;
@@ -66,7 +72,6 @@ export const ProjectTitle = styled.h3`
 `;
 
 export const Info = styled.div`
-  margin-bottom: 20px;
   line-height: 24px;
 `;
 
