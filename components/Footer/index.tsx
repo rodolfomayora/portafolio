@@ -1,9 +1,18 @@
 import React, { FC } from 'react';
+
 import Link from 'next/link';
-import style from './style.module.scss';
+
 import Container from '../Container';
-import NavigationLinks from '../NavigationLinks';
 import SocialLinks from '../SocialLinks';
+import {
+  InnerNavigation,
+  FooterBottom,
+  FooterTop,
+  FooterStyled,
+  LinkToHome,
+  LinkToHomeWrapper,
+  SocialLinksWrapper,
+} from './styles';
 
 const Footer: FC = () => {
 
@@ -11,35 +20,33 @@ const Footer: FC = () => {
   const currentYear: string = date.getFullYear().toString();
 
   return (
-    <footer className={style.Footer}>
+    <FooterStyled>
       <Container>
-        <div className={style.footerWrapper}>
-          <div className={style.myNameWrapper}>
+        <FooterTop>
+          <LinkToHomeWrapper>
             <Link href="/">
-              <a className={style.myName}>
+              <LinkToHome>
                 RODOLFO<br />
                 MAYORA<br />
                 PEREDA
-              </a>
+              </LinkToHome>
             </Link>
-          </div>
+          </LinkToHomeWrapper>
   
-          <div className={style.navigationContainer}>
-            <NavigationLinks />
-          </div>
+          <InnerNavigation />
   
-          <div className={style.socialWrapper}>
+          <SocialLinksWrapper>
             <SocialLinks />
-          </div>
-        </div>
+          </SocialLinksWrapper>
+        </FooterTop>
   
-        <div className={style.footerBottom}>
+        <FooterBottom>
           <small>
             &copy; <time dateTime={currentYear}>{currentYear}</time> - Rodolfo Mayora Pereda
           </small>
-        </div>
+        </FooterBottom>
       </Container>
-    </footer>
+    </FooterStyled>
   );
 }
 

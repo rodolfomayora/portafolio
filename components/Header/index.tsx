@@ -1,34 +1,39 @@
 import React, { FC, useState, useEffect } from 'react';
-import HeaderProps from './type';
+
 import Container from '../Container';
-import NavigationLinks from '../NavigationLinks';
-import style from './style.module.scss';
+import { HeaderProps } from './types';
+import {
+  HeaderContent,
+  HeaderStyled,
+  Navigation,
+} from './styles';
 
 const Header: FC<HeaderProps> = ({ currentPage }) => {
   
-  const [headerStyle, setHeaderStyle] = useState<string>(style.Header);
+  const [didScroll, setDidScroll] = useState<boolean>(false);
   useEffect(() => {
-    const initHeaderStyle: string = style.Header;
-    const scrollHeaderStyle: string = `${style.Header} ${style.scroll}`;
     let isScrolling: boolean = false;
     let isInTop: boolean = true;
 
-    if (window.pageYOffset > 0) setHeaderStyle(scrollHeaderStyle);
+    const didScroll: boolean = window.pageYOffset > 0;
+    if (didScroll) setDidScroll(true);
 
     const intervalWatcher: number = window.setInterval(():void => {
       if (isScrolling) {
         isScrolling = false;
-        
-        let scrollYOffset: number = window.pageYOffset;
+        const scrollYOffset: number = window.pageYOffset;
+        const initialPoint: number = 0;
+        const isAtInitialPoint: boolean = scrollYOffset === initialPoint;
+        const isNoAtInitialPoint: boolean = scrollYOffset > 0 && isInTop;
 
-        if (scrollYOffset === 0) {
+        if (isAtInitialPoint) {
           isInTop = true;
-          setHeaderStyle(initHeaderStyle);
+          setDidScroll(false);
         }
 
-        if (scrollYOffset > 0 && isInTop) {
+        if (isNoAtInitialPoint) {
           isInTop = false;
-          setHeaderStyle(scrollHeaderStyle)
+          setDidScroll(true);
         }
       }
     }, 200)
@@ -46,33 +51,23 @@ const Header: FC<HeaderProps> = ({ currentPage }) => {
   },
   [])
 
-  const setStyle = (page: string): string => {
-    switch(page) {
-      case 'Inicio':
-        return style.navigationBar + ' ' + style.home;
-      case 'Portafolio':
-        return style.navigationBar + ' ' + style.portfolio;
-      case 'Perfil':
-        return style.navigationBar + ' ' + style.profile;
-      default:
-        return style.navigationBar;
-    }
+  const navigationIndex = {
+    'Inicio'    : 1,
+    'Portafolio': 2, 
+    'Perfil'    : 3,
   }
 
-  const navStyle: string = setStyle(currentPage);
+  const optionIndex = navigationIndex[currentPage];
 
   return (
-    <header className={headerStyle}>
+    <HeaderStyled didScroll={didScroll}>
       <Container>
-        <div className={style.headerContainer}>
-          <nav className={navStyle}>
-            <NavigationLinks />
-          </nav>
-
-          {/* <span className={style.toggle}></span> */}
-        </div>
+        <HeaderContent>
+          <Navigation optionIndex={optionIndex} />
+          {/* <span className={style.toggle} /> */}
+        </HeaderContent>
       </Container>
-    </header>
+    </HeaderStyled>
   );
 }
 
