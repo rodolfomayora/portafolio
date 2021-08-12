@@ -7,6 +7,8 @@ export default css`
     box-sizing: border-box;
     margin: 0;
     -webkit-tap-highlight-color: ${colors.transparent};
+
+    ::selection { background-color: ${colors.green3}; }
   }
 
   html,
