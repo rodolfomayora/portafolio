@@ -29,12 +29,15 @@ import {
 } from './styles';
 
 const Home: FC = () => {
+
   const [viewportHeight, setViewportHeight] = useState<number>(0);
   useEffect(() => {
     const updateViewportHeight = () => {
       const windowInnerHeight: number = window.innerHeight;
       setViewportHeight(windowInnerHeight);
     }
+
+    updateViewportHeight();
 
     window.addEventListener('resize', updateViewportHeight);
     
