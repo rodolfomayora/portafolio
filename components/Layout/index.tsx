@@ -1,8 +1,10 @@
 import React, { FC } from 'react';
-import LayoutProps from './type';
+
 import Head from 'next/head';
+
 import Header from '../Header';
 import Footer from '../Footer';
+import LayoutProps from './types';
 
 const Layout: FC<LayoutProps> = ({ children, pageTitle }) => (
   <>
