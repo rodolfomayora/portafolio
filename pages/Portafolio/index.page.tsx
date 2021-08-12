@@ -1,46 +1,51 @@
 import React, { FC } from 'react';
-import { Layout, Container } from '../../components';
-import style from './style.module.scss';
-import { ProjectSummary, AuroraBackground } from '../../components';
+
 import projects from '../../utils/projects';
+import addCustomId from '../../utils/addCustomId'
+import {
+  AuroraBackground,
+  Container,
+  Layout,
+  ProjectSummary,
+} from '../../components';
+import {
+  DecorationSection,
+  MainTitle,
+  PageSection,
+  Main,
+} from './styles';
 
 const Portafolio: FC = () => {
 
-  const addId = (item: any, index: number) => {
-    return {
-      ...item,
-      customId: (index + 1).toString()
-    }
-  }
-
-  const portfolio: Array<any> = projects.map(addId);
+  const pageTitle: string = 'Portafolio';
+  const portfolio: Array<any> = projects.map(addCustomId);
 
   return (
-    <Layout pageTitle="Portafolio">
-      <main className={style.Portfolio}>
-        <section className={style.layer}>
+    <Layout pageTitle={pageTitle}>
+      <Main>
+        <DecorationSection>
           <AuroraBackground />
-          <h1 className={style.mainTitle}>Portafolio</h1>
-        </section>
-        <Container>
-          <div className={style.contentWrapper}>
-            {!!portfolio && portfolio.map((item) => (
+          <MainTitle>{pageTitle}</MainTitle>
+        </DecorationSection>
+
+        <PageSection>
+          <Container>
+            {portfolio?.map(project => (
               <ProjectSummary
-                key={item.customId}
-                title={item.title}
-                mockupPath={item.mockupPath}
-                focusDevelopment={item.focusDevelopment}
-                stack={item.stack}
-                renderType={item.renderType}
-                webType={item.webType}
-                sourceCodeURL={item.sourceCodeURL}
-                deployURL={item.deployURL}
-                apiIntegration={{ ...item.apiIntegration }}
-              />
+                key={project.customId}
+                apiIntegration={{ ...project.apiIntegration }}
+                deployURL={project.deployURL}
+                focusDevelopment={project.focusDevelopment}
+                mockupPath={project.mockupPath}
+                renderType={project.renderType}
+                sourceCodeURL={project.sourceCodeURL}
+                stack={project.stack}
+                title={project.title}
+                webType={project.webType} />
             ))}
-          </div>
-        </Container>
-      </main>
+          </Container>
+        </PageSection>
+      </Main>
     </Layout>
   );
 }

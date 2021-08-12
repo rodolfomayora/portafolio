@@ -26,8 +26,7 @@ const MockupViewer: FC<MockupViewerProps> = ({ mockupFileName, title }) => {
           <Mockup
             src={defaultMokupSource}
             alt={alternativeText}
-            width="270"
-            height="140" />
+            width="270" height="140" />
         </picture>
       </MockupLayer>
     </div>

@@ -22,7 +22,8 @@ export const PageSection2 = styled(PageSection)`
 
 export const Subtitle = styled.h2`
   margin-bottom: 40px;
-  font-size: 36px;
+  font-size: 32px;
+  line-height: 36px;
   text-align: center;
   color: ${colors.darkGray};
 
@@ -107,6 +108,7 @@ export const MainTittle = styled.h1`
   `)}
 
   ${mixins.medium(css`
+    margin-left: -4px;
     font-size: 90px;
     line-height: 80px;
   `)}
@@ -118,7 +120,7 @@ export const TechRole = styled.span`
   line-height: 4vw;
   letter-spacing: 0;
   font-weight: 400;
-  color: $dark-gray;
+  color: ${colors.darkGray};
   margin-bottom: 50px;
 
   ${mixins.small(css`
@@ -127,6 +129,7 @@ export const TechRole = styled.span`
   `)}
   
   ${mixins.medium(css`
+    margin-left: -4px;
     margin-bottom: 70px;
     font-size: 42px;
     line-height: 32px;
@@ -138,7 +141,7 @@ export const SocialLinksWrapper = styled.div`
   text-align: center;
     
   svg { /** Links */
-    height: 26px;
+    width: 22px;
     fill: ${colors.green};
     cursor: pointer;
     transition: fill 0.3s ease;

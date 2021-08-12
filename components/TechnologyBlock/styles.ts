@@ -25,7 +25,7 @@ export const LogoWrapper = styled.div`
 `;
 
 export const Logo = styled.img`
-  max-height: 40px;
+  max-height: 34px;
   height: auto;
   width: auto;
 `;

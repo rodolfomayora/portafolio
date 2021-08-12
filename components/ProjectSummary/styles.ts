@@ -46,7 +46,7 @@ export const MockupWrapperMobile = styled.div`
 
 export const InfoWrapper = styled.div`
   & > :first-child ~ * {
-    margin-top: 25px;
+    margin-top: 14px;
   }
 
   ${mixins.medium(css`
@@ -55,12 +55,13 @@ export const InfoWrapper = styled.div`
 `;
 
 export const ProjectTitle = styled.h3`
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 400;
   text-align: center;
   
   ${mixins.medium(css`
     text-align: left;
+    font-size: 28px;
   `)}
 `;
 

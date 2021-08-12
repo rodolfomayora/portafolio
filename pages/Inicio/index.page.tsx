@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from 'react';
 
 import projects from '../../utils/projects';
 import tecnologies from '../../utils/tecnologies';
+import addCustomId from '../../utils/addCustomId';
 import {
   AuroraBackground,
   Button,
@@ -38,20 +39,15 @@ const Home: FC = () => {
 
     window.addEventListener('resize', updateViewportHeight);
     
-    () => {
+    return () => {
       window.removeEventListener('resize', updateViewportHeight);
     }
   },
   [])
 
-  const addId = (item: any, index: number) => ({
-    ...item,
-    customId: (index + 1).toString()
-  })
+  const myTechSkills: Array<any> = tecnologies.map(addCustomId);
 
-  const myTechSkills: Array<any> = tecnologies.map(addId);
-
-  const portfolio: Array<any> = projects.slice(0,3).map(addId);
+  const portfolio: Array<any> = projects.slice(0,3).map(addCustomId);
 
   return (
     <Layout pageTitle="Inicio">
@@ -83,6 +79,7 @@ const Home: FC = () => {
           <PageSection>
             <Container>
               <Subtitle>¿Qué utilizo?</Subtitle>
+              
               <TechnologyGrid>
                 {myTechSkills?.map(technology => (
                   <TechnologyBlock
@@ -106,10 +103,10 @@ const Home: FC = () => {
                 deployURL={project.deployURL}
                 focusDevelopment={project.focusDevelopment}
                 mockupPath={project.mockupPath}
-                title={project.title}
                 renderType={project?.renderType}
                 sourceCodeURL={project.sourceCodeURL}
                 stack={project.stack}
+                title={project.title}
                 webType={project.webType}/>
             ))}              
 
