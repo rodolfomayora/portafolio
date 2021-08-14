@@ -38,12 +38,6 @@ const Home: FC = () => {
     }
 
     updateViewportHeight();
-
-    window.addEventListener('resize', updateViewportHeight);
-    
-    return () => {
-      window.removeEventListener('resize', updateViewportHeight);
-    }
   },
   [])
 
