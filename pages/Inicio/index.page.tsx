@@ -96,6 +96,7 @@ const Home: FC = () => {
               <ProjectSummary
                 key={project.customId}
                 apiIntegration={{ ...project.apiIntegration }}
+                sampleDataFrom={{ ...project.sampleDataFrom }}
                 deployURL={project.deployURL}
                 focusDevelopment={project.focusDevelopment}
                 mockupPath={project.mockupPath}

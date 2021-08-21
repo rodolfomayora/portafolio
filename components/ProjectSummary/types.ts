@@ -1,4 +1,4 @@
-import ProjectSummaryType from '../../types/ProjectSummaryType';
+import ProjectSummaryType from '../../models/ProjectSummaryType';
 
 type ProjectSummaryProps = ProjectSummaryType;
 

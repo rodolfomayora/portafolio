@@ -2,6 +2,20 @@ import ProjectSummaryType from '../types/ProjectSummaryType';
 
 const projectsData: Array<ProjectSummaryType> = [
   {
+    title: 'Mini Shop',
+    mockupPath:  'mini-shop.png',
+    focusDevelopment: 'Mobile Firsr',
+    stack: 'NextJS, ReactJS, TypeScript, Context-API, Styled-Components, SCSS, Flexbox, Grid CSS, Responsive Web Design',
+    webType: 'Single Page Aplication (SPA)',
+    renderType: 'Client Side Rendering (CSR)',
+    sourceCodeURL: 'https://github.com/rodolfomayora/mini-shop.git',
+    deployURL: 'https://mini-shop-rodolfo.vercel.app',
+    sampleDataFrom: {
+      name: 'Fake Store API',
+      url: 'https://fakestoreapi.com'
+    },
+  },
+  {
     title: 'Rest Countries App',
     mockupPath:  'rest-countries-app.png',
     focusDevelopment: 'Mobile First',
@@ -13,7 +27,7 @@ const projectsData: Array<ProjectSummaryType> = [
     apiIntegration: {
       name: 'REST Countries',
       url: 'https://restcountries.eu'
-    }
+    },
   },
   {
     title: 'Blogr Landing Page',
@@ -23,7 +37,7 @@ const projectsData: Array<ProjectSummaryType> = [
     webType: 'Landing Page',
     renderType: 'Static Generation (SSG)',
     sourceCodeURL: 'https://github.com/rodolfomayora/blogr-landing-page.git',
-    deployURL: 'https://blogr-landing-page-orcin.vercel.app'
+    deployURL: 'https://blogr-landing-page-orcin.vercel.app',
   },
   {
     title: 'Easybank Landing Page',
@@ -33,7 +47,7 @@ const projectsData: Array<ProjectSummaryType> = [
     webType: 'Landing Page',
     renderType: 'Client Side Rendering (CSR)',
     sourceCodeURL: 'https://github.com/rodolfomayora/easybank-landing-page.git',
-    deployURL: 'https://rodolfomayora.github.io/easybank-landing-page'
+    deployURL: 'https://rodolfomayora.github.io/easybank-landing-page',
   },
   {
     title: 'Insure Landing Page',
@@ -42,7 +56,7 @@ const projectsData: Array<ProjectSummaryType> = [
     stack: 'HTML, SCSS, JavaScript, Flexbox, Responsive Web Design',
     webType: 'Landing Page',
     sourceCodeURL: 'https://github.com/rodolfomayora/insure-landing-page.git',
-    deployURL: 'https://rodolfomayora.github.io/insure-landing-page'
+    deployURL: 'https://rodolfomayora.github.io/insure-landing-page',
   },
   {
     title: 'Testimonials Grid Section',
@@ -51,7 +65,7 @@ const projectsData: Array<ProjectSummaryType> = [
     stack: 'ReactJS, TypeScript, CSS-Modules, CSS Grid, Responsive Web Design',
     webType: 'Estático',
     sourceCodeURL: 'https://github.com/rodolfomayora/testimonials-grid-section.git',
-    deployURL: 'https://rodolfomayora.github.io/testimonials-grid-section'
+    deployURL: 'https://rodolfomayora.github.io/testimonials-grid-section',
   },
   {
     title: 'Article Preview Component',
@@ -60,19 +74,21 @@ const projectsData: Array<ProjectSummaryType> = [
     stack: 'HTML, CSS, JavaScript, Responsive Web Design',
     webType: 'Estático',
     sourceCodeURL: 'https://github.com/rodolfomayora/article-preview-component.git',
-    deployURL: 'https://rodolfomayora.github.io/article-preview-component'
+    deployURL: 'https://rodolfomayora.github.io/article-preview-component',
   },
   
   // {
   //   title: '',
   //   mockupPath:  '',
   //   focusDevelopment: '',
-  //   apiIntegration: '',
   //   stack: '',
   //   webType: '',
   //   renderType: '',
   //   sourceCodeURL: '',
   //   deployURL: ''
+  //   sampleDataFrom: '',
+  //   apiIntegration: {},
+  //   sampleDataFrom: {},
   // },
 ];
 
