@@ -3,6 +3,8 @@ type ApiIntegration = {
   url: string
 }
 
+type SampleDataFrom = ApiIntegration;
+
 type ProjectSummaryType = {
   title: string,
   mockupPath: string,
@@ -13,6 +15,7 @@ type ProjectSummaryType = {
   sourceCodeURL: string,
   deployURL: string,
   apiIntegration?: ApiIntegration,
+  sampleDataFrom?: SampleDataFrom,
 }
 
 export default ProjectSummaryType;

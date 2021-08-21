@@ -27,11 +27,13 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
     stack,
     title,
     webType,
+    sampleDataFrom,
   } = props;
 
   const hasWebType: boolean = !!webType;
   const hasRenderType: boolean = !!renderType;
   const hasApiIntegration: boolean = !!Object.keys(apiIntegration).length;
+  const hasSampleData: boolean = !!Object.keys(sampleDataFrom).length;
 
   return (
     <ProjectSummaryStyled>
@@ -78,6 +80,15 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
               <Label>API Integrada: </Label>
               <ExternalLink href={apiIntegration.url}>
                 {apiIntegration.name}
+              </ExternalLink>
+            </p>
+          )}
+
+          {hasSampleData && (
+            <p>
+              <Label>API Integrada: </Label>
+              <ExternalLink href={sampleDataFrom.url}>
+                {sampleDataFrom.name}
               </ExternalLink>
             </p>
           )}
