@@ -86,7 +86,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
 
           {hasSampleData && (
             <p>
-              <Label>API Integrada: </Label>
+              <Label>Datos de Ejemplo: </Label>
               <ExternalLink href={sampleDataFrom.url}>
                 {sampleDataFrom.name}
               </ExternalLink>
