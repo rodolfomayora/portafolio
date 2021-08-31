@@ -1,7 +1,7 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { colors } from '../../styles/config';
-import { default as NavBar} from '../Navigation';
+import { default as NavBar } from '../Navigation';
 import { HeaderStyledProps, NavigationProps } from './types';
 
 export const HeaderStyled = styled.header<HeaderStyledProps>`
@@ -10,21 +10,15 @@ export const HeaderStyled = styled.header<HeaderStyledProps>`
   top: 0;
   left: 0;
   right: 0;
-  padding-top: 30px;
+  padding-top: var(--padding-top, 30px);
   min-height: 50px;
   font-weight: 700;
-  background-color: ${colors.transparent};
-  box-shadow: none;
+  background-color: var(--background, ${colors.transparent});
+  box-shadow: var(--shadow, none);
   will-change:
     background-color,
     box-shadow;
   transition: all 0.3s ease;
-
-  ${({ didScroll }) => didScroll && css`
-    padding-top: 0;
-    background-color: ${colors.white};
-    box-shadow: 0 0 5px ${colors.shadow};
-  `}
 `;
 
 export const HeaderContent = styled.div`

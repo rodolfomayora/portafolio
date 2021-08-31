@@ -1,9 +1,11 @@
+import { CSSObject } from 'styled-components';
+
 export type HeaderProps = {
   currentPage: string
 }
 
 export type HeaderStyledProps = {
-  didScroll: boolean,
+  style?: CSSObject
 }
 
 export type NavigationProps = {

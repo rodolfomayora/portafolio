@@ -1,6 +1,7 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { CSSProperties, FC, useState, useEffect } from 'react';
 
 import Container from '../Container';
+import { colors } from '../../styles/config';
 import { HeaderProps } from './types';
 import {
   HeaderContent,
@@ -15,8 +16,8 @@ const Header: FC<HeaderProps> = ({ currentPage }) => {
     let isScrolling: boolean = false;
     let isInTop: boolean = true;
 
-    const didScroll: boolean = window.pageYOffset > 0;
-    if (didScroll) setDidScroll(true);
+    const didUserScroll: boolean = window.pageYOffset > 0;
+    if (didUserScroll) setDidScroll(true);
 
     const intervalWatcher: number = window.setInterval(():void => {
       if (isScrolling) {
@@ -36,7 +37,7 @@ const Header: FC<HeaderProps> = ({ currentPage }) => {
           setDidScroll(true);
         }
       }
-    }, 200)
+    }, 200);
 
     const setScrollTrue = ():void => {
       isScrolling = true;
@@ -59,8 +60,16 @@ const Header: FC<HeaderProps> = ({ currentPage }) => {
 
   const optionIndex = navigationIndex[currentPage];
 
+  const scrollCustomProperties = {
+    '--padding-top': 0,
+    '--background': colors.white,
+    '--shadow': `0 0 5px ${colors.shadow}`
+  }
+
+  const scrolledStyle = didScroll ? scrollCustomProperties : {};
+
   return (
-    <HeaderStyled didScroll={didScroll}>
+    <HeaderStyled style={scrolledStyle}>
       <Container>
         <HeaderContent>
           <Navigation optionIndex={optionIndex} />
