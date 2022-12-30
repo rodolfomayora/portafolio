@@ -1,10 +1,15 @@
 import React , { FC } from 'react';
-
 import { LoaderProps } from './types';
-import { LoaderStyled } from './styles';
+import styles from './styles.module.scss';
 
-const Loader: FC<LoaderProps> = props => {
-  return <LoaderStyled {...props} />;
+const Loader: FC<LoaderProps> = ({ small, dark }) => {
+  const loaderStyle = `
+    ${styles.Loader}
+    ${small ? styles.small : ''}
+    ${dark ? styles.dark : ''}
+  `
+
+  return <div className={loaderStyle} />;
 }
 
 export default Loader;

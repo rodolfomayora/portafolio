@@ -1,12 +1,8 @@
 import React , { FC } from 'react';
 
-import { breakpoints } from '../../styles/config';
-import { Mockup, MockupLayer } from './styles';
-
-type MockupViewerProps = {
-  mockupFileName: string,
-  title: string,
-}
+import breakpoints from '../../styles/config/breakpoints';
+import MockupViewerProps from './types';
+import styles from './styles.module.scss';
 
 const MockupViewer: FC<MockupViewerProps> = ({ mockupFileName, title }) => {
 
@@ -18,17 +14,17 @@ const MockupViewer: FC<MockupViewerProps> = ({ mockupFileName, title }) => {
 
   return (
     <div>
-      <MockupLayer>
+      <div className={styles.MockupViewer}>
         <picture>
           <source
             media={mediumBreakpointSource}
             srcSet={mediumMockupSource} />
-          <Mockup
+          <img className={styles.mockup}
             src={defaultMokupSource}
             alt={alternativeText}
             width="270" height="140" />
         </picture>
-      </MockupLayer>
+      </div>
     </div>
   );
 }

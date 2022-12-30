@@ -86,6 +86,7 @@ export const InfoWrapper = styled.div`
 `;
 
 export const MainTittle = styled.h1`
+  display: inline-block;
   margin-bottom: 10px;
   font-size: 12.5vw;
   line-height: 11vw;
@@ -99,7 +100,7 @@ export const MainTittle = styled.h1`
   background-image: linear-gradient(
     90deg,
     ${colors.lightGradient1},
-    ${colors.lightGradient2}
+    ${colors.lightAurora5}
   );
 
   ${mixins.small(css`

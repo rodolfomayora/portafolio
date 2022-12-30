@@ -1,24 +1,25 @@
 import React, { FC } from 'react';
 import { Github, Linkedin, Telegram } from '../../public/images';
 import { socialLinks as links } from '../../data';
+import ExternalLink from '../ExternalLink';
 import styles from './styles.module.scss';
 
 const SocialLinks: FC = () => (
   <>
-    <a className={styles.ExternalLink}
+    <ExternalLink className={styles.ExternalLink}
       href={links.githubProfile}>
       <Github />
-    </a>
+    </ExternalLink>
 
-    <a className={styles.ExternalLink}
+    <ExternalLink className={styles.ExternalLink}
       href={links.linkedInProfile}>
       <Linkedin />
-    </a>
+    </ExternalLink>
 
-    <a className={styles.ExternalLink}
+    <ExternalLink className={styles.ExternalLink}
       href={links.telegramProfile}>
       <Telegram />
-    </a>
+    </ExternalLink>
   </>
 );
 

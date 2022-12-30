@@ -1,13 +1,12 @@
 import React, { FC } from 'react';
-
-import { ContainerStyled, ContainerWrapper} from './styles';
+import styles from './styles.module.scss';
 
 const Container: FC = ({ children }) => (
-  <ContainerStyled>
-    <ContainerWrapper>
+  <div className={styles.Container}>
+    <div className={styles.containerWrapper}>
       {children}
-    </ContainerWrapper>
-  </ContainerStyled>
+    </div>
+  </div>
 );
 
 export default Container;

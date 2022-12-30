@@ -1,0 +1,87 @@
+@import '../../styles/config';
+
+.Footer {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-color: $dark;
+  color: $white;
+
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    & > :first-child ~ * { margin-top: 40px }; /** Items */
+  }
+
+  .linkToHomeWrapper { text-align: center; }
+
+  .linkToHome {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 16px;
+    color: $white;
+    transition: color 0.3s linear;
+
+    &:hover { color: $green3; }
+  }
+
+  .innerNavigation {
+    display: flex;
+    justify-content: center;
+
+    & > * { /** Navigation Links */
+      color: $white;
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: $green3;
+      }
+    }
+
+    & > * + * { margin-left: 20px; }
+  }
+
+  .socialLinksWrapper {
+    svg {
+      width: 22px;
+      fill: $white;
+      transition: fill 0.3s ease;
+  
+      &:hover {
+        fill: $green3;
+      }
+    }
+  }
+
+  .footerBottom {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: solid 1px $green3;
+  }
+
+  @include medium {
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+    .footerTop {
+      flex-direction: row;
+      
+      & > * { /** Items */
+        flex-basis: 30%;
+        flex-grow: 1;
+      }
+      
+      & > :first-child ~ * { margin-top: 0 };
+    }
+
+    .linkToHomeWrapper {
+      text-align: left;
+    }
+    
+    .socialLinksWrapper {
+      text-align: right;
+    }
+  }
+}
