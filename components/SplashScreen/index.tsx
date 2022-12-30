@@ -1,9 +1,4 @@
 import { FC, useEffect, useState } from 'react';
-
-/**
- * CSS Modules it is implemented instead of Styled-Componentes because 
- * it works as a spected way when the client recieve de main page
- */
 import styles from './styles.module.scss';
 
 const SplashScreen: FC = () => {
