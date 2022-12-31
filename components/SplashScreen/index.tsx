@@ -30,7 +30,11 @@ const SplashScreen: FC = () => {
       }, delayRemove);
     }
 
-    init();
+    window.addEventListener('load', init);
+
+    () => {
+      window.removeEventListener('load', init);
+    }
   },
   [])
 

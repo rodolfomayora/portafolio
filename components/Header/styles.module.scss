@@ -32,24 +32,27 @@
   }
   
   .navigationBar {
+    %miniBar {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      height: 5px;
+      bottom: -12px;
+      left: 0;
+      background: linear-gradient(
+        90deg,
+        $lightGradient1,
+        $lightAurora3 80%
+      );
+    }
+
     & > * { /** Navigation Links */
       position: relative;
       color: $gray;
-  
+
       &:before {
-        content: '';
-        position: absolute;
-        z-index: 10;
-        height: 5px;
-        bottom: -12px;
-        left: 0;
+        @extend %miniBar;
         width: 0;
-        background: linear-gradient(
-          90deg,
-          $lightGradient1,
-          $lightGradient2
-        );
-  
         transition: width 0.2s linear;
       }
   
@@ -64,18 +67,21 @@
     &.second > :nth-of-type(2),
     &.third > :nth-of-type(3) {
       &:after {
-        content: '';
-        position: absolute;
-        z-index: 10;
-        height: 5px;
-        bottom: -12px;
-        left: 0;
-        right: 0;
-        background: linear-gradient(
-          90deg,
-          $lightGradient1,
-          $lightGradient2
-        );
+        @extend %miniBar;
+        width: 100%;
+        // content: '';
+        // position: absolute;
+        // z-index: 10;
+        // height: 5px;
+        // bottom: -12px;
+        // left: 0;
+        // // right: 0;
+        // width: 100%;
+        // background: linear-gradient(
+        //   90deg,
+        //   $lightGradient1,
+        //   $lightAurora3 80%
+        // );
       }
     }
   }

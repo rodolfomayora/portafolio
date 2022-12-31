@@ -1,8 +1,8 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 
 import { Formik, FormikProps, FormikValues } from 'formik';
 import * as Yup from 'yup';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 
 import { capitelizeAllWords } from '../../utils';
 import { Loader } from '../../components';
@@ -48,7 +48,7 @@ const ContactForm: FC = () => {
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
         requestBody,
-        process.env.NEXT_PUBLIC_USER_ID
+        process.env.NEXT_PUBLIC_KEY
       );
 
       setLoader(false);
@@ -176,7 +176,7 @@ const ContactForm: FC = () => {
           )}
 
           {requestError && (
-            <div className={styles.successResponse}>
+            <div className={styles.failureResponse}>
               <span className="notification">
                 Intentalo de nuevo
               </span>
@@ -184,7 +184,7 @@ const ContactForm: FC = () => {
           )}
 
           {requestSuccess && (
-            <div className={styles.failureResponse}>
+            <div className={styles.successResponse}>
               <span className="notification">
                 Mensaje enviado
               </span>

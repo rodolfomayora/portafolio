@@ -67,15 +67,15 @@
   
     &:nth-of-type(5) {
       left: 40%;
-      top: 49%;
+      top: 50%;
       height: 90vh;
       width: 180vh;
       transform:
         translate(-40%, -40%)
-        skewX(-40deg);
+        skewX(-30deg);
       background-image: radial-gradient(
-        $lightAurora5  10%,
-        $transparent 60%
+        $lightAurora5  0%,
+        $transparent 70%
       );
     }
   }
