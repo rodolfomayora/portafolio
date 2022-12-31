@@ -1,13 +1,10 @@
-import React, { CSSProperties, FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 
 import Container from '../Container';
-import { colors } from '../../styles/config';
-import { HeaderProps } from './types';
-import {
-  HeaderContent,
-  HeaderStyled,
-  Navigation,
-} from './styles';
+import HeaderProps from './types';
+
+import Navigation from '../Navigation';
+import styles from './styles.module.scss';
 
 const Header: FC<HeaderProps> = ({ currentPage }) => {
   
@@ -46,37 +43,33 @@ const Header: FC<HeaderProps> = ({ currentPage }) => {
     document.addEventListener('scroll', setScrollTrue);
 
     return () => {
-      clearInterval(intervalWatcher);
+      window.clearInterval(intervalWatcher);
       document.removeEventListener('scroll', setScrollTrue);
     }
   },
   [])
 
   const navigationIndex = {
-    'Inicio'    : 1,
-    'Portafolio': 2, 
-    'Perfil'    : 3,
+    'Inicio'    : styles.first,
+    'Portafolio': styles.second, 
+    'Perfil'    : styles.third,
   }
 
   const optionIndex = navigationIndex[currentPage];
 
-  const scrollCustomProperties = {
-    '--padding-top': 0,
-    '--background': colors.white,
-    '--shadow': `0 0 5px ${colors.shadow}`
-  }
-
-  const scrolledStyle = didScroll ? scrollCustomProperties : {};
+  const navigationStyle = `${styles.navigationBar} ${optionIndex}`;
 
   return (
-    <HeaderStyled style={scrolledStyle}>
+    <div className={`
+      ${styles.Header}
+      ${didScroll ? styles.scroll : ''}  
+    `}>
       <Container>
-        <HeaderContent>
-          <Navigation optionIndex={optionIndex} />
-          {/* <span className={style.toggle} /> */}
-        </HeaderContent>
+        <div className={styles.headerContent}>
+          <Navigation className={navigationStyle} />
+        </div>
       </Container>
-    </HeaderStyled>
+    </div>
   );
 }
 

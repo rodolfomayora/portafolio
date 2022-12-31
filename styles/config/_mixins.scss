@@ -1,0 +1,34 @@
+@import './breakpoints';
+
+/* Responsive Mixins
+ ==================================*/
+
+@mixin responsive($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin small {
+  @include responsive($small) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @include responsive($medium) {
+    @content;
+  }
+}
+
+@mixin large {
+  @include responsive($large) {
+    @content;
+  }
+}
+
+@mixin extraLarge {
+  @include responsive($extraLarge) {
+    @content;
+  }
+}

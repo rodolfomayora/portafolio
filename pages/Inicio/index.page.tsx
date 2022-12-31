@@ -12,24 +12,10 @@ import {
   SocialLinks,
   TechnologyBlock,
 } from '../../components';
-import {
-  ButtonWrapper,
-  ContactFormWrapper,
-  FrostedLayer,
-  InfoWrapper,
-  MainTittle,
-  MainSection,
-  MainSectionContent,
-  PageSection,
-  PageSection2,
-  SocialLinksWrapper,
-  Subtitle,
-  TechnologyGrid,
-  TechRole,
-} from './styles';
+import styles from './styles.module.scss';
 
 const Home: FC = () => {
-
+  // this logis its mostly for mobile screens
   const [viewportHeight, setViewportHeight] = useState<number>(0);
   useEffect(() => {
     const updateViewportHeight = () => {
@@ -45,52 +31,59 @@ const Home: FC = () => {
 
   const portfolio: Array<any> = projects.slice(0,3).map(addCustomId);
 
+  const viewportHeightStyle = {
+    '--viewport-height': `${viewportHeight}px`
+  }
+
+  const mainSectionHeight = !!viewportHeight ? viewportHeightStyle : {};
+
   return (
     <Layout pageTitle="Inicio">
       <main>
-        <MainSection mainSectionHeight={viewportHeight}>
+        {/* Main Section */}
+        <section className={styles.mainSection} style={mainSectionHeight}>
           <AuroraBackground />
           <Container>
-            <MainSectionContent>
-              <FrostedLayer />
+            <div className={styles.mainSectionContent}>
+              <div className={styles.frostedLayer} />
 
-              <InfoWrapper>
-                <MainTittle>
+              <div className={styles.infoWrapper}>
+                <h1 className={styles.mainTitle}>
                   RODOLFO<br />
                   MAYORA<br />
                   PEREDA
-                </MainTittle>
+                </h1>
                 
-                <TechRole>FRONTEND DEVELOPER</TechRole>
+                <span className={styles.techRole}>FRONTEND DEVELOPER</span>
 
-                <SocialLinksWrapper>
+                <div className={styles.socialLinksWrapper}>
                   <SocialLinks />
-                </SocialLinksWrapper>
-              </InfoWrapper>
-            </MainSectionContent>
+                </div>
+              </div>
+            </div>
           </Container>
-        </MainSection>
+        </section>
 
         {/* Tech Skills Section */}
-          <PageSection>
-            <Container>
-              <Subtitle>¿Qué utilizo?</Subtitle>
-              
-              <TechnologyGrid>
-                {myTechSkills?.map(technology => (
-                  <TechnologyBlock
-                    key={technology.customId}
-                    name={technology.name}
-                    pathIcon={technology.image}/>
-                ))}
-              </TechnologyGrid>
-            </Container>
-          </PageSection>
+        <section className={styles.pageSection}>
+          <Container>
+            <h2 className={styles.subtitle}>¿Qué utilizo?</h2>
+            
+            <div className={styles.technologyGrid}>
+              {myTechSkills?.map(technology => (
+                <TechnologyBlock
+                  key={technology.customId}
+                  name={technology.name}
+                  pathIcon={technology.image}/>
+              ))}
+            </div>
+          </Container>
+        </section>
   
         {/* Portfolio Section */}
-        <PageSection2>
+        <section className={styles.pageSection2}>
           <Container>
-            <Subtitle>Portafolio</Subtitle>
+            <h2 className={styles.subtitle}>Portafolio</h2>
 
             {portfolio?.map(project => (
               <ProjectSummary
@@ -107,27 +100,27 @@ const Home: FC = () => {
                 webType={project.webType}/>
             ))}              
 
-            <ButtonWrapper>
+            <div className={styles.buttonWrapper}>
               <Button
                 as="innerLink"
                 href="/Portafolio"
                 fullWidth>
                 Ver más proyectos
               </Button>
-            </ButtonWrapper>
+            </div>
           </Container>
-        </PageSection2>
+        </section>
                 
         {/* Contact Section */}
-        <PageSection2>
+        <section className={styles.pageSection2}>
           <Container>
-            <Subtitle>Contacto</Subtitle>
+            <h2 className={styles.subtitle}>Contacto</h2>
 
-            <ContactFormWrapper> 
+            <div className={styles.contactFormWrapper}> 
               <ContactForm />
-            </ContactFormWrapper>
+            </div>
           </Container>
-        </PageSection2>
+        </section>
       </main>
     </Layout>
   );

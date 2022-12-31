@@ -1,34 +1,29 @@
 import React , { FC } from 'react';
 
-import { breakpoints } from '../../styles/config';
-import { Mockup, MockupLayer } from './styles';
-
-type MockupViewerProps = {
-  mockupFileName: string,
-  title: string,
-}
+import MockupViewerProps from './types';
+import styles from './styles.module.scss';
 
 const MockupViewer: FC<MockupViewerProps> = ({ mockupFileName, title }) => {
 
   const projectMockupPath: string = '/images/static/';
   const defaultMokupSource: string = `${projectMockupPath}${mockupFileName}`;
   const mediumMockupSource: string = `${projectMockupPath}medium_${mockupFileName}`;
-  const mediumBreakpointSource: string = `(min-width: ${breakpoints.medium})`;
+  const mediumBreakpointSource: string = `(min-width: '768px')`;
   const alternativeText: string = `${title} Mockup`;
 
   return (
     <div>
-      <MockupLayer>
+      <div className={styles.MockupViewer}>
         <picture>
           <source
             media={mediumBreakpointSource}
             srcSet={mediumMockupSource} />
-          <Mockup
+          <img className={styles.mockup}
             src={defaultMokupSource}
             alt={alternativeText}
             width="270" height="140" />
         </picture>
-      </MockupLayer>
+      </div>
     </div>
   );
 }

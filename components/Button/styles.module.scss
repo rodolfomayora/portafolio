@@ -1,0 +1,44 @@
+@import '../../styles/config';
+
+$buttonHeight: 42px;
+$borderWidth: 2px;
+$outlineButtonHeight: calc(#{$buttonHeight} - (#{$borderWidth} * 2));
+
+.Button {
+  display: inline-block;
+  padding: 0 10px;
+  line-height: $buttonHeight;
+  border: none;
+  border-radius: 4px;
+  overflow: hidden;
+  
+  font-size: 16px;
+  font-weight: 700;
+  color: $white;
+  text-align: center;
+  text-decoration: none;
+  
+  background-color: $green;
+  box-shadow: 0 2px 4px $shadow;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover { background-color: $green2; }
+
+  &.fullwidth { width: 100%;  }
+
+  &.outline {
+    line-height: $outlineButtonHeight;
+    border:
+      solid
+      $borderWidth
+      $green;
+    color: $green;
+    background-color: $transparent;
+
+    &:hover {
+      color: $white;
+      background-color: $green;
+    }
+  }
+}

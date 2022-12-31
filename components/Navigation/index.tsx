@@ -1,10 +1,6 @@
 import React, { FC } from 'react';
-
 import Link from 'next/link';
-
-type NavigationProps = {
-  className?: string,
-}
+import NavigationProps from './types';
 
 const Navigation: FC<NavigationProps> = ({ className }) => (
   <nav className={className}>

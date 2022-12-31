@@ -1,10 +1,6 @@
 import React, { FC } from 'react';
+import styles from './styles.module.scss';
 
-import {
-  AuroraBrackgroundStyled,
-  Layer,
-  Shape,
-} from './styles';
 /**
  * this component needs to be into a component with the next porperties:
  * position: relative;
@@ -13,15 +9,15 @@ import {
  */
   
 const AuroraBakcground: FC = () => (
-  <AuroraBrackgroundStyled>
-    <Layer>
-      <Shape />
-      <Shape />
-      <Shape />
-      <Shape />
-      <Shape />
-    </Layer>
-  </AuroraBrackgroundStyled>
+  <div className={styles.AuroraBrackground}>
+    <div className={styles.layer}>
+      <div className={styles.shape} />
+      <div className={styles.shape} />
+      <div className={styles.shape} />
+      <div className={styles.shape} />
+      <div className={styles.shape} />
+    </div>
+  </div>
 );
 
 export default AuroraBakcground;

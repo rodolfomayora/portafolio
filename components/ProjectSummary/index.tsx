@@ -4,16 +4,7 @@ import Button from '../Button';
 import ExternalLink from '../ExternalLink';
 import MockupViewer from '../MockupViewer';
 import ProjectSummaryProps from './types';
-import {
-  ButtonsWrapper,
-  Info,
-  InfoWrapper,
-  Label,
-  MockupWrapperDesktop,
-  MockupWrapperMobile,
-  ProjectTitle,
-  ProjectSummaryStyled
-} from './styles';
+import styles from './styles.module.scss';
 
 const ProjectSummary: FC<ProjectSummaryProps> = props => {
 
@@ -36,48 +27,48 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
   const hasSampleData: boolean = !!Object.keys(sampleDataFrom).length;
 
   return (
-    <ProjectSummaryStyled>
-      <MockupWrapperDesktop>
+    <div className={styles.ProjectSummary}>
+      <div className={styles.mockupWrapperDesktop}>
         <MockupViewer 
           mockupFileName={mockupPath}
           title={title} />
-      </MockupWrapperDesktop>
+      </div>
   
-      <InfoWrapper>
-        <ProjectTitle>{title}</ProjectTitle>
+      <div className={styles.inforWrapper}>
+        <h3 className={styles.projectTitle}>{title}</h3>
   
-        <MockupWrapperMobile>
+        <div className={styles.mockupWrapperMobile}>
           <MockupViewer 
             mockupFileName={mockupPath}
             title={title} />
-        </MockupWrapperMobile>
-        <Info>
+        </div>
+        <div className={styles.info}>
           <p>
-            <Label>Enfoque de desarrollo: </Label>
+            <span className={styles.label}>Enfoque de desarrollo: </span>
             {focusDevelopment}
           </p>
           <p>
-            <Label>Stack: </Label>
+            <span className={styles.label}>Stack: </span>
             {stack}
           </p>
           
           {hasWebType && (
             <p>
-              <Label>Tipo de sitio web: </Label>
+              <span className={styles.label}>Tipo de sitio web: </span>
               {webType}
             </p>
           )}
           
           {hasRenderType && (
             <p>
-              <Label>Tipo de renderizado: </Label>
+              <span className={styles.label}>Tipo de renderizado: </span>
               {renderType}
             </p>
           )}
 
           {hasApiIntegration && (
             <p>
-              <Label>API Integrada: </Label>
+              <span className={styles.label}>API Integrada: </span>
               <ExternalLink href={apiIntegration.url}>
                 {apiIntegration.name}
               </ExternalLink>
@@ -86,15 +77,15 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
 
           {hasSampleData && (
             <p>
-              <Label>Datos de Ejemplo: </Label>
+              <span className={styles.label}>Datos de Ejemplo: </span>
               <ExternalLink href={sampleDataFrom.url}>
                 {sampleDataFrom.name}
               </ExternalLink>
             </p>
           )}
-        </Info>
+        </div>
   
-        <ButtonsWrapper>
+        <div className={styles.buttonsWrapper}>
           <Button
             as="externalLink"
             fullWidth
@@ -109,9 +100,9 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
             href={sourceCodeURL}>
             Código Fuente
           </Button>
-        </ButtonsWrapper>
-      </InfoWrapper>
-    </ProjectSummaryStyled>
+        </div>
+      </div>
+    </div>
   );
 }
 
