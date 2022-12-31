@@ -1,28 +1,18 @@
 import React , { FC } from 'react';
-
-import {
-  ProfilePictureStyled,
-  PictureLayer1x1,
-  PictureContent,
-  Picture
-} from './styles';
-
-type ProfilePictureProps = {
-  src: string,
-  alt: string,
-}
+import ProfilePictureProps from './types';
+import styles from './styles.module.scss';
 
 const ProfilePicture: FC<ProfilePictureProps> = props => (
-  <ProfilePictureStyled>
-    <PictureLayer1x1>
-      <PictureContent>
-        <Picture
+  <div className={styles.ProfilePictureStyled}>
+    <div className={styles.pictureLayer1x1}>
+      <div className={styles.pictureContent}>
+        <img className={styles.picture}
           src={props.src}
           alt={props.alt}
           height="100" width="100" />
-      </PictureContent>
-    </PictureLayer1x1>
-  </ProfilePictureStyled>
+      </div>
+    </div>
+  </div>
 );
 
 export default ProfilePicture;

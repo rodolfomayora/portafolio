@@ -1,9 +1,5 @@
 import React , { FC } from 'react';
-
-type ExternalLinkProps = {
-  className?: string,
-  href: string
-}
+import ExternalLinkProps from './types';
 
 const ExternalLink: FC<ExternalLinkProps> = ({ children, className, href }) => (
   <a

@@ -1,9 +1,9 @@
-import { FC, useEffect, useState } from 'react';
-
 /**
- * CSS Modules it is implemented instead of Styled-Componentes because 
- * it works as a spected way when the client recieve de main page
+ * this componente ist not nescesary for NextJS 12' server components
+ * is just for decoration
  */
+
+import { FC, useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 
 const SplashScreen: FC = () => {
@@ -13,22 +13,28 @@ const SplashScreen: FC = () => {
   const [splashStyle, setSpalshStyle] = useState<string>(visibleStyle);
   const [didLoad, setDidLoad] = useState<boolean>(false);
   useEffect(() => {
+    const HTML = document.querySelector('html');
+    HTML.style.overflow = 'hidden';
+
     const init = (): void => {
       const delayHidde: number = 2000;
       const delayRemove: number = 4000;
 
       window.setTimeout(() => {
         setSpalshStyle(hiddenStyle);
+        HTML.style.overflow = 'auto';
       }, delayHidde);
 
       window.setTimeout(() => {
-        setDidLoad(true)
+        setDidLoad(true);
       }, delayRemove);
     }
 
     window.addEventListener('load', init);
 
-    return () => window.removeEventListener('load', init);
+    () => {
+      window.removeEventListener('load', init);
+    }
   },
   [])
 
@@ -36,7 +42,9 @@ const SplashScreen: FC = () => {
 
   return (
     <div className={splashStyle}>
-      <div className={styles.layer} />
+      <div className={styles.layer}>
+        <span>Cargando...</span>
+      </div>
     </div>
   );
 }

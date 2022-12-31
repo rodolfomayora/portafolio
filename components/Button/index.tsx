@@ -1,12 +1,8 @@
 import React , { FC } from 'react';
 import Link from 'next/link';
-
+import ExternalLink from '../ExternalLink';
 import { ButtonProps } from './types';
-import {
-  ButtonStyled,
-  ExternalLinkStyled,
-  LinkButtonStyled
-} from './styles';
+import styles from './styles.module.scss';
 
 const Button: FC<ButtonProps> = props => {
 
@@ -24,36 +20,37 @@ const Button: FC<ButtonProps> = props => {
 
   const mustBeExternalLink: boolean = as === 'externalLink';
   const mustBeInnerLink: boolean = as === 'innerLink';
+  const buttonStyle = `
+    ${styles.Button}
+    ${fullWidth ? styles.fullwidth : ''}
+    ${outline ? styles.outline : '' }
+    ${className ? className : '' }
+  `
 
   if (mustBeExternalLink) return (
-    <ExternalLinkStyled
-      href={href}
-      fullWidth={fullWidth}
-      outline={outline}>
+    <ExternalLink
+      className={buttonStyle}
+      href={href}>
       {children}
-    </ExternalLinkStyled>
+    </ExternalLink>
   );
 
   if (mustBeInnerLink) return (
     <Link href={href}>
-      <LinkButtonStyled
-        fullWidth={fullWidth}
-        outline={outline}>
+      <a className={buttonStyle}>
         {children}
-      </LinkButtonStyled>
+      </a>
     </Link>
   );
 
   return (
-    <ButtonStyled
-      className={className}
+    <button
+      className={buttonStyle}
       disabled={disabled}
-      fullWidth={fullWidth}
-      outline={outline}
       type={type}
       onClick={onClick}>
       {children}
-    </ButtonStyled>
+    </button>
   );
 }
 

@@ -1,5 +1,4 @@
-$green: hsl(167, 92%, 20%);
-$white2: hsl(0, 0%, 96%);
+@import '../../styles/config';
 
 .SplahScreen {
   position: fixed;
@@ -18,14 +17,22 @@ $white2: hsl(0, 0%, 96%);
     top: 50%;
     left: 50%;
     transform: translate(-50%, calc(-50% + 25px));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $gray;
     
-    width: 1px;
-    height: 1px;
+    min-width: 120px;
+    min-height: 120px;
+    width: 8vmax;
+    height: 8vmax;
     border-radius: 50%;
-    box-shadow: 0 0 0 50px $white2;
     background-color: $white2 ;
   
     will-change:
+      width,
+      height,
       opacity,
       transform,
       box-shadow;
@@ -33,7 +40,9 @@ $white2: hsl(0, 0%, 96%);
     animation: verticalMove 2s ease-in-out 0s infinite;
 
     transition:
-      box-shadow 0.5s ease 0.5s;    // un segundo en total
+      height 0.5s ease 0.5s,    // un segundo en total
+      width 0.5s ease 0.5s,    // un segundo en total
+      color 0.5s ease 0.5s;    // un segundo en total
   }
 
   &.loaded {
@@ -41,7 +50,9 @@ $white2: hsl(0, 0%, 96%);
 
     .layer {
       animation-play-state: paused;
-      box-shadow: 0 0 0 140vmax $white2;
+      width: 140vmax;
+      height: 140vmax;
+      color: transparent;
     }
   }
 }

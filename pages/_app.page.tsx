@@ -1,13 +1,11 @@
 import { AppProps } from 'next/app';
-
-import GlobalStyles from '../styles/GlobalStyles';
 import { SplashScreen } from '../components';
+import '../styles/styles.global.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <GlobalStyles />
-      <SplashScreen />
+      {process.env.NODE_ENV !== 'development' && <SplashScreen />}
       <Component {...pageProps} />
     </>
   );

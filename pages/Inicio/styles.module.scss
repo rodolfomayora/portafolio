@@ -1,59 +1,52 @@
-import styled, { css } from "styled-components";
-
-import { colors, mixins } from '../../styles/config';
+@import '../../styles/config';
 
 /* GENERAL
   ===============================*/
-export const PageSection = styled.section`
+.pageSection {
   padding: 60px 0;
-  background-color: ${colors.white};
+  background-color: $white;
 
-  ${mixins.medium(css`
+  @include medium {
     padding-top: 80px;
     padding-bottom: 80px;
-  `)}
-`;
+  }
+}
 
-export const PageSection2 = styled(PageSection)`
-  background-color: ${colors.white2};
+.pageSection2 {
+  @extend .pageSection;
+  background-color: $white2;
 
   & + & { padding-top: 0; }
-`;
+}
 
-export const Subtitle = styled.h2`
+.subtitle {
   margin-bottom: 40px;
   font-size: 32px;
   line-height: 36px;
   text-align: center;
-  color: ${colors.darkGray};
+  color: $darkGray;
 
-  ${mixins.medium(css`
+  @include medium {
     text-align: left;
-  `)}
-`;
+  }
+}
 
 /* MAIN SECTION
 ===============================*/
-type MainSectionProps = {
-  mainSectionHeight: number
-}
-export const MainSection = styled.section<MainSectionProps>`
-  position: relative;
+.mainSection {
+ position: relative;
   z-index: 0;
   display: flex;
-  min-height: 100vmax;
-  ${({ mainSectionHeight }) => !!mainSectionHeight &&  css`
-    min-height: ${mainSectionHeight}px;
-  `}
   overflow: hidden;
-  background-color: ${colors.transparent};
+  background-color: $transparent;
+  min-height: var(--viewport-height, 100vmax);
 
-  ${mixins.medium(css`
+  @include medium {
     min-height: 100vh;
-  `)}
-`;
+  }
+}
 
-export const MainSectionContent = styled.div`
+.mainSectionContent {
   position: relative;
   z-index: 0;
 
@@ -66,129 +59,128 @@ export const MainSectionContent = styled.div`
   padding-bottom: 50px;
   padding-right: 25px;
 
-  ${mixins.medium(css`
+  @include medium {
     padding-right: 50px; 
-  `)}
-`;
+  }
+}
 
-export const FrostedLayer = styled.div`
+.frostedLayer {
   position: absolute;
   z-index: -1;
   top: 0;
   right: 0;
   bottom: 0;
   width: 200%;
-  background-color: ${colors.lightFrostedLayer};
-`;
+  background-color: $lightFrostedLayer;
+}
 
-export const InfoWrapper = styled.div`
+.infoWrapper {
   width: 100%;
-`;
+}
 
-export const MainTittle = styled.h1`
+.mainTitle {
+  display: inline-block;
   margin-bottom: 10px;
   font-size: 12.5vw;
   line-height: 11vw;
   font-weight: 900;
 
   /* text overlay gradient */
-  background-color: ${colors.dark};
+  background-color: $dark;
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: ${colors.transparent};
+  -webkit-text-fill-color: $transparent;
   background-image: linear-gradient(
     90deg,
-    ${colors.lightGradient1},
-    ${colors.lightGradient2}
+    $lightGradient1,
+    $lightAurora5
   );
 
-  ${mixins.small(css`
+  @include small {
     font-size: 68px;
     line-height: 60px;
-  `)}
+  }
 
-  ${mixins.medium(css`
+  @include medium {
     margin-left: -4px;
     font-size: 90px;
     line-height: 80px;
-  `)}
-`;
+  }
+}
 
-export const TechRole = styled.span`
+.techRole {
   display: block;
   font-size: 5.5vw;
   line-height: 4vw;
   letter-spacing: 0;
   font-weight: 400;
-  color: ${colors.darkGray};
+  color: $darkGray;
   margin-bottom: 50px;
 
-  ${mixins.small(css`
+  @include small {
     font-size: 30px;
     line-height: 24px;
-  `)}
+  }
   
-  ${mixins.medium(css`
+  @include medium {
     margin-left: -4px;
     margin-bottom: 70px;
     font-size: 42px;
     line-height: 32px;
     letter-spacing: -1.7px;
-  `)}
-`;
+  }
+}
 
-export const SocialLinksWrapper = styled.div`
+.socialLinksWrapper {
   text-align: center;
     
   svg { /** Links */
     width: 22px;
-    fill: ${colors.green};
+    fill: $green;
     cursor: pointer;
     transition: fill 0.3s ease;
 
-    &:hover { fill: ${colors.lightAurora3}; }
+    &:hover { fill: $lightAurora3; }
   }
 
-  ${mixins.medium(css`
+  @include medium {
     text-align: left;
-  `)}
-`;
-
+  }
+}
 
 /* TECH SKILLS SECTION
 ===============================*/
-export const TechnologyGrid = styled.div`
+.technologyGrid {
   display: grid;
   grid-auto-rows: auto;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 24px;
 
-  ${mixins.medium(css`
+  @include medium {
     grid-template-columns: repeat(3, 1fr);
-  `)}
+  }
 
-  ${mixins.large(css`
+  @include large {
     grid-template-columns: repeat(5, 1fr);
-  `)}
-`;
+  }
+}
 
 /* PORTFOLIO SECTION
 ===============================*/
-export const ButtonWrapper = styled.div`
+.buttonWrapper {
   margin-top: 60px;
 
-  ${mixins.medium(css`
+  @include medium {
     margin-top: 80px;
-  `)}
-`;
-
+  }
+}
 
 /* CONTACT SECTION
 ===============================*/
-export const ContactFormWrapper = styled.div`
+.contactFormWrapper {
   width: 100%;
 
-  ${mixins.medium(css`
+  @include medium {
     width: 50%;
-  `)}
-`;
+  }
+}

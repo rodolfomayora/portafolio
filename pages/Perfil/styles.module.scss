@@ -1,15 +1,13 @@
-import styled, { css } from "styled-components";
+@import '../../styles/config';
 
-import { colors, mixins } from '../../styles/config';
-
-export const ProfileStyled = styled.main`
-  min-height: calc(100vh - 263px); /** 263px Footer Height */
+.profile {
+   min-height: calc(100vh - 263px); /** 263px Footer Height */
   line-height: 24px;
 
   & p:first-of-type ~ p { margin-top: 20px; }
-`;
+}
 
-export const DecorationSection = styled.div`
+.decorationSection {
   position: relative;
   z-index: 0;
   
@@ -19,38 +17,38 @@ export const DecorationSection = styled.div`
   height: 350px;
   padding-top: 100px;
   overflow: hidden;
-  background: ${colors.transparent};
+  background: $transparent;
 
-  ${mixins.medium(css`
+  @include medium {
     height: 400px;
-  `)}
-`;
+  }
+}
 
-export const MainTitle = styled.h1`
+.mainTitle {
   font-size: 36px;
-  color: ${colors.darkGray};
+  color: $darkGray;
 
-  ${mixins.medium(css`
+  @include medium {
     font-size: 42px;
-  `)}
-`;
+  }
+}
 
-export const PageSection = styled.section`
+.pageSection {
   position: relative;
   padding: 60px 0;
-  background-color: ${colors.white2};
+  background-color: $white2;
 
   &:first-of-type { padding-top: 100px; }
 
   & + & { padding-top: 0; }
 
-  ${mixins.medium(css`
+  @include medium {
     padding-top: 80px;
     padding-bottom: 80px;
-  `)}
-`;
+  }
+}
 
-export const PictureWrapper = styled.div`
+.pictureWrapper {
   position: absolute;
   top: 0;
   left: 50%;
@@ -58,36 +56,36 @@ export const PictureWrapper = styled.div`
   width: 160px;
   border-radius: 50%;
   padding: 10px;
-  background-color: ${colors.white2};
+  background-color: $white2;
 
-  ${mixins.large(css`
+  @include large {
     width: 170px;
-  `)}
-`;
+  }
+}
 
-export const Subtitle = styled.h2`
+.subtitle {
   margin-bottom: 40px;
   font-size: 28px;
   line-height: 36px;
   text-align: center;
-  color: ${colors.darkGray};
+  color: $darkGray;
 
-  ${mixins.medium(css`
+  @include medium {
     text-align: left;
     font-size: 32px;
-  `)}
-`;
+  }
+}
 
-export const List = styled.ul`
+.list {
   padding-left: 20px;
-`;
+}
 
 /* CONTACT SECTION
 ===============================*/
-export const ContactFormWrapper = styled.div`
+.contactFormWrapper {
   width: 100%;
 
-  ${mixins.medium(css`
+  @include medium {
     width: 50%;
-  `)}
-`;
+  }
+}

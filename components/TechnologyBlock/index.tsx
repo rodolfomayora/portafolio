@@ -1,24 +1,17 @@
 import React, { FC } from 'react';
-
 import TechnologyBlockProps from './types';
-import {
-  Label,
-  Logo,
-  LogoWrapper,
-  TechnologyBlockStyled
-} from './styles';
+import styles from './styles.module.scss';
 
 const TecnologyBlock: FC<TechnologyBlockProps> = ({ name, pathIcon }) => (
-  <TechnologyBlockStyled>
-    <LogoWrapper>
-      <Logo
+  <div className={styles.TechnologyBlock}>
+    <div className={styles.logoWrapper}>
+      <img
+        className={styles.logo}
         src={pathIcon}
-        alt={name + ' Icon'}
-        width="40"
-        height="40" />
-    </LogoWrapper>
-    <Label>{name}</Label>
-  </TechnologyBlockStyled>
+        alt={name + ' Icon'} />
+    </div>
+    <div className={styles.label}>{name}</div>
+  </div>
 );
 
 export default TecnologyBlock;
