@@ -8,12 +8,7 @@ import {
   Layout,
   ProjectSummary,
 } from '../../components';
-import {
-  DecorationSection,
-  MainTitle,
-  PageSection,
-  Main,
-} from './styles';
+import styles from './styles.module.scss';
 
 const Portafolio: FC = () => {
 
@@ -22,13 +17,13 @@ const Portafolio: FC = () => {
 
   return (
     <Layout pageTitle={pageTitle}>
-      <Main>
-        <DecorationSection>
+      <div className={styles.main}>
+        <section className={styles.decorationSection}>
           <AuroraBackground />
-          <MainTitle>{pageTitle}</MainTitle>
-        </DecorationSection>
+          <h1 className={styles.mainTitle}>{pageTitle}</h1>
+        </section>
 
-        <PageSection>
+        <section className={styles.pageSection}>
           <Container>
             {portfolio?.map(project => (
               <ProjectSummary
@@ -45,8 +40,8 @@ const Portafolio: FC = () => {
                 webType={project.webType} />
             ))}
           </Container>
-        </PageSection>
-      </Main>
+        </section>
+      </div>
     </Layout>
   );
 }

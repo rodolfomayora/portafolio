@@ -17,7 +17,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, calc(-50% + 25px));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $gray;
     
+    min-width: 120px;
+    min-height: 120px;
     width: 8vmax;
     height: 8vmax;
     border-radius: 50%;
@@ -34,7 +41,8 @@
 
     transition:
       height 0.5s ease 0.5s,    // un segundo en total
-      width 0.5s ease 0.5s;    // un segundo en total
+      width 0.5s ease 0.5s,    // un segundo en total
+      color 0.5s ease 0.5s;    // un segundo en total
   }
 
   &.loaded {
@@ -44,6 +52,7 @@
       animation-play-state: paused;
       width: 140vmax;
       height: 140vmax;
+      color: transparent;
     }
   }
 }

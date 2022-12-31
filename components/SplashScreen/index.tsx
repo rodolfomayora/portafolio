@@ -31,7 +31,9 @@ const SplashScreen: FC = () => {
 
   return (
     <div className={splashStyle}>
-      <div className={styles.layer} />
+      <div className={styles.layer}>
+        <span>Cargando...</span>
+      </div>
     </div>
   );
 }
