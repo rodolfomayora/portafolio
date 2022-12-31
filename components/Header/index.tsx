@@ -43,7 +43,7 @@ const Header: FC<HeaderProps> = ({ currentPage }) => {
     document.addEventListener('scroll', setScrollTrue);
 
     return () => {
-      clearInterval(intervalWatcher);
+      window.clearInterval(intervalWatcher);
       document.removeEventListener('scroll', setScrollTrue);
     }
   },
