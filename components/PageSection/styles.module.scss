@@ -1,0 +1,26 @@
+@import '../../styles/config';
+
+%section {
+  position: relative;
+  padding: 60px 0;
+
+  @include medium {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+.PageSection {
+  @extend %section;
+  background-color: $white2;
+
+  & + & { padding-top: 0; }
+}
+
+
+.PageSection2 { 
+  @extend %section;
+  background-color: $white;
+
+  & + & { padding-top: 0; }
+}

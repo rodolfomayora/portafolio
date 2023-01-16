@@ -8,6 +8,7 @@ import {
   ContactForm,
   Container,
   Layout,
+  PageSection,
   ProjectSummary,
   SocialLinks,
   TechnologyBlock,
@@ -65,24 +66,21 @@ const Home: FC = () => {
         </section>
 
         {/* Tech Skills Section */}
-        <section className={styles.pageSection}>
-          <Container>
-            <h2 className={styles.subtitle}>¿Qué utilizo?</h2>
-            
-            <div className={styles.technologyGrid}>
-              {myTechSkills?.map(technology => (
-                <TechnologyBlock
-                  key={technology.customId}
-                  name={technology.name}
-                  pathIcon={technology.image}/>
-              ))}
-            </div>
-          </Container>
-        </section>
+        <PageSection whiteColor>
+          <h2 className={styles.subtitle}>¿Qué utilizo?</h2>
+          
+          <div className={styles.technologyGrid}>
+            {myTechSkills?.map(technology => (
+              <TechnologyBlock
+                key={technology.customId}
+                name={technology.name}
+                pathIcon={technology.image}/>
+            ))}
+          </div>
+        </PageSection>
   
         {/* Portfolio Section */}
-        <section className={styles.pageSection2}>
-          <Container>
+        <PageSection>
             <h2 className={styles.subtitle}>Portafolio</h2>
 
             {portfolio?.map(project => (
@@ -108,19 +106,15 @@ const Home: FC = () => {
                 Ver más proyectos
               </Button>
             </div>
-          </Container>
-        </section>
-                
-        {/* Contact Section */}
-        <section className={styles.pageSection2}>
-          <Container>
-            <h2 className={styles.subtitle}>Contacto</h2>
+        </PageSection>
 
-            <div className={styles.contactFormWrapper}> 
-              <ContactForm />
-            </div>
-          </Container>
-        </section>
+        {/* Contact Section */}
+        <PageSection>
+          <h2 className={styles.subtitle}>Contacto</h2>
+          <div className={styles.contactFormWrapper}> 
+            <ContactForm />
+          </div>
+        </PageSection>
       </main>
     </Layout>
   );

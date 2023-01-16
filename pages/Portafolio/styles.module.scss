@@ -22,20 +22,5 @@
 }
 
 .mainTitle {
-  font-size: 36px;
-  color: $darkGray;
-
-  @include medium {
-    font-size: 42px;
-  }
-}
-
-.pageSection {
-  padding: 60px 0;
-  background-color: $white2;
-
-  @include medium {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+  @include maintitle;
 }

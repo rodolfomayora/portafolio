@@ -32,3 +32,26 @@
     @content;
   }
 }
+
+/* Common Styles
+==============================*/
+@mixin maintitle {
+  font-size: 36px;
+  color: $darkGray;
+
+  @include medium {
+    font-size: 42px;
+  }
+}
+
+@mixin subtitle {
+  margin-bottom: 40px;
+  font-size: 28px;
+  line-height: 36px;
+  color: $darkGray;
+
+  @include medium {
+    text-align: left;
+    font-size: 32px;
+  }
+}

@@ -1,34 +1,9 @@
 @import '../../styles/config';
 
 /* GENERAL
-  ===============================*/
-.pageSection {
-  padding: 60px 0;
-  background-color: $white;
-
-  @include medium {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-}
-
-.pageSection2 {
-  @extend .pageSection;
-  background-color: $white2;
-
-  & + & { padding-top: 0; }
-}
-
+===============================*/
 .subtitle {
-  margin-bottom: 40px;
-  font-size: 32px;
-  line-height: 36px;
-  text-align: center;
-  color: $darkGray;
-
-  @include medium {
-    text-align: left;
-  }
+  @include subtitle;
 }
 
 /* MAIN SECTION

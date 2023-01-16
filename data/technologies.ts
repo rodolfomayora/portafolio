@@ -8,7 +8,7 @@ const tecnologies: Array<any> = [
     image: '/images/svg/nextjs.svg'
   },
   {
-    name: 'TypesScript',
+    name: 'TypeScript',
     image: '/images/svg/typescript.svg'
   },
   {

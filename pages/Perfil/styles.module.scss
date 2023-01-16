@@ -1,7 +1,7 @@
 @import '../../styles/config';
 
 .profile {
-   min-height: calc(100vh - 263px); /** 263px Footer Height */
+  min-height: calc(100vh - 263px); /** 263px Footer Height */
   line-height: 24px;
 
   & p:first-of-type ~ p { margin-top: 20px; }
@@ -25,27 +25,7 @@
 }
 
 .mainTitle {
-  font-size: 36px;
-  color: $darkGray;
-
-  @include medium {
-    font-size: 42px;
-  }
-}
-
-.pageSection {
-  position: relative;
-  padding: 60px 0;
-  background-color: $white2;
-
-  &:first-of-type { padding-top: 100px; }
-
-  & + & { padding-top: 0; }
-
-  @include medium {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+  @include maintitle;
 }
 
 .pictureWrapper {
@@ -63,17 +43,16 @@
   }
 }
 
-.subtitle {
-  margin-bottom: 40px;
-  font-size: 28px;
-  line-height: 36px;
-  text-align: center;
-  color: $darkGray;
-
+.profileName {
+  @include subtitle;
+  margin-top: 60px;
   @include medium {
-    text-align: left;
-    font-size: 32px;
+    text-align: center;
   }
+}
+
+.subtitle {
+  @include subtitle;
 }
 
 .list {
