@@ -16,7 +16,7 @@ const Portafolio: FC = () => {
 
   return (
     <Layout pageTitle={pageTitle}>
-      <div className={styles.main}>
+      <div>
         <section className={styles.decorationSection}>
           <AuroraBackground />
           <h1 className={styles.mainTitle}>{pageTitle}</h1>

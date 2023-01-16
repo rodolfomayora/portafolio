@@ -1,8 +1,7 @@
 @import '../../styles/config';
 
 .profile {
-  min-height: calc(100vh - 263px); /** 263px Footer Height */
-  line-height: 24px;
+  line-height: 28px;
 
   & p:first-of-type ~ p { margin-top: 20px; }
 }
@@ -19,7 +18,7 @@
   overflow: hidden;
   background: $transparent;
 
-  @include medium {
+  @include mediumScreen {
     height: 400px;
   }
 }
@@ -38,7 +37,7 @@
   padding: 10px;
   background-color: $white2;
 
-  @include large {
+  @include largeScreen {
     width: 170px;
   }
 }
@@ -46,7 +45,7 @@
 .profileName {
   @include subtitle;
   margin-top: 60px;
-  @include medium {
+  @include mediumScreen {
     text-align: center;
   }
 }
@@ -64,7 +63,7 @@
 .contactFormWrapper {
   width: 100%;
 
-  @include medium {
+  @include mediumScreen {
     width: 50%;
   }
 }

@@ -16,7 +16,7 @@
   background-color: $transparent;
   min-height: var(--viewport-height, 100vmax);
 
-  @include medium {
+  @include mediumScreen {
     min-height: 100vh;
   }
 }
@@ -34,7 +34,7 @@
   padding-bottom: 50px;
   padding-right: 25px;
 
-  @include medium {
+  @include mediumScreen {
     padding-right: 50px; 
   }
 }
@@ -71,12 +71,12 @@
     $lightAurora5
   );
 
-  @include small {
+  @include smallScreen {
     font-size: 68px;
     line-height: 60px;
   }
 
-  @include medium {
+  @include mediumScreen {
     margin-left: -4px;
     font-size: 90px;
     line-height: 80px;
@@ -92,12 +92,12 @@
   color: $darkGray;
   margin-bottom: 50px;
 
-  @include small {
+  @include smallScreen {
     font-size: 30px;
     line-height: 24px;
   }
   
-  @include medium {
+  @include mediumScreen {
     margin-left: -4px;
     margin-bottom: 70px;
     font-size: 42px;
@@ -118,7 +118,7 @@
     &:hover { fill: $lightAurora3; }
   }
 
-  @include medium {
+  @include mediumScreen {
     text-align: left;
   }
 }
@@ -131,11 +131,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 24px;
 
-  @include medium {
+  @include mediumScreen {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  @include large {
+  @include largeScreen {
     grid-template-columns: repeat(5, 1fr);
   }
 }
@@ -145,7 +145,7 @@
 .buttonWrapper {
   margin-top: 60px;
 
-  @include medium {
+  @include mediumScreen {
     margin-top: 80px;
   }
 }
@@ -155,7 +155,7 @@
 .contactFormWrapper {
   width: 100%;
 
-  @include medium {
+  @include mediumScreen {
     width: 50%;
   }
 }

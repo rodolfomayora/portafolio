@@ -9,25 +9,25 @@
   }
 }
 
-@mixin small {
+@mixin smallScreen {
   @include responsive($small) {
     @content;
   }
 }
 
-@mixin medium {
+@mixin mediumScreen {
   @include responsive($medium) {
     @content;
   }
 }
 
-@mixin large {
+@mixin largeScreen {
   @include responsive($large) {
     @content;
   }
 }
 
-@mixin extraLarge {
+@mixin extraLargeScreen {
   @include responsive($extraLarge) {
     @content;
   }
@@ -39,7 +39,7 @@
   font-size: 36px;
   color: $darkGray;
 
-  @include medium {
+  @include mediumScreen {
     font-size: 42px;
   }
 }
@@ -50,7 +50,7 @@
   line-height: 36px;
   color: $darkGray;
 
-  @include medium {
+  @include mediumScreen {
     text-align: left;
     font-size: 32px;
   }
