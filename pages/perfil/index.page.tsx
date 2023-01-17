@@ -1,9 +1,9 @@
 import React, { FC, ReactNode } from 'react';
 
 import { socialLinks as links} from '../../data';
+import ContactSection from '../_commonSections/ContactSection';
 import {
   AuroraBackground,
-  ContactForm,
   ExternalLink,
   Layout,
   PageSection,
@@ -47,7 +47,7 @@ const Perfil: FC = () => {
 
   return (
     <Layout pageTitle={pageTitle}>
-      <div className={styles.profile}>
+      <main className={styles.profile}>
         <div className={styles.decorationSection}>
           <AuroraBackground />
           <h1 className={styles.mainTitle}>{pageTitle}</h1>
@@ -57,7 +57,7 @@ const Perfil: FC = () => {
           <div className={styles.pictureWrapper}>
             <ProfilePicture
               src="/images/static/rodolfo-mayora-pereda.jpg"
-              alt="Rodolfo Mayora Pereda"/>
+              alt="Rodolfo Mayora Pereda" />
           </div>
 
           <h2 className={styles.profileName}>Hola, soy Rodolfo Mayora Pereda</h2>
@@ -100,14 +100,8 @@ const Perfil: FC = () => {
           </p>
         </PageSection>
 
-        <PageSection>
-          <h2 className={styles.subtitle}>Contacto</h2>
-
-          <div className={styles.contactFormWrapper}> 
-            <ContactForm />
-          </div>
-        </PageSection>
-      </div>
+        <ContactSection />
+      </main>
     </Layout>
   );
 }

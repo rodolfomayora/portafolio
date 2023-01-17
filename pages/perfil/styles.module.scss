@@ -1,8 +1,6 @@
 @import '../../styles/config';
 
 .profile {
-  line-height: 28px;
-
   & p:first-of-type ~ p { margin-top: 20px; }
 }
 
@@ -56,14 +54,4 @@
 
 .list {
   padding-left: 20px;
-}
-
-/* CONTACT SECTION
-===============================*/
-.contactFormWrapper {
-  width: 100%;
-
-  @include mediumScreen {
-    width: 50%;
-  }
 }

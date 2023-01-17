@@ -1,9 +1,8 @@
 import { FC } from 'react';
-
 import {
   ContactForm,
   PageSection,
-} from '../../../../components';
+} from '../../../components';
 import styles from './styles.module.scss';
 
 const ContactSection: FC = () => {
