@@ -1,0 +1,13 @@
+@import '../../../../styles/config';
+
+.subtitle {
+  @include subtitle;
+}
+
+.buttonWrapper {
+  margin-top: 60px;
+
+  @include mediumScreen {
+    margin-top: 80px;
+  }
+}
