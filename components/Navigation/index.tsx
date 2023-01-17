@@ -7,10 +7,10 @@ const Navigation: FC<NavigationProps> = ({ className }) => (
     <Link href="/">
       <a>Inicio</a>
     </Link>
-    <Link href="/Portafolio">
+    <Link href="/portafolio">
       <a>Portafolio</a>
     </Link>
-    <Link href="/Perfil">
+    <Link href="/perfil">
       <a>Perfil</a>
     </Link>
   </nav>

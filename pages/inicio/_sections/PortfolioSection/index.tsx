@@ -34,7 +34,7 @@ const PortfolioSection: FC = () => {
       <div className={styles.buttonWrapper}>
         <Button
           as="innerLink"
-          href="/Portafolio"
+          href="/portafolio"
           fullWidth>
           Ver más proyectos
         </Button>
