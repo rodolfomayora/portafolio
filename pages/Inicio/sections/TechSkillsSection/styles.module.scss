@@ -1,0 +1,20 @@
+@import '../../../../styles/config';
+
+.subtitle {
+  @include subtitle;
+}
+
+.technologyGrid {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+
+  @include mediumScreen {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include largeScreen {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

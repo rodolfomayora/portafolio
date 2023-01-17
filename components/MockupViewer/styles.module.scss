@@ -16,7 +16,7 @@
     object-position: center;
   }
 
-  @include medium {
+  @include mediumScreen {
     position: relative;
     padding-top: 60%;
   }

@@ -1,9 +1,5 @@
 @import '../../styles/config';
 
-.main {
-  min-height: calc(100vh - 263px); /** 263px Footer Height */
-}
-
 .decorationSection {
   position: relative;
   z-index: 0;
@@ -16,26 +12,11 @@
   overflow: hidden;
   background: $transparent;
 
-  @include medium {
+  @include mediumScreen {
     height: 400px;
   }
 }
 
 .mainTitle {
-  font-size: 36px;
-  color: $darkGray;
-
-  @include medium {
-    font-size: 42px;
-  }
-}
-
-.pageSection {
-  padding: 60px 0;
-  background-color: $white2;
-
-  @include medium {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+  @include maintitle;
 }

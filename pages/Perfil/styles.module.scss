@@ -1,8 +1,7 @@
 @import '../../styles/config';
 
 .profile {
-   min-height: calc(100vh - 263px); /** 263px Footer Height */
-  line-height: 24px;
+  line-height: 28px;
 
   & p:first-of-type ~ p { margin-top: 20px; }
 }
@@ -19,33 +18,13 @@
   overflow: hidden;
   background: $transparent;
 
-  @include medium {
+  @include mediumScreen {
     height: 400px;
   }
 }
 
 .mainTitle {
-  font-size: 36px;
-  color: $darkGray;
-
-  @include medium {
-    font-size: 42px;
-  }
-}
-
-.pageSection {
-  position: relative;
-  padding: 60px 0;
-  background-color: $white2;
-
-  &:first-of-type { padding-top: 100px; }
-
-  & + & { padding-top: 0; }
-
-  @include medium {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
+  @include maintitle;
 }
 
 .pictureWrapper {
@@ -58,22 +37,21 @@
   padding: 10px;
   background-color: $white2;
 
-  @include large {
+  @include largeScreen {
     width: 170px;
   }
 }
 
-.subtitle {
-  margin-bottom: 40px;
-  font-size: 28px;
-  line-height: 36px;
-  text-align: center;
-  color: $darkGray;
-
-  @include medium {
-    text-align: left;
-    font-size: 32px;
+.profileName {
+  @include subtitle;
+  margin-top: 60px;
+  @include mediumScreen {
+    text-align: center;
   }
+}
+
+.subtitle {
+  @include subtitle;
 }
 
 .list {
@@ -85,7 +63,7 @@
 .contactFormWrapper {
   width: 100%;
 
-  @include medium {
+  @include mediumScreen {
     width: 50%;
   }
 }

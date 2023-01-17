@@ -4,9 +4,9 @@ import { socialLinks as links} from '../../data';
 import {
   AuroraBackground,
   ContactForm,
-  Container,
   ExternalLink,
   Layout,
+  PageSection,
   ProfilePicture,
 } from '../../components';
 import styles from './styles.module.scss';
@@ -53,65 +53,60 @@ const Perfil: FC = () => {
           <h1 className={styles.mainTitle}>{pageTitle}</h1>
         </div>
 
-        <section className={styles.pageSection}>
-          <Container>
-            <div className={styles.pictureWrapper}>
-              <ProfilePicture
-                src="/images/static/rodolfo-mayora-pereda.jpg"
-                alt="Rodolfo Mayora Pereda"/>
-            </div>
+        <PageSection>
+          <div className={styles.pictureWrapper}>
+            <ProfilePicture
+              src="/images/static/rodolfo-mayora-pereda.jpg"
+              alt="Rodolfo Mayora Pereda"/>
+          </div>
 
-            <h2 className={styles.subtitle}>Hola, soy Rodolfo Mayora Pereda</h2>
+          <h2 className={styles.profileName}>Hola, soy Rodolfo Mayora Pereda</h2>
 
-            <p><strong>Soy desarollador Frontend con enfoque en ReactJS y TypeScript.</strong></p>
+          <p><strong>Soy desarollador Frontend con enfoque en ReactJS y TypeScript.</strong></p>
 
-            <p>Empecé mi carrera como Ingeniero de Sistemas graduado de la UNEFA. Tengo más de dos (2) años de experiencia en desarrollo web, de los cuales cuento con más de un (1) año enfocado en desarrollo FrontEnd. He trabajado en proyectos de E-commerce, aplicaciones web, desarrollo de aplicación móvil y sitios web estáticos. En el transcurso de mi carrera he implementado las siguientes tecnologías:</p>
+          <p>Empecé mi carrera como Ingeniero de Sistemas graduado de la UNEFA. Tengo más de dos (2) años de experiencia en desarrollo web, de los cuales cuento con más de un (1) año enfocado en desarrollo FrontEnd. He trabajado en proyectos de E-commerce, aplicaciones web, desarrollo de aplicación móvil y sitios web estáticos. En el transcurso de mi carrera he implementado las siguientes tecnologías:</p>
 
-            <ul className={styles.list}>
-              <li><strong>Librerías:</strong> ReactJS</li>
-              <li><strong>Frameworks:</strong> React-Native (Expo SDK) y NextJS</li>
-              <li><strong>Lenguajes:</strong> HTML5, CSS3, Sass, CSS Modules, JavaScript y TypeScript</li>
-              <li><strong>Gestión de estado global:</strong>Redux y React Context API</li>
-              <li><strong>Gestión de efectos:</strong>Redux-Saga, Redux-Thunk y useEffect hook</li>
-              <li><strong>CMS'S:</strong> Wordpress</li>
-              <li><strong>Versionado del código:</strong> Git y Github</li>
-            </ul>
+          <ul className={styles.list}>
+            <li><strong>Control de versiones del código:</strong> Git y Github</li>
+            <li><strong>Librerías:</strong> ReactJS</li>
+            <li><strong>Frameworks:</strong> NextJS y React-Native (Expo SDK)</li>
+            <li><strong>Lenguajes:</strong> HTML5, CSS3, Sass, CSS Modules, JavaScript y TypeScript</li>
+            <li><strong>Gestión de estado global:</strong>Redux y React Context API</li>
+            <li><strong>Gestión de efectos:</strong>Redux-Saga, Redux-Thunk y useEffect hook</li>
+            <li><strong>CMS'S:</strong> Wordpress</li>
+          </ul>
 
-            <p>Mi Objetivo profesional es resolver problemas complejos de la web mediante el desarrollo de soluciones simples, fáciles de entender y mantener con el menor costo y tiempo posible, junto con el cumplimiento de convenciones, la aplicación de metodologías ágiles y de buenas prácticas correspondientes para cada tipo de tecnología web.</p>
+          <p>Mi Objetivo profesional es resolver problemas complejos de la web mediante el desarrollo de soluciones simples, fáciles de entender y mantener con el menor costo y tiempo posible, junto con el cumplimiento de convenciones, la aplicación de metodologías ágiles y de buenas prácticas correspondientes para cada tipo de tecnología web.</p>
 
-            <p><strong>¿Qué problemas puedo resolver?</strong> <br /> Puedo:</p>
+          <p><strong>¿Qué problemas puedo resolver?</strong> <br /> Puedo:</p>
 
-            <ul className={styles.list}>{generateListElements(soluciontAndSkills)}</ul>
+          <ul className={styles.list}>{generateListElements(soluciontAndSkills)}</ul>
 
-            <p>Actualmente me encuentro en el desarrollo de proyectos web con ReactJS y NextJS.</p>
+          <p>Actualmente me encuentro en el desarrollo de proyectos web con ReactJS y NextJS.</p>
 
-            <p><strong>Estoy muy interesado en colaborar</strong> en el desarrollo de proyectos que requieran el uso de <strong>ReactJS, TypeScript, Redux</strong>, tales como:</p>
+          <p><strong>Estoy muy interesado en colaborar</strong> en el desarrollo de proyectos que requieran el uso de <strong>ReactJS, TypeScript, Redux</strong>, tales como:</p>
 
-            <ul className={styles.list}>{generateListElements(workOfInterest)}</ul>
+          <ul className={styles.list}>{generateListElements(workOfInterest)}</ul>
 
-            <p>También estoy interesado en aprender tecnologías web tales como:</p>
+          <p>También estoy interesado en aprender tecnologías web tales como:</p>
 
-            <ul className={styles.list}>{generateListElements(knowledgeOfInterest)}</ul>
+          <ul className={styles.list}>{generateListElements(knowledgeOfInterest)}</ul>
 
-            <p>
-              Puedes ver mas en mi perfil de {' '}
-              <ExternalLink href={links.linkedInProfile}>
-                LinkedIn
-              </ExternalLink>
-            </p>
+          <p>
+            Puedes ver mas en mi perfil de {' '}
+            <ExternalLink href={links.linkedInProfile}>
+              LinkedIn
+            </ExternalLink>
+          </p>
+        </PageSection>
 
-          </Container>
-        </section>
+        <PageSection>
+          <h2 className={styles.subtitle}>Contacto</h2>
 
-        <section className={styles.pageSection}>
-          <Container>
-            <h2 className={styles.subtitle}>Contacto</h2>
-
-            <div className={styles.contactFormWrapper}> 
-              <ContactForm />
-            </div>
-          </Container>
-        </section>
+          <div className={styles.contactFormWrapper}> 
+            <ContactForm />
+          </div>
+        </PageSection>
       </div>
     </Layout>
   );
