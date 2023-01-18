@@ -19,6 +19,8 @@
     }
   }
 
+  .info > * + * { margin-top: 5px; }
+
   .projectTitle {
     font-size: 24px;
     font-weight: 400;

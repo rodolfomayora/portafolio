@@ -35,7 +35,8 @@ const Portafolio: FC = () => {
               sourceCodeURL={project.sourceCodeURL}
               stack={project.stack}
               title={project.title}
-              webType={project.webType} />
+              webType={project.webType}
+              deploymentPlatform={project.deploymentPlatform} />
           ))}
         </PageSection>
       </main>

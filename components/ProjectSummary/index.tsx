@@ -11,6 +11,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
   const {
     apiIntegration,
     deployURL,
+    deploymentPlatform,
     focusDevelopment,
     mockupPath,
     renderType,
@@ -83,6 +84,11 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
               </ExternalLink>
             </p>
           )}
+          
+          <p>
+            <span className={styles.label}>Despliegue: </span>
+            {deploymentPlatform}
+          </p>
         </div>
   
         <div className={styles.buttonsWrapper}>
