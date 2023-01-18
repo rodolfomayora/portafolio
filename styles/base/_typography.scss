@@ -1,6 +1,7 @@
-$fontsPath: '/fonts/';
-$poppinsPath: '#{$fontsPath}Poppins/';
-$openSansPath: '#{$fontsPath}OpenSans/';
+$fontsPath: '/fonts';
+$poppinsPath: '#{$fontsPath}/Poppins';
+// $openSansPath: '#{$fontsPath}/OpenSans';
+$firaCodePath: '#{$fontsPath}/FiraCode';
 
 /* Popins
 ========================================*/
@@ -9,8 +10,8 @@ $openSansPath: '#{$fontsPath}OpenSans/';
   font-style: normal;
   font-weight: 300;
   src:
-    url('#{$poppinsPath}poppins-v15-latin-300.woff') format('woff'),
-    url('#{$poppinsPath}poppins-v15-latin-300.ttf') format('truetype');
+    url('#{$poppinsPath}/poppins-v15-latin-300.woff') format('woff'),
+    url('#{$poppinsPath}/poppins-v15-latin-300.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -19,8 +20,28 @@ $openSansPath: '#{$fontsPath}OpenSans/';
   font-style: normal;
   font-weight: 400;
   src:
-    url('#{$poppinsPath}poppins-v15-latin-regular.woff') format('woff'),
-    url('#{$poppinsPath}poppins-v15-latin-regular.ttf') format('truetype');
+    url('#{$poppinsPath}/poppins-v15-latin-regular.woff') format('woff'),
+    url('#{$poppinsPath}/poppins-v15-latin-regular.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('#{$poppinsPath}/poppins-v20-latin-500.woff') format('woff'),
+    url('#{$poppinsPath}/poppins-v20-latin-500.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src:
+    url('#{$poppinsPath}/poppins-v20-latin-600.woff') format('woff'),
+    url('#{$poppinsPath}/poppins-v20-latin-600.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -29,8 +50,8 @@ $openSansPath: '#{$fontsPath}OpenSans/';
   font-style: normal;
   font-weight: 800;
   src:
-    url('#{$poppinsPath}poppins-v15-latin-800.woff') format('woff'),
-    url('#{$poppinsPath}poppins-v15-latin-800.ttf') format('truetype');
+    url('#{$poppinsPath}/poppins-v15-latin-800.woff') format('woff'),
+    url('#{$poppinsPath}/poppins-v15-latin-800.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -39,49 +60,59 @@ $openSansPath: '#{$fontsPath}OpenSans/';
   font-style: normal;
   font-weight: 900;
   src:
-    url('#{$poppinsPath}poppins-v15-latin-900.woff') format('woff'),
-    url('#{$poppinsPath}poppins-v15-latin-900.ttf') format('truetype');
+    url('#{$poppinsPath}/poppins-v15-latin-900.woff') format('woff'),
+    url('#{$poppinsPath}/poppins-v15-latin-900.ttf') format('truetype');
   font-display: swap;
 }
 
-/* Open Sans
+/* Fira Code
 ========================================*/
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Fira Code';
   font-style: normal;
   font-weight: 300;
   src:
-    url('#{$openSansPath}open-sans-v18-latin-300.woff') format('woff'),
-    url('#{$openSansPath}open-sans-v18-latin-300.ttf') format('truetype');
+    url('#{$firaCodePath}/fira-code-v21-latin-300.woff') format('woff'),
+    url('#{$firaCodePath}/fira-code-v21-latin-300.ttf') format('truetype');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Fira Code';
   font-style: normal;
   font-weight: 400;
   src:
-    url('#{$openSansPath}open-sans-v18-latin-regular.woff') format('woff'),
-    url('#{$openSansPath}open-sans-v18-latin-regular.ttf') format('truetype');
+    url('#{$firaCodePath}/fira-code-v21-latin-regular.woff') format('woff'),
+    url('#{$firaCodePath}/fira-code-v21-latin-regular.ttf') format('truetype');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 500;
+  src:
+    url('#{$firaCodePath}/fira-code-v21-latin-500.woff') format('woff'),
+    url('#{$firaCodePath}/fira-code-v21-latin-500.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Code';
   font-style: normal;
   font-weight: 700;
   src:
-    url('#{$openSansPath}open-sans-v18-latin-700.woff') format('woff'),
-    url('#{$openSansPath}open-sans-v18-latin-700.ttf') format('truetype');
+    url('#{$firaCodePath}/fira-code-v21-latin-600.woff') format('woff'),
+    url('#{$firaCodePath}/fira-code-v21-latin-600.ttf') format('truetype');
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
+  font-family: 'Fira Code';
   font-style: normal;
   font-weight: 800;
   src:
-    url('#{$openSansPath}open-sans-v18-latin-800.woff') format('woff'),
-    url('#{$openSansPath}open-sans-v18-latin-800.ttf') format('truetype');
+    url('#{$firaCodePath}/fira-code-v21-latin-700.woff') format('woff'),
+    url('#{$firaCodePath}/fira-code-v21-latin-700.ttf') format('truetype');
   font-display: swap;
 }
