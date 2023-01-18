@@ -35,7 +35,7 @@ const projectsData: Array<ProjectSummaryType> = [
     title: 'Blogr Landing Page',
     mockupPath: 'blogr-mockup.png',
     focusDevelopment: 'Mobile First',
-    stack: 'NextJS, TypeScript, SCSS, SCSS-Modules, Flexbox, Responsive Web Design',
+    stack: 'NextJS, ReactJS, TypeScript, SCSS, SCSS-Modules, Flexbox, Responsive Web Design',
     webType: 'Landing Page',
     renderType: 'Static Generation (SSG)',
     sourceCodeURL: 'https://github.com/rodolfomayora/blogr-landing-page.git',

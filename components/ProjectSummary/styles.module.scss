@@ -1,6 +1,7 @@
 @import '../../styles/config';
 
 .ProjectSummary {
+
   &:first-of-type ~ & { margin-top: 60px; }
 
   .mockupWrapperDesktop {

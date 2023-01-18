@@ -15,3 +15,4 @@ export { default as ProjectSummary } from './ProjectSummary';
 export { default as SocialLinks } from './SocialLinks';
 export { default as SplashScreen } from './SplashScreen';
 export { default as TechnologyBlock } from './TechnologyBlock';
+export { default as TechnologyTag } from './TechnologyTag';
