@@ -1,6 +1,7 @@
 @import '../../styles/config';
 
 .ProjectSummary {
+
   &:first-of-type ~ & { margin-top: 60px; }
 
   .mockupWrapperDesktop {
@@ -19,14 +20,12 @@
     }
   }
 
+  .info > * + * { margin-top: 5px; }
+
   .projectTitle {
     font-size: 24px;
     font-weight: 400;
     text-align: center;
-  }
-
-  .info {
-    line-height: 24px;
   }
 
   .label {

@@ -16,7 +16,7 @@ const Portafolio: FC = () => {
 
   return (
     <Layout pageTitle={pageTitle}>
-      <div>
+      <main>
         <section className={styles.decorationSection}>
           <AuroraBackground />
           <h1 className={styles.mainTitle}>{pageTitle}</h1>
@@ -35,10 +35,11 @@ const Portafolio: FC = () => {
               sourceCodeURL={project.sourceCodeURL}
               stack={project.stack}
               title={project.title}
-              webType={project.webType} />
+              webType={project.webType}
+              deploymentPlatform={project.deploymentPlatform} />
           ))}
         </PageSection>
-      </div>
+      </main>
     </Layout>
   );
 }

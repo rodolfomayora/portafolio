@@ -28,13 +28,14 @@ const PortfolioSection: FC = () => {
           sourceCodeURL={project.sourceCodeURL}
           stack={project.stack}
           title={project.title}
-          webType={project.webType}/>
+          webType={project.webType}
+          deploymentPlatform={project.deploymentPlatform} />
       ))}              
 
       <div className={styles.buttonWrapper}>
         <Button
           as="innerLink"
-          href="/Portafolio"
+          href="/portafolio"
           fullWidth>
           Ver más proyectos
         </Button>

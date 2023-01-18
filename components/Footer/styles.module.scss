@@ -17,9 +17,11 @@
   .linkToHomeWrapper { text-align: center; }
 
   .linkToHome {
+    display: inline-block;
+    font-family: 'Poppins';
     font-size: 18px;
     font-weight: 900;
-    line-height: 16px;
+    line-height: 18px;
     color: $white;
     transition: color 0.3s linear;
 

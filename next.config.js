@@ -6,5 +6,13 @@ module.exports = {
       use: ["@svgr/webpack"]
     });
     return config;
-  }
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        destination: '/inicio'
+      },
+    ]
+  },
 };

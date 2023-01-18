@@ -12,10 +12,11 @@ body {
   min-height: 100vh;
   overflow-X: hidden;
   background-color: $white2;
+  line-height: 28px;
 }
 
 :root {
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Fira Code', Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: $gray;
 }

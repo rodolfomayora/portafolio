@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import Button from '../Button';
+import TechnologyTag from '../TechnologyTag';
 import ExternalLink from '../ExternalLink';
 import MockupViewer from '../MockupViewer';
 import ProjectSummaryProps from './types';
@@ -11,6 +12,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
   const {
     apiIntegration,
     deployURL,
+    deploymentPlatform,
     focusDevelopment,
     mockupPath,
     renderType,
@@ -25,6 +27,10 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
   const hasRenderType: boolean = !!renderType;
   const hasApiIntegration: boolean = !!Object.keys(apiIntegration).length;
   const hasSampleData: boolean = !!Object.keys(sampleDataFrom).length;
+
+  const tagStack = stack.split(', ').map((name, index) => {
+    return <TechnologyTag name={name} id={String(index + 1)} />
+  });
 
   return (
     <div className={styles.ProjectSummary}>
@@ -49,7 +55,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
           </p>
           <p>
             <span className={styles.label}>Stack: </span>
-            {stack}
+            {tagStack}
           </p>
           
           {hasWebType && (
@@ -83,6 +89,11 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
               </ExternalLink>
             </p>
           )}
+          
+          <p>
+            <span className={styles.label}>Despliegue: </span>
+            {deploymentPlatform}
+          </p>
         </div>
   
         <div className={styles.buttonsWrapper}>
