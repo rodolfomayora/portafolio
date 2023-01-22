@@ -48,6 +48,8 @@
 
     & > * { /** Navigation Links */
       position: relative;
+      font-family: 'Poppins';
+      font-weight: 600;
       color: $gray;
 
       &:before {
@@ -69,19 +71,6 @@
       &:after {
         @extend %miniBar;
         width: 100%;
-        // content: '';
-        // position: absolute;
-        // z-index: 10;
-        // height: 5px;
-        // bottom: -12px;
-        // left: 0;
-        // // right: 0;
-        // width: 100%;
-        // background: linear-gradient(
-        //   90deg,
-        //   $lightGradient1,
-        //   $lightAurora3 80%
-        // );
       }
     }
   }

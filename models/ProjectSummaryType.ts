@@ -13,6 +13,7 @@ type ProjectSummaryType = {
   webType: string,
   renderType?: string
   sourceCodeURL: string,
+  deploymentPlatform: string,
   deployURL: string,
   apiIntegration?: ApiIntegration,
   sampleDataFrom?: SampleDataFrom,

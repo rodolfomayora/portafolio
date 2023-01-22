@@ -5,6 +5,7 @@ import Head from 'next/head';
 import Header from '../Header';
 import Footer from '../Footer';
 import LayoutProps from './types';
+import styles from './styles.module.scss';
 
 const Layout: FC<LayoutProps> = ({ children, pageTitle }) => (
   <>
@@ -14,7 +15,9 @@ const Layout: FC<LayoutProps> = ({ children, pageTitle }) => (
       <meta name="description" content="Portafolio de Rodolfo Mayora Pereda, FrontEnd Developer enfocado en ReactJS y tecnologías relacionadas, ingresa al portafolio si deseas saber más." />
     </Head>
     <Header currentPage={pageTitle} />
-    {children}
+    <div className={styles.pageContent}>
+      {children}
+    </div>
     <Footer />
   </>
 )

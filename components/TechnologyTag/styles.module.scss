@@ -1,0 +1,17 @@
+@import '../../styles/config';
+
+.technologyTag {
+  display: inline-block;
+  padding: 0 14px;
+  border: 2px solid $gray ;
+  border-radius: 18px;
+  color: $gray ;
+  line-height: 32px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+  &:hover {
+    color: $green2;
+    border-color: $green2;
+  }
+}

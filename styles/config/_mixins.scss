@@ -9,26 +9,49 @@
   }
 }
 
-@mixin small {
+@mixin smallScreen {
   @include responsive($small) {
     @content;
   }
 }
 
-@mixin medium {
+@mixin mediumScreen {
   @include responsive($medium) {
     @content;
   }
 }
 
-@mixin large {
+@mixin largeScreen {
   @include responsive($large) {
     @content;
   }
 }
 
-@mixin extraLarge {
+@mixin extraLargeScreen {
   @include responsive($extraLarge) {
     @content;
+  }
+}
+
+/* Common Styles
+==============================*/
+@mixin maintitle {
+  font-size: 36px;
+  color: $darkGray;
+
+  @include mediumScreen {
+    font-size: 42px;
+  }
+}
+
+@mixin subtitle {
+  margin-bottom: 40px;
+  font-size: 28px;
+  line-height: 36px;
+  color: $darkGray;
+
+  @include mediumScreen {
+    text-align: left;
+    font-size: 32px;
   }
 }
