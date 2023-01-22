@@ -91,8 +91,8 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
           )}
           
           <p>
-            <span className={styles.label}>Despliegue: </span>
-            {deploymentPlatform}
+            <span className={styles.label}>Desplegado en: </span>
+            <TechnologyTag name={deploymentPlatform} />
           </p>
         </div>
   
