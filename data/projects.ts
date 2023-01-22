@@ -9,10 +9,10 @@ const projectsData: Array<ProjectSummaryType> = [
     webType: 'Single Page Aplication (SPA)',
     renderType: 'Client Side Rendering (CSR)',
     sourceCodeURL: 'https://github.com/rodolfomayora/mini-shop.git',
-    deployURL: 'https://mini-shop-rodolfo.vercel.app',
+    deployURL: 'https://my-mini-shop.vercel.app',
     deploymentPlatform: 'Vercel',
     sampleDataFrom: {
-      name: 'Fake Store API',
+      name: 'Fake Store (public API)',
       url: 'https://fakestoreapi.com'
     },
   },
@@ -24,11 +24,11 @@ const projectsData: Array<ProjectSummaryType> = [
     webType: 'Single Page Aplication (SPA)',
     renderType: 'Client Side Rendering (CSR), List Virtualization (Windowing)',
     sourceCodeURL: 'https://github.com/rodolfomayora/rest-countries.git',
-    deployURL: 'https://rest-countries-app-swart.vercel.app',
+    deployURL: 'https://my-rest-countries.vercel.app',
     deploymentPlatform: 'Vercel',
     apiIntegration: {
-      name: 'REST Countries',
-      url: 'https://restcountries.eu'
+      name: 'REST Countries (public API)',
+      url: 'https://restcountries.com/'
     },
   },
   {
@@ -39,7 +39,7 @@ const projectsData: Array<ProjectSummaryType> = [
     webType: 'Landing Page',
     renderType: 'Static Generation (SSG)',
     sourceCodeURL: 'https://github.com/rodolfomayora/blogr-landing-page.git',
-    deployURL: 'https://blogr-landing-page-orcin.vercel.app',
+    deployURL: 'https://my-blogr-landing-page.vercel.app',
     deploymentPlatform: 'Vercel',
   },
   {
