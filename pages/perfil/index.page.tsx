@@ -63,7 +63,7 @@ const Perfil: FC = () => {
 
           <p><strong>Soy desarollador Frontend con enfoque en ReactJS.</strong></p>
 
-          <p>Empecé mi carrera como Ingeniero de Sistemas graduado de la UNEFA. Tengo más de tres (3) años de experiencia en desarrollo web, de los cuales cuento con más de dos (2) año enfocado en desarrollo FrontEnd. He trabajado en proyectos de E-commerce, aplicaciones web (SPA y SSR), desarrollo de aplicaciones móviles (Android) y sitios web estáticos. En el transcurso de mi carrera he implementado las siguientes tecnologías:</p>
+          <p>Empecé mi carrera como Ingeniero de Sistemas graduado de la UNEFA. Tengo más de tres (3) años de experiencia en desarrollo web, de los cuales cuento con más de dos (2) años enfocado en desarrollo FrontEnd. He trabajado en proyectos de E-commerce, aplicaciones web (SPA y SSR), desarrollo de aplicaciones móviles (Android) y sitios web estáticos. En el transcurso de mi carrera he implementado las siguientes tecnologías:</p>
 
           <ul className={styles.list}>
             <li><strong>Librerías FronEnd:</strong> ReactJS</li>
