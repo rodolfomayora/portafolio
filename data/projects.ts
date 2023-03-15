@@ -2,6 +2,15 @@ import ProjectSummaryType from '../models/ProjectSummaryType';
 
 const projectsData: Array<ProjectSummaryType> = [
   {
+    title: 'RESTful API + Documentación',
+    mockupPath:  'todo-api.png',
+    stack: 'MongoDB Atlas, Express, Node, Javascript, Jest, Supertest, Swagger, OpenAPI v3, CI/CD (Github Actions)',
+    renderType: 'Server Side Rendering',
+    sourceCodeURL: 'https://github.com/rodolfomayora/todo-api',
+    deployURL: 'https://todo-api.fly.dev/api/v1/docs',
+    deploymentPlatform: 'Fly.io',
+  },
+  {
     title: 'Mini Shop',
     mockupPath:  'mini-shop.png',
     focusDevelopment: 'Mobile First',

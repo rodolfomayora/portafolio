@@ -29,7 +29,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
   const hasSampleData: boolean = !!Object.keys(sampleDataFrom).length;
 
   const tagStack = stack.split(', ').map((name, index) => {
-    return <TechnologyTag name={name} id={String(index + 1)} />
+    return <TechnologyTag key={String(index + 1)}  name={name} />
   });
 
   return (
