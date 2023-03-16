@@ -21,6 +21,7 @@ const PortfolioSection: FC = () => {
           key={project.customId}
           apiIntegration={{ ...project.apiIntegration }}
           sampleDataFrom={{ ...project.sampleDataFrom }}
+          category={project.category}
           deployURL={project.deployURL}
           focusDevelopment={project.focusDevelopment}
           mockupPath={project.mockupPath}
