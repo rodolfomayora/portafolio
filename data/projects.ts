@@ -1,9 +1,12 @@
 import ProjectSummaryType from '../models/ProjectSummaryType';
 
+const categories = Object.freeze(['Frontend', 'Backend']);
+
 const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'RESTful API + Documentación',
     mockupPath:  'todo-api.png',
+    category: categories[1],
     stack: 'MongoDB Atlas, Express, Node, Javascript, Jest, Supertest, Swagger, OpenAPI v3, CI/CD (Github Actions)',
     renderType: 'Server Side Rendering',
     sourceCodeURL: 'https://github.com/rodolfomayora/todo-api',
@@ -13,6 +16,7 @@ const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Mini Shop',
     mockupPath:  'mini-shop.png',
+    category: categories[0],
     focusDevelopment: 'Mobile First',
     stack: 'NextJS, ReactJS, TypeScript, Context-API, Styled-Components, SCSS, Flexbox, Grid CSS, Responsive Web Design',
     webType: 'Single Page Aplication (SPA)',
@@ -28,6 +32,7 @@ const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Rest Countries App',
     mockupPath:  'rest-countries-app.png',
+    category: categories[0],
     focusDevelopment: 'Mobile First',
     stack: 'ReactJS, TypeScript, Redux, Redux-Saga, React-router-dom, SCSS, SCSS-Modules, Flexbox, Responsive Web Design',
     webType: 'Single Page Aplication (SPA)',
@@ -43,6 +48,7 @@ const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Blogr Landing Page',
     mockupPath: 'blogr-mockup.png',
+    category: categories[0],
     focusDevelopment: 'Mobile First',
     stack: 'NextJS, ReactJS, TypeScript, SCSS, SCSS-Modules, Flexbox, Responsive Web Design',
     webType: 'Landing Page',
@@ -54,6 +60,7 @@ const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Easybank Landing Page',
     mockupPath: 'easybank-mockup.png',
+    category: categories[0],
     focusDevelopment: 'Mobile First',
     stack: 'ReactJS, TypeScript, SCSS, SCSS-Modules, CSS Grid, Flexbox, Responsive Web Design',
     webType: 'Landing Page',
@@ -65,6 +72,7 @@ const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Insure Landing Page',
     mockupPath: 'insure-mockup.png',
+    category: categories[0],
     focusDevelopment: 'Mobile First',
     stack: 'HTML, SCSS, JavaScript, Flexbox, Responsive Web Design',
     webType: 'Landing Page',
@@ -75,6 +83,7 @@ const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Testimonials Grid Section',
     mockupPath: 'testimonial-mockup.png',
+    category: categories[0],
     focusDevelopment: 'Mobile First',
     stack: 'ReactJS, TypeScript, CSS-Modules, CSS Grid, Responsive Web Design',
     webType: 'Estático',
@@ -85,6 +94,7 @@ const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Article Preview Component',
     mockupPath: 'article-preview-mockup.png',
+    category: categories[0],
     focusDevelopment: 'Mobile First',
     stack: 'HTML, CSS, JavaScript, Responsive Web Design',
     webType: 'Estático',
@@ -96,6 +106,7 @@ const projectsData: Array<ProjectSummaryType> = [
   // {
   //   title: '',
   //   mockupPath:  '',
+  //   category: '',
   //   focusDevelopment: '',
   //   stack: '',
   //   webType: '',

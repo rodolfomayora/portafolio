@@ -11,6 +11,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
 
   const {
     apiIntegration,
+    category,
     deployURL,
     deploymentPlatform,
     focusDevelopment,
@@ -50,9 +51,17 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
         </div>
         <div className={styles.info}>
           <p>
-            <span className={styles.label}>Enfoque de desarrollo: </span>
-            {focusDevelopment}
+            <span className={styles.label}>Categoría: </span>
+            {category}
           </p>
+
+          {focusDevelopment && (
+            <p>
+            <span className={styles.label}>Enfoque de desarrollo: </span>
+              {focusDevelopment}
+            </p>
+          )}
+
           <p>
             <span className={styles.label}>Stack: </span>
             {tagStack}

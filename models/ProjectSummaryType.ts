@@ -8,6 +8,7 @@ type SampleDataFrom = ApiIntegration;
 type ProjectSummaryType = {
   title: string,
   mockupPath: string,
+  category: string,
   focusDevelopment?: string,
   stack: string,
   webType?: string,
