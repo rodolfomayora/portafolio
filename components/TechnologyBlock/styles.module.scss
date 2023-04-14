@@ -20,19 +20,19 @@
   
   .logo {
     max-height: 40px;
-    height: auto;
-    width: auto;
+    height: 100%;
+    width: 100%;
   }
   
   .label {
     flex-grow: 1;
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     margin-top: 12px;
     line-height: 18px;
   }
 
-  @include smallScreen {
+  @include mediumScreen {
     flex-direction: row;
     
     .logoWrapper { margin-right: 10px; }
