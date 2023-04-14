@@ -5,16 +5,19 @@
 }
 
 .technologyGrid {
+  --min-column-size-mobile: 120px;
+  --min-column-size-desktop: 190px;
   display: grid;
-  grid-auto-rows: auto;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 24px;
-
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--min-column-size-mobile), 1fr)
+  );
+  gap: 24px;
+  
   @include mediumScreen {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  @include largeScreen {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(
+      auto-fit, 
+      minmax(var(--min-column-size-desktop), 1fr)
+    );
   }
 }
