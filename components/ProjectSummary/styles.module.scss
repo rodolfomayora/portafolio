@@ -49,6 +49,12 @@
     .label { flex-grow: 0 }
   }
 
+  .deploy {
+    display: flex;
+    align-items: baseline;
+    column-gap: 10px;
+  }
+
   .buttonsWrapper {
     & > :first-child { margin-bottom: 25px; }
   }

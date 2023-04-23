@@ -8,7 +8,7 @@ const projectsData: Array<ProjectSummaryType> = [
     mockupPath: 'sunnyside-landing-page.png',
     category: categories[0],
     focusDevelopment: 'Mobile First',
-    stack: 'HTML, CSS, JavaScript, Responsive Web Design, Pixel-Perfect',
+    stack: 'HTML, CSS, JavaScript, Pixel-Perfect, Responsive Web Design',
     webType: 'Estático',
     sourceCodeURL: 'https://github.com/rodolfomayora/sunnyside-agency-landing-page-main',
     deployURL: 'https://rodolfomayora.github.io/sunnyside-agency-landing-page-main',
