@@ -20,7 +20,10 @@
     }
   }
 
-  .info > * + * { margin-top: 5px; }
+  .info{
+    display: grid;
+    row-gap: 5px;
+  }
 
   .projectTitle {
     font-size: 24px;
@@ -30,6 +33,20 @@
 
   .label {
     font-weight: 700;
+  }
+
+  .techStack {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+
+    > * {
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .label { flex-grow: 0 }
   }
 
   .buttonsWrapper {
@@ -44,7 +61,7 @@
     }
 
     .buttonsWrapper {
-       display: flex;
+      display: flex;
 
       & > * { flex-basis: 50%; }
 

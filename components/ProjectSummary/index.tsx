@@ -62,8 +62,8 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
             </p>
           )}
 
-          <p>
-            <span className={styles.label}>Stack: </span>
+          <p className={styles.techStack}>
+            <span className={styles.label}>Stack:</span>
             {tagStack}
           </p>
           

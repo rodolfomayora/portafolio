@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 
 const PortfolioSection: FC = () => {
 
-  const portfolio: Array<any> = projects.slice(0,3).map(addCustomId);
+  const portfolio: Array<any> = projects.slice(0,4).map(addCustomId);
 
   return (
     <PageSection>

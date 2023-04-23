@@ -1,5 +1,29 @@
 const tecnologies: Array<any> = [
   {
+    name: 'HTML5',
+    image: '/images/svg/html.svg'
+  },
+  {
+    name: 'CSS3',
+    image: '/images/svg/css.svg'
+  },
+  {
+    name: 'Sass/scss',
+    image: '/images/svg/sass.svg'
+  },
+  {
+    name: 'JavaScript',
+    image: '/images/svg/javascript.svg'
+  },
+  {
+    name: 'TypeScript',
+    image: '/images/svg/typescript.svg'
+  },
+  {
+    name: 'Node.js',
+    image: '/images/svg/node.svg'
+  },
+  {
     name: 'Next.js',
     image: '/images/svg/nextjs.svg'
   },
@@ -8,36 +32,16 @@ const tecnologies: Array<any> = [
     image: '/images/svg/react.svg'
   },
   {
-    name: 'Vite.js',
-    image: '/images/svg/vitejs.svg'
-  },
-  {
-    name: 'Node.js',
-    image: '/images/svg/node.svg'
-  },
-  {
-    name: 'TypeScript',
-    image: '/images/svg/typescript.svg'
-  },
-  {
-    name: 'JavaScript',
-    image: '/images/svg/javascript.svg'
-  },
-  {
     name: 'Redux',
     image: '/images/svg/redux.svg'
   },
   {
-    name: 'Sass/scss',
-    image: '/images/svg/sass.svg'
+    name: 'Vite.js',
+    image: '/images/svg/vitejs.svg'
   },
   {
-    name: 'CSS3',
-    image: '/images/svg/css.svg'
-  },
-  {
-    name: 'HTML5',
-    image: '/images/svg/html.svg'
+    name: 'Jest',
+    image: '/images/svg/jest.svg'
   },
   {
     name: 'Docker',
