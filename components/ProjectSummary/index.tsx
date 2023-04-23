@@ -62,8 +62,8 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
             </p>
           )}
 
-          <p>
-            <span className={styles.label}>Stack: </span>
+          <p className={styles.techStack}>
+            <span className={styles.label}>Stack:</span>
             {tagStack}
           </p>
           
@@ -99,7 +99,7 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
             </p>
           )}
           
-          <p>
+          <p className={styles.deploy}>
             <span className={styles.label}>Desplegado en: </span>
             <TechnologyTag name={deploymentPlatform} />
           </p>

@@ -4,14 +4,15 @@ const categories = Object.freeze(['Frontend', 'Backend']);
 
 const projectsData: Array<ProjectSummaryType> = [
   {
-    title: 'RESTful API + Documentación',
-    mockupPath:  'todo-api.png',
-    category: categories[1],
-    stack: 'MongoDB Atlas, Express, Node, Javascript, Jest, Supertest, Swagger, OpenAPI v3, CI/CD (Github Actions)',
-    renderType: 'Server Side Rendering',
-    sourceCodeURL: 'https://github.com/rodolfomayora/todo-api',
-    deployURL: 'https://todo-api.fly.dev/api/v1/docs',
-    deploymentPlatform: 'Fly.io',
+    title: 'Sunnyside Agency Landing Page',
+    mockupPath: 'sunnyside-landing-page.png',
+    category: categories[0],
+    focusDevelopment: 'Mobile First',
+    stack: 'HTML, CSS, JavaScript, Pixel-Perfect, Responsive Web Design',
+    webType: 'Estático',
+    sourceCodeURL: 'https://github.com/rodolfomayora/sunnyside-agency-landing-page-main',
+    deployURL: 'https://rodolfomayora.github.io/sunnyside-agency-landing-page-main',
+    deploymentPlatform: 'Github Pages',
   },
   {
     title: 'Mini Shop',
@@ -44,6 +45,16 @@ const projectsData: Array<ProjectSummaryType> = [
       name: 'REST Countries (public API)',
       url: 'https://restcountries.com/'
     },
+  },
+  {
+    title: 'RESTful API + Documentación',
+    mockupPath:  'todo-api.png',
+    category: categories[1],
+    stack: 'MongoDB Atlas, Express, Node, Javascript, Jest, Supertest, Swagger, OpenAPI v3, CI/CD (Github Actions)',
+    renderType: 'Server Side Rendering',
+    sourceCodeURL: 'https://github.com/rodolfomayora/todo-api',
+    deployURL: 'https://todo-api.fly.dev/api/v1/docs',
+    deploymentPlatform: 'Fly.io',
   },
   {
     title: 'Blogr Landing Page',
@@ -102,6 +113,7 @@ const projectsData: Array<ProjectSummaryType> = [
     deployURL: 'https://rodolfomayora.github.io/article-preview-component',
     deploymentPlatform: 'Github Pages',
   },
+  
   
   // {
   //   title: '',

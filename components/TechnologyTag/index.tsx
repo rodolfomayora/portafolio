@@ -4,7 +4,9 @@ import styles from './styles.module.scss';
 
 const TechologyTag: FC<TecnologyTagProps> = ({ name }) => (
   <div className={styles.technologyTag}>
-    {name}
+    <div className={styles.content}>
+      <div className={styles.text}>{name}</div>
+    </div>
   </div>
 );
 
