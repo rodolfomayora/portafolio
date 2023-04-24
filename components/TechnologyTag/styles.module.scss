@@ -2,23 +2,17 @@
 
 .technologyTag {
   display: inline-block;
-  padding: 1px;
   border-radius: 20px;
-  color: $gray ;
+  color: $gray;
   overflow: hidden;
-  background-image: linear-gradient(120deg, $green2 60%, $lightAurora3);
+  background-color: $white;
+  padding: 0 14px;
+  box-shadow: 0 2px 4px -2px $shadow;
 
   .content {
-    background-color: $white;
-    padding: 0 14px;
-    border-radius: 18px;
-  }
-
-  .text {
     display: inline-block;
     font-weight: 400;
     line-height: 32px;
-
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: hsla(0deg, 0%, 0%, 0);
