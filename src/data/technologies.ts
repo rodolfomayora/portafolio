@@ -1,14 +1,14 @@
 const tecnologies: Array<any> = [
   {
-    name: 'HTML5',
+    name: 'HTML',
     image: '/images/svg/html.svg'
   },
   {
-    name: 'CSS3',
+    name: 'CSS',
     image: '/images/svg/css.svg'
   },
   {
-    name: 'Sass/scss',
+    name: 'Sass/SCSS',
     image: '/images/svg/sass.svg'
   },
   {
