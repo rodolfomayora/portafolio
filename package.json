@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0 --port 3001",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cz": "cz",
+    "prepare": "husky"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
@@ -19,10 +21,15 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.12.7",
     "@types/react": "^18.3.1",
     "@types/react-dom": "^18.3.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.0.11",
     "typescript": "^5.4.5"
   },
   "engines": {
