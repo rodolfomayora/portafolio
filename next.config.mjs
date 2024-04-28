@@ -1,5 +1,8 @@
-module.exports = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
   pageExtensions: ['page.ts', 'page.tsx'],
+  
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
@@ -16,3 +19,5 @@ module.exports = {
     ]
   },
 };
+
+export default nextConfig;
