@@ -15,7 +15,7 @@ const Inicio: FC = () => (
       <MainSection />
       <TechSkillsSection />
       <PortfolioSection />
-      <ContactSection />
+      {/* <ContactSection /> */}
     </main>
   </Layout>
 );

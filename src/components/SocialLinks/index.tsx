@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Github, Linkedin, Telegram } from '../../public/images';
+import { Github, Linkedin, Telegram } from '../../../public/images';
 import { socialLinks as links } from '../../data';
 import ExternalLink from '../ExternalLink';
 import styles from './styles.module.scss';

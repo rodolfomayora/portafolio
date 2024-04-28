@@ -5,13 +5,13 @@ import NavigationProps from './types';
 const Navigation: FC<NavigationProps> = ({ className }) => (
   <nav className={className}>
     <Link href="/">
-      <a>Inicio</a>
+      Inicio
     </Link>
     <Link href="/portafolio">
-      <a>Portafolio</a>
+      Portafolio
     </Link>
     <Link href="/perfil">
-      <a>Perfil</a>
+      Perfil
     </Link>
   </nav>
 );

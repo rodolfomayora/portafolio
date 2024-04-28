@@ -62,10 +62,10 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
             </p>
           )}
 
-          <p className={styles.techStack}>
+          <div className={styles.techStack}>
             <span className={styles.label}>Stack:</span>
             {tagStack}
-          </p>
+          </div>
           
           {hasWebType && (
             <p>
@@ -99,10 +99,10 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
             </p>
           )}
           
-          <p className={styles.deploy}>
+          <span className={styles.deploy}>
             <span className={styles.label}>Desplegado en: </span>
             <TechnologyTag name={deploymentPlatform} />
-          </p>
+          </span>
         </div>
   
         <div className={styles.buttonsWrapper}>

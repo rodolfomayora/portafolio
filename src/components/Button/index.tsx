@@ -36,10 +36,8 @@ const Button: FC<ButtonProps> = props => {
   );
 
   if (mustBeInnerLink) return (
-    <Link href={href}>
-      <a className={buttonStyle}>
-        {children}
-      </a>
+    <Link className={buttonStyle} href={href}>
+      {children}
     </Link>
   );
 

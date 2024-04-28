@@ -17,12 +17,10 @@ const Footer: FC = () => {
       <Container>
         <div className={styles.footerTop}>
           <div className={styles.linkToHomeWrapper}>
-            <Link href="/">
-              <a className={styles.linkToHome}>
+            <Link className={styles.linkToHome} href="/">
                 RODOLFO<br />
                 MAYORA<br />
                 PEREDA
-              </a>
             </Link>
           </div>
   
