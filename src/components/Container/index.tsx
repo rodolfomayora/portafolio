@@ -1,7 +1,11 @@
-import React, { FC } from 'react';
+import type { ReactElement } from 'react';
 import styles from './styles.module.scss';
 
-const Container: FC = ({ children }) => (
+type Props = {
+  children: ReactElement | ReactElement[]
+}
+
+const Container = ({ children }: Props) => (
   <div className={styles.Container}>
     <div className={styles.containerWrapper}>
       {children}

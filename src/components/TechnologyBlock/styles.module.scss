@@ -1,4 +1,4 @@
-@import '../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .TechnologyBlock {
   position: relative;
@@ -7,10 +7,10 @@
   flex-direction: column;
   border-radius: 4px;
   padding: 12px 12px;
-  background-color: $white2;
+  background-color: var(--color-white2);
   overflow: hidden;
-  border-left: solid 6px $green;
-  box-shadow: 0 2px 4px $shadow;
+  border-left: solid 6px var(--color-green);
+  box-shadow: 0 2px 4px var(--color-shadow);
 
   .logoWrapper {
     display: flex;
@@ -32,7 +32,7 @@
     line-height: 18px;
   }
 
-  @include mediumScreen {
+  @include mixins.tablet {
     flex-direction: row;
     
     .logoWrapper { margin-right: 10px; }

@@ -1,5 +1,3 @@
-@import '../../styles/config';
-
 $buttonHeight: 42px;
 $borderWidth: 2px;
 $outlineButtonHeight: calc(#{$buttonHeight} - (#{$borderWidth} * 2));
@@ -14,16 +12,16 @@ $outlineButtonHeight: calc(#{$buttonHeight} - (#{$borderWidth} * 2));
   
   font-size: 16px;
   font-weight: 700;
-  color: $white;
+  color: var(--color-white);
   text-align: center;
   text-decoration: none;
   
-  background-color: $green;
-  box-shadow: 0 2px 4px $shadow;
+  background-color: var(--color-green);
+  box-shadow: 0 2px 4px var(--color-shadow);
   cursor: pointer;
   transition: all 0.3s ease;
 
-  &:hover { background-color: $green2; }
+  &:hover { background-color: var(--color-green2); }
 
   &.fullwidth { width: 100%;  }
 
@@ -32,13 +30,13 @@ $outlineButtonHeight: calc(#{$buttonHeight} - (#{$borderWidth} * 2));
     border:
       solid
       $borderWidth
-      $green;
-    color: $green;
-    background-color: $transparent;
+      var(--color-green);
+    color: var(--color-green);
+    background-color: var(--color-transparent);
 
     &:hover {
-      color: $white;
-      background-color: $green;
+      color: var(--color-white);
+      background-color: var(--color-green);
     }
   }
 }

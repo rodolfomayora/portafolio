@@ -1,4 +1,4 @@
-@import '../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .Container {
   width: 100%;
@@ -12,7 +12,7 @@
     margin-right: auto;
   }
 
-  @include mediumScreen {
+  @include mixins.tablet {
     padding-left: 50px;
     padding-right: 50px;
   }

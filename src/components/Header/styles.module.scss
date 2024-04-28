@@ -1,5 +1,3 @@
-@import '../../styles/config';
-
 .Header {
   position: fixed;
   z-index: 2;
@@ -9,7 +7,7 @@
   padding-top: 30px;
   min-height: 50px;
   font-weight: 700;
-  background-color: $transparent;
+  background-color: var(--color-transparent);
   box-shadow: none;
   will-change:
     padding-top
@@ -19,8 +17,8 @@
 
   &.scroll {
     padding-top: 0;
-    background-color: $white;
-    box-shadow: 0 2px 4px $shadow;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px var(--color-shadow);
   }
 
   .headerContent {
@@ -41,8 +39,8 @@
       left: 0;
       background: linear-gradient(
         90deg,
-        $lightGradient1,
-        $lightAurora3 80%
+        var(--color-lightGradient1),
+        var(--color-lightAurora3) 80%
       );
     }
 
@@ -50,7 +48,7 @@
       position: relative;
       font-family: 'Poppins';
       font-weight: 600;
-      color: $gray;
+      color: var(--color-gray);
 
       &:before {
         @extend %miniBar;

@@ -1,4 +1,4 @@
-@import '../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .decorationSection {
   position: relative;
@@ -10,13 +10,13 @@
   height: 350px;
   padding-top: 100px;
   overflow: hidden;
-  background: $transparent;
+  background: var(--color-transparent);
 
-  @include mediumScreen {
+  @include mixins.tablet {
     height: 400px;
   }
 }
 
 .mainTitle {
-  @include maintitle;
+  @include mixins.maintitle;
 }

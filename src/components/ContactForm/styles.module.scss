@@ -1,10 +1,8 @@
-@import '../../styles/config';
-
 .ContactForm {
   display: flex;
   flex-direction: column;
   width: auto;
-  background-color: $white2;
+  background-color: var(--color-white2);
   border-radius: 4px;
 
   & > :first-child ~ * { margin-top: 16px; }
@@ -15,24 +13,24 @@
     min-height: 40px;
     padding: 10px 20px;
     margin-top: 5px;
-    border: 1px solid $lightGray;
+    border: 1px solid var(--color-light-gray);
     border-radius: 4px;
     outline: none;
     box-shadow: none;
 
     font-family: 'Open Sans';
     font-size: 16px;
-    color: $darkGray;
+    color: var(--color-dark-gray);
     
-    background-color: $white;
+    background-color: var(--color-white);
 
     &::placeholder {
-      color: $gray;
+      color: var(--color-gray);
       opacity: 1;
     }
 
     &.error {
-      border-color: $red;
+      border-color: var(--color-red);
     }
   }
 
@@ -43,7 +41,7 @@
 
   .errorLabel {
     font-size: 13px;
-    color: $red;
+    color: var(--color-red);
     margin-top: 3px;
   }
 
@@ -61,14 +59,14 @@
     font-weight: 700;
 
     &:enabled:hover {
-      background-color: $green2;
+      background-color: var(--color-green2);
       cursor: pointer;
     }
 
     &:disabled {
       opacity: 0.6;
       cursor: not-allowed;
-      background-color: $darkGray;
+      background-color: var(--color-dark-gray);
     }
   }
 
@@ -93,12 +91,12 @@
 
   .successResponse {
     @extend %responseMessage;
-    background-color: $greenSuccess;
+    background-color: var(--color-greenSuccess);
   }
 
   .failureResponse {
     @extend %responseMessage;
-    background-color: $red;
+    background-color: var(--color-red);
   }
 }
 

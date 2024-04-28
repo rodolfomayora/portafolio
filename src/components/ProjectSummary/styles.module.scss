@@ -1,4 +1,4 @@
-@import '../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .ProjectSummary {
 
@@ -59,7 +59,8 @@
     & > :first-child { margin-bottom: 25px; }
   }
 
-  @include smallScreen {
+  // @media screen and (min-width:576px) {
+  @include mixins.minWidth(576px) {
     .inforWrapper {
       & > :first-child ~ * {
         margin-top: 20px;
@@ -78,7 +79,7 @@
     }
   }
 
-  @include mediumScreen {
+  @include mixins.tablet {
     display: flex;
     align-items: center;
 

@@ -1,13 +1,11 @@
-@import '../../styles/config';
-
 .technologyTag {
   display: inline-block;
   border-radius: 20px;
-  color: $gray;
+  color: var(--color-gray);
   overflow: hidden;
-  background-color: $white;
+  background-color: var(--color-white);
   padding: 0 14px;
-  box-shadow: 0 2px 4px -2px $shadow;
+  box-shadow: 0 2px 4px -2px var(--color-shadow);
 
   .content {
     display: inline-block;
@@ -16,6 +14,6 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: hsla(0deg, 0%, 0%, 0);
-    background-image: linear-gradient(120deg, $green2 60%, $lightAurora3);
+    background-image: linear-gradient(120deg, var(--color-green2) 60%, var(--color-light-aurora3));
   }
 }

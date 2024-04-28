@@ -1,10 +1,10 @@
-@import '../../styles/config';
+@use "#styles/mixins" as mixins;
 
 %section {
   position: relative;
   padding: 60px 0;
 
-  @include mediumScreen {
+  @include mixins.tablet {
     padding-top: 80px;
     padding-bottom: 80px;
   }
@@ -12,7 +12,7 @@
 
 .PageSection {
   @extend %section;
-  background-color: $white2;
+  background-color: var(--color-white2);
 
   & + & { padding-top: 0; }
 }
@@ -20,7 +20,7 @@
 
 .PageSection2 { 
   @extend %section;
-  background-color: $white;
+  background-color: var(--color-white);
 
   & + & { padding-top: 0; }
 }

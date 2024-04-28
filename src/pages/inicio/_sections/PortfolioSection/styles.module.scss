@@ -1,13 +1,13 @@
-@import '../../../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .subtitle {
-  @include subtitle;
+  @include mixins.subtitle;
 }
 
 .buttonWrapper {
   margin-top: 60px;
 
-  @include mediumScreen {
+  @include mixins.tablet {
     margin-top: 80px;
   }
 }

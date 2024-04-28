@@ -1,11 +1,11 @@
-@import '../../../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .MainSection {
- position: relative;
+  position: relative;
   z-index: 0;
   display: flex;
   overflow: hidden;
-  background-color: $transparent;
+  background-color: var(--color-transparent);
   min-height: var(--viewport-height, 100vmax);
 
   .contentLayer {
@@ -29,7 +29,7 @@
     right: 0;
     bottom: 0;
     width: 200%;
-    background-color: $lightFrostedLayer;
+    background-color: var(--color-light-frosted-layer);
   }
 
   .infoWrapper {
@@ -44,14 +44,14 @@
     font-weight: 900;
 
     /* text overlay gradient */
-    background-color: $dark;
+    background-color: var(--color-dark);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: $transparent;
+    -webkit-text-fill-color: var(--color-transparent);
     background-image: linear-gradient(
       90deg,
-      $lightGradient1,
-      $lightAurora5
+      var(--color-light-gradient1),
+      var(--color-light-aurora5)
     );
   }
 
@@ -61,7 +61,7 @@
     line-height: 4vw;
     letter-spacing: 0;
     font-weight: 400;
-    color: $darkGray;
+    color: var(--color-dark-gray);
     margin-bottom: 50px;
   }
 
@@ -70,15 +70,15 @@
       
     svg { /** Links */
       width: 22px;
-      fill: $green;
+      fill: var(--color-green);
       cursor: pointer;
       transition: fill 0.3s ease;
 
-      &:hover { fill: $lightAurora3; }
+      &:hover { fill: var(--color-light-aurora3); }
     }
   }
 
-  @include smallScreen {
+  @include mixins.minWidth(576px) {
     .mainTitle {
       font-size: 68px;
       line-height: 60px;
@@ -90,7 +90,7 @@
     }
   }
 
-  @include mediumScreen {
+  @include mixins.tablet {
     min-height: 100vh;
 
     .contentLayer {

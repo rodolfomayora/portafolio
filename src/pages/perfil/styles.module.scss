@@ -1,4 +1,4 @@
-@import '../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .profile {
   & p:first-of-type ~ p { margin-top: 20px; }
@@ -14,15 +14,15 @@
   height: 350px;
   padding-top: 100px;
   overflow: hidden;
-  background: $transparent;
+  background: var(--color-transparent);
 
-  @include mediumScreen {
+  @include mixins.tablet {
     height: 400px;
   }
 }
 
 .mainTitle {
-  @include maintitle;
+  @include mixins.maintitle;
 }
 
 .pictureWrapper {
@@ -33,23 +33,24 @@
   width: 160px;
   border-radius: 50%;
   padding: 10px;
-  background-color: $white2;
+  background-color: var(--color-white2);
 
-  @include largeScreen {
+  @include mixins.minWidth(1440px) {
     width: 170px;
   }
 }
 
 .profileName {
-  @include subtitle;
+  @include mixins.subtitle;
   margin-top: 60px;
-  @include mediumScreen {
+
+  @include mixins.tablet {
     text-align: center;
   }
 }
 
 .subtitle {
-  @include subtitle;
+  @include mixins.subtitle;
 }
 
 .list {

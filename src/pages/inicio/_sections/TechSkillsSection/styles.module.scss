@@ -1,7 +1,7 @@
-@import '../../../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .subtitle {
-  @include subtitle;
+  @include mixins.subtitle;
 }
 
 .technologyGrid {
@@ -14,7 +14,7 @@
   );
   gap: 24px;
   
-  @include mediumScreen {
+  @include mixins.tablet {
     grid-template-columns: repeat(
       auto-fit, 
       minmax(var(--min-column-size-desktop), 1fr)

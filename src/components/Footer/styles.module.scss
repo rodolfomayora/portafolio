@@ -1,10 +1,10 @@
-@import '../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .Footer {
   padding-top: 50px;
   padding-bottom: 40px;
-  background-color: $dark;
-  color: $white;
+  background-color: var(--color-dark);
+  color: var(--color-white);
 
   .footerTop {
     display: flex;
@@ -22,10 +22,10 @@
     font-size: 18px;
     font-weight: 900;
     line-height: 18px;
-    color: $white;
+    color: var(--color-white);
     transition: color 0.3s linear;
 
-    &:hover { color: $green3; }
+    &:hover { color: var(--color-green3); }
   }
 
   .innerNavigation {
@@ -33,11 +33,11 @@
     justify-content: center;
 
     & > * { /** Navigation Links */
-      color: $white;
+      color: var(--color-white);
       transition: color 0.3s linear;
 
       &:hover {
-        color: $green3;
+        color: var(--color-green3);
       }
     }
 
@@ -47,11 +47,11 @@
   .socialLinksWrapper {
     svg {
       width: 22px;
-      fill: $white;
+      fill: var(--color-white);
       transition: fill 0.3s ease;
   
       &:hover {
-        fill: $green3;
+        fill: var(--color-green3);
       }
     }
   }
@@ -60,10 +60,10 @@
     text-align: center;
     padding-top: 40px;
     margin-top: 40px;
-    border-top: solid 1px $green3;
+    border-top: solid 1px var(--color-green3);
   }
 
-  @include mediumScreen {
+  @include mixins.tablet {
     padding-top: 60px;
     padding-bottom: 50px;
 

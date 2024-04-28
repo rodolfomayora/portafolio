@@ -1,4 +1,4 @@
-@import '../../styles/config';
+@use "#styles/mixins" as mixins;
 
 .MockupViewer {
   position: relative;
@@ -16,7 +16,7 @@
     object-position: center;
   }
 
-  @include mediumScreen {
+  @include mixins.tablet {
     position: relative;
     padding-top: 60%;
   }
