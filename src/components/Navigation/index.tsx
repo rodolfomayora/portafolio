@@ -15,9 +15,9 @@ export function Navigation ({ className }: Props) {
       <Link href="/portfolio">
         {t.portfolio}
       </Link>
-      <Link href="/profile">
+      {/* <Link href="/profile">
         {t.profile}
-      </Link>
+      </Link> */}
     </nav>
   );
 }

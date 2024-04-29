@@ -1,14 +1,14 @@
 import { useState } from 'react';
 
-import { Formik, FormikProps, FormikValues } from 'formik';
+// import { Formik, FormikProps, FormikValues } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
 
 import { capitelizeAllWords } from '#utils/capitelizeAllWords';
-import { Loader } from '#components/Loader';
-import { Button } from '#components/Button';
+// import { Loader } from '#components/Loader';
+// import { Button } from '#components/Button';
 import { RequestBody } from './type';
-import styles from './styles.module.scss';
+// import styles from './styles.module.scss';
 
 export function ContactForm () {
   const [loader, setLoader] = useState<boolean>(false);
@@ -70,130 +70,132 @@ export function ContactForm () {
       .required('Campo requerido')
   });
 
-  return (
-    <Formik
-      initialValues={{
-        fullName: '',
-        email   : '',
-        message : '',
-      }}
+  return null;
 
-      validationSchema={schema}
+  // return (
+  //   <Formik
+  //     initialValues={{
+  //       fullName: '',
+  //       email   : '',
+  //       message : '',
+  //     }}
 
-      onSubmit={sendEmail}
+  //     validationSchema={schema}
 
-      initialErrors={{ fullName: 'required', email: 'required' }}
-    >
-    {({
-      values,
-      errors,
-      touched,
-      isValid,
-      handleBlur,
-      handleChange,
-      handleSubmit,
-    }: FormikProps<FormikValues>) => (
-      <form
-        className={styles.ContactForm}
-        onSubmit={handleSubmit}>
-        <label>
-          Nombre y apellido <br />
-          <input
-            className={`
-              ${styles.input}
-              ${!!touched.fullName && !!errors.fullName ? styles.error : '' }
-            `}
-            name="fullName"
-            type="text"
-            value={values.fullName}
-            disabled={loader}
-            required
-            onBlur={handleBlur}
-            onChange={handleChange}
-          />
-          {
-            touched.fullName &&
-            errors.fullName &&
-            <div className={styles.errorLabel}>{errors.fullName}</div>
-          }
-        </label>
+  //     onSubmit={sendEmail}
+
+  //     initialErrors={{ fullName: 'required', email: 'required' }}
+  //   >
+  //   {({
+  //     values,
+  //     errors,
+  //     touched,
+  //     isValid,
+  //     handleBlur,
+  //     handleChange,
+  //     handleSubmit,
+  //   }: FormikProps<FormikValues>) => (
+  //     <form
+  //       className={styles.ContactForm}
+  //       onSubmit={handleSubmit}>
+  //       <label>
+  //         Nombre y apellido <br />
+  //         <input
+  //           className={`
+  //             ${styles.input}
+  //             ${!!touched.fullName && !!errors.fullName ? styles.error : '' }
+  //           `}
+  //           name="fullName"
+  //           type="text"
+  //           value={values.fullName}
+  //           disabled={loader}
+  //           required
+  //           onBlur={handleBlur}
+  //           onChange={handleChange}
+  //         />
+  //         {
+  //           touched.fullName &&
+  //           errors.fullName &&
+  //           <div className={styles.errorLabel}>{errors.fullName}</div>
+  //         }
+  //       </label>
         
-        <label>
-          Correo <br />
-          <input
-            className={`
-              ${styles.input}
-              ${!!touched.email && !!errors.email ? styles.error : '' }
-            `}
-            name="email"
-            type="email"
-            value={values.email}
-            disabled={loader}
-            required
-            onBlur={handleBlur}
-            onChange={handleChange}
-          />
-          {
-            touched.email &&
-            errors.email &&
-            <div className={styles.errorLabel}>{errors.email}</div>
-          }
-        </label>
+  //       <label>
+  //         Correo <br />
+  //         <input
+  //           className={`
+  //             ${styles.input}
+  //             ${!!touched.email && !!errors.email ? styles.error : '' }
+  //           `}
+  //           name="email"
+  //           type="email"
+  //           value={values.email}
+  //           disabled={loader}
+  //           required
+  //           onBlur={handleBlur}
+  //           onChange={handleChange}
+  //         />
+  //         {
+  //           touched.email &&
+  //           errors.email &&
+  //           <div className={styles.errorLabel}>{errors.email}</div>
+  //         }
+  //       </label>
 
-        <label>
-          Mensaje <br />
-          <textarea
-            className={`
-              ${styles.textArea}
-              ${!!touched.message && !!errors.message ? styles.error : '' }
-            `}
-            name="message"
-            value={values.message}
-            maxLength={2000}
-            disabled={loader}
-            required
-            onBlur={handleBlur}
-            onChange={handleChange}
-          />
-          {
-            touched.message &&
-            errors.message &&
-            <div className={styles.errorLabel}>{errors.message}</div>
-          }
-        </label>
+  //       <label>
+  //         Mensaje <br />
+  //         <textarea
+  //           className={`
+  //             ${styles.textArea}
+  //             ${!!touched.message && !!errors.message ? styles.error : '' }
+  //           `}
+  //           name="message"
+  //           value={values.message}
+  //           maxLength={2000}
+  //           disabled={loader}
+  //           required
+  //           onBlur={handleBlur}
+  //           onChange={handleChange}
+  //         />
+  //         {
+  //           touched.message &&
+  //           errors.message &&
+  //           <div className={styles.errorLabel}>{errors.message}</div>
+  //         }
+  //       </label>
 
 
-        <Button
-          className={styles.submitButton}
-          type="submit"
-          disabled={!isValid || loader}>
-          {loader && (
-            <div className={styles.loaderWrapper}>
-              <Loader small />
-            </div>
-          )}
+  //       <Button
+  //         className={styles.submitButton}
+  //         type="submit"
+  //         disabled={!isValid || loader}>
+  //         {loader && (
+  //           <div className={styles.loaderWrapper}>
+  //             <Loader small />
+  //           </div>
+  //         )}
 
-          {requestError && (
-            <div className={styles.failureResponse}>
-              <span className="notification">
-                Intentalo de nuevo
-              </span>
-            </div>
-          )}
+  //         {requestError && (
+  //           <div className={styles.failureResponse}>
+  //             <span className="notification">
+  //               Intentalo de nuevo
+  //             </span>
+  //           </div>
+  //         )}
 
-          {requestSuccess && (
-            <div className={styles.successResponse}>
-              <span className="notification">
-                Mensaje enviado
-              </span>
-            </div>
-          )}
+  //         {requestSuccess && (
+  //           <div className={styles.successResponse}>
+  //             <span className="notification">
+  //               Mensaje enviado
+  //             </span>
+  //           </div>
+  //         )}
 
-          Enviar mensaje
-        </Button>
+  //         Enviar mensaje
+  //       </Button>
 
-      </form>
-    )}
-    </Formik>
-  );
+  //     </form>
+  //   )}
+  //   </Formik>
+  // );
 }
