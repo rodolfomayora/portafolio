@@ -5,6 +5,7 @@ type Props = {
   children: ReactNode,
   href: string
   className?: string,
+  ["aria-label"]?: string, 
 }
 
 export function ExternalLink ({ children, className, href }: Props) {
@@ -19,5 +20,3 @@ export function ExternalLink ({ children, className, href }: Props) {
     </Link>
   );
 }
-
-export default ExternalLink;
