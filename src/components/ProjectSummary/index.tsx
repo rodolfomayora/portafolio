@@ -13,7 +13,7 @@ export function ProjectSummary(props: ProjectSummaryProps) {
     deploymentPlatform,
     developmentApproaches,
     mockupPath,
-    renderType,
+    renderPatter,
     sourceCodeURL,
     stack,
     title,
@@ -22,7 +22,7 @@ export function ProjectSummary(props: ProjectSummaryProps) {
   } = props;
 
   const hasWebType: boolean = !!webType;
-  const hasRenderType: boolean = !!renderType;
+  const hasRenderPatter: boolean = !!renderPatter;
   const hasApiIntegration: boolean = !!Object.keys(apiIntegration).length;
   const hasSampleData: boolean = !!Object.keys(sampleDataFrom).length;
 
@@ -71,10 +71,10 @@ export function ProjectSummary(props: ProjectSummaryProps) {
             </p>
           )}
           
-          {hasRenderType && (
+          {hasRenderPatter && (
             <p>
               <span className={styles.label}>Tipo de renderizado: </span>
-              {renderType}
+              {renderPatter}
             </p>
           )}
 

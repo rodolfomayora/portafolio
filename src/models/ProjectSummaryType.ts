@@ -12,10 +12,11 @@ type ProjectSummaryType = {
   developmentApproaches?: string,
   stack: string,
   webType?: string,
-  renderType?: string
+  renderPatter?: string
   sourceCodeURL: string,
   deploymentPlatform: string,
   deployURL: string,
+  dockerhubURL?: string,
   apiIntegration?: ApiIntegration,
   sampleDataFrom?: SampleDataFrom,
 }

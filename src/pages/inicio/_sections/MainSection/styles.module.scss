@@ -6,7 +6,9 @@
   display: flex;
   overflow: hidden;
   background-color: var(--color-transparent);
-  min-height: var(--viewport-height, 100vmax);
+  // height: var(--viewport-height, 100vmax);
+  height: 100svh;
+  // max-height: 1080px;
 
   > * { flex-grow: 1; }
 
@@ -70,8 +72,10 @@
   .socialLinksWrapper {
     text-align: center;
       
-    svg { /** Links */
-      width: 22px;
+    svg {
+      // width: 22px;
+      width: auto;
+      max-height: 24px;
       fill: var(--color-green);
       cursor: pointer;
       transition: fill 0.3s ease;
@@ -93,10 +97,12 @@
   }
 
   @include mixins.tablet {
-    min-height: 100vh;
+    // min-height: 100vh;
+    // height: auto;
+    // aspect-ratio: 16 / 9;
 
     .contentLayer {
-      padding-right: 50px; 
+      padding-right: 50px;
     }
 
     .mainTitle {

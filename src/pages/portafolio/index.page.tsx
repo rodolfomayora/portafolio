@@ -26,9 +26,9 @@ function Portafolio () {
               sampleDataFrom={{ ...project.sampleDataFrom }}
               category={project.category}
               deployURL={project.deployURL}
-              focusDevelopment={project.focusDevelopment}
+              developmentApproaches={project.developmentApproaches}
               mockupPath={project.mockupPath}
-              renderType={project.renderType}
+              renderPatter={project.renderPatter}
               sourceCodeURL={project.sourceCodeURL}
               stack={project.stack}
               title={project.title}
