@@ -1,6 +1,6 @@
 import type { technologyBlock } from "#/types/technologyBlock";
 
-const tecnologies: technologyBlock[] = [
+export const technologies: technologyBlock[] = [
   {
     name: 'HTML',
     imageSource: '/images/svg/html.svg'
@@ -83,4 +83,4 @@ const tecnologies: technologyBlock[] = [
   },
 ];
 
-export default tecnologies;
+export default technologies;

@@ -30,7 +30,7 @@ const cwv = 'Core Web Vitals';
 const staticPage = 'Static';
 
 
-const projectsData: Array<ProjectSummaryType> = [
+export const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Easybank Landing Page',
     mockupPath: 'easybank-mockup.png',
