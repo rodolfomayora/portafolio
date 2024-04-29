@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import { Layout } from '../../components';
-import ContactSection from '../_commonSections/ContactSection';
+import { BasicLayout } from '#layouts/BasicLayout';
+// import ContactSection from '../_commonSections/ContactSection';
 import MainSection from './_sections/MainSection';
 import TechSkillsSection from './_sections/TechSkillsSection';
 import PortfolioSection from './_sections/PortfolioSection';
@@ -10,14 +10,14 @@ import PortfolioSection from './_sections/PortfolioSection';
 // now its not nescesary to define index.js in root path
 
 const Inicio: FC = () => (
-  <Layout pageTitle="Inicio">
+  <BasicLayout pageTitle="Inicio">
     <main>
       <MainSection />
       <TechSkillsSection />
       <PortfolioSection />
       {/* <ContactSection /> */}
     </main>
-  </Layout>
+  </BasicLayout>
 );
 
 export default Inicio;

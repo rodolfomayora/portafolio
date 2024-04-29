@@ -1,11 +1,9 @@
-import React , { FC } from 'react';
 import Link from 'next/link';
-import ExternalLink from '../ExternalLink';
+import { ExternalLink } from '#components/ExternalLink';
 import { ButtonProps } from './types';
 import styles from './styles.module.scss';
 
-const Button: FC<ButtonProps> = props => {
-
+export function Button (props: ButtonProps) {
   const {
     as,
     children,
@@ -51,5 +49,3 @@ const Button: FC<ButtonProps> = props => {
     </button>
   );
 }
-
-export default Button;

@@ -1,14 +1,9 @@
-/**
- * this componente ist not nescesary for NextJS 12' server components
- * is just for decoration
- */
-
-import { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 
-const SplashScreen: FC = () => {
-  const visibleStyle: string = styles.SplahScreen;
-  const hiddenStyle: string = `${styles.SplahScreen} ${styles.loaded}`;
+export function SplashScreen () {
+  const visibleStyle = styles.SplahScreen;
+  const hiddenStyle = `${styles.SplahScreen} ${styles.loaded}`;
 
   const [splashStyle, setSpalshStyle] = useState<string>(visibleStyle);
   const [didLoad, setDidLoad] = useState<boolean>(false);
@@ -17,8 +12,8 @@ const SplashScreen: FC = () => {
     HTML.style.overflow = 'hidden';
 
     const init = (): void => {
-      const delayHidde: number = 2000;
-      const delayRemove: number = 4000;
+      const delayHidde = 2000;
+      const delayRemove = 4000;
 
       window.setTimeout(() => {
         setSpalshStyle(hiddenStyle);
@@ -35,10 +30,9 @@ const SplashScreen: FC = () => {
     () => {
       window.removeEventListener('load', init);
     }
-  },
-  [])
+  }, [])
 
-  if (didLoad) return <></>;
+  if (didLoad) return null;
 
   return (
     <div className={splashStyle}>
@@ -48,5 +42,3 @@ const SplashScreen: FC = () => {
     </div>
   );
 }
-
-export default SplashScreen;

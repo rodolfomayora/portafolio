@@ -1,13 +1,13 @@
-import React, { FC, useState, useEffect } from 'react';
-
-import Container from '../Container';
-import HeaderProps from './types';
-
-import Navigation from '../Navigation';
+import { useState, useEffect } from 'react';
+import { Container } from '#components/Container';
+import { Navigation } from '#components/Navigation';
 import styles from './styles.module.scss';
 
-const Header: FC<HeaderProps> = ({ currentPage }) => {
-  
+type Props = {
+  currentPage: string,
+}
+
+export function Header ({ currentPage }: Props) {
   const [didScroll, setDidScroll] = useState<boolean>(false);
   useEffect(() => {
     let isScrolling: boolean = false;
@@ -72,5 +72,3 @@ const Header: FC<HeaderProps> = ({ currentPage }) => {
     </div>
   );
 }
-
-export default Header;

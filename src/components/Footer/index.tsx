@@ -1,14 +1,10 @@
-import React, { FC } from 'react';
-
 import Link from 'next/link';
-
-import Container from '../Container';
-import SocialLinks from '../SocialLinks';
-import Navigation from '../Navigation';
+import { Container } from '#components/Container';
+import { SocialLinks } from '#components/SocialLinks';
+import { Navigation } from '#components/Navigation';
 import styles from './styles.module.scss';
 
-const Footer: FC = () => {
-
+export function Footer () {
   const date: Date = new Date;
   const currentYear: string = date.getFullYear().toString();
 
@@ -18,9 +14,9 @@ const Footer: FC = () => {
         <div className={styles.footerTop}>
           <div className={styles.linkToHomeWrapper}>
             <Link className={styles.linkToHome} href="/">
-                RODOLFO<br />
-                MAYORA<br />
-                PEREDA
+              RODOLFO<br />
+              MAYORA<br />
+              PEREDA
             </Link>
           </div>
   

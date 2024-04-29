@@ -1,10 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
-
-import {
-  AuroraBackground,
-  Container,
-  SocialLinks,
-} from '../../../../components';
+import { Container } from '#components/Container';
+import { SocialLinks } from '#components/SocialLinks';
+import { AuroraBackground } from '#components/AuroraBackground';
 import styles from './styles.module.scss';
 
 const MainSection: FC = () => {

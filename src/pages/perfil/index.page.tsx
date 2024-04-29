@@ -1,14 +1,14 @@
 import React, { FC, ReactNode } from 'react';
 
 import { socialLinks as links} from '../../data';
+
+import { BasicLayout } from '#layouts/BasicLayout';
+import { PageSection } from '#components/PageSection';
+import { ExternalLink } from '#components/ExternalLink';
+import { ProfilePicture } from '#components/ProfilePicture';
+import { AuroraBackground } from '#components/AuroraBackground';
+
 import ContactSection from '../_commonSections/ContactSection';
-import {
-  AuroraBackground,
-  ExternalLink,
-  Layout,
-  PageSection,
-  ProfilePicture,
-} from '../../components';
 import styles from './styles.module.scss';
 
 const Perfil: FC = () => {
@@ -45,7 +45,7 @@ const Perfil: FC = () => {
   }
 
   return (
-    <Layout pageTitle={pageTitle}>
+    <BasicLayout pageTitle={pageTitle}>
       <main className={styles.profile}>
         <div className={styles.decorationSection}>
           <AuroraBackground />
@@ -107,7 +107,7 @@ const Perfil: FC = () => {
 
         <ContactSection />
       </main>
-    </Layout>
+    </BasicLayout>
   );
 }
 

@@ -1,15 +1,23 @@
-import React , { FC } from 'react';
+import type { ReactNode } from 'react';
 import Link from 'next/link';
-import ExternalLinkProps from './types';
 
-const ExternalLink: FC<ExternalLinkProps> = ({ children, className, href }) => (
-  <Link
-    className={className}
-    href={href}
-    rel="external noopener noreferrer"
-    target="_blank">
-    {children}
-  </Link>
-);
+type Props = {
+  children: ReactNode,
+  href: string
+  className?: string,
+}
+
+export function ExternalLink ({ children, className, href }: Props) {
+  return (
+    <Link
+      className={className}
+      href={href}
+      target="_blank"
+      rel="external noopener noreferrer"
+    >
+      {children}
+    </Link>
+  );
+}
 
 export default ExternalLink;

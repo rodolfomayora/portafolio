@@ -1,14 +1,11 @@
-import { FC } from 'react';
-
-import Button from '../Button';
-import TechnologyTag from '../TechnologyTag';
-import ExternalLink from '../ExternalLink';
-import MockupViewer from '../MockupViewer';
+import { Button } from '#components/Button';
+import { TechnologyTag } from '#components/TechnologyTag';
+import { ExternalLink } from '#components/ExternalLink';
+import { MockupViewer } from '#components/MockupViewer';
 import ProjectSummaryProps from './types';
 import styles from './styles.module.scss';
 
-const ProjectSummary: FC<ProjectSummaryProps> = props => {
-
+export function ProjectSummary(props: ProjectSummaryProps) {
   const {
     apiIntegration,
     category,
@@ -125,5 +122,3 @@ const ProjectSummary: FC<ProjectSummaryProps> = props => {
     </div>
   );
 }
-
-export default ProjectSummary;

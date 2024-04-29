@@ -1,9 +1,13 @@
-import { FC } from 'react';
-import Container from '../Container';
-import PageSectionProps from './types';
+import type { ReactNode } from 'react';
+import { Container } from '#components/Container';
 import styles from './styles.module.scss';
 
-const PageSection: FC<PageSectionProps> = ({ children, whiteColor }) => {
+type Props = {
+  children: ReactNode,
+  whiteColor?: boolean,
+}
+
+export function PageSection ({ children, whiteColor }: Props) {
   const componenteStyle = !!whiteColor ? styles.PageSection2 : styles.PageSection;
   return (
     <section className={componenteStyle}>
@@ -13,5 +17,3 @@ const PageSection: FC<PageSectionProps> = ({ children, whiteColor }) => {
     </section>
   );
 }
-
-export default PageSection;

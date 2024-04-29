@@ -1,6 +1,7 @@
 export type ButtonStyledProps = {
   fullWidth?: boolean,
   outline?: boolean,
+  children: any,
 }
 
 export type ButtonProps =  ButtonStyledProps & { 

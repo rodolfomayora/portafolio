@@ -1,4 +1,3 @@
-import React, { FC } from 'react';
 import styles from './styles.module.scss';
 
 /**
@@ -8,16 +7,16 @@ import styles from './styles.module.scss';
  * background: *transparent*
  */
   
-const AuroraBakcground: FC = () => (
-  <div className={styles.AuroraBrackground}>
-    <div className={styles.layer}>
-      <div className={styles.shape} />
-      <div className={styles.shape} />
-      <div className={styles.shape} />
-      <div className={styles.shape} />
-      <div className={styles.shape} />
+export function AuroraBackground () {
+  return (
+    <div className={styles.AuroraBrackground}>
+      <div className={styles.layer}>
+        <div className={styles.shape} />
+        <div className={styles.shape} />
+        <div className={styles.shape} />
+        <div className={styles.shape} />
+        <div className={styles.shape} />
+      </div>
     </div>
-  </div>
-);
-
-export default AuroraBakcground;
+  );
+}

@@ -1,16 +1,14 @@
-import type { ReactElement } from 'react';
+import type { ReactNode } from 'react';
 import styles from './styles.module.scss';
 
 type Props = {
-  children: ReactElement | ReactElement[]
+  children: ReactNode
 }
 
-const Container = ({ children }: Props) => (
-  <div className={styles.Container}>
-    <div className={styles.containerWrapper}>
+export function Container ({ children }: Props) {
+  return (
+    <div className={styles.Container}>
       {children}
     </div>
-  </div>
-);
-
-export default Container;
+  );
+}

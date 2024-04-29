@@ -1,10 +1,8 @@
 import { FC } from 'react';
 import { technologies } from '../../../../data';
 import { addCustomId } from '../../../../utils';
-import {
-  PageSection,
-  TechnologyBlock,
-} from '../../../../components';
+import { TechnologyBlock } from '#components/TechnologyBlock';
+import { PageSection } from '#components/PageSection';
 import styles from './styles.module.scss';
 
 const TechSkillsSection: FC = () => {

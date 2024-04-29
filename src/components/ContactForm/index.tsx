@@ -1,18 +1,17 @@
-import React, { FC, useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import { Formik, FormikProps, FormikValues } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
 
 import { capitelizeAllWords } from '../../utils';
-import { Loader } from '../../components';
+import { Loader } from '#components/Loader';
 import { RequestBody } from './type';
 
-import Button from '../Button';
+import { Button } from '#components/Button';
 import styles from './styles.module.scss';
 
-const ContactForm: FC = () => {
-
+export function ContactForm () {
   const [loader, setLoader] = useState<boolean>(false);
   const [requestError, setRequestErrorr] = useState<boolean>(false);
   const [requestSuccess, setRequestSuccess] = useState<boolean>(false);
@@ -199,5 +198,3 @@ const ContactForm: FC = () => {
     </Formik>
   );
 }
-
-export default ContactForm;

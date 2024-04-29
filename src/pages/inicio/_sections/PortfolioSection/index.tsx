@@ -1,11 +1,9 @@
 import { FC } from 'react';
 import { projects } from '../../../../data';
 import { addCustomId } from '../../../../utils';
-import {
-  Button,
-  PageSection,
-  ProjectSummary,
-} from '../../../../components';
+import { ProjectSummary } from '#components/ProjectSummary';
+import { PageSection } from '#components/PageSection';
+import { Button } from '#components/Button';
 import styles from './styles.module.scss';
 
 const PortfolioSection: FC = () => {

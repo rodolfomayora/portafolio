@@ -1,13 +1,15 @@
-import React, { FC } from 'react';
-
+import type { ReactNode } from 'react';
 import Head from 'next/head';
-
-import Header from '../Header';
-import Footer from '../Footer';
-import LayoutProps from './types';
+import { Header } from '#components/Header';
+import { Footer } from '#components/Footer';
 import styles from './styles.module.scss';
 
-const Layout: FC<LayoutProps> = ({ children, pageTitle }) => {
+type Props = {
+  children: ReactNode,
+  pageTitle: string,
+}
+
+export function BasicLayout ({ children, pageTitle }: Props) {
   const title = `${pageTitle} | Rodolfo Mayora Pereda | FrontEnd Develope`;
   return (
     <>
@@ -17,12 +19,10 @@ const Layout: FC<LayoutProps> = ({ children, pageTitle }) => {
         <meta name="description" content="Portafolio de Rodolfo Mayora Pereda, FrontEnd Developer enfocado en ReactJS y tecnologías relacionadas, ingresa al portafolio si deseas saber más." />
       </Head>
       <Header currentPage={pageTitle} />
-      <div className={styles.pageContent}>
+      <main className={styles.pageContent}>
         {children}
-      </div>
+      </main>
       <Footer />
     </>
   );
 }
-
-export default Layout;

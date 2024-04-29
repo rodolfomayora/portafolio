@@ -1,5 +1,5 @@
 import { AppProps } from 'next/app';
-import { SplashScreen } from '../components';
+import { SplashScreen } from '#components/SplashScreen';
 import '../styles/global.scss';
 
 export default function App({ Component, pageProps }: AppProps) {

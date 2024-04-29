@@ -2,12 +2,10 @@ import React, { FC } from 'react';
 
 import { projects } from '../../data';
 import { addCustomId } from '../../utils';
-import {
-  AuroraBackground,
-  Layout,
-  PageSection,
-  ProjectSummary,
-} from '../../components';
+import { BasicLayout } from '#layouts/BasicLayout';
+import { PageSection } from '#components/PageSection';
+import { ProjectSummary } from '#components/ProjectSummary';
+import { AuroraBackground } from '#components/AuroraBackground';
 import styles from './styles.module.scss';
 
 const Portafolio: FC = () => {
@@ -15,7 +13,7 @@ const Portafolio: FC = () => {
   const portfolio: Array<any> = projects.map(addCustomId);
 
   return (
-    <Layout pageTitle={pageTitle}>
+    <BasicLayout pageTitle={pageTitle}>
       <main>
         <section className={styles.decorationSection}>
           <AuroraBackground />
@@ -41,7 +39,7 @@ const Portafolio: FC = () => {
           ))}
         </PageSection>
       </main>
-    </Layout>
+    </BasicLayout>
   );
 }
 

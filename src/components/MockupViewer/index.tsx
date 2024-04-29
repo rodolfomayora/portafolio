@@ -1,15 +1,16 @@
-import React , { FC } from 'react';
-
-import MockupViewerProps from './types';
 import styles from './styles.module.scss';
 
-const MockupViewer: FC<MockupViewerProps> = ({ mockupFileName, title }) => {
+type Props = {
+  mockupFileName: string,
+  title: string,
+}
 
-  const projectMockupPath: string = '/images/static/';
-  const defaultMokupSource: string = `${projectMockupPath}${mockupFileName}`;
-  const mediumMockupSource: string = `${projectMockupPath}medium_${mockupFileName}`;
-  const mediumBreakpointSource: string = `(min-width: '768px')`;
-  const alternativeText: string = `${title} Mockup`;
+export function MockupViewer ({ mockupFileName, title }: Props) {
+  const projectMockupPath = '/images/static/';
+  const defaultMokupSource = `${projectMockupPath}${mockupFileName}`;
+  const mediumMockupSource = `${projectMockupPath}medium_${mockupFileName}`;
+  const mediumBreakpointSource = `(min-width: '768px')`;
+  const alternativeText = `${title} Mockup`;
 
   return (
     <div>
@@ -27,5 +28,3 @@ const MockupViewer: FC<MockupViewerProps> = ({ mockupFileName, title }) => {
     </div>
   );
 }
-
-export default MockupViewer;
