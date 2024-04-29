@@ -11,7 +11,7 @@ export function ProjectSummary(props: ProjectSummaryProps) {
     category,
     deployURL,
     deploymentPlatform,
-    focusDevelopment,
+    developmentApproaches,
     mockupPath,
     renderType,
     sourceCodeURL,
@@ -52,10 +52,10 @@ export function ProjectSummary(props: ProjectSummaryProps) {
             {category}
           </p>
 
-          {focusDevelopment && (
+          {developmentApproaches && (
             <p>
-            <span className={styles.label}>Enfoque de desarrollo: </span>
-              {focusDevelopment}
+            <span className={styles.label}>Enfoques de desarrollo: </span>
+              {developmentApproaches}
             </p>
           )}
 
@@ -79,7 +79,7 @@ export function ProjectSummary(props: ProjectSummaryProps) {
           )}
 
           {hasApiIntegration && (
-            <p>
+            <p className={styles.link}>
               <span className={styles.label}>API Integrada: </span>
               <ExternalLink href={apiIntegration.url}>
                 {apiIntegration.name}
@@ -88,7 +88,7 @@ export function ProjectSummary(props: ProjectSummaryProps) {
           )}
 
           {hasSampleData && (
-            <p>
+            <p className={styles.link}>
               <span className={styles.label}>Datos de Ejemplo: </span>
               <ExternalLink href={sampleDataFrom.url}>
                 {sampleDataFrom.name}

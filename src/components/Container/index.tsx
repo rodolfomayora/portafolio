@@ -2,7 +2,7 @@ import type { ReactNode } from 'react';
 import styles from './styles.module.scss';
 
 type Props = {
-  children: ReactNode
+  children: ReactNode,
 }
 
 export function Container ({ children }: Props) {
