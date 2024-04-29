@@ -16,7 +16,7 @@ export function TechSkillsSection () {
           <TechnologyBlock
             key={technology.customId}
             name={technology.name}
-            pathIcon={technology.image}/>
+            imageSource={technology.imageSource}/>
         ))}
       </div>
     </PageSection>

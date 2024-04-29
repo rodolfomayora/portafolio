@@ -19,7 +19,7 @@ export function PortfolioSection () {
           sampleDataFrom={{ ...project.sampleDataFrom }}
           category={project.category}
           deployURL={project.deployURL}
-          focusDevelopment={project.focusDevelopment}
+          developmentApproaches={project.developmentApproaches}
           mockupPath={project.mockupPath}
           renderType={project?.renderType}
           sourceCodeURL={project.sourceCodeURL}

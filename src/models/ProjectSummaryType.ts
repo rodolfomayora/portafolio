@@ -9,7 +9,7 @@ type ProjectSummaryType = {
   title: string,
   mockupPath: string,
   category: string,
-  focusDevelopment?: string,
+  developmentApproaches?: string,
   stack: string,
   webType?: string,
   renderType?: string

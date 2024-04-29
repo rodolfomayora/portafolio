@@ -8,6 +8,8 @@
   background-color: var(--color-transparent);
   min-height: var(--viewport-height, 100vmax);
 
+  > * { flex-grow: 1; }
+
   .contentLayer {
     position: relative;
     z-index: 0;
