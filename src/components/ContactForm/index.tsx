@@ -4,11 +4,10 @@ import { Formik, FormikProps, FormikValues } from 'formik';
 import * as Yup from 'yup';
 import emailjs from '@emailjs/browser';
 
-import { capitelizeAllWords } from '../../utils';
+import { capitelizeAllWords } from '#utils/capitelizeAllWords';
 import { Loader } from '#components/Loader';
-import { RequestBody } from './type';
-
 import { Button } from '#components/Button';
+import { RequestBody } from './type';
 import styles from './styles.module.scss';
 
 export function ContactForm () {

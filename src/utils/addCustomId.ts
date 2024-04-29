@@ -1,6 +1,6 @@
-const addCustomId = (item: any, index: number) => ({
-  ...item,
-  customId: (index + 1).toString()
-});
-
-export default addCustomId;
+export function addCustomId (item: any, index: number) {
+  return ({
+    ...item,
+    customId: (index + 1).toString()
+  });
+}

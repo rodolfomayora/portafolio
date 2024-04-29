@@ -1,14 +1,12 @@
-import React, { FC } from 'react';
-
 import { projects } from '../../data';
-import { addCustomId } from '../../utils';
+import { addCustomId } from '#utils/addCustomId';
 import { BasicLayout } from '#layouts/BasicLayout';
 import { PageSection } from '#components/PageSection';
 import { ProjectSummary } from '#components/ProjectSummary';
 import { AuroraBackground } from '#components/AuroraBackground';
 import styles from './styles.module.scss';
 
-const Portafolio: FC = () => {
+function Portafolio () {
   const pageTitle: string = 'Portafolio';
   const portfolio: Array<any> = projects.map(addCustomId);
 

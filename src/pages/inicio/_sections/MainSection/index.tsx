@@ -1,10 +1,10 @@
-import React, { FC, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Container } from '#components/Container';
 import { SocialLinks } from '#components/SocialLinks';
 import { AuroraBackground } from '#components/AuroraBackground';
 import styles from './styles.module.scss';
 
-const MainSection: FC = () => {
+export function MainSection () {
   // this logis its mostly for mobile screens
   const [viewportHeight, setViewportHeight] = useState<number>(0);
   useEffect(() => {
@@ -47,5 +47,3 @@ const MainSection: FC = () => {
     </section>
   );
 }
-
-export default MainSection;

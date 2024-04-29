@@ -1,9 +1,8 @@
-import { FC } from 'react';
 import { PageSection } from '#components/PageSection';
 import { ContactForm } from '#components/ContactForm';
 import styles from './styles.module.scss';
 
-const ContactSection: FC = () => {
+export function ContactSection () {
   return (
     <PageSection>
       <h2 className={styles.subtitle}>Contacto</h2>
@@ -13,5 +12,3 @@ const ContactSection: FC = () => {
     </PageSection>
   );
 }
-
-export default ContactSection;

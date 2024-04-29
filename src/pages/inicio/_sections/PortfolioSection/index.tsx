@@ -1,13 +1,11 @@
-import { FC } from 'react';
 import { projects } from '../../../../data';
-import { addCustomId } from '../../../../utils';
+import { addCustomId } from '#utils/addCustomId';
 import { ProjectSummary } from '#components/ProjectSummary';
 import { PageSection } from '#components/PageSection';
 import { Button } from '#components/Button';
 import styles from './styles.module.scss';
 
-const PortfolioSection: FC = () => {
-
+export function PortfolioSection () {
   const portfolio: Array<any> = projects.slice(0,4).map(addCustomId);
 
   return (
@@ -42,5 +40,3 @@ const PortfolioSection: FC = () => {
     </PageSection>
   );
 }
-
-export default PortfolioSection;

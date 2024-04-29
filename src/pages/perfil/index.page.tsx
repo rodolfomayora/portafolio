@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 import { socialLinks as links} from '../../data';
 
@@ -8,11 +8,10 @@ import { ExternalLink } from '#components/ExternalLink';
 import { ProfilePicture } from '#components/ProfilePicture';
 import { AuroraBackground } from '#components/AuroraBackground';
 
-import ContactSection from '../_commonSections/ContactSection';
+// import { ContactSection } from '../_commonSections/ContactSection';
 import styles from './styles.module.scss';
 
-const Perfil: FC = () => {
-  
+function Perfil () {
   const pageTitle: string = 'Perfil';
 
   const soluciontAndSkills: Array<string> = [
@@ -105,7 +104,7 @@ const Perfil: FC = () => {
           </p>
         </PageSection>
 
-        <ContactSection />
+        {/* <ContactSection /> */}
       </main>
     </BasicLayout>
   );
