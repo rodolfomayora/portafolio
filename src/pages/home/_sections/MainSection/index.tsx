@@ -5,6 +5,7 @@ import { AuroraBackground } from '#components/AuroraBackground';
 import styles from './styles.module.scss';
 
 export function MainSection () {
+
   // this logis its mostly for mobile screens
   const [viewportHeight, setViewportHeight] = useState<number>(0);
   useEffect(() => {
@@ -28,16 +29,13 @@ export function MainSection () {
       <Container>
         <div className={styles.contentLayer}>
           <div className={styles.frostedLayer} />
-
           <div className={styles.infoWrapper}>
             <h1 className={styles.mainTitle}>
               RODOLFO<br />
               MAYORA<br />
               PEREDA
             </h1>
-            
             <span className={styles.techRole}>FRONTEND DEVELOPER</span>
-
             <div className={styles.socialLinksWrapper}>
               <SocialLinks />
             </div>

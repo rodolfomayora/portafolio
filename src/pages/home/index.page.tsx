@@ -3,13 +3,16 @@ import { BasicLayout } from '#layouts/BasicLayout';
 import { MainSection } from './_sections/MainSection';
 import { TechSkillsSection } from './_sections/TechSkillsSection';
 import { PortfolioSection } from './_sections/PortfolioSection';
+import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
 
 // I set a rewrite route in 'next.config.js' to show this page in root path request '/'
 // now its not nescesary to define index.js in root path
 
-export function Inicio () {
+function Home () {
+  const { t } = useLocaleDictionary();
+  const pageTitle = t.home;
   return (
-    <BasicLayout pageTitle="Inicio">
+    <BasicLayout pageTitle={pageTitle}>
       <main>
         <MainSection />
         <TechSkillsSection />
@@ -20,4 +23,4 @@ export function Inicio () {
   );
 }
 
-export default Inicio;
+export default Home;

@@ -1,18 +1,18 @@
 import type { ReactNode } from 'react';
-
-import { socialLinks as links} from '../../data';
-
+import * as links from '#data/socialLinks';
 import { BasicLayout } from '#layouts/BasicLayout';
 import { PageSection } from '#components/PageSection';
 import { ExternalLink } from '#components/ExternalLink';
 import { ProfilePicture } from '#components/ProfilePicture';
 import { AuroraBackground } from '#components/AuroraBackground';
+import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
 
 // import { ContactSection } from '../_commonSections/ContactSection';
 import styles from './styles.module.scss';
 
-function Perfil () {
-  const pageTitle: string = 'Perfil';
+function Profile () {
+  const { t } = useLocaleDictionary();
+  const pageTitle: string = t.profile;
 
   const soluciontAndSkills: Array<string> = [
     'Desarollar aplicaciones web SPA con React y NextJS',
@@ -110,4 +110,4 @@ function Perfil () {
   );
 }
 
-export default Perfil;
+export default Profile;

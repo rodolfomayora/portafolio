@@ -1,20 +1,22 @@
 import Link from 'next/link';
+import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
 
 type Props = {
   className?: string,
 }
 
 export function Navigation ({ className }: Props) {
+  const { t } = useLocaleDictionary();
   return (
     <nav className={className}>
       <Link href="/">
-        Inicio
+        {t.home}
       </Link>
-      <Link href="/portafolio">
-        Portafolio
+      <Link href="/portfolio">
+        {t.portfolio}
       </Link>
-      <Link href="/perfil">
-        Perfil
+      <Link href="/profile">
+        {t.profile}
       </Link>
     </nav>
   );
