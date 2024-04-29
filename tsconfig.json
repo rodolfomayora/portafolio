@@ -24,7 +24,8 @@
       // "#icons/*": ["./assets/icons/*"],
       "#layouts/*": ["./layouts/*"],
       "#styles/*": ["./styles/utils/*"],
-      "#utils/*": ["./utils/*"],
+      "#types/*": ["./types/*"],
+      "#utils/*": ["./utils/*"]
     },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

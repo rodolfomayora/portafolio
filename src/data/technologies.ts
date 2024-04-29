@@ -1,69 +1,82 @@
-const tecnologies: Array<any> = [
+import type { technologyBlock } from "#/types/technologyBlock";
+
+const tecnologies: technologyBlock[] = [
   {
     name: 'HTML',
-    image: '/images/svg/html.svg'
+    imageSource: '/images/svg/html.svg'
   },
   {
     name: 'CSS',
-    image: '/images/svg/css.svg'
-  },
-  {
-    name: 'Sass/SCSS',
-    image: '/images/svg/sass.svg'
+    imageSource: '/images/svg/css.svg'
   },
   {
     name: 'JavaScript',
-    image: '/images/svg/javascript.svg'
+    imageSource: '/images/svg/javascript.svg'
+  },
+  {
+    name: 'Sass/SCSS',
+    imageSource: '/images/svg/sass.svg'
   },
   {
     name: 'TypeScript',
-    image: '/images/svg/typescript.svg'
-  },
-  {
-    name: 'Node.js',
-    image: '/images/svg/node.svg'
+    imageSource: '/images/svg/typescript.svg'
   },
   {
     name: 'Next.js',
-    image: '/images/svg/nextjs.svg'
+    imageSource: '/images/svg/nextjs.svg'
   },
   {
     name: 'React.js',
-    image: '/images/svg/react.svg'
+    imageSource: '/images/svg/react.svg'
   },
   {
     name: 'Redux',
-    image: '/images/svg/redux.svg'
+    imageSource: '/images/svg/redux.svg'
   },
   {
     name: 'Vite.js',
-    image: '/images/svg/vitejs.svg'
+    imageSource: '/images/svg/vitejs.svg'
+  },
+  {
+    name: 'Vitest',
+    imageSource: '/images/svg/vitest.svg'
   },
   {
     name: 'Jest',
-    image: '/images/svg/jest.svg'
+    imageSource: '/images/svg/jest.svg'
+  },
+  {
+    name: 'Husky.js',
+    imageSource: '/images/svg/husky.svg'
+  },
+  {
+    name: 'PNPM',
+    imageSource: '/images/svg/pnpm.svg'
+  },
+  {
+    name: 'Corepack',
+    imageSource: '/images/svg/corepack.svg'
+  },
+  {
+    name: 'Node.js',
+    imageSource: '/images/svg/node.svg'
   },
   {
     name: 'Docker',
-    image: '/images/svg/docker.svg'
+    imageSource: '/images/svg/docker.svg'
   },
   {
     name: 'VSCode',
-    image: '/images/svg/vscode.svg'
+    imageSource: '/images/svg/vscode.svg'
   },
   {
     name: 'WSL2',
-    image: '/images/svg/ubuntu.svg'
+    imageSource: '/images/svg/ubuntu.svg'
   },
   {
     name: 'Git',
-    image: '/images/svg/git.svg'
+    imageSource: '/images/svg/git.svg'
   },
-  
-  // {
-  //   name: '',
-  //   image: ''
-  // },
 ];
 
 export default tecnologies;
