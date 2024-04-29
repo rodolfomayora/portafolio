@@ -20,9 +20,12 @@
       "#assets/*": ["./assets/*"],
       "#components/*": ["./components/*"],
       "#config/*": ["./config/*"],
+      "#data/*": ["./data/*"],
       // "#helpers/*": ["./helpers/*"],
+      "#hooks/*": ["./hooks/*"],
       // "#icons/*": ["./assets/icons/*"],
       "#layouts/*": ["./layouts/*"],
+      "#locales/*": ["./locales/*"],
       "#styles/*": ["./styles/utils/*"],
       "#types/*": ["./types/*"],
       "#utils/*": ["./utils/*"]

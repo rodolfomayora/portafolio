@@ -1,0 +1,16 @@
+export const es = {
+  home: 'Inicio',
+  portfolio: 'Portafolio',
+  profile: 'Perfil',
+  what_i_use: '¿Qué utilizo?',
+  see_more_projects: 'Ver más proyectos',
+  category: 'Categoría',
+  development_approaches: 'Enfoques de desarrollo',
+  website_type: 'Tipo de sitio web',
+  render_patter: 'Tipo de renderizado',
+  api_integration: 'API Integrada',
+  sample_data: 'Datos de Ejemplo',
+  deploy_on: 'Desplegado en',
+  see_online: 'Ver Online',
+  source_code: 'Código Fuente',
+}
