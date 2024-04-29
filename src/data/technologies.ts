@@ -46,6 +46,10 @@ const tecnologies: technologyBlock[] = [
     imageSource: '/images/svg/jest.svg'
   },
   {
+    name: 'Testing Library',
+    imageSource: '/images/svg/testing-library.svg'
+  },
+  {
     name: 'Husky.js',
     imageSource: '/images/svg/husky.svg'
   },
