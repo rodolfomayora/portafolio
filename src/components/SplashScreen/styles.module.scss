@@ -1,0 +1,62 @@
+.SplahScreen {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-green);
+  
+  will-change: opacity;
+  transition: opacity 1s ease 1s; // un segundo en total
+
+  .layer {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 25px));
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-gray);
+    
+    min-width: 120px;
+    min-height: 120px;
+    width: 8vmax;
+    height: 8vmax;
+    border-radius: 50%;
+    background-color: var(--color-white2) ;
+  
+    will-change:
+      width,
+      height,
+      opacity,
+      transform,
+      box-shadow;
+    
+    animation: verticalMove 2s ease-in-out 0s infinite;
+
+    transition:
+      height 0.5s ease 0.5s,    // un segundo en total
+      width 0.5s ease 0.5s,    // un segundo en total
+      color 0.5s ease 0.5s;    // un segundo en total
+  }
+
+  &.loaded {
+    opacity: 0;
+
+    .layer {
+      animation-play-state: paused;
+      width: 140vmax;
+      height: 140vmax;
+      color: transparent;
+    }
+  }
+}
+
+@keyframes verticalMove {
+  0% { transform: translate(-50%, calc(-50% + 25px)); }
+  50% { transform: translate(-50%, calc(-50% - 25px)); }
+  100% { transform: translate(-50%, calc(-50% + 25px)); }
+}

@@ -1,0 +1,99 @@
+@use "#styles/mixins" as mixins;
+
+.Footer {
+  padding-top: 50px;
+  padding-bottom: 40px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+
+  .footerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    & > :first-child ~ * { margin-top: 40px }; /** Items */
+  }
+
+  .linkToHomeWrapper { text-align: center; }
+
+  .linkToHome {
+    display: inline-block;
+    font-family: var(--font-poppins);
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 18px;
+    color: var(--color-white);
+    transition: color 0.3s linear;
+
+    &:hover { color: var(--color-green3); }
+  }
+
+  .innerNavigation {
+    display: flex;
+    justify-content: center;
+
+    & > * { /** Navigation Links */
+      color: var(--color-white);
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: var(--color-green3);
+      }
+    }
+
+    & > * + * { margin-left: 20px; }
+  }
+
+  .socialLinksWrapper {
+    display: flex;
+    column-gap: 20px;
+
+    a {
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    svg {
+      width: auto;
+      height: 24px;
+
+      fill: var(--color-white);
+      transition: fill 0.3s ease;
+  
+      &:hover {
+        fill: var(--color-green3);
+      }
+    }
+  }
+
+  .footerBottom {
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 40px;
+    border-top: solid 1px var(--color-green3);
+  }
+
+  @include mixins.tablet {
+    padding-top: 60px;
+    padding-bottom: 50px;
+
+    .footerTop {
+      flex-direction: row;
+      
+      & > * { /** Items */
+        flex-basis: 30%;
+        flex-grow: 1;
+      }
+      
+      & > :first-child ~ * { margin-top: 0 };
+    }
+
+    .linkToHomeWrapper {
+      text-align: left;
+    }
+    
+    .socialLinksWrapper {
+      justify-content: flex-end;
+    }
+  }
+}

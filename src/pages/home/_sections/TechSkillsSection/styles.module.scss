@@ -1,0 +1,23 @@
+@use "#styles/mixins" as mixins;
+
+.subtitle {
+  @include mixins.subtitle;
+}
+
+.technologyGrid {
+  --min-column-size-mobile: 120px;
+  --min-column-size-desktop: 190px;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--min-column-size-mobile), 1fr)
+  );
+  gap: 24px;
+  
+  @include mixins.tablet {
+    grid-template-columns: repeat(
+      auto-fit, 
+      minmax(var(--min-column-size-desktop), 1fr)
+    );
+  }
+}

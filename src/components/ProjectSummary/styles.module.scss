@@ -1,0 +1,127 @@
+@use "#styles/mixins" as mixins;
+
+.ProjectSummary {
+
+  &:first-of-type ~ & { margin-top: 60px; }
+
+  .mockupWrapperDesktop {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+  .mockupWrapperMobile {
+    overflow: hidden;
+  }
+
+  .inforWrapper {
+    & > :first-child ~ * {
+      margin-top: 25px;
+    }
+  }
+
+  .info{
+    display: grid;
+    row-gap: 10px;
+    line-height: 1.2;
+  }
+
+  .projectTitle {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .label {
+    font-weight: 700;
+  }
+
+  .link a {
+    text-decoration: underline;
+  }
+
+  .techStack {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    align-items: baseline;
+
+    > * {
+      flex-grow: 1;
+      max-width: 50%;
+      text-align: center;
+    }
+
+    .label { flex-grow: 0 }
+  }
+
+  .deploy {
+    display: flex;
+    align-items: baseline;
+    column-gap: 10px;
+  }
+
+  .buttonsWrapper {
+    & > :first-child { margin-bottom: 25px; }
+  }
+
+  // @media screen and (min-width:576px) {
+  @include mixins.minWidth(576px) {
+    .inforWrapper {
+      & > :first-child ~ * {
+        margin-top: 20px;
+      }
+    }
+
+    .buttonsWrapper {
+      display: flex;
+
+      & > * { flex-basis: 50%; }
+
+      & > :first-child {
+        margin-right: 20px;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include mixins.tablet {
+    display: flex;
+    align-items: center;
+
+    &:first-of-type ~ & { margin-top: 80px; }
+    
+    &:nth-of-type(2n - 1) > :first-child { margin-right: 20px; }
+
+    &:nth-of-type(2n) {
+      flex-direction: row-reverse;
+
+      & > :first-child { margin-left: 25px; }
+    }
+
+    .mockupWrapperDesktop {
+      width: auto;
+      height: auto;
+      visibility: visible;
+      flex-basis: 50%;
+    }
+
+    .mockupWrapperMobile {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      position: absolute;
+      z-index: -99;
+    }
+
+    .inforWrapper {
+      flex-basis: 50%;
+    }
+
+    .projectTitle {
+      text-align: left;
+      font-size: 28px;
+    }
+  }
+}

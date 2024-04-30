@@ -1,0 +1,52 @@
+@use "../utils/breakpoints" as breakpoints;
+
+// responsive helpers
+@mixin minWidth($breakpoint) {
+  @media only screen and (min-width:$breakpoint) {
+    @content;
+  }
+}
+
+@mixin maxWidth($breakpoint) {
+  @media only screen and (max-width:$breakpoint) {
+    @content;
+  }
+}
+
+// mobile first responsive
+@mixin tablet {
+  @include minWidth(breakpoints.$minTablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include minWidth(breakpoints.$minDesktop) {
+    @content;
+  }
+}
+
+
+
+/* Common Styles (TO REMOVE!)
+==============================*/
+@mixin maintitle {
+  font-size: 36px;
+  color: var(--color-dark-gray);
+
+  @include tablet {
+    font-size: 42px;
+  }
+}
+
+@mixin subtitle {
+  margin-bottom: 40px;
+  font-size: 28px;
+  line-height: 36px;
+  color: var(--color-dark-gray);
+
+  @include tablet {
+    text-align: left;
+    font-size: 32px;
+  }
+}

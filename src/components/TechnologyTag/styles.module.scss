@@ -1,0 +1,22 @@
+.technologyTag {
+  display: inline-block;
+  border-radius: 5px;
+  color: var(--color-gray);
+  background-color: var(--color-white);
+  padding-inline: 10px;
+  // box-shadow: 0 2px 4px -2px var(--color-shadow);
+  // background-color: var(--color-white2);
+  overflow: hidden;
+  // border-left: solid 4px var(--color-green);
+  box-shadow: 0 2px 4px var(--color-shadow);
+
+  .content {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 32px;
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: hsla(0deg, 0%, 0%, 0);
+    // background-image: linear-gradient(120deg, var(--color-green2) 60%, var(--color-light-aurora3));
+  }
+}
