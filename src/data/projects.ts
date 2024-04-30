@@ -33,7 +33,7 @@ const staticPage = 'Static';
 export const projectsData: Array<ProjectSummaryType> = [
   {
     title: 'Easybank Landing Page',
-    mockupPath: 'easybank-mockup.png',
+    mockupPath: 'easybank-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}, ${pixel}, ${cwv}`,
     stack: `${vitejs}, ${reactjs}, ${typescript}, ${sass}`,
@@ -46,7 +46,7 @@ export const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Mini Shop',
-    mockupPath:  'mini-shop.png',
+    mockupPath:  'mini-shop',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
     stack: `${nextjs}, ${typescript}, Context-API, Styled-Components,  ${sass}`,
@@ -62,7 +62,7 @@ export const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Rest Countries App',
-    mockupPath:  'rest-countries-app.png',
+    mockupPath:  'rest-countries-app',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
     stack: ` ${reactjs}, ${typescript}, Redux, Redux-Saga, ${sass}`,
@@ -77,8 +77,9 @@ export const projectsData: Array<ProjectSummaryType> = [
     },
   },
   {
-    title: 'RESTful API + Documentación',
-    mockupPath:  'todo-api.png',
+    // title: 'RESTful API + Documentación',
+    title: 'RESTful API + Documentation',
+    mockupPath:  'todo-api',
     category: categories[1],
     developmentApproaches: 'REST',
     stack: `${docker}, ${nodejs}, ${epxressjs}, ${javascript}, MongoDB Atlas, Jest, Supertest, Swagger, OpenAPI v3`,
@@ -89,7 +90,7 @@ export const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Sunnyside Agency Landing Page',
-    mockupPath: 'sunnyside-landing-page.png',
+    mockupPath: 'sunnyside-landing-page',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}, ${pixel}`,
     stack: `${html}, ${css}, ${javascript}`,
@@ -100,7 +101,7 @@ export const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Blogr Landing Page',
-    mockupPath: 'blogr-mockup.png',
+    mockupPath: 'blogr-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
     stack: `${nextjs}, ${reactjs}, ${typescript}, ${sass}`,
@@ -113,7 +114,7 @@ export const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Insure Landing Page',
-    mockupPath: 'insure-mockup.png',
+    mockupPath: 'insure-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
     stack: `${html}, ${sass}, ${javascript}`,
@@ -124,7 +125,7 @@ export const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Testimonials Grid Section',
-    mockupPath: 'testimonial-mockup.png',
+    mockupPath: 'testimonial-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
     stack: `${reactjs}, ${typescript}, ${cssModules}`,
@@ -135,7 +136,7 @@ export const projectsData: Array<ProjectSummaryType> = [
   },
   {
     title: 'Article Preview Component',
-    mockupPath: 'article-preview-mockup.png',
+    mockupPath: 'article-preview-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
     stack: `${html}, ${css}, ${javascript}`,
