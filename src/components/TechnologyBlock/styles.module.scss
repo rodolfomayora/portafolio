@@ -30,6 +30,7 @@
     font-weight: 700;
     margin-top: 12px;
     line-height: 18px;
+    text-align: center;
   }
 
   @include mixins.tablet {
@@ -37,6 +38,9 @@
     
     .logoWrapper { margin-right: 10px; }
     
-    .label { margin-top: 0; }
+    .label {
+      margin-top: 0;
+      text-align: left;
+    }
   }
 }
