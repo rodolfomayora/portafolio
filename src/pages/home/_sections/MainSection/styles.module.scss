@@ -43,7 +43,6 @@
   .mainTitle {
     display: inline-block;
     margin-bottom: 10px;
-    // font-size: 12.5vw;
     font-size: max(47px, 12.5vw);
     line-height: 0.88;
     font-weight: 900;
@@ -72,17 +71,24 @@
   }
 
   .socialLinksWrapper {
-    text-align: left;
+    display: flex;
+    column-gap: 20px;
+
+    a {
+      display: inline-block;
+      cursor: pointer;
+    }
       
     svg {
-      // width: 22px;
       width: auto;
-      max-height: 24px;
+      height: 24px;
+
       fill: var(--color-green);
-      cursor: pointer;
       transition: fill 0.3s ease;
 
-      &:hover { fill: var(--color-light-aurora3); }
+      &:hover {
+        fill: var(--color-light-aurora3);
+      }
     }
   }
 
@@ -99,10 +105,6 @@
   }
 
   @include mixins.tablet {
-    // min-height: 100vh;
-    // height: auto;
-    // aspect-ratio: 16 / 9;
-
     .contentLayer {
       padding-right: 50px;
     }
@@ -119,10 +121,6 @@
       font-size: 42px;
       line-height: 32px;
       letter-spacing: -1.7px;
-    }
-
-    .socialLinksWrapper {
-      text-align: left;
     }
   }
 }
