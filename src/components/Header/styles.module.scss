@@ -36,20 +36,23 @@
       content: '';
       position: absolute;
       z-index: 10;
+      display: block;
       height: 5px;
       bottom: -12px;
       left: 0;
       background: linear-gradient(
         90deg,
-        var(--color-lightGradient1),
-        var(--color-lightAurora3) 80%
+        var(--color-light-gradient1),
+        var(--color-light-aurora3) 80%
       );
     }
 
     & > * { /** Navigation Links */
       position: relative;
+      display: inline-block;
       font-family: 'Poppins';
       font-weight: 600;
+      line-height: 1;
       color: var(--color-gray);
 
       &:before {

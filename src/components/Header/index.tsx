@@ -11,7 +11,7 @@ type Props = {
 
 export function Header ({ currentPage }: Props) {
   const { t } = useLocaleDictionary();
-  
+
   const [didScroll, setDidScroll] = useState<boolean>(false);
   useEffect(() => {
     let isScrolling = false;
@@ -54,11 +54,8 @@ export function Header ({ currentPage }: Props) {
   [])
 
   const navigationIndex = {
-    // 'Inicio'     : styles.first,
     [t.home]     : styles.first,
-    // 'Portafolio': styles.second, 
     [t.portfolio]: styles.second, 
-    // 'Perfil'  : styles.third,
     [t.profile]  : styles.third,
   }
 
