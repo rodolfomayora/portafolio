@@ -7,5 +7,8 @@ export function useLocaleDictionary () {
   const [baseLocale] = locale.split('-');
   const isDefaultLocale = baseLocale === 'en';
   const t = isDefaultLocale ? en : es;
-  return { t };
+  return {
+    t,
+    baseLocale,
+  };
 }
