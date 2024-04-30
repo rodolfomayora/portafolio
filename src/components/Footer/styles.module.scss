@@ -45,10 +45,18 @@
   }
 
   .socialLinksWrapper {
+    display: flex;
+    column-gap: 20px;
+
+    a {
+      display: inline-block;
+      cursor: pointer;
+    }
+
     svg {
-      // width: 22px;
       width: auto;
-      max-height: 24px;
+      height: 24px;
+
       fill: var(--color-white);
       transition: fill 0.3s ease;
   
@@ -85,7 +93,7 @@
     }
     
     .socialLinksWrapper {
-      text-align: right;
+      justify-content: flex-end;
     }
   }
 }
