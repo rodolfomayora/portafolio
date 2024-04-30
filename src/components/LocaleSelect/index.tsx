@@ -10,7 +10,7 @@ export function LocaleSelect () {
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
-  const { baseLocale } = useLocaleDictionary();
+  const { baseLocale, pathname } = useLocaleDictionary();
 
   return (
     <div className={styles.LocaleSelect}
@@ -28,8 +28,10 @@ export function LocaleSelect () {
 
       <div className={styles.i18nContainer} aria-expanded={isOpen}>
         <div className={styles.i18nOptions}>
-          <Link href="/" locale="es">Español</Link>
-          <Link href="/" locale="en">English</Link>
+          {/* <Link href="/" locale="es">Español</Link> */}
+          <Link href={pathname} locale="es">Español</Link>
+          {/* <Link href="/" locale="en">English</Link> */}
+          <Link href={pathname} locale="en">English</Link>
         </div>
       </div>
     </div>
