@@ -1,0 +1,45 @@
+@layer defaults.typography {
+  /************** Popins **************/
+  // font definition delegated to 'next/font' module, see '/src/assets/fonts'
+
+  /************** Fira Code **************/
+  @font-face {
+    font-display: swap;
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 300;
+    src: url("/fonts/FiraCode/fira-code-v22-latin-ext-300.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/FiraCode/fira-code-v22-latin-ext-regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/FiraCode/fira-code-v22-latin-ext-500.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/FiraCode/fira-code-v22-latin-ext-600.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-display: swap;
+    font-family: "Fira Code";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/FiraCode/fira-code-v22-latin-ext-700.woff2") format("woff2");
+  }
+}

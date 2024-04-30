@@ -1,0 +1,52 @@
+@layer defaults.base {
+  *:focus-visible {
+    outline: solid #111111 4px;
+  }
+
+  html {
+    font: {
+      family: var(--font-fira-code), Arial, Helvetica, sans-serif;
+      size: 16px;
+    }
+    color: var(--color-gray);
+
+    @supports (text-wrap:pretty) {
+      text-wrap: pretty;
+    }
+  }
+  
+  body {
+    min-height: 100svh;
+    min-width: var(--min-mobile-width);
+    background-color: var(--color-white2)
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font: {
+      family: var(--font-poppins);
+      weight: 700;
+    }
+    color: var(--color-dark-gray);
+
+    @supports (text-wrap:balance) {
+      text-wrap: balance;
+    }
+  }
+  
+  img {
+    all: revert;
+    max-inline-size: 100%; /* max-width: 100% */
+    block-size: auto;      /* height: auto */
+  }
+
+  a {
+    cursor: pointer;
+    line-height: 0;
+  }
+
+  abbr[title] { text-decoration: none; }
+
+  button, label, img, a {
+    user-select: none;
+  }
+}

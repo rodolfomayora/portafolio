@@ -1,0 +1,13 @@
+@use "#styles/mixins" as mixins;
+
+.subtitle {
+  @include mixins.subtitle;
+}
+
+.contactFormWrapper {
+  width: 100%;
+
+  @include mixins.tablet {
+    width: 50%;
+  }
+}

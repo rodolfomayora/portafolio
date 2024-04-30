@@ -1,0 +1,80 @@
+.Header {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 30px;
+  min-height: 50px;
+  font-weight: 700;
+  background-color: var(--color-transparent);
+  box-shadow: none;
+  will-change:
+    padding-top
+    background-color,
+    box-shadow;
+  transition: all 0.3s ease;
+
+  &[data-did-scroll=true] {
+    padding-top: 0;
+    background-color: var(--color-white);
+    box-shadow: 0 2px 4px var(--color-shadow);
+  }
+
+  .headerContent {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    align-content: center;
+    transition: margin-top 0.3s ease;
+  }
+  
+  .navigationBar {
+    %miniBar {
+      content: '';
+      position: absolute;
+      z-index: 10;
+      display: block;
+      height: 5px;
+      bottom: -12px;
+      left: 0;
+      background: linear-gradient(
+        90deg,
+        var(--color-light-gradient1),
+        var(--color-light-aurora3) 80%
+      );
+    }
+
+    & > * { /** Navigation Links */
+      position: relative;
+      display: inline-block;
+      font-family: var(--font-poppins);;
+      font-weight: 600;
+      line-height: 1;
+      color: var(--color-gray);
+
+      &:before {
+        @extend %miniBar;
+        width: 0;
+        transition: width 0.2s linear;
+      }
+  
+      &:hover:before {
+        width: 100%;
+      }
+    }
+          
+    & > * + * { margin-left: 20px; }
+  
+    &.first  > :nth-of-type(1),
+    &.second > :nth-of-type(2),
+    &.third  > :nth-of-type(3) {
+      &:after {
+        @extend %miniBar;
+        width: 100%;
+      }
+    }
+  }
+}

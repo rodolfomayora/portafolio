@@ -1,0 +1,54 @@
+@use "../utils/breakpoints" as breakpoints;
+
+@layer defaults.variables {
+  :root {
+    // fonts (custom font names)
+    // --font-poppins: "Poppins"; // now defined on '/src/assets/fonts/poppins'
+    --font-fira-code: "Fira Code";
+    
+    // Colors
+    // Primary Colors
+    --color-green     : hsl(167, 92%, 20%); 
+    --color-white     : hsl(0, 0%, 100%);
+    --color-dark      : hsl(167, 10%, 14%); 
+    --color-gray      : hsl(166, 6%, 38%); // body text
+    --color-dark-gray : hsl(167deg, 10%, 30%); // titles
+    --color-light-gray: hsl(0deg 0% 70%);
+
+
+    // Neutral Colors
+    --color-green2     : hsl(167deg, 92%, 30%); // buttons hover
+    --color-green3     : hsl(136, 94%, 66%);
+    --color-white2     : hsl(0, 0%, 96%);
+    --color-whiteGray  : hsl(0, 0%, 94%);
+    --color-shadow     : hsla(166deg, 6%, 22%, 0.4);
+    --color-transparent: hsla(0, 0%, 0%, 0);
+    --color-black      : hsl(0, 0%, 7%);
+
+    // Extra Colors
+    // frosted effect layer over auroras or gradients
+    --color-light-frosted-layer: hsla(0, 0%, 100%, 0.6);
+
+    // Aurora Gradient for layers
+    --color-light-aurora1: hsl(0, 50%, 100%);
+    --color-light-aurora2: hsl(152, 100%, 50%);
+    --color-light-aurora3: hsl(168, 95%, 43%);  // hover width green
+    --color-light-aurora4: hsl(136, 94%, 66%); // hover width white
+    --color-light-aurora5: hsl(174, 100%, 70%);
+
+    // Linear Gradient for text and layers
+    --color-light-gradient1: hsl(167deg, 92%, 20%);
+    --color-light-gradient2: hsl(136deg, 94%, 40%);
+
+    // Indicators
+    --color-red: hsl(0, 70%, 50%);
+    --color-green-success: rgb(0, 219, 0);
+
+    // Container
+    --min-mobile-width: #{breakpoints.$minMobile};
+
+    // header
+    // --mobile-header-height: 64px;
+    // --desktop-header-height: 80px;
+  }
+}

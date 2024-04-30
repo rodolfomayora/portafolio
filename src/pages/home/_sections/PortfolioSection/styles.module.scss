@@ -1,0 +1,13 @@
+@use "#styles/mixins" as mixins;
+
+.subtitle {
+  @include mixins.subtitle;
+}
+
+.buttonWrapper {
+  margin-top: 60px;
+
+  @include mixins.tablet {
+    margin-top: 80px;
+  }
+}
