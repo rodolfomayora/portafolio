@@ -1,0 +1,69 @@
+
+.LocaleSelect {
+  position: relative;
+  display: inline-block;
+  height: auto;
+  line-height: 0;
+  font-family: var(--font-poppins);
+
+  .i18nButton {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 6px;
+    line-height: 0;
+    cursor: pointer;
+  }
+
+  .i18nBase {
+    color: var(--color-gray);
+  }
+
+  .i18nIcon {
+    width: 24px;
+    height: auto;
+    > * {
+      fill: var(--color-gray);
+    }
+  }
+
+  &:hover .i18nButton *,
+  &:focus-within .i18nButton * {
+    fill: var(--color-light-gray);
+    color: var(--color-light-gray);
+  }
+
+  .i18nContainer {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding-top: 10px;
+    visibility: hidden;
+
+
+    &[aria-expanded=true] {
+      visibility: visible;
+    }
+  }
+
+  .i18nOptions {
+    display: grid;
+    row-gap: 10px;
+    padding-block: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px var(--color-shadow);
+    background-color: var(--color-white);
+  
+    > * {
+      display: inline-block;
+      padding-inline: 10px;
+      line-height: 1;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    > *:hover,
+    > *:focus{
+      color: var(--color-light-gray);
+    }
+  }
+}
