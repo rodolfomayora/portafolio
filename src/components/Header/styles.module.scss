@@ -50,7 +50,7 @@
     & > * { /** Navigation Links */
       position: relative;
       display: inline-block;
-      font-family: 'Poppins';
+      font-family: var(--font-poppins);;
       font-weight: 600;
       line-height: 1;
       color: var(--color-gray);
