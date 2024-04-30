@@ -8,7 +8,7 @@ type Props = {
 export function Navigation ({ className }: Props) {
   const { t } = useLocaleDictionary();
   return (
-    <nav className={className}>
+    <nav className={className} tabIndex={0}>
       <Link href="/">
         {t.home}
       </Link>

@@ -8,8 +8,8 @@ export function TechnologyBlock ({ name, imageSource }: Props) {
   return (
     <div className={styles.TechnologyBlock}>
       <div className={styles.logoWrapper}>
+        {/* <Image */}
         <img
-        // <Image
           className={styles.logo}
           src={imageSource}
           alt={name + ' Icon'}
