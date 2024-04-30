@@ -162,5 +162,3 @@ export const projectsData: Array<ProjectSummaryType> = [
   //   sampleDataFrom: {},
   // },
 ];
-
-export default projectsData;

@@ -1,5 +1,5 @@
 import { Github, Linkedin, Telegram, DockerFlat } from '../../../public/images';
-import { socialLinks as links } from '../../data';
+import * as links from '#data/socialLinks';
 import { ExternalLink } from '#components/ExternalLink';
 import styles from './styles.module.scss';
 
