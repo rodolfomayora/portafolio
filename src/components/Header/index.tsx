@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Container } from '#components/Container';
 import { Navigation } from '#components/Navigation';
+import { LocaleSelect } from '#components/LocaleSelect';
+import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -8,21 +10,22 @@ type Props = {
 }
 
 export function Header ({ currentPage }: Props) {
+  const { t } = useLocaleDictionary();
   const [didScroll, setDidScroll] = useState<boolean>(false);
   useEffect(() => {
-    let isScrolling: boolean = false;
-    let isInTop: boolean = true;
+    let isScrolling = false;
+    let isInTop = true;
 
-    const didUserScroll: boolean = window.pageYOffset > 0;
+    const didUserScroll = window.pageYOffset > 0;
     if (didUserScroll) setDidScroll(true);
 
-    const intervalWatcher: number = window.setInterval(():void => {
+    const intervalWatcher = window.setInterval(():void => {
       if (isScrolling) {
         isScrolling = false;
-        const scrollYOffset: number = window.pageYOffset;
-        const initialPoint: number = 0;
-        const isAtInitialPoint: boolean = scrollYOffset === initialPoint;
-        const isNoAtInitialPoint: boolean = scrollYOffset > 0 && isInTop;
+        const scrollYOffset = window.pageYOffset;
+        const initialPoint = 0;
+        const isAtInitialPoint = scrollYOffset === initialPoint;
+        const isNoAtInitialPoint = scrollYOffset > 0 && isInTop;
 
         if (isAtInitialPoint) {
           isInTop = true;
@@ -50,23 +53,28 @@ export function Header ({ currentPage }: Props) {
   [])
 
   const navigationIndex = {
-    'Inicio'    : styles.first,
-    'Portafolio': styles.second, 
-    'Perfil'    : styles.third,
+    // 'Inicio'     : styles.first,
+    [t.home]     : styles.first,
+    // 'Portafolio': styles.second, 
+    [t.portfolio]: styles.second, 
+    // 'Perfil'  : styles.third,
+    [t.profile]  : styles.third,
   }
 
   const optionIndex = navigationIndex[currentPage];
-
   const navigationStyle = `${styles.navigationBar} ${optionIndex}`;
 
   return (
     <div className={`
-      ${styles.Header}
-      ${didScroll ? styles.scroll : ''}  
-    `}>
+        ${styles.Header}
+        ${didScroll ? styles.scroll : ''}  
+      `}
+      // tabIndex={0}
+    >
       <Container>
         <div className={styles.headerContent}>
-          <Navigation className={navigationStyle} />
+          <Navigation className={navigationStyle}/>
+          <LocaleSelect />
         </div>
       </Container>
     </div>

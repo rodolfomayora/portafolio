@@ -3,82 +3,82 @@ import type { technologyBlock } from "#/types/technologyBlock";
 export const technologies: technologyBlock[] = [
   {
     name: 'HTML',
-    imageSource: '/images/svg/html.svg',
+    imageSource: '/icons/svg/html.svg',
   },
   {
     name: 'CSS',
-    imageSource: '/images/svg/css.svg',
+    imageSource: '/icons/svg/css.svg',
   },
   {
     name: 'JavaScript',
-    imageSource: '/images/svg/javascript.svg',
+    imageSource: '/icons/svg/javascript.svg',
   },
   {
     name: 'Sass/SCSS',
-    imageSource: '/images/svg/sass.svg',
+    imageSource: '/icons/svg/sass.svg',
   },
   {
     name: 'TypeScript',
-    imageSource: '/images/svg/typescript.svg',
+    imageSource: '/icons/svg/typescript.svg',
   },
   {
     name: 'Next.js',
-    imageSource: '/images/svg/nextjs.svg',
+    imageSource: '/icons/svg/nextjs.svg',
   },
   {
     name: 'React.js',
-    imageSource: '/images/svg/react.svg',
+    imageSource: '/icons/svg/react.svg',
   },
   {
     name: 'Redux',
-    imageSource: '/images/svg/redux.svg',
+    imageSource: '/icons/svg/redux.svg',
   },
   {
     name: 'Vite.js',
-    imageSource: '/images/svg/vitejs.svg',
+    imageSource: '/icons/svg/vitejs.svg',
   },
   {
     name: 'Vitest',
-    imageSource: '/images/svg/vitest.svg',
+    imageSource: '/icons/svg/vitest.svg',
   },
   {
     name: 'Jest',
-    imageSource: '/images/svg/jest.svg',
+    imageSource: '/icons/svg/jest.svg',
   },
   {
     name: 'Testing Library',
-    imageSource: '/images/svg/testing-library.svg',
+    imageSource: '/icons/svg/testing-library.svg',
   },
   {
     name: 'Husky.js',
-    imageSource: '/images/svg/husky.svg',
+    imageSource: '/icons/svg/husky.svg',
   },
   {
     name: 'PNPM',
-    imageSource: '/images/svg/pnpm.svg',
+    imageSource: '/icons/svg/pnpm.svg',
   },
   {
     name: 'Corepack',
-    imageSource: '/images/svg/corepack.svg',
+    imageSource: '/icons/svg/corepack.svg',
   },
   {
     name: 'Node.js',
-    imageSource: '/images/svg/node.svg',
+    imageSource: '/icons/svg/node.svg',
   },
   {
     name: 'Docker',
-    imageSource: '/images/svg/docker.svg',
+    imageSource: '/icons/svg/docker.svg',
   },
   {
     name: 'VSCode',
-    imageSource: '/images/svg/vscode.svg',
+    imageSource: '/icons/svg/vscode.svg',
   },
   {
     name: 'WSL2',
-    imageSource: '/images/svg/ubuntu.svg',
+    imageSource: '/icons/svg/ubuntu.svg',
   },
   {
     name: 'Git',
-    imageSource: '/images/svg/git.svg',
+    imageSource: '/icons/svg/git.svg',
   },
 ];

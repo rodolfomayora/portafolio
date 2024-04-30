@@ -1,4 +1,9 @@
-import { Github, Linkedin, Telegram, DockerFlat } from '../../../public/images';
+import {
+  GithubIcon,
+  LinkedinIcon,
+  TelegramIcon,
+  DockerFlatIcon,
+} from '#icons/svg';
 import * as links from '#data/socialLinks';
 import { ExternalLink } from '#components/ExternalLink';
 import styles from './styles.module.scss';
@@ -10,28 +15,28 @@ export function SocialLinks () {
         href={links.githubProfile}
         aria-label="github profile page"  
       >
-        <Github />
+        <GithubIcon />
       </ExternalLink>
 
       <ExternalLink className={styles.ExternalLink}
         href={links.dockerhubProfile}
         aria-label="dockerhub profile page"    
       >
-        <DockerFlat />
+        <DockerFlatIcon />
       </ExternalLink>
   
       <ExternalLink className={styles.ExternalLink}
         href={links.linkedInProfile}
         aria-label="linkedin profile page"  
       >
-        <Linkedin />
+        <LinkedinIcon />
       </ExternalLink>
   
       <ExternalLink className={styles.ExternalLink}
         href={links.telegramProfile}
         aria-label="telegram contact link"
       >
-        <Telegram />
+        <TelegramIcon />
       </ExternalLink>
     </>
   );
