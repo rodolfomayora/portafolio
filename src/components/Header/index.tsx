@@ -11,6 +11,7 @@ type Props = {
 
 export function Header ({ currentPage }: Props) {
   const { t } = useLocaleDictionary();
+  
   const [didScroll, setDidScroll] = useState<boolean>(false);
   useEffect(() => {
     let isScrolling = false;
@@ -65,12 +66,7 @@ export function Header ({ currentPage }: Props) {
   const navigationStyle = `${styles.navigationBar} ${optionIndex}`;
 
   return (
-    <div className={`
-        ${styles.Header}
-        ${didScroll ? styles.scroll : ''}  
-      `}
-      // tabIndex={0}
-    >
+    <div className={styles.Header} data-did-scroll={didScroll}>
       <Container>
         <div className={styles.headerContent}>
           <Navigation className={navigationStyle}/>

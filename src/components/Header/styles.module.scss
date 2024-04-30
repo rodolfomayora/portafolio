@@ -15,7 +15,7 @@
     box-shadow;
   transition: all 0.3s ease;
 
-  &.scroll {
+  &[data-did-scroll=true] {
     padding-top: 0;
     background-color: var(--color-white);
     box-shadow: 0 2px 4px var(--color-shadow);
