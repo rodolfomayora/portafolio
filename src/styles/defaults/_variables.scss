@@ -1,4 +1,4 @@
-// @use "../utils/breakpoints" as breakpoints;
+@use "../utils/breakpoints" as breakpoints;
 
 @layer defaults.variables {
   :root {
@@ -45,7 +45,7 @@
     --color-green-success: rgb(0, 219, 0);
 
     // Container
-    // --min-mobile-width: #{breakpoints.$minMobile};
+    --min-mobile-width: #{breakpoints.$minMobile};
 
     // header
     // --mobile-header-height: 64px;

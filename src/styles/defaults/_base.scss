@@ -9,6 +9,10 @@
       size: 16px;
     }
     color: var(--color-gray);
+
+    @supports (text-wrap:pretty) {
+      text-wrap: pretty;
+    }
   }
   
   body {
@@ -23,6 +27,10 @@
       weight: 700;
     }
     color: var(--color-dark-gray);
+
+    @supports (text-wrap:balance) {
+      text-wrap: balance;
+    }
   }
   
   img {
