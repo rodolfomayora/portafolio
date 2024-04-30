@@ -1,4 +1,4 @@
-import { projects } from '../../data';
+import { projectsData } from 'data/projects';
 import { addCustomId } from '#utils/addCustomId';
 import { BasicLayout } from '#layouts/BasicLayout';
 import { PageSection } from '#components/PageSection';
@@ -10,7 +10,7 @@ import styles from './styles.module.scss';
 function Portfolio () {
   const { t } = useLocaleDictionary();
   const pageTitle = t.portfolio;
-  const portfolio: Array<any> = projects.map(addCustomId);
+  const portfolio: Array<any> = projectsData.map(addCustomId);
   const projectsToRender = portfolio?.map(project => (
     <ProjectSummary
       key={project.customId}
