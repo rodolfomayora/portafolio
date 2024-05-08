@@ -1,0 +1,37 @@
+name: my-server
+
+services:
+  # Development Service: docker compose --profile dev up --watch
+  my-server-dev:
+    build:
+      context: .
+      target: dev
+    image: my-server-dev:1.0
+    container_name: my-server-dev
+    ports:
+      - 3001:3001
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /usr/src/app
+          ignore:
+            - package.json
+        - action: rebuild
+          path: package.json
+    profiles:
+      - dev
+
+  # Production Service: docker compose --profile prod build
+  # my-server-prod:
+  #   build:
+  #     context: .
+  #     target: prod  
+  #   image: my-server-prod:1.0
+  #   container_name: my-server-prod
+  #   mem_limit: 1024m # good practice for production
+  #   ports:
+  #     - 3002:3002
+  #     # - 3002:80
+  #   profiles:
+  #     - prod

@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0 --port 3001",
     "build": "next build",
-    "start": "next start",
-    "cz": "cz",
-    "prepare": "husky"
+    "start": "next start --hostname 0.0.0.0 --port 3002",
+    "dev:docker": "docker compose --profile dev up --build --watch",
+    "build:docker": "docker compose --profile prod build",
+    "preview:docker": "docker compose --profile prod up",
+    "prepare": "husky",
+    "cz": "cz"
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
