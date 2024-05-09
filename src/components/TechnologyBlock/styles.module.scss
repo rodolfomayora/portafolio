@@ -13,6 +13,7 @@
   box-shadow: 0 2px 4px var(--color-shadow);
 
   .logoWrapper {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     margin-right: 0;

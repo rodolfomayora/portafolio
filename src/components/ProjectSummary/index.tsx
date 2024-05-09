@@ -33,6 +33,11 @@ export function ProjectSummary(props: ProjectSummaryProps) {
 
   const { t } = useLocaleDictionary();
 
+  const imageLayerBackground = `
+    linear-gradient(to bottom, #ffffff70, #ffffff),
+    url("/images/${mockupPath}.webp")
+  `;
+
   return (
     <div className={styles.ProjectSummary}>
       <div className={styles.mockupWrapperDesktop}>
@@ -140,6 +145,10 @@ export function ProjectSummary(props: ProjectSummaryProps) {
           </Button>
         </div>
       </div>
+
+      <div className={styles.imageLayer}
+        style={{ backgroundImage: imageLayerBackground }}
+      ></div>
     </div>
   );
 }
