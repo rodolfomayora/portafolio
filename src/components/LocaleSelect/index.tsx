@@ -7,15 +7,14 @@ import styles from './styles.module.scss';
 export function LocaleSelect () {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggle = () => setIsOpen(isOpen => !isOpen);
-  const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
   const { baseLocale, pathname } = useLocaleDictionary();
 
   return (
     <div className={styles.LocaleSelect}
+      aria-expanded={isOpen}
       onClick={toggle}
-      onMouseEnter={open}
       onMouseLeave={close}
     >
       <button className={styles.i18nButton}
@@ -26,11 +25,9 @@ export function LocaleSelect () {
         <I18nIcon className={styles.i18nIcon} />
       </button>
 
-      <div className={styles.i18nContainer} aria-expanded={isOpen}>
+      <div className={styles.i18nContainer}>
         <div className={styles.i18nOptions}>
-          {/* <Link href="/" locale="es">Español</Link> */}
           <Link href={pathname} locale="es">Español</Link>
-          {/* <Link href="/" locale="en">English</Link> */}
           <Link href={pathname} locale="en">English</Link>
         </div>
       </div>

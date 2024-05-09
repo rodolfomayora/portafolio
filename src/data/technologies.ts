@@ -74,7 +74,7 @@ export const technologies: technologyBlock[] = [
     imageSource: '/icons/svg/vscode.svg',
   },
   {
-    name: 'WSL2',
+    name: 'Ubuntu',
     imageSource: '/icons/svg/ubuntu.svg',
   },
   {

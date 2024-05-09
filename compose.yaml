@@ -1,0 +1,36 @@
+name: porfolio
+
+services:
+  # Development Service: docker compose --profile dev up --watch
+  porfolio-dev:
+    build:
+      context: .
+      target: dev
+    image: porfolio-dev:1.0
+    container_name: porfolio-dev
+    ports:
+      - 3001:3001
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /usr/src/app
+          ignore:
+            - package.json
+        - action: rebuild
+          path: package.json
+    profiles:
+      - dev
+
+  # Production Service: docker compose --profile prod build
+  porfolio-prod:
+    build:
+      context: .
+      target: prod  
+    image: porfolio-prod:1.0
+    container_name: porfolio-prod
+    mem_limit: 1024m # good practice for production
+    ports:
+      - 3002:3002
+    profiles:
+      - prod

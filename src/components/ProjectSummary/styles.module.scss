@@ -1,6 +1,25 @@
 @use "#styles/mixins" as mixins;
 
 .ProjectSummary {
+  position: relative;
+  z-index: 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px var(--color-shadow);
+  overflow: hidden;
+
+  .imageLayer {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    margin: 0;
+
+    // background-image is defined on JSX
+    background-size: cover;
+    background-position: center 40%;
+    background-attachment: fixed;
+    filter: blur(5px);
+  }
 
   &:first-of-type ~ & { margin-top: 60px; }
 
@@ -45,11 +64,12 @@
     flex-wrap: wrap;
     row-gap: 10px;
     column-gap: 10px;
-    align-items: baseline;
+    align-items: stretch;
 
     > * {
       flex-grow: 1;
-      max-width: 50%;
+      display: grid;
+      place-items: center;
       text-align: center;
     }
 
