@@ -21,20 +21,28 @@ FROM base AS dev
 EXPOSE 3001
 CMD pnpm dev
 
-# # Build STAGE
-# FROM base as build
-# RUN pnpm build
-# # heads up!! this should be 'RUN' not 'CMD'
+# Build STAGE
+FROM base as build
+RUN pnpm build
+# heads up!! this should be 'RUN' not 'CMD'
 
-# # production STAGE (container image optimization)
-# # Node Server for Next.js
-# FROM node:${NODE_VERSION}-alpine AS prod
-# WORKDIR /usr/src/app
-# COPY package.json .
-# COPY pnpm-lock.yml .
-# RUN pnpm --prod
-# COPY --from=build /usr/src/app/.next ./.next
-# COPY --from=build /usr/src/app/public ./public
-# USER node
-# EXPOSE 3002
+# production STAGE (container image optimization)
+# Node Server for Next.js
+FROM node:${NODE_VERSION}-alpine AS prod
+RUN corepack enable
+RUN --mount=type=bind,source=package.json,target=package.json \
+    corepack install
+WORKDIR /usr/src/app
+COPY --from=build /usr/src/app/package.json ./package.json
+COPY --from=build /usr/src/app/pnpm-lock.yaml ./pnpm-lock.yaml
+COPY --from=build  /usr/src/app/.next/standalone ./
+COPY --from=build /usr/src/app/.next/static ./.next/static
+COPY --from=build /usr/src/app/public ./public
+# remove "prepare" script from "package.json" to prevent Husky.js runs
+RUN npm pkg delete scripts.prepare
+RUN --mount=type=cache,id=pnpm,target=/pnpm/store \
+    pnpm install --prod
+USER node
+EXPOSE 3002
 # CMD pnpm start
+CMD HOSTNAME="0.0.0.0" PORT=3002 node server.js
