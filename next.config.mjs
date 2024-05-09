@@ -14,14 +14,6 @@ const nextConfig = {
     });
     return config;
   },
-  async rewrites() {
-    return [
-      {
-        source: '/',
-        destination: '/home'
-      },
-    ]
-  },
   output: "standalone",
 };
 

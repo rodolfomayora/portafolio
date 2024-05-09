@@ -5,10 +5,7 @@ import { TechSkillsSection } from './_sections/TechSkillsSection';
 import { PortfolioSection } from './_sections/PortfolioSection';
 import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
 
-// I set a rewrite route in 'next.config.js' to show this page in root path request '/'
-// now its not nescesary to define index.js in root path
-
-function Home () {
+export function Home () {
   const { t } = useLocaleDictionary();
   const pageTitle = t.home;
   return (
@@ -22,5 +19,3 @@ function Home () {
     </BasicLayout>
   );
 }
-
-export default Home;
