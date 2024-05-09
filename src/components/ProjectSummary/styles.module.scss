@@ -45,11 +45,12 @@
     flex-wrap: wrap;
     row-gap: 10px;
     column-gap: 10px;
-    align-items: baseline;
+    align-items: stretch;
 
     > * {
       flex-grow: 1;
-      max-width: 50%;
+      display: grid;
+      place-items: center;
       text-align: center;
     }
 
