@@ -1,0 +1,13 @@
+@use "#components/ButtonLink/styles.module.scss" as _;
+
+.ButtonLinkOutlined {
+  @extend .ButtonLink;
+  color: var(--color-green);
+  border-color: var(--color-green);
+  background-color: var(--color-white);
+
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-green);
+  }
+}
