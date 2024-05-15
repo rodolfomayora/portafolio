@@ -1,4 +1,5 @@
-import { Button } from '#components/Button';
+import { ButtonLink } from '#components/ButtonLink';
+import { ButtonLinkOutlined } from '#components/ButtonLinkOutlined';
 import { TechnologyTag } from '#components/TechnologyTag';
 import { ExternalLink } from '#components/ExternalLink';
 import { MockupViewer } from '#components/MockupViewer';
@@ -127,22 +128,13 @@ export function ProjectSummary(props: ProjectSummaryProps) {
         </div>
   
         <div className={styles.buttonsWrapper}>
-          <Button
-            as="externalLink"
-            fullWidth
-            href={deployURL}
-          >
+          <ButtonLink href={deployURL} style={{ width: '100%' }}>
             {t.see_online}
-          </Button>
+          </ButtonLink>
 
-          <Button
-            as="externalLink"
-            fullWidth
-            outline
-            href={sourceCodeURL}
-          >
+          <ButtonLinkOutlined href={sourceCodeURL} style={{ width: '100%' }}>
             {t.source_code}
-          </Button>
+          </ButtonLinkOutlined>
         </div>
       </div>
 
