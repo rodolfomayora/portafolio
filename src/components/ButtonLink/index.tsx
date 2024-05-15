@@ -1,5 +1,6 @@
-import type { ComponentProps, ReactNode } from 'react';
 import Link from 'next/link';
+import type { ComponentProps, ReactNode } from 'react';
+import { ExternalLink } from '#components/ExternalLink';
 import styles from './styles.module.scss';
 
 export type Props = ComponentProps<typeof Link> & {
@@ -11,14 +12,12 @@ export function ButtonLink ({ children, href, ...props }: Props) {
   const isExternalLink = href.startsWith('http');
   
   if (isExternalLink) return (
-    <a className={styles.ButtonLink}
+    <ExternalLink className={styles.ButtonLink}
       href={href}
-      target="_blank"
-      rel="external noopener noreferrer"
       {...props}
     >
       {children}
-    </a>
+    </ExternalLink>
   );
 
   return (
