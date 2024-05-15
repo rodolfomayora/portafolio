@@ -2,7 +2,7 @@ import { projectsData } from '#data/projects';
 import { addCustomId } from '#utils/addCustomId';
 import { ProjectSummary } from '#components/ProjectSummary';
 import { PageSection } from '#components/PageSection';
-import { Button } from '#components/Button';
+import { ButtonLink } from '#components/ButtonLink';
 import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
 import styles from './styles.module.scss';
 
@@ -33,13 +33,12 @@ export function PortfolioSection () {
       <h2 className={styles.subtitle}>{t.portfolio}</h2>
       {projectsToRender}              
       <div className={styles.buttonWrapper}>
-        <Button
-          as="innerLink"
+        <ButtonLink
           href="/portfolio"
-          fullWidth
+          style={{ width: '100%' }}
         >
           {t.see_more_projects}
-        </Button>
+        </ButtonLink>
       </div>
     </PageSection>
   );
