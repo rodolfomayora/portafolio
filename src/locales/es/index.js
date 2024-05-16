@@ -13,4 +13,5 @@ export const es = {
   deploy_on: 'Desplegado en',
   see_online: 'Ver Online',
   source_code: 'Código Fuente',
+  page_not_found: 'Página No Encontrada',
 }
