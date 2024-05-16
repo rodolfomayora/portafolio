@@ -4,6 +4,15 @@
   @include mixins.subtitle;
 }
 
+.projectsWrapper {
+  display: grid;
+  row-gap: 60px;
+
+  @include mixins.tablet {
+    row-gap: 80px;
+  }
+}
+
 .buttonWrapper {
   margin-top: 60px;
 

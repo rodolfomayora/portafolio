@@ -20,3 +20,12 @@
 .mainTitle {
   @include mixins.maintitle;
 }
+
+.projectsWrapper {
+  display: grid;
+  row-gap: 60px;
+
+  @include mixins.tablet {
+    row-gap: 80px;
+  }
+}

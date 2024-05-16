@@ -4,7 +4,7 @@ const categories = Object.freeze(['Frontend', 'Backend']);
 
 const html = 'HTML';
 const css = 'CSS';
-const javascript = 'JavsScript';
+const javascript = 'JavaScript';
 const typescript = 'TypeScript';
 const sass = 'Sass/SCSS';
 const cssModules = 'CSS Modules';
@@ -32,11 +32,12 @@ const staticPage = 'Static';
 
 export const projectsData: Array<ProjectSummaryType> = [
   {
+    id: crypto.randomUUID(),
     title: 'Easybank Landing Page',
     mockupPath: 'easybank-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}, ${pixel}, ${cwv}`,
-    stack: `${docker}, ${vitejs}, ${reactjs}, ${typescript}, ${sass}`,
+    stack: [docker, vitejs, reactjs, typescript, sass],
     // webType: 'Single Page Aplication (SPA)',
     renderPatter: 'Client Side Rendering (CSR)',
     sourceCodeURL: 'https://github.com/rodolfomayora/easybank-landing-page.git',
@@ -45,11 +46,12 @@ export const projectsData: Array<ProjectSummaryType> = [
     deploymentPlatform: 'Github Pages',
   },
   {
+    id: crypto.randomUUID(),
     title: 'Mini Shop',
     mockupPath:  'mini-shop',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: `${nextjs}, ${typescript}, Context-API, Styled Components,  ${sass}`,
+    stack: [nextjs, typescript, 'Context-API', 'Styled Components', sass],
     // webType: 'Single Page Aplication (SPA)',
     renderPatter: 'Client Side Rendering (CSR)',
     sourceCodeURL: 'https://github.com/rodolfomayora/mini-shop.git',
@@ -61,11 +63,12 @@ export const projectsData: Array<ProjectSummaryType> = [
     },
   },
   {
+    id: crypto.randomUUID(),
     title: 'Rest Countries App',
     mockupPath:  'rest-countries-app',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: ` ${reactjs}, ${typescript}, Redux, Redux-Saga, ${sass}`,
+    stack: [reactjs, typescript, 'Redux', 'Redux-Sagas', sass],
     // webType: 'Single Page Aplication (SPA)',
     renderPatter: 'Client Side Rendering (CSR), List Virtualization (Windowing)',
     sourceCodeURL: 'https://github.com/rodolfomayora/rest-countries.git',
@@ -77,34 +80,36 @@ export const projectsData: Array<ProjectSummaryType> = [
     },
   },
   {
-    // title: 'RESTful API + Documentación',
+    id: crypto.randomUUID(),
     title: 'RESTful API + Documentation',
     mockupPath:  'todo-api',
     category: categories[1],
     developmentApproaches: 'REST',
-    stack: `${docker}, ${nodejs}, ${epxressjs}, ${javascript}, MongoDB Atlas, Jest, Supertest, Swagger, OpenAPI v3`,
+    stack: [docker, nodejs, epxressjs, javascript, 'MongoDB Atlas', 'Jest', 'Supertest', 'Swagger', 'OpenAPI v3'],
     // renderPatter: 'Server Side Rendering (SSR)',
     sourceCodeURL: 'https://github.com/rodolfomayora/todo-api',
     deployURL: 'https://todo-api.fly.dev/api/v1/docs',
     deploymentPlatform: 'Fly.io',
   },
   {
+    id: crypto.randomUUID(),
     title: 'Sunnyside Agency Landing Page',
     mockupPath: 'sunnyside-landing-page',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}, ${pixel}`,
-    stack: `${html}, ${css}, ${javascript}`,
+    stack: [html, css, javascript],
     renderPatter: staticPage,
     sourceCodeURL: 'https://github.com/rodolfomayora/sunnyside-agency-landing-page-main',
     deployURL: 'https://rodolfomayora.github.io/sunnyside-agency-landing-page-main',
     deploymentPlatform: 'Github Pages',
   },
   {
+    id: crypto.randomUUID(),
     title: 'Blogr Landing Page',
     mockupPath: 'blogr-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: `${nextjs}, ${reactjs}, ${typescript}, ${sass}`,
+    stack: [nextjs, reactjs, typescript, sass],
     // webType: 'Landing Page',
     // renderPatter: 'Server Side Rendering (SSR) + Hydration',
     renderPatter: 'Pre-rendering + Hydration',
@@ -113,33 +118,36 @@ export const projectsData: Array<ProjectSummaryType> = [
     deploymentPlatform: 'Vercel',
   },
   {
+    id: crypto.randomUUID(),
     title: 'Insure Landing Page',
     mockupPath: 'insure-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: `${html}, ${sass}, ${javascript}`,
+    stack: [html, sass, javascript],
     renderPatter: staticPage,
     sourceCodeURL: 'https://github.com/rodolfomayora/insure-landing-page.git',
     deployURL: 'https://rodolfomayora.github.io/insure-landing-page',
     deploymentPlatform: 'Github Pages',
   },
   {
+    id: crypto.randomUUID(),
     title: 'Testimonials Grid Section',
     mockupPath: 'testimonial-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: `${reactjs}, ${typescript}, ${cssModules}`,
+    stack: [reactjs, typescript, cssModules],
     renderPatter: staticPage,
     sourceCodeURL: 'https://github.com/rodolfomayora/testimonials-grid-section.git',
     deployURL: 'https://rodolfomayora.github.io/testimonials-grid-section',
     deploymentPlatform: 'Github Pages',
   },
   {
+    id: crypto.randomUUID(),
     title: 'Article Preview Component',
     mockupPath: 'article-preview-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: `${html}, ${css}, ${javascript}`,
+    stack: [html, css, javascript],
     renderPatter: staticPage,
     sourceCodeURL: 'https://github.com/rodolfomayora/article-preview-component.git',
     deployURL: 'https://rodolfomayora.github.io/article-preview-component',
@@ -148,6 +156,7 @@ export const projectsData: Array<ProjectSummaryType> = [
   
   
   // {
+    // id: crypto.randomUUID(),
   //   title: '',
   //   mockupPath:  '',
   //   category: '',
