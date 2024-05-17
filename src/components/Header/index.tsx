@@ -27,15 +27,14 @@ export function Header ({ currentPage }: Props) {
     <>
       {/* element to observe */}
       <div style={{ width: "100%", height: "0" }} ref={ref}></div>
-
-      <div className={styles.Header} data-did-scroll={didScroll}>
+      <header className={styles.Header} data-did-scroll={didScroll}>
         <Container>
           <div className={styles.headerContent}>
             <Navigation className={navigationStyle}/>
             <LocaleSelect />
           </div>
         </Container>
-      </div>
+      </header>
     </>
   );
 }
