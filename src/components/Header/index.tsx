@@ -2,8 +2,10 @@ import { Container } from '#components/Container';
 import { Navigation } from '#components/Navigation';
 import { LocaleSelect } from '#components/LocaleSelect';
 import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
-import { useScrollState } from './useScrollState';
+// import { useScrollState } from './useScrollState';
 import styles from './styles.module.scss';
+
+import { useInView } from "react-intersection-observer";
 
 type Props = {
   currentPage: string,
@@ -11,7 +13,8 @@ type Props = {
 
 export function Header ({ currentPage }: Props) {
   const { t } = useLocaleDictionary();
-  const { didScroll } = useScrollState();
+  const { ref, inView } = useInView();
+  const didScroll = !inView;
 
   const navigationIndex = {
     [t.home]     : styles.first,
@@ -23,13 +26,16 @@ export function Header ({ currentPage }: Props) {
   const navigationStyle = `${styles.navigationBar} ${optionIndex}`;
 
   return (
-    <div className={styles.Header} data-did-scroll={didScroll}>
-      <Container>
-        <div className={styles.headerContent}>
-          <Navigation className={navigationStyle}/>
-          <LocaleSelect />
-        </div>
-      </Container>
-    </div>
+    <>
+      <div ref={ref} style={{ width: "100%", height: "0"  }}></div>
+      <div className={styles.Header} data-did-scroll={didScroll}>
+        <Container>
+          <div className={styles.headerContent}>
+            <Navigation className={navigationStyle}/>
+            <LocaleSelect />
+          </div>
+        </Container>
+      </div>
+    </>
   );
 }
