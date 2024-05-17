@@ -11,29 +11,31 @@ export function PortfolioSection () {
   const portfolio = projectsData.slice(0,4);
 
   const projectsToRender = portfolio?.map(project => (
-    <ProjectSummary key={project.id}
-      id={project.id}
-      apiIntegration={{ ...project.apiIntegration }}
-      sampleDataFrom={{ ...project.sampleDataFrom }}
-      category={project.category}
-      deployURL={project.deployURL}
-      developmentApproaches={project.developmentApproaches}
-      mockupPath={project.mockupPath}
-      renderPatter={project?.renderPatter}
-      sourceCodeURL={project.sourceCodeURL}
-      stack={project.stack}
-      title={project.title}
-      webType={project.webType}
-      deploymentPlatform={project.deploymentPlatform}
-    />
+    <li key={project.id}>
+      <ProjectSummary
+        id={project.id}
+        apiIntegration={{ ...project.apiIntegration }}
+        sampleDataFrom={{ ...project.sampleDataFrom }}
+        category={project.category}
+        deployURL={project.deployURL}
+        developmentApproaches={project.developmentApproaches}
+        mockupPath={project.mockupPath}
+        renderPatter={project?.renderPatter}
+        sourceCodeURL={project.sourceCodeURL}
+        stack={project.stack}
+        title={project.title}
+        webType={project.webType}
+        deploymentPlatform={project.deploymentPlatform}
+      />
+    </li>
   ));
 
   return (
     <PageSection>
       <h2 className={styles.subtitle}>{t.portfolio}</h2>
-      <div className={styles.projectsWrapper}>
+      <ul className={styles.projectsWrapper} role="list">
         {projectsToRender}
-      </div>
+      </ul>
       <div className={styles.buttonWrapper}>
         <ButtonLink href="/portfolio" style={{ width: '100%' }}>
           {t.see_more_projects}

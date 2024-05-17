@@ -50,8 +50,7 @@ export function Header ({ currentPage }: Props) {
       window.clearInterval(intervalWatcher);
       document.removeEventListener('scroll', setScrollTrue);
     }
-  },
-  [])
+  }, []);
 
   const navigationIndex = {
     [t.home]     : styles.first,

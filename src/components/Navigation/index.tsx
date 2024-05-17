@@ -9,15 +9,13 @@ export function Navigation ({ className }: Props) {
   const { t } = useLocaleDictionary();
   return (
     <nav className={className} tabIndex={0}>
-      <Link href="/">
-        {t.home}
-      </Link>
-      <Link href="/portfolio">
-        {t.portfolio}
-      </Link>
-      {/* <Link href="/profile">
+      <ul>
+        <li><Link href="/">{t.home}</Link></li>
+        <li><Link href="/portfolio">{t.portfolio}</Link></li>
+        {/* <li><<Link href="/profile">
         {t.profile}
-      </Link> */}
+      </Link></li> */}
+      </ul>
     </nav>
   );
 }

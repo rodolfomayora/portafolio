@@ -11,13 +11,15 @@ const cssModules = 'CSS Modules';
 const reactjs = 'React.js';
 const nextjs = 'Next.js';
 const redux = 'Redux';
-const reduxSagas = 'Redux-Sagas';
+const reduxSagas = 'Redux Sagas';
 const docker = 'Docker';
 const vitejs = 'Vite.js';
 const huskyjs = 'Husky.js';
 const cicd = 'CI/CD';
-const nodejs = 'Node.js'
-const epxressjs = 'Express.js'
+const nodejs = 'Node.js';
+const epxressjs = 'Express.js';
+const jest = 'Jest';
+const vitest = 'Vitest';
 
 // Development Apporaches (techniques)
 const rwd = 'Responsive Web Design';
@@ -68,7 +70,7 @@ export const projectsData: Array<ProjectSummaryType> = [
     mockupPath:  'rest-countries-app',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: [reactjs, typescript, 'Redux', 'Redux-Sagas', sass],
+    stack: [reactjs, typescript, redux, reduxSagas, sass],
     // webType: 'Single Page Aplication (SPA)',
     renderPatter: 'Client Side Rendering (CSR), List Virtualization (Windowing)',
     sourceCodeURL: 'https://github.com/rodolfomayora/rest-countries.git',
@@ -85,7 +87,7 @@ export const projectsData: Array<ProjectSummaryType> = [
     mockupPath:  'todo-api',
     category: categories[1],
     developmentApproaches: 'REST',
-    stack: [docker, nodejs, epxressjs, javascript, 'MongoDB Atlas', 'Jest', 'Supertest', 'Swagger', 'OpenAPI v3'],
+    stack: [docker, nodejs, epxressjs, javascript, 'MongoDB Atlas', jest, 'Supertest', 'Swagger', 'OpenAPI v3'],
     // renderPatter: 'Server Side Rendering (SSR)',
     sourceCodeURL: 'https://github.com/rodolfomayora/todo-api',
     deployURL: 'https://todo-api.fly.dev/api/v1/docs',

@@ -29,10 +29,16 @@
   }
 
   .innerNavigation {
-    display: flex;
-    justify-content: center;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+    }
 
-    & > * { /** Navigation Links */
+    li { /** Navigation Links */
       color: var(--color-white);
       transition: color 0.3s linear;
 
@@ -40,8 +46,6 @@
         color: var(--color-green3);
       }
     }
-
-    & > * + * { margin-left: 20px; }
   }
 
   .socialLinksWrapper {
@@ -90,6 +94,10 @@
 
     .linkToHomeWrapper {
       text-align: left;
+    }
+
+    .innerNavigation ul {
+      flex-direction: row;
     }
     
     .socialLinksWrapper {
