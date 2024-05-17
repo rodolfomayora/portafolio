@@ -11,7 +11,8 @@ type Props = {
 
 export function Header ({ currentPage }: Props) {
   const { t } = useLocaleDictionary();
-  const { didScroll } = useScrollState();
+  const { ref, isInViewport } = useScrollState();
+  const didScroll = !isInViewport;
 
   const navigationIndex = {
     [t.home]     : styles.first,
@@ -23,13 +24,18 @@ export function Header ({ currentPage }: Props) {
   const navigationStyle = `${styles.navigationBar} ${optionIndex}`;
 
   return (
-    <div className={styles.Header} data-did-scroll={didScroll}>
-      <Container>
-        <div className={styles.headerContent}>
-          <Navigation className={navigationStyle}/>
-          <LocaleSelect />
-        </div>
-      </Container>
-    </div>
+    <>
+      {/* element to observe */}
+      <div style={{ width: "100%", height: "0" }} ref={ref}></div>
+
+      <div className={styles.Header} data-did-scroll={didScroll}>
+        <Container>
+          <div className={styles.headerContent}>
+            <Navigation className={navigationStyle}/>
+            <LocaleSelect />
+          </div>
+        </Container>
+      </div>
+    </>
   );
 }

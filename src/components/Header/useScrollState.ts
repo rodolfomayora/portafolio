@@ -1,50 +1,32 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, type MutableRefObject } from 'react';
 
 type ScrollState = {
-  didScroll: boolean,
+  isInViewport: boolean,
+  ref: MutableRefObject<any>,
 }
 
 export function useScrollState (): ScrollState {
-  const [didScroll, setDidScroll] = useState<boolean>(false);
+  const ref = useRef(null);
+  const [isInViewport, setIsInViewport] = useState<boolean>(true);
+
   useEffect(() => {
-    let isScrolling = false;
-    let isInTop = true;
-
-    const didUserScroll = window.pageYOffset > 0;
-    if (didUserScroll) setDidScroll(true);
-
-    const intervalWatcher = window.setInterval(() => {
-      if (isScrolling) {
-
-        isScrolling = false;
-        const scrollYOffset = window.pageYOffset;
-        const initialPoint = 0;
-        const isAtInitialPoint = scrollYOffset === initialPoint;
-        const isNoAtInitialPoint = scrollYOffset > 0 && isInTop;
-
-        if (isAtInitialPoint) {
-          isInTop = true;
-          setDidScroll(false);
-        }
-
-        if (isNoAtInitialPoint) {
-          isInTop = false;
-          setDidScroll(true);
-        }
+    function observerHandler (entries) {
+      const [element] = entries;
+      if (element.isIntersecting) {
+        setIsInViewport(true);
+      } else {
+        setIsInViewport(false);
       }
-    }, 200);
+    }
 
-    const setScrollTrue = (): void => {
-      isScrolling = true;
-    };
+    const observer = new IntersectionObserver(observerHandler);
 
-    document.addEventListener('scroll', setScrollTrue);
+    observer.observe(ref.current);
 
     return () => {
-      window.clearInterval(intervalWatcher);
-      document.removeEventListener('scroll', setScrollTrue);
+      observer.disconnect();
     }
   }, []);
 
-  return { didScroll };
+  return { isInViewport, ref };
 }

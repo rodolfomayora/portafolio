@@ -1,6 +1,6 @@
-import type { technologyBlock } from "#/types/technologyBlock";
+import type { Props as TechnologyBlockProps } from '#components/TechnologyBlock';
 
-export const technologies: technologyBlock[] = [
+export const technologies: TechnologyBlockProps[] = [
   {
     name: 'HTML',
     imageSource: '/icons/svg/html.svg',
