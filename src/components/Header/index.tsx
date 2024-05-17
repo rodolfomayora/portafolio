@@ -4,8 +4,8 @@ import { LocaleSelect } from '#components/LocaleSelect';
 import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
 // import { useScrollState } from './useScrollState';
 import styles from './styles.module.scss';
-// import { useInView } from "react-intersection-observer";
 
+import { useInView } from "react-intersection-observer";
 
 type Props = {
   currentPage: string,
