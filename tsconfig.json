@@ -32,7 +32,7 @@
       "#utils/*": ["./utils/*"]
     },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mjs"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules"
   ]
