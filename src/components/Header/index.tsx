@@ -13,8 +13,8 @@ type Props = {
 
 export function Header ({ currentPage }: Props) {
   const { t } = useLocaleDictionary();
-  // const { ref, inView } = useInView();
-  // const didScroll = !inView;
+  const { ref, inView } = useInView();
+  const didScroll = !inView;
 
   const navigationIndex = {
     [t.home]     : styles.first,
@@ -27,9 +27,8 @@ export function Header ({ currentPage }: Props) {
 
   return (
     <>
-      {/* <div ref={ref} style={{ width: "100%", height: "0"  }}></div> */}
-      {/* <div className={styles.Header} data-did-scroll={didScroll}> */}
-      <div className={styles.Header} data-did-scroll={false}>
+      <div ref={ref} style={{ width: "100%", height: "0"  }}></div>
+      <div className={styles.Header} data-did-scroll={didScroll}>
         <Container>
           <div className={styles.headerContent}>
             <Navigation className={navigationStyle}/>
