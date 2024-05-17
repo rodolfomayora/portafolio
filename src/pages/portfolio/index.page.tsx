@@ -1,5 +1,4 @@
 import { projectsData } from 'data/projects';
-import { addCustomId } from '#utils/addCustomId';
 import { BasicLayout } from '#layouts/BasicLayout';
 import { PageSection } from '#components/PageSection';
 import { ProjectSummary } from '#components/ProjectSummary';
@@ -10,10 +9,9 @@ import styles from './styles.module.scss';
 function Portfolio () {
   const { t } = useLocaleDictionary();
   const pageTitle = t.portfolio;
-  const portfolio: Array<any> = projectsData.map(addCustomId);
-  const projectsToRender = portfolio?.map(project => (
-    <ProjectSummary
-      key={project.customId}
+  const projectsToRender = projectsData?.map(project => (
+    <ProjectSummary key={project.id}
+      id={project.id}
       apiIntegration={{ ...project.apiIntegration }}
       sampleDataFrom={{ ...project.sampleDataFrom }}
       category={project.category}
@@ -25,8 +23,10 @@ function Portfolio () {
       stack={project.stack}
       title={project.title}
       webType={project.webType}
-      deploymentPlatform={project.deploymentPlatform} />
+      deploymentPlatform={project.deploymentPlatform}
+    />
   ));
+
   return (
     <BasicLayout pageTitle={pageTitle}>
       <main>
@@ -35,7 +35,9 @@ function Portfolio () {
           <h1 className={styles.mainTitle}>{pageTitle}</h1>
         </section>
         <PageSection>
-          {projectsToRender}
+          <div className={styles.projectsWrapper}>
+            {projectsToRender}
+          </div>
         </PageSection>
       </main>
     </BasicLayout>

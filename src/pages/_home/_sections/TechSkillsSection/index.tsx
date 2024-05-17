@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 export function TechSkillsSection () {
   const { t } = useLocaleDictionary();
 
-  const myTechSkills = technologies.map(addCustomId);
+  const myTechSkills = technologies.map(addCustomId<typeof technologies[0]>);
 
   const skillsToRender = myTechSkills?.map(technology => (
     <TechnologyBlock
