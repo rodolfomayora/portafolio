@@ -25,6 +25,7 @@
       "#hooks/*": ["./hooks/*"],
       "#icons/*": ["./assets/icons/*"],
       "#layouts/*": ["./layouts/*"],
+      "#lib/*": ["./lib/*"],
       "#locales/*": ["./locales/*"],
       "#styles/*": ["./styles/utils/*"],
       "#types/*": ["./types/*"],
