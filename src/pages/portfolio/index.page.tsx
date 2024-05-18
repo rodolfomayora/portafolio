@@ -1,5 +1,4 @@
 import { projectsData } from 'data/projects';
-import { addCustomId } from '#utils/addCustomId';
 import { BasicLayout } from '#layouts/BasicLayout';
 import { PageSection } from '#components/PageSection';
 import { ProjectSummary } from '#components/ProjectSummary';
@@ -10,23 +9,26 @@ import styles from './styles.module.scss';
 function Portfolio () {
   const { t } = useLocaleDictionary();
   const pageTitle = t.portfolio;
-  const portfolio: Array<any> = projectsData.map(addCustomId);
-  const projectsToRender = portfolio?.map(project => (
-    <ProjectSummary
-      key={project.customId}
-      apiIntegration={{ ...project.apiIntegration }}
-      sampleDataFrom={{ ...project.sampleDataFrom }}
-      category={project.category}
-      deployURL={project.deployURL}
-      developmentApproaches={project.developmentApproaches}
-      mockupPath={project.mockupPath}
-      renderPatter={project.renderPatter}
-      sourceCodeURL={project.sourceCodeURL}
-      stack={project.stack}
-      title={project.title}
-      webType={project.webType}
-      deploymentPlatform={project.deploymentPlatform} />
+  const projectsToRender = projectsData?.map(project => (
+    <li key={project.id}>
+      <ProjectSummary
+        id={project.id}
+        apiIntegration={{ ...project.apiIntegration }}
+        sampleDataFrom={{ ...project.sampleDataFrom }}
+        category={project.category}
+        deployURL={project.deployURL}
+        developmentApproaches={project.developmentApproaches}
+        mockupPath={project.mockupPath}
+        renderPatter={project.renderPatter}
+        sourceCodeURL={project.sourceCodeURL}
+        stack={project.stack}
+        title={project.title}
+        webType={project.webType}
+        deploymentPlatform={project.deploymentPlatform}
+      />
+    </li>
   ));
+
   return (
     <BasicLayout pageTitle={pageTitle}>
       <main>
@@ -35,7 +37,9 @@ function Portfolio () {
           <h1 className={styles.mainTitle}>{pageTitle}</h1>
         </section>
         <PageSection>
-          {projectsToRender}
+          <ul className={styles.projectsWrapper} role="list">
+            {projectsToRender}
+          </ul>
         </PageSection>
       </main>
     </BasicLayout>

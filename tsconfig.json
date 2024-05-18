@@ -25,13 +25,14 @@
       "#hooks/*": ["./hooks/*"],
       "#icons/*": ["./assets/icons/*"],
       "#layouts/*": ["./layouts/*"],
+      "#lib/*": ["./lib/*"],
       "#locales/*": ["./locales/*"],
       "#styles/*": ["./styles/utils/*"],
       "#types/*": ["./types/*"],
       "#utils/*": ["./utils/*"]
     },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mjs"],
   "exclude": [
     "node_modules"
   ]

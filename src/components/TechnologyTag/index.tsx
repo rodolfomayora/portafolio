@@ -1,16 +1,13 @@
 import styles from './styles.module.scss'
 
-type Props = {
-  name: string,
-  id?: string,
+export type Props = {
+  children: string,
 };
 
-export function TechnologyTag ({ name }: Props) {
+export function TechnologyTag ({ children }: Props) {
   return (
-    <div className={styles.technologyTag}>
-      <div className={styles.content}>
-        {name}
-      </div>
+    <div className={styles.TechnologyTag}>
+      {children}
     </div>
   );
 }

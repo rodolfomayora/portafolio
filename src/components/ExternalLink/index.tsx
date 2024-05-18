@@ -1,22 +1,18 @@
-import type { ReactNode } from 'react';
-import Link from 'next/link';
+import type { ComponentProps, ReactNode } from 'react';
 
-type Props = {
+type Props = ComponentProps<'a'> & {
   children: ReactNode,
   href: string
-  className?: string,
-  ["aria-label"]?: string, 
 }
 
-export function ExternalLink ({ children, className, href }: Props) {
+export function ExternalLink ({ children, href, ...props }: Props) {
   return (
-    <Link
-      className={className}
-      href={href}
+    <a href={href}
       target="_blank"
       rel="external noopener noreferrer"
+      {...props}
     >
       {children}
-    </Link>
+    </a>
   );
 }

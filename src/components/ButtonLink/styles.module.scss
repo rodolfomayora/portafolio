@@ -1,0 +1,33 @@
+.ButtonLink {
+  display: inline-grid;
+  place-items: center;
+
+  max-width: 100%;
+  height: 42px;
+  padding-inline: 10px;
+  border: {
+    color: var(--color-transparent);
+    width: 2px;
+    style: solid;
+    radius: 4px;
+  }
+  
+  font: {
+    size: 16px;
+    weight: 700;
+  }
+  text: {
+    align: center;
+    decoration: none;
+  }
+  color: var(--color-white);
+  
+  background-color: var(--color-green);
+  box-shadow: var(--shadow-1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: var(--color-green2);
+  }
+}

@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
 import { Container } from '#components/Container';
 import { Navigation } from '#components/Navigation';
 import { LocaleSelect } from '#components/LocaleSelect';
 import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
+import { useScrollState } from './useScrollState';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -11,47 +11,8 @@ type Props = {
 
 export function Header ({ currentPage }: Props) {
   const { t } = useLocaleDictionary();
-
-  const [didScroll, setDidScroll] = useState<boolean>(false);
-  useEffect(() => {
-    let isScrolling = false;
-    let isInTop = true;
-
-    const didUserScroll = window.pageYOffset > 0;
-    if (didUserScroll) setDidScroll(true);
-
-    const intervalWatcher = window.setInterval(():void => {
-      if (isScrolling) {
-        isScrolling = false;
-        const scrollYOffset = window.pageYOffset;
-        const initialPoint = 0;
-        const isAtInitialPoint = scrollYOffset === initialPoint;
-        const isNoAtInitialPoint = scrollYOffset > 0 && isInTop;
-
-        if (isAtInitialPoint) {
-          isInTop = true;
-          setDidScroll(false);
-        }
-
-        if (isNoAtInitialPoint) {
-          isInTop = false;
-          setDidScroll(true);
-        }
-      }
-    }, 200);
-
-    const setScrollTrue = ():void => {
-      isScrolling = true;
-    };
-
-    document.addEventListener('scroll', setScrollTrue);
-
-    return () => {
-      window.clearInterval(intervalWatcher);
-      document.removeEventListener('scroll', setScrollTrue);
-    }
-  },
-  [])
+  const { ref, isInViewport } = useScrollState();
+  const didScroll = !isInViewport;
 
   const navigationIndex = {
     [t.home]     : styles.first,
@@ -63,13 +24,17 @@ export function Header ({ currentPage }: Props) {
   const navigationStyle = `${styles.navigationBar} ${optionIndex}`;
 
   return (
-    <div className={styles.Header} data-did-scroll={didScroll}>
-      <Container>
-        <div className={styles.headerContent}>
-          <Navigation className={navigationStyle}/>
-          <LocaleSelect />
-        </div>
-      </Container>
-    </div>
+    <>
+      {/* element to observe */}
+      <div style={{ width: "100%", height: "0" }} ref={ref}></div>
+      <header className={styles.Header} data-did-scroll={didScroll}>
+        <Container>
+          <div className={styles.headerContent}>
+            <Navigation className={navigationStyle}/>
+            <LocaleSelect />
+          </div>
+        </Container>
+      </header>
+    </>
   );
 }

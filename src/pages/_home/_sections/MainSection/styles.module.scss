@@ -5,10 +5,9 @@
   z-index: 0;
   display: flex;
   overflow: hidden;
-  background-color: var(--color-transparent);
-  // height: var(--viewport-height, 100vmax);
   height: 100svh;
-  // max-height: 1080px;
+  max-height: 1080px;
+  background-color: var(--color-transparent);
 
   > * { flex-grow: 1; }
 

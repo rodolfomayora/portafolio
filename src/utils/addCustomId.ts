@@ -1,6 +1,6 @@
-export function addCustomId (item: any, index: number) {
+export function addCustomId<T>(item: any): T & { customId: string} {
   return ({
     ...item,
-    customId: (index + 1).toString()
+    customId: crypto.randomUUID(),
   });
 }
