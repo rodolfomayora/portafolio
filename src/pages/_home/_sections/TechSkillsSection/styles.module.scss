@@ -23,7 +23,7 @@
     translate: 0 100%;
     transition-property: all;
     transition-timing-function: linear;
-    transition-duration: 800ms;
+    transition-duration: 600ms;
     transition-delay: 0ms;
 
     &[data-in-view="true"] {
@@ -40,7 +40,8 @@
     );
 
     .item {
-      transition-delay: calc(var(--item) * 150ms);
+      transition-duration: 400ms;
+      transition-delay: calc(var(--item) * 100ms);
     }
   }
 }

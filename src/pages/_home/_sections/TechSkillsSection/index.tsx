@@ -13,7 +13,7 @@ type CustomStyle = CSSProperties & {
 
 export function TechSkillsSection () {
   const { t } = useLocaleDictionary();
-  const { containerRef} = useObserver();
+  const { containerRef } = useObserver();
 
   const myTechSkills = technologies.map(addCustomId<typeof technologies[0]>);
 
