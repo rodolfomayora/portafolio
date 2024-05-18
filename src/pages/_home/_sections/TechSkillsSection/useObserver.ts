@@ -30,7 +30,7 @@ export function useObserver () {
     return () => {
       observer.disconnect();
     }
-  }, []);
+  }); // no dependency list to ensure observer runs with locale language switch
 
   return { containerRef };
 }
