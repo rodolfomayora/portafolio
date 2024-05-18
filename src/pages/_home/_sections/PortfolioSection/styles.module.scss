@@ -7,6 +7,7 @@
 .projectsWrapper {
   display: grid;
   row-gap: 60px;
+  list-style: none;
 
   @include mixins.tablet {
     row-gap: 80px;

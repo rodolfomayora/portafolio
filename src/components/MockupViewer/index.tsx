@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './styles.module.scss';
 
 type Props = {
@@ -28,10 +29,13 @@ export function MockupViewer ({ mockupFileName, title }: Props) {
             media="(min-width:768px)"
             srcSet={`${mediumMockupSource}.png`} />
 
-          <img className={styles.mockup}
+          <Image className={styles.mockup}
             src={`${defaultMokupSource}.png`}
             alt={alternativeText}
-            width="270" height="140" />
+            width="270" height="140"
+            loading="lazy"
+            decoding="auto"
+          />
         </picture>
       </div>
     </div>

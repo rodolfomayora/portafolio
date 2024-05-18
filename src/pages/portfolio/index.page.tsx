@@ -10,21 +10,23 @@ function Portfolio () {
   const { t } = useLocaleDictionary();
   const pageTitle = t.portfolio;
   const projectsToRender = projectsData?.map(project => (
-    <ProjectSummary key={project.id}
-      id={project.id}
-      apiIntegration={{ ...project.apiIntegration }}
-      sampleDataFrom={{ ...project.sampleDataFrom }}
-      category={project.category}
-      deployURL={project.deployURL}
-      developmentApproaches={project.developmentApproaches}
-      mockupPath={project.mockupPath}
-      renderPatter={project.renderPatter}
-      sourceCodeURL={project.sourceCodeURL}
-      stack={project.stack}
-      title={project.title}
-      webType={project.webType}
-      deploymentPlatform={project.deploymentPlatform}
-    />
+    <li key={project.id}>
+      <ProjectSummary
+        id={project.id}
+        apiIntegration={{ ...project.apiIntegration }}
+        sampleDataFrom={{ ...project.sampleDataFrom }}
+        category={project.category}
+        deployURL={project.deployURL}
+        developmentApproaches={project.developmentApproaches}
+        mockupPath={project.mockupPath}
+        renderPatter={project.renderPatter}
+        sourceCodeURL={project.sourceCodeURL}
+        stack={project.stack}
+        title={project.title}
+        webType={project.webType}
+        deploymentPlatform={project.deploymentPlatform}
+      />
+    </li>
   ));
 
   return (
@@ -35,9 +37,9 @@ function Portfolio () {
           <h1 className={styles.mainTitle}>{pageTitle}</h1>
         </section>
         <PageSection>
-          <div className={styles.projectsWrapper}>
+          <ul className={styles.projectsWrapper} role="list">
             {projectsToRender}
-          </div>
+          </ul>
         </PageSection>
       </main>
     </BasicLayout>
