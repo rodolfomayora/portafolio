@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { ButtonLink } from '.';
 
-describe('ButtonLink', () => {
+describe('Component: ButtonLink', () => {
   test('Should renders an internal navigation link when recieve only a pathname as \'href\'', () => {
     render(<ButtonLink href="/internal" >Test</ButtonLink>);
     const link = screen.getByRole('link', { name: /^test$/i });

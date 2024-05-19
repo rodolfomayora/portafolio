@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Button } from '.';
 
-describe('Button', () => {
+describe('Component: Button', () => {
   test('Should renders with content', () => {
     render(<Button>Test</Button>);
     const button = screen.getByRole('button', { name: /^test$/i });
