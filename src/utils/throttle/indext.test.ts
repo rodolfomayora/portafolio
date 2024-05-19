@@ -20,7 +20,7 @@ describe('Function: throttle', () => {
     expect(mockFn).toBeCalledWith('test');
   });
 
-  test('should call the wrapped function only once when is called multiple times within the delay', () => {
+  test('Should call the wrapped function only once when is called multiple times within the delay', () => {
     const mockFn = vi.fn();
     const throttledFn = throttle(mockFn, 100);
 
@@ -33,7 +33,7 @@ describe('Function: throttle', () => {
     expect(mockFn).toBeCalledWith('test1');
   });
 
-  test('should call the wrapped function for subsequent calls after the delay', () => {
+  test('Should call the wrapped function for subsequent calls after the delay', () => {
     const mockFn = vi.fn();
     const throttledFn = throttle(mockFn, 100);
 
@@ -41,8 +41,13 @@ describe('Function: throttle', () => {
     throttledFn(); // call 2 (should be throtled)
     vi.advanceTimersByTime(100);
     throttledFn(); // call 3 (should be executed)
-    vi.advanceTimersByTime(100);
 
     expect(mockFn).toBeCalledTimes(2);
+  });
+
+  test('Should throw an error when \'delay\' parameter receive a negative argument', () => {
+    const doError = () => throttle(() => {}, -100);
+    
+    expect(doError).toThrowError(/^\'delay\' parameter should recieve a positive number$/i);
   });
 });

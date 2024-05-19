@@ -45,4 +45,10 @@ describe('Function: debounce', () => {
 
     expect(mockFn).toBeCalledTimes(2);
   });
+
+  test('Should throw an error when \'delay\' parameter receive a negative argument', () => {
+    const doError = () => debounce(() => {}, -100);
+
+    expect(doError).toThrowError(/^\'delay\' parameter should recieve a positive number$/i);
+  });
 });
