@@ -1,4 +1,3 @@
-
 type Callback = (...args: any[]) => any;
 
 export function throttle (callback: Callback, delay: number): Callback {
