@@ -12,7 +12,7 @@ describe('Component: ButtonLink', () => {
     expect(link).not.toHaveAttribute('rel');    // Not an external link
   });
 
-  test('Should renders an external navigation link when recieve only a full URL as \'href\'', ()=> {
+  test('Should renders an external navigation link when recieve only a full URL as \'href\'', () => {
     render(<ButtonLink href="http://www.example.com">Test</ButtonLink>);
     const link = screen.getByRole('link', { name: /^test$/i });
     

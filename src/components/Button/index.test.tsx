@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { Button } from '.';
 
 describe('Component: Button', () => {
-  test('Should renders with content', () => {
+  test('Should renders children prop', () => {
     render(<Button>Test</Button>);
     const button = screen.getByRole('button', { name: /^test$/i });
     expect(button).toBeDefined();
