@@ -17,12 +17,9 @@ export function ProfilePicture (props: Props) {
             height="100" width="100"
             loading="eager"
             decoding="async"
-            
           />
         </div>
       </div>
     </div>
   );
 }
-
-export default ProfilePicture;
