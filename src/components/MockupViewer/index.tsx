@@ -3,41 +3,38 @@ import styles from './styles.module.scss';
 
 type Props = {
   mockupFileName: string,
-  title: string,
+  alt: string,
 }
 
-export function MockupViewer ({ mockupFileName, title }: Props) {
-  // const projectMockupPath = '/images/static/';
+export function MockupViewer ({ mockupFileName, alt }: Props) {
   const projectMockupPath = '/images/';
   const defaultMokupSource = `${projectMockupPath}${mockupFileName}`;
   const mediumMockupSource = `${projectMockupPath}medium_${mockupFileName}`;
-  const alternativeText = `${title} Mockup`;
+  const alternativeText = `${alt} Mockup`;
 
   return (
-    <div>
-      <div className={styles.MockupViewer}>
-        <picture>
-          <source
-            type="image/webp"
-            srcSet={`${defaultMokupSource}.webp`} />
-          <source
-            type="image/webp"
-            media="(min-width:768px)"
-            srcSet={`${defaultMokupSource}.webp`} />
-          
-          <source
-            media="(min-width:768px)"
-            srcSet={`${mediumMockupSource}.png`} />
+    <div className={styles.MockupViewer}>
+      <picture>
+        <source
+          type="image/webp"
+          srcSet={`${defaultMokupSource}.webp`} />
+        <source
+          type="image/webp"
+          media="(min-width:768px)"
+          srcSet={`${defaultMokupSource}.webp`} />
+        
+        <source
+          media="(min-width:768px)"
+          srcSet={`${mediumMockupSource}.png`} />
 
-          <Image className={styles.mockup}
-            src={`${defaultMokupSource}.png`}
-            alt={alternativeText}
-            width="270" height="140"
-            loading="lazy"
-            decoding="auto"
-          />
-        </picture>
-      </div>
+        <Image className={styles.mockup}
+          src={`${defaultMokupSource}.png`}
+          alt={alternativeText}
+          width="270" height="140"
+          loading="lazy"
+          decoding="auto"
+        />
+      </picture>
     </div>
   );
 }
