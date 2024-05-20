@@ -23,9 +23,10 @@ export function TechSkillsSection () {
       style={{ '--item': index + 1, } as CustomStyle}
       data-in-view={false}
     >
-      <TechnologyBlock
-        name={technology.name}
-        imageSource={technology.imageSource}
+      <TechnologyBlock name={technology.name}
+        src={technology.imageSource}
+        loading="lazy"
+        decoding="auto"
       />
     </li>
   ));

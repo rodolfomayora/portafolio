@@ -1,22 +1,26 @@
+import type { ComponentProps } from 'react';
 import Image from 'next/image';
 import styles from './styles.module.scss';
 
+type NextImageProps = ComponentProps<typeof Image>;
+
 export type Props = {
   name: string,
-  imageSource: string
+  src: string,
+  loading: NextImageProps['loading'],
+  decoding: NextImageProps['decoding'],
 }
 
-export function TechnologyBlock ({ name, imageSource }: Props) {
+export function TechnologyBlock ({ name, src, loading, decoding }: Props) {
   return (
     <div className={styles.TechnologyBlock}>
       <div className={styles.logoWrapper}>
         <Image className={styles.logo}
-          src={imageSource}
+          src={src}
           alt={name + " Icon"}
-          width={100}
-          height={100}
-          loading="lazy"
-          decoding="auto"
+          width="100" height="100"
+          loading={loading}
+          decoding={decoding}
         />
       </div>
       <div className={styles.label}>{name}</div>

@@ -1,7 +1,7 @@
 import { Container } from '#components/Container';
 import { Navigation } from '#components/Navigation';
 import { LocaleSelect } from '#components/LocaleSelect';
-import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
+import { useLocaleDictionary } from '#hooks/useLocaleDictionary';
 import { useScrollState } from './useScrollState';
 import styles from './styles.module.scss';
 
