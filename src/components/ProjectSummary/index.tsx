@@ -97,7 +97,8 @@ export function ProjectSummary(props: ProjectSummaryProps) {
       <div className={styles.mockupWrapperDesktop}>
         <MockupViewer 
           mockupFileName={mockupPath}
-          title={title} />
+          alt={title}
+        />
       </div>
   
       <div className={styles.inforWrapper}>
@@ -106,7 +107,8 @@ export function ProjectSummary(props: ProjectSummaryProps) {
         <div className={styles.mockupWrapperMobile}>
           <MockupViewer 
             mockupFileName={mockupPath}
-            title={title} />
+            alt={title}
+          />
         </div>
         <div className={styles.info}>
           <p>
