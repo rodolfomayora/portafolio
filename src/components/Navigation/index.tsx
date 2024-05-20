@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
+import { useLocaleDictionary } from '#hooks/useLocaleDictionary';
 
 type Props = {
   className?: string,
@@ -12,9 +12,7 @@ export function Navigation ({ className }: Props) {
       <ul>
         <li><Link href="/">{t.home}</Link></li>
         <li><Link href="/portfolio">{t.portfolio}</Link></li>
-        {/* <li><<Link href="/profile">
-        {t.profile}
-      </Link></li> */}
+        {/* <li><Link href="/profile">{t.profile}</Link></li> */}
       </ul>
     </nav>
   );
