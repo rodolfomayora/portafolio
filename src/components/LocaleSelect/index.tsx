@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useState } from "react";
 import { I18nIcon } from '#icons/svg';
-import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
+import { useLocaleDictionary } from '#hooks/useLocaleDictionary';
 import styles from './styles.module.scss';
 
 export function LocaleSelect () {
