@@ -1,7 +1,8 @@
-import { type Props as ButtonLinkProps, ButtonLink } from "../ButtonLink";
+import type { ComponentProps } from 'react';
+import { ButtonLink } from "../ButtonLink";
 import styles from './styles.module.scss';
 
-export type Props = ButtonLinkProps;
+type Props = ComponentProps<typeof ButtonLink>;
 
 export function ButtonLinkOutlined ({ children, ...props}: Props) {
 
