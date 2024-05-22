@@ -9,6 +9,7 @@ class MyDocument extends Document {
           <meta name="theme-color" content="hsla(0deg, 0%, 0%, 0)" />
           <meta name="thumbnail" content="/thumbnail.png" />
           <link rel="icon" href="/favicon2.ico" />
+          <meta name="color-scheme" content="only light" />
         </Head>
         <body>
           <Main />
