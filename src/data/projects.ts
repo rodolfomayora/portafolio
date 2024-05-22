@@ -20,6 +20,7 @@ const nodejs = 'Node.js';
 const epxressjs = 'Express.js';
 const jest = 'Jest';
 const vitest = 'Vitest';
+const testingLibrary = 'Testing Library'
 
 // Development Apporaches (techniques)
 const rwd = 'Responsive Web Design';
@@ -39,13 +40,27 @@ export const projectsData: Array<ProjectSummaryType> = [
     mockupPath: 'easybank-mockup',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}, ${pixel}, ${cwv}`,
-    stack: [docker, vitejs, reactjs, typescript, sass],
+    stack: [vitejs, reactjs, typescript, sass, vitest, testingLibrary, docker],
     // webType: 'Single Page Aplication (SPA)',
     renderPatter: 'Client Side Rendering (CSR)',
     sourceCodeURL: 'https://github.com/rodolfomayora/easybank-landing-page.git',
     deployURL: 'https://rodolfomayora.github.io/easybank-landing-page',
     dockerhubURL: 'https://hub.docker.com/r/rodolfomayora/easybank',
     deploymentPlatform: 'Github Pages',
+  },
+  {
+    id: crypto.randomUUID(),
+    title: 'Blogr Landing Page',
+    mockupPath: 'blogr-mockup',
+    category: categories[0],
+    developmentApproaches: `${rwd}, ${mobileFirst}, ${pixel}, ${cwv}`,
+    stack: [nextjs, reactjs, typescript, sass, vitest, testingLibrary, docker],
+    // webType: 'Landing Page',
+    // renderPatter: 'Server Side Rendering (SSR) + Hydration',
+    renderPatter: 'Pre-rendering + Hydration',
+    sourceCodeURL: 'https://github.com/rodolfomayora/blogr-landing-page.git',
+    deployURL: 'https://my-blogr-landing-page.vercel.app',
+    deploymentPlatform: 'Vercel',
   },
   {
     id: crypto.randomUUID(),
@@ -104,20 +119,6 @@ export const projectsData: Array<ProjectSummaryType> = [
     sourceCodeURL: 'https://github.com/rodolfomayora/sunnyside-agency-landing-page-main',
     deployURL: 'https://rodolfomayora.github.io/sunnyside-agency-landing-page-main',
     deploymentPlatform: 'Github Pages',
-  },
-  {
-    id: crypto.randomUUID(),
-    title: 'Blogr Landing Page',
-    mockupPath: 'blogr-mockup',
-    category: categories[0],
-    developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: [nextjs, reactjs, typescript, sass],
-    // webType: 'Landing Page',
-    // renderPatter: 'Server Side Rendering (SSR) + Hydration',
-    renderPatter: 'Pre-rendering + Hydration',
-    sourceCodeURL: 'https://github.com/rodolfomayora/blogr-landing-page.git',
-    deployURL: 'https://my-blogr-landing-page.vercel.app',
-    deploymentPlatform: 'Vercel',
   },
   {
     id: crypto.randomUUID(),

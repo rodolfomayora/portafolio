@@ -1,7 +1,7 @@
 import type { ComponentProps, ReactNode } from 'react';
 import styles from './styles.module.scss';
 
-export type Props = ComponentProps<'button'> & {
+type Props = ComponentProps<'button'> & {
   children: ReactNode,
 }
 
