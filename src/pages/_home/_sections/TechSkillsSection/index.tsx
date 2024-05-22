@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react';
 import { technologies } from '#data/technologies';
 import { addCustomId } from '#utils/addCustomId';
 import { TechnologyBlock } from '#components/TechnologyBlock';
@@ -7,20 +6,15 @@ import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
 import { useObserver } from './useObserver';
 import styles from './styles.module.scss';
 
-type CustomStyle = CSSProperties & {
-  '--item': number,
-}
-
 export function TechSkillsSection () {
   const { t } = useLocaleDictionary();
   const { containerRef } = useObserver();
 
   const myTechSkills = technologies.map(addCustomId<typeof technologies[0]>);
 
-  const skillsToRender = myTechSkills?.map((technology, index) => (
+  const skillsToRender = myTechSkills?.map((technology) => (
     <li key={technology.customId}
       className={styles.item}
-      style={{ '--item': index + 1, } as CustomStyle}
       data-in-view={false}
     >
       <TechnologyBlock name={technology.name}

@@ -9,21 +9,26 @@ export function useObserver () {
         JS access: element.dataset.inView (js makes an automatic
         camelCase convesion for property name)
      */
-    function observerHandler (entries: IntersectionObserverEntry[]) {
-      entries.forEach((entry) => {
+    function observerHandler (entries: IntersectionObserverEntry[]): void {
+      entries.forEach((entry, index) => {
+        const element = entry.target as HTMLElement; // Type casting
         if (entry.isIntersecting) {
-          // @ts-ignore
-          entry.target.dataset.inView = true;
+          element.style.setProperty('--delay', `${index}`);
+          element.dataset.inView = `${true}`;
         }
       });
     }
-    const observer = new IntersectionObserver(observerHandler);
+    const observer = new IntersectionObserver(observerHandler, {
+      // threshold: [0.5], // runs handler when elemen is 50% visible (is 0% by default)
+      // root: null,
+      rootMargin: '-140px' // runs when reach the element margin
+    });
 
     const { current } = containerRef;
     if (!!current) {
+      // const hiddenElements: NodeList = current.querySelectorAll('li');
       const hiddenElements: NodeList = current.querySelectorAll('[data-in-view]');
-      const elements = Array.from(hiddenElements);
-      // @ts-ignore
+      const elements = Array.from(hiddenElements) as Element[]; // Type casting
       elements.forEach((element) => observer.observe(element));
     }
 

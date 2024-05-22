@@ -1,6 +1,6 @@
 import styles from './styles.module.scss'
 
-export type Props = {
+type Props = {
   children: string,
 };
 

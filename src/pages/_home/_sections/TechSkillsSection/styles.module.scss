@@ -16,12 +16,14 @@
   list-style: none;
 
   .item {
-    --item: initial;
+    --delay: initial;
     display: grid;
     opacity: 0;
     filter: blur(5px);
     translate: 0 100%;
-    transition-property: all;
+
+    will-change: opacity, filter, translate;
+    transition-property: opacity, filter, translate;
     transition-timing-function: linear;
     transition-duration: 600ms;
     transition-delay: 0ms;
@@ -41,7 +43,7 @@
 
     .item {
       transition-duration: 400ms;
-      transition-delay: calc(var(--item) * 100ms);
+      transition-delay: calc(var(--delay) * 200ms);
     }
   }
 }

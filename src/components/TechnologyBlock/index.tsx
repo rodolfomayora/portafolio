@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 
 type NextImageProps = ComponentProps<typeof Image>;
 
-export type Props = {
+type Props = {
   name: string,
   src: string,
   loading: NextImageProps['loading'],

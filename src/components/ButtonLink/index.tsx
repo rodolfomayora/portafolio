@@ -3,7 +3,7 @@ import type { ComponentProps, ReactNode } from 'react';
 import { ExternalLink } from '#components/ExternalLink';
 import styles from './styles.module.scss';
 
-export type Props = ComponentProps<typeof Link> & {
+type Props = ComponentProps<typeof Link> & {
   children: ReactNode,
   href: string,
 }
