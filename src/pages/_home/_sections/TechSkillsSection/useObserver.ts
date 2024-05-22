@@ -9,12 +9,13 @@ export function useObserver () {
         JS access: element.dataset.inView (js makes an automatic
         camelCase convesion for property name)
      */
-    function observerHandler (entries: IntersectionObserverEntry[]): void {
+    function observerHandler (entries: IntersectionObserverEntry[], observer): void {
       entries.forEach((entry, index) => {
         const element = entry.target as HTMLElement; // Type casting
         if (entry.isIntersecting) {
           element.style.setProperty('--delay', `${index}`);
           element.dataset.inView = `${true}`;
+          observer.unobserve(element); // optimize observer
         }
       });
     }
