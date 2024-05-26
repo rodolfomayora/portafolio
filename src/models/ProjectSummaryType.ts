@@ -20,6 +20,7 @@ type ProjectSummaryType = {
   dockerhubURL?: string,
   apiIntegration?: ApiIntegration,
   sampleDataFrom?: SampleDataFrom,
+  pageSpeedReportURL?: string,
 }
 
 export default ProjectSummaryType;
