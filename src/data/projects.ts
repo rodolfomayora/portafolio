@@ -31,7 +31,10 @@ const cwv = 'Core Web Vitals';
 
 // Render Patter
 const staticPage = 'Static';
-
+const CSR = 'Client Side Rendering (CSR)';
+const SSR = 'Server Side Rendering (SSR)';
+const SSG = 'Static Site Generation (SSG)';
+const MPA = 'Multi Page Application (MPA)';
 
 export const projectsData: Array<ProjectSummaryType> = [
   {
@@ -42,8 +45,7 @@ export const projectsData: Array<ProjectSummaryType> = [
     developmentApproaches: `${rwd}, ${mobileFirst}, ${pixel}, ${cwv}`,
     stack: [vitejs, reactjs, typescript, sass, vitest, testingLibrary, cicd, docker],
     // webType: 'Single Page Aplication (SPA)',
-    // renderPatter: 'Client Side Rendering (CSR)',
-    renderPatter: 'Static Site Generation (SSG)',
+    renderPatter: SSG,
     pageSpeedReportURL: 'https://pagespeed.web.dev/analysis/https-rodolfomayora-github-io-easybank-landing-page/fos3xnpt6s?form_factor=desktop',
     sourceCodeURL: 'https://github.com/rodolfomayora/easybank-landing-page.git',
     deployURL: 'https://rodolfomayora.github.io/easybank-landing-page',
@@ -76,7 +78,7 @@ export const projectsData: Array<ProjectSummaryType> = [
     sourceCodeURL: 'https://github.com/rodolfomayora/mini-shop.git',
     deployURL: 'https://my-mini-shop.vercel.app',
     deploymentPlatform: 'Vercel',
-    sampleDataFrom: {
+    apiIntegration: {
       name: 'Fake Store (public API)',
       url: 'https://fakestoreapi.com'
     },
