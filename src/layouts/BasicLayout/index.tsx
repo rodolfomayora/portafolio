@@ -10,7 +10,7 @@ type Props = {
 }
 
 export function BasicLayout ({ children, pageTitle }: Props) {
-  const title = `${pageTitle} | Rodolfo Mayora Pereda | FrontEnd Develope`;
+  const title = `${pageTitle} | Rodolfo Mayora Pereda | FrontEnd Developer`;
   return (
     <>
       <Head>
