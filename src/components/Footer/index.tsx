@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Container } from '#components/Container';
 import { SocialLinks } from '#components/SocialLinks';
 import { Navigation } from '#components/Navigation';
+import { ExternalLink } from '../ExternalLink';
 import styles from './styles.module.scss';
 
 export function Footer () {
@@ -28,6 +29,11 @@ export function Footer () {
         </div>
   
         <div className={styles.footerBottom}>
+          <small className={styles.sourceCode}>
+            <ExternalLink href="https://github.com/rodolfomayora/portafolio">
+              View page source
+            </ExternalLink>
+          </small>
           <small>
             &copy; <time dateTime={currentYear}>{currentYear}</time> - Rodolfo Mayora Pereda
           </small>
