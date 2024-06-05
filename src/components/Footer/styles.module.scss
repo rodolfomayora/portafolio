@@ -71,10 +71,17 @@
   }
 
   .footerBottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     text-align: center;
     padding-top: 40px;
     margin-top: 40px;
     border-top: solid 1px var(--color-green3);
+  }
+
+  .sourceCode {
+    text-decoration: underline;
   }
 
   @include mixins.tablet {
@@ -102,6 +109,10 @@
     
     .socialLinksWrapper {
       justify-content: flex-end;
+    }
+
+    .footerBottom {
+      align-items: flex-start;
     }
   }
 }
