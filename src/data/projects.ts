@@ -8,6 +8,7 @@ const javascript = 'JavaScript';
 const typescript = 'TypeScript';
 const sass = 'Sass/SCSS';
 const cssModules = 'CSS Modules';
+const tailwindCSS = 'Tailwind CSS'
 const reactjs = 'React.js';
 const nextjs = 'Next.js';
 const redux = 'Redux';
@@ -21,6 +22,7 @@ const epxressjs = 'Express.js';
 const jest = 'Jest';
 const vitest = 'Vitest';
 const testingLibrary = 'Testing Library'
+const msw = 'Mock Service Worker'
 
 // Development Apporaches (techniques)
 const rwd = 'Responsive Web Design';
@@ -72,9 +74,10 @@ export const projectsData: Array<ProjectSummaryType> = [
     mockupPath:  'mini-shop',
     category: categories[0],
     developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: [nextjs, typescript, 'Context-API', 'Styled Components', sass],
+    stack: [nextjs, reactjs, typescript, tailwindCSS, vitest, testingLibrary, msw, docker],
     // webType: 'Single Page Aplication (SPA)',
-    renderPatter: 'Client Side Rendering (CSR)',
+    // renderPatter: 'Client Side Rendering (CSR)',
+    renderPatter: 'Pre-rendering + Hydration',
     sourceCodeURL: 'https://github.com/rodolfomayora/mini-shop.git',
     deployURL: 'https://my-mini-shop.vercel.app',
     deploymentPlatform: 'Vercel',
