@@ -22,7 +22,7 @@ export function useObserver () {
     const observer = new IntersectionObserver(observerHandler, {
       // threshold: [0.5], // runs handler when elemen is 50% visible (is 0% by default)
       // root: null,
-      rootMargin: '-140px' // runs when reach the element margin
+      rootMargin: '-120px' // runs when reach the element margin
     });
 
     const { current } = containerRef;
