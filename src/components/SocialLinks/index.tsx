@@ -30,13 +30,6 @@ export function SocialLinks () {
       >
         <LinkedinIcon />
       </ExternalLink>
-  
-      <ExternalLink
-        href={links.telegramProfile}
-        aria-label="telegram contact link"
-      >
-        <TelegramIcon />
-      </ExternalLink>
     </>
   );
 }
