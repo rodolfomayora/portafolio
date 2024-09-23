@@ -1,13 +1,13 @@
-name: porfolio
+name: portfolio
 
 services:
   # Development Service: docker compose --profile dev up --watch
-  porfolio-dev:
+  portfolio-dev:
     build:
       context: .
       target: dev
-    image: porfolio-dev:1.0
-    container_name: porfolio-dev
+    image: portfolio-dev:1.0
+    container_name: portfolio-dev
     ports:
       - 3001:3001
     develop:
@@ -23,12 +23,12 @@ services:
       - dev
 
   # Production Service: docker compose --profile prod build
-  porfolio-prod:
+  portfolio-prod:
     build:
       context: .
       target: prod  
-    image: porfolio-prod:1.0
-    container_name: porfolio-prod
+    image: portfolio-prod:1.0
+    container_name: portfolio-prod
     mem_limit: 1024m # good practice for production
     ports:
       - 3002:3002
