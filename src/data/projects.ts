@@ -21,8 +21,10 @@ const nodejs = 'Node.js';
 const epxressjs = 'Express.js';
 const jest = 'Jest';
 const vitest = 'Vitest';
-const testingLibrary = 'Testing Library'
-const msw = 'Mock Service Worker'
+const testingLibrary = 'Testing Library';
+const msw = 'Mock Service Worker';
+const axios = 'Axios';
+const tanstackQuery = 'Tanstack Query (React Query)';
 
 // Development Apporaches (techniques)
 const rwd = 'Responsive Web Design';
@@ -56,6 +58,23 @@ export const projectsData: Array<ProjectSummaryType> = [
   },
   {
     id: crypto.randomUUID(),
+    title: 'Rest Countries App',
+    mockupPath:  'rest-countries-app',
+    category: categories[0],
+    developmentApproaches: `${rwd}, ${mobileFirst}, ${pixel}, ${cwv}`,
+    stack: [reactjs, tanstackQuery, typescript, sass, docker],
+    // webType: 'Single Page Aplication (SPA)',
+    renderPatter: CSR,
+    sourceCodeURL: 'https://github.com/rodolfomayora/rest-countries.git',
+    deployURL: 'https://my-rest-countries.vercel.app',
+    deploymentPlatform: 'Vercel',
+    apiIntegration: {
+      name: 'REST Countries (public API)',
+      url: 'https://restcountries.com/'
+    },
+  },
+  {
+    id: crypto.randomUUID(),
     title: 'Blogr Landing Page',
     mockupPath: 'blogr-mockup',
     category: categories[0],
@@ -84,23 +103,6 @@ export const projectsData: Array<ProjectSummaryType> = [
     apiIntegration: {
       name: 'Fake Store (public API)',
       url: 'https://fakestoreapi.com'
-    },
-  },
-  {
-    id: crypto.randomUUID(),
-    title: 'Rest Countries App',
-    mockupPath:  'rest-countries-app',
-    category: categories[0],
-    developmentApproaches: `${rwd}, ${mobileFirst}`,
-    stack: [reactjs, typescript, redux, reduxSagas, sass],
-    // webType: 'Single Page Aplication (SPA)',
-    renderPatter: 'Client Side Rendering (CSR), List Virtualization (Windowing)',
-    sourceCodeURL: 'https://github.com/rodolfomayora/rest-countries.git',
-    deployURL: 'https://my-rest-countries.vercel.app',
-    deploymentPlatform: 'Vercel',
-    apiIntegration: {
-      name: 'REST Countries (public API)',
-      url: 'https://restcountries.com/'
     },
   },
   {

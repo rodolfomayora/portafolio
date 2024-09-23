@@ -31,26 +31,34 @@ export const technologies: { name: string, imageSource: string }[] = [
     name: 'Redux',
     imageSource: '/icons/svg/redux.svg',
   },
+  // {
+  //   name: 'React Query',
+  //   imageSource: '/icons/svg/react-query.svg',
+  // },
+  {
+    name: 'Tanstack Query',
+    imageSource: '/icons/svg/tanstack-query.png',
+  },
   {
     name: 'Vite.js',
     imageSource: '/icons/svg/vitejs.svg',
-  },
-  {
-    name: 'Vitest',
-    imageSource: '/icons/svg/vitest.svg',
   },
   {
     name: 'Jest',
     imageSource: '/icons/svg/jest.svg',
   },
   {
+    name: 'Vitest',
+    imageSource: '/icons/svg/vitest.svg',
+  },
+  {
     name: 'Testing Library',
     imageSource: '/icons/svg/testing-library.svg',
   },
-  {
-    name: 'Husky.js',
-    imageSource: '/icons/svg/husky.svg',
-  },
+  // {
+  //   name: 'Husky.js',
+  //   imageSource: '/icons/svg/husky.svg',
+  // },
   {
     name: 'PNPM',
     imageSource: '/icons/svg/pnpm.svg',
