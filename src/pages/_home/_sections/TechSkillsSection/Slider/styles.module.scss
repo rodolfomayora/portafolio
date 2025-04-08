@@ -1,0 +1,55 @@
+@use "#styles/mixins" as mixins;
+
+.slider {
+  --slider-items-gap: 24px; // can by overrited from JSX
+  --slider-duration: 20s; // can by overrited from JSX
+
+  display: flex;
+  column-gap: var(--slider-items-gap);
+  overflow: hidden;
+  user-select: none;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #111 10% 90%,
+    transparent
+  );
+  padding-block: 2px;
+
+  .list {
+    flex-shrink: 0;
+    display: flex;
+    column-gap: var(--slider-items-gap);
+    min-width: 100%;
+    width: auto;
+    list-style: none;
+  }
+
+  [data-slider-direction="left"] {
+    animation: slide-to-left var(--slider-duration) linear infinite;
+  }
+
+  [data-slider-direction="right"] {
+    animation: slide-to-right var(--slider-duration) linear infinite;
+  }
+
+  &:hover .list {
+    animation-play-state: paused;
+  }
+
+  @keyframes slide-to-left {
+    from {
+      transform: translateX(0);
+    } to {
+      transform: translateX(calc(-100% - var(--slider-items-gap)));
+    }
+  }
+
+  @keyframes slide-to-right {
+    from {
+      transform: translateX(calc(-100% - var(--slider-items-gap)));
+    } to {
+      transform: translateX(0);
+    }
+  }
+}

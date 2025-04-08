@@ -4,104 +4,11 @@
   @include mixins.subtitle;
 }
 
-
-
-.slider {
-  border: solid red 1px;
-
-  // --items-quantity: 20;
-  --items-quantity: 4;
-  --items-gap: 24px;
-  --items-width: 200px;
-
-  // overflow: hidden;
-  // width: 100%;
-  padding-block: 10px;
-  height: 100px;
-  // overflow: hidden;  
-  position: relative;
-  
-  .list {
-    border: solid rgb(128, 0, 255) 1px;
-
-    height: 80px;
-
-    display: flex;
-    column-gap: 24px;
-    list-style: none;
-    max-width: 100%;
-    position: relative;
-    // animation: example 20s linear infinite;
-
-    
-  }
-
-
-  .item {
-    width: 200px;
-    flex-shrink: 0;
-    // position: relative;
-    position: absolute;
-    left: calc((var(--items-width) + var(--items-gap)) * -1);
-    margin-left: calc(100% + var(--items-width) + var(--items-gap)); 
-    // animation: example 20s linear infinite;
-    // animation-delay: calc(2s * var(--position));
-  }
-
-  @keyframes example {
-    from {
-      // left: 100%;
-      // transform: translateX(0);
-      left: calc((var(--items-width) + var(--items-gap)) * -1);
-      margin-left: calc(100% + var(--items-width) + var(--items-gap)); 
-    } to {
-      // transform: translateX(calc(var(--items-width) * var(--items-quantity) * -1));
-      // left: calc((var(--items-width) + var(--items-gap)) * var(--items-quantity) * -1);
-      margin-left: calc(var(--items-width) * var(--items-quantity) * -1);
-    }
-  }
+.label {
+  margin-block: 10px;
 }
 
-.technologyGrid {
-  --min-column-size-mobile: 120px;
-  --min-column-size-desktop: 190px;
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(var(--min-column-size-mobile), 1fr)
-  );
-  gap: 24px;
-  list-style: none;
-
-  .item {
-    // --delay: initial;
-    display: grid;
-    // opacity: 0;
-    // filter: blur(5px);
-    // translate: 0 100%;
-
-    // will-change: opacity, filter, translate;
-    // transition-property: opacity, filter, translate;
-    // transition-timing-function: linear;
-    // transition-duration: 600ms;
-    // transition-delay: 0ms;
-
-    // &[data-in-view="true"] {
-    //   opacity: 1;
-    //   filter: blur(0);
-    //   translate: 0 0;
-    // }
-  }
-  
-  @include mixins.tablet {
-    grid-template-columns: repeat(
-      auto-fit, 
-      minmax(var(--min-column-size-desktop), 1fr)
-    );
-
-    .item {
-      transition-duration: 400ms;
-      transition-delay: calc(var(--delay) * 200ms);
-    }
-  }
+.item {
+  width: 200px;
+  flex-shrink: 0;
 }
