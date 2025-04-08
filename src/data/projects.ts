@@ -11,14 +11,12 @@ const cssModules = 'CSS Modules';
 const tailwindCSS = 'Tailwind CSS'
 const reactjs = 'React.js';
 const nextjs = 'Next.js';
-const redux = 'Redux';
-const reduxSagas = 'Redux Sagas';
+const redux = 'Redux ToolKit';
 const docker = 'Docker';
 const vitejs = 'Vite.js';
-const huskyjs = 'Husky.js';
 const cicd = 'CI/CD';
-const nodejs = 'Node.js';
 const epxressjs = 'Express.js';
+const nestjs = 'Nest.js';
 const jest = 'Jest';
 const vitest = 'Vitest';
 const testingLibrary = 'Testing Library';
@@ -105,18 +103,18 @@ export const projectsData: Array<ProjectSummaryType> = [
       url: 'https://fakestoreapi.com'
     },
   },
-  {
-    id: crypto.randomUUID(),
-    title: 'RESTful API + Documentation',
-    mockupPath:  'todo-api',
-    category: categories[1],
-    developmentApproaches: 'REST',
-    stack: [docker, nodejs, epxressjs, javascript, 'MongoDB Atlas', jest, 'Supertest', 'Swagger', 'OpenAPI v3'],
-    // renderPatter: 'Server Side Rendering (SSR)',
-    sourceCodeURL: 'https://github.com/rodolfomayora/todo-api',
-    deployURL: 'https://todo-api.fly.dev/api/v1/docs',
-    deploymentPlatform: 'Fly.io',
-  },
+  // {
+  //   id: crypto.randomUUID(),
+  //   title: 'RESTful API + Documentation',
+  //   mockupPath:  'todo-api',
+  //   category: categories[1],
+  //   developmentApproaches: 'REST',
+  //   stack: [docker, nodejs, epxressjs, javascript, 'MongoDB Atlas', jest, 'Supertest', 'Swagger', 'OpenAPI v3'],
+  //   // renderPatter: 'Server Side Rendering (SSR)',
+  //   sourceCodeURL: 'https://github.com/rodolfomayora/todo-api',
+  //   deployURL: 'https://todo-api.fly.dev/api/v1/docs',
+  //   deploymentPlatform: 'Fly.io',
+  // },
   {
     id: crypto.randomUUID(),
     title: 'Sunnyside Agency Landing Page',
@@ -165,22 +163,4 @@ export const projectsData: Array<ProjectSummaryType> = [
     deployURL: 'https://rodolfomayora.github.io/article-preview-component',
     deploymentPlatform: 'Github Pages',
   },
-  
-  
-  // {
-    // id: crypto.randomUUID(),
-  //   title: '',
-  //   mockupPath:  '',
-  //   category: '',
-  //   developmentApproaches: '',
-  //   stack: '',
-  //   webType: '',
-  //   renderPatter: '',
-  //   sourceCodeURL: '',
-  //   deployURL: ''
-  //   deploymentPlatform: ''
-  //   sampleDataFrom: '',
-  //   apiIntegration: {},
-  //   sampleDataFrom: {},
-  // },
 ];
