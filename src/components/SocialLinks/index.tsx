@@ -1,7 +1,7 @@
 import {
   GithubIcon,
   LinkedinIcon,
-  TelegramIcon,
+  GitlabIcon,
   DockerFlatIcon,
 } from '#icons/svg';
 import * as links from '#data/socialLinks';
@@ -15,6 +15,13 @@ export function SocialLinks () {
         aria-label="github profile page"  
       >
         <GithubIcon />
+      </ExternalLink>
+
+      <ExternalLink
+        href={links.gitlabProfile}
+        aria-label="gitlab profile page"
+      >
+        <GitlabIcon />
       </ExternalLink>
 
       <ExternalLink

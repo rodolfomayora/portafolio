@@ -3,19 +3,17 @@ import { addCustomId } from '#utils/addCustomId';
 import { TechnologyBlock } from '#components/TechnologyBlock';
 import { PageSection } from '#components/PageSection';
 import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
-import { useObserver } from './useObserver';
 import styles from './styles.module.scss';
 
 export function TechSkillsSection () {
   const { t } = useLocaleDictionary();
-  const { containerRef } = useObserver();
 
   const myTechSkills = technologies.map(addCustomId<typeof technologies[0]>);
 
-  const skillsToRender = myTechSkills?.map((technology) => (
+  const skillsToRender = myTechSkills.slice(0, 10).map((technology, index) => (
     <li key={technology.customId}
       className={styles.item}
-      data-in-view={false}
+      style={{ '--position': index } as any}
     >
       <TechnologyBlock name={technology.name}
         src={technology.imageSource}
@@ -30,9 +28,14 @@ export function TechSkillsSection () {
       <h2 className={styles.subtitle}>
         {t.what_i_use}
       </h2>
-      <ul className={styles.technologyGrid} ref={containerRef}>
+      <div className={styles.slider}>
+        <ul className={styles.list} role="list">
+          {skillsToRender}
+        </ul>
+      </div>
+      {/* <ul className={styles.technologyGrid} role="list">
         {skillsToRender}
-      </ul>
+      </ul> */}
     </PageSection>
   );
 }
