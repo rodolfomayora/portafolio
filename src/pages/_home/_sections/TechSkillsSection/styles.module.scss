@@ -4,46 +4,11 @@
   @include mixins.subtitle;
 }
 
-.technologyGrid {
-  --min-column-size-mobile: 120px;
-  --min-column-size-desktop: 190px;
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(var(--min-column-size-mobile), 1fr)
-  );
-  gap: 24px;
-  list-style: none;
+.label {
+  margin-block: 10px;
+}
 
-  .item {
-    --delay: initial;
-    display: grid;
-    opacity: 0;
-    filter: blur(5px);
-    translate: 0 100%;
-
-    will-change: opacity, filter, translate;
-    transition-property: opacity, filter, translate;
-    transition-timing-function: linear;
-    transition-duration: 600ms;
-    transition-delay: 0ms;
-
-    &[data-in-view="true"] {
-      opacity: 1;
-      filter: blur(0);
-      translate: 0 0;
-    }
-  }
-  
-  @include mixins.tablet {
-    grid-template-columns: repeat(
-      auto-fit, 
-      minmax(var(--min-column-size-desktop), 1fr)
-    );
-
-    .item {
-      transition-duration: 400ms;
-      transition-delay: calc(var(--delay) * 200ms);
-    }
-  }
+.item {
+  width: 200px;
+  flex-shrink: 0;
 }

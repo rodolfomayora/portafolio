@@ -8,7 +8,6 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    // "moduleResolution": "node",
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -21,7 +20,6 @@
       "#components/*": ["./components/*"],
       "#config/*": ["./config/*"],
       "#data/*": ["./data/*"],
-      // "#helpers/*": ["./helpers/*"],
       "#hooks/*": ["./hooks/*"],
       "#icons/*": ["./assets/icons/*"],
       "#layouts/*": ["./layouts/*"],
@@ -34,7 +32,5 @@
     "types": ["vitest/globals"]
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "**/*.mjs"],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
