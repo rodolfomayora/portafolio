@@ -6,7 +6,6 @@ import { useLocaleDictionary } from '#/hooks/useLocaleDictionary';
 import { Slider } from './Slider';
 import styles from './styles.module.scss';
 
-
 export function TechSkillsSection () {
   const { t } = useLocaleDictionary();
 
