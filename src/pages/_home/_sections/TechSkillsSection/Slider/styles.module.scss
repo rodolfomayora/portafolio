@@ -23,6 +23,7 @@
     min-width: 100%;
     width: auto;
     list-style: none;
+    will-change: translate;
   }
 
   [data-slider-direction="left"] {
@@ -39,17 +40,17 @@
 
   @keyframes slide-to-left {
     from {
-      transform: translateX(0);
+      translate: 0
     } to {
-      transform: translateX(calc(-100% - var(--slider-items-gap)));
+      translate: calc(-100% - var(--slider-items-gap));
     }
   }
 
   @keyframes slide-to-right {
     from {
-      transform: translateX(calc(-100% - var(--slider-items-gap)));
+      translate: calc(-100% - var(--slider-items-gap));
     } to {
-      transform: translateX(0);
+      translate: 0;
     }
   }
 }
