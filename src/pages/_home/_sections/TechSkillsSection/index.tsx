@@ -59,11 +59,11 @@ export function TechSkillsSection () {
         {t.what_i_use}
       </h2>
       <h3 className={styles.label}>Frontend</h3>
-      <Slider duration={30}>{frontendSkillItems}</Slider>
+      <Slider duration={36}>{frontendSkillItems}</Slider>
       <h3 className={styles.label}>Backend</h3>
-      <Slider duration={24} direction='right'>{backendSkillItems}</Slider>
+      <Slider duration={20} direction='right'>{backendSkillItems}</Slider>
       <h3 className={styles.label}>Tools</h3>
-      <Slider>{myToolsItems}</Slider>
+      <Slider duration={24}>{myToolsItems}</Slider>
     </PageSection>
   );
 }
